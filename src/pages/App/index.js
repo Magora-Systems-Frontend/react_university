@@ -5,7 +5,7 @@ import PT from 'prop-types';
 //
 import { Wrapper } from './index.styled';
 import MainMenu from 'components/MainMenu';
-import Header from 'components/Header';
+import { Header } from 'components/Header';
 import { CommonModals } from 'components';
 
 @connect(mapStateToProps, mapDispatchToProps)

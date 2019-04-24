@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Modal } from 'antd';
+import { Login } from 'components';
 import { withCommonModals } from '../withCommonModals';
 import TitleWithTextButton from '../_CommonModalComponents/TitleWithTextButton';
 
@@ -16,7 +17,7 @@ class LoginModal extends React.PureComponent {
         title={<TitleWithTextButton title="Log In" btnText="Sign up" onClick={() =>  this.props.showModal('sign-up')} />}
         closable={false}
       >
-        Login modal template
+        <Login />
       </Modal>
     );
   }

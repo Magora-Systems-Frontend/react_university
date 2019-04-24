@@ -5,7 +5,7 @@ import HeaderControls from './controls/HeaderControls'
 
 import './header.sass';
 
-class Header extends React.PureComponent {
+export class Header extends React.PureComponent {
 
   render() {
     return (
@@ -30,5 +30,3 @@ class Header extends React.PureComponent {
     );
   }
 }
-
-export default Header;
