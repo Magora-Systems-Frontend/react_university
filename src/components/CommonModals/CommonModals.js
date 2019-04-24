@@ -30,7 +30,6 @@ class CommonModals extends React.PureComponent {
     return (
       <React.Fragment>
         { this.renderModal() }
-        common modals
       </React.Fragment>
     );
   }
