@@ -8,7 +8,7 @@ import reducer from './reducer';
 
 // CommonModals
 import LoginModal from './LoginModal';
-import SignUpModal from './SignUp';
+import SignUpModal from './SignUpModal';
 
 @connect(mapStateToProps, mapDispatchToProps)
 class CommonModals extends React.PureComponent {
