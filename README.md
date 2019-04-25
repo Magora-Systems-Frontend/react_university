@@ -26,3 +26,8 @@ npm run dev
 npm run server
 
 ```
+
+### Credentials
+```
+For Google Auth: magoramagorova@gmail.com (FrontendReactTemplate)
+```
