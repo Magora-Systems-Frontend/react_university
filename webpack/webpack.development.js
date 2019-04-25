@@ -5,6 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const common = require('./webpack.common.js');
 const config = require('../bin');
 
+const { API_URL = 'http://localhost:8021' } = process.env || {};
+
 module.exports = merge(common, {
   mode: 'development',
   devtool: 'cheap-module-eval-source-map',
@@ -13,7 +15,14 @@ module.exports = merge(common, {
     historyApiFallback: true,
     hot: true,
     host: config.HOST,
-    port: config.PORT
+    port: config.PORT,
+    proxy: {
+      '/**': {
+        target: API_URL,
+        secure: false,
+        changeOrigin: true,
+      },
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
