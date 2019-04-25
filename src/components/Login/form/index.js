@@ -35,27 +35,22 @@ export class LoginForm extends React.PureComponent {
     return (
       <form className="login-form">
 
-        <FormItem>
-          <Field
-            name="email"
-            type="email"
-            label="Email:"
-            placeholder="Email"
-            component={TextField}
-            prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-          />
-        </FormItem>
+        <Field
+          name="email"
+          type="email"
+          placeholder="Email"
+          error="aaa"
+          component={TextField}
+          prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+        />
 
-        <FormItem>
-          <Field
-            name="password"
-            type="password"
-            label="Email:"
-            placeholder="Password"
-            component={TextField}
-            prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
-          />
-        </FormItem>
+        <Field
+          name="password"
+          type="password"
+          placeholder="Password"
+          component={TextField}
+          prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
+        />
 
       </form>
     );

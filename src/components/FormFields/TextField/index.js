@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { fieldPropTypes } from 'redux-form';
-import { Input } from 'antd';
-import { AbsolutePositioningError } from '../_CommonFieldsComponents/AbsolutePositioningError';
+import { Input, Form } from 'antd';
 
 //
 
@@ -13,20 +12,23 @@ export class TextField extends React.PureComponent {
 
   render() {
     const {
+      label,
       meta,
       input,
       type,
     } = this.props;
 
     const inputElement = type === 'password' ? Input.Password : Input;
+    const validateStatus = meta.error && meta.touched ? 'error' : '';
 
-    return (
-      <div className="text-field" style={{ position: 'relative' }}>
+    return(
+      <Form.Item
+        label={label}
+        validateStatus={validateStatus}
+        help={meta.error}
+      >
         {React.createElement(inputElement, { ...this.props, ...input })}
-        {meta.error && meta.touched
-          ? <AbsolutePositioningError>{meta.error}</AbsolutePositioningError> : null
-        }
-      </div>
+      </Form.Item>
     );
   }
 }
