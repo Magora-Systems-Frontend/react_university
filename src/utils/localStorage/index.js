@@ -1,6 +1,6 @@
 import * as localStorageHelper from './localStorage';
 
-const PREFIX = process.env.WEB_APP_PREFIX;
+const PREFIX = process.env.WEB_APP_PREFIX || '@REACT_TEMPLATE_APP';
 const KEYS = {
   STORE: `${PREFIX}_$`
 };

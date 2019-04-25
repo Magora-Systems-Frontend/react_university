@@ -7,3 +7,7 @@ export const ROUTES = {
   'HOME_PAGE': '/',
   'ADMIN_PANEL': '/admin-panel'
 };
+
+export const API_METHODS = {
+  LOGIN: '/users/login',
+};

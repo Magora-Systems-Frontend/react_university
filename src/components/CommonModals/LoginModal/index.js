@@ -19,7 +19,7 @@ class LoginModal extends React.PureComponent {
         footer={null}
         style={{ maxWidth: '400px' }}
       >
-        <Login />
+        <Login hideModal={this.props.hideModal} />
       </Modal>
     );
   }
