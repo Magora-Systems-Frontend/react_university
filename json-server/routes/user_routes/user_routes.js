@@ -1,8 +1,8 @@
 // handlers
 const userLogin = require('../../handlers/users/login/login');
 
-module.exports = function(api) {
+module.exports = function(server) {
 
-  api.get('/users/login', (req, res) => {console.log('aaa'); res.send({ a: 'a' })});
+  server.get('/api/users/login', userLogin);
 
 };

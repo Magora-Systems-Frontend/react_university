@@ -6,9 +6,9 @@ const middlewares = jsonServer.defaults();
 
 const PORT = 8021;
 
-const api = jsonServer.router({});
-appRoutes(api);
-server.use('/api', api);
+appRoutes(server);
+
+// server.get('/api/users/login', (req, res) => {res.send({a: 'aaa'});});
 
 server.use(function(err, req, res, next) {
   res.status(500).send(err);
@@ -17,7 +17,6 @@ server.use(function(err, req, res, next) {
 
 server.use(middlewares);
 server.use(router);
-server.use('/api/users/login', (req, res) => {res.send({a: 'a'});});
 server.listen(PORT, () => {
   console.log(`JSON Server is running on port: ${PORT}`)
 });
