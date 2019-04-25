@@ -3,6 +3,6 @@ const userLogin = require('../../handlers/users/login/login');
 
 module.exports = function(server) {
 
-  server.get('/users/login', userLogin);
+  server.post('/api/v1/users/login', userLogin);
 
 };
