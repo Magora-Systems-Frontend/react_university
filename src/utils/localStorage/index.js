@@ -6,34 +6,10 @@ export const KEYS = {
   AUTH: 'AUTH',
 };
 
-/**
- *
- * @param key
- * @param store
- */
 export const saveItem = (key, store = {}) => {
   localStorageHelper.setItem(`${KEYS.STORE}${key}`, JSON.stringify(store));
 };
 
-// /**
-//  *
-//  * @param key
-//  */
-// export const getItem = (key) => {
-//   localStorageHelper.getItem(`${KEYS.STORE}${key}`);
-// };
-
-/**
- *
- * @param store
- */
-export const saveStore = (store = {}) => {
-  localStorageHelper.setItem(KEYS.STORE, JSON.stringify(store));
-};
-
-/**
- *
- */
 export const loadStore = (key) => {
   let store = {};
   const data = localStorageHelper.getItem(`${KEYS.STORE}${key}`);
@@ -42,6 +18,10 @@ export const loadStore = (key) => {
   return store;
 };
 
-export const cleatStore = () => {
+export function removeItem(key) {
+  localStorageHelper.removeItem(`${KEYS.STORE}${key}`);
+}
+
+export const clearStore = () => {
   localStorageHelper.clear();
 };

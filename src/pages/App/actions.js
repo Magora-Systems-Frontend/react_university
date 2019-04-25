@@ -1,6 +1,6 @@
 import { getAxios } from 'utils/api/axiosClient';
 import { API_METHODS } from 'config/constants';
-import { saveItem, KEYS } from 'utils/localStorage';
+import { saveItem, removeItem, KEYS } from 'utils/localStorage';
 
 /*
  * Application Actions
@@ -31,5 +31,13 @@ export function setAuthState(authState) {
     payload: {
       ...authState,
     },
+  };
+}
+
+export function logout() {
+  removeItem(KEYS.AUTH);
+
+  return {
+    type: 'APP_CLEAR_AUTH_STATE',
   };
 }
