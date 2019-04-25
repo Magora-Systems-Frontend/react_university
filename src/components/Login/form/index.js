@@ -55,7 +55,7 @@ export class LoginForm extends React.PureComponent {
           prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
         />
 
-        <Form.Item style={{ margin: '20px 0 0' }}>
+        <Form.Item style={{ margin: '0' }}>
           <Button
             type="primary"
             htmlType="submit"
