@@ -27,3 +27,9 @@ export function validateForm(state, data) {
     return validateInput(vldScheme, value);
   });
 }
+
+
+const passwordRegexp = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[\w]{6,40}/g;
+export function validatePassword(str) {
+  return str.match(passwordRegexp);
+}
