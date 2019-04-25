@@ -20,5 +20,8 @@ npm run compile
 # run local server
 npm run dev
 
+# run json-server
+npm run server
+
 # head over to http://0.0.0.0:8020
 ```
