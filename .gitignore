@@ -19,5 +19,4 @@ node_modules
 npm-debug.log
 application/public
 .tmp
-/public
-/json-server/db.json
+/json-server/*.json
