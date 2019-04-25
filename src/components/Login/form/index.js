@@ -1,7 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { reduxForm, propTypes, Field } from 'redux-form';
 import { TextField } from 'components';
-import { Icon, Button, Form } from 'antd';
+import {
+  Icon, Button, Form,
+  Tooltip,
+} from 'antd';
 import { validateInput, validationTypes } from 'lib/validation';
 //
 
@@ -30,6 +34,7 @@ const validate = (values) => {
 export class LoginForm extends React.PureComponent {
   static propTypes = {
     ...propTypes,
+    isLoading: PropTypes.bool,
   };
 
   render() {
@@ -45,6 +50,11 @@ export class LoginForm extends React.PureComponent {
           error="aaa"
           component={TextField}
           prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+          suffix={
+            <Tooltip title="test@email.com 123456">
+              <Icon type="info-circle" style={{ color: 'rgba(0,0,0,.45)' }} />
+            </Tooltip>
+          }
         />
 
         <Field
@@ -61,6 +71,8 @@ export class LoginForm extends React.PureComponent {
             htmlType="submit"
             className="login-form-button"
             style={{ width: '100%' }}
+            loading={this.props.isLoading}
+            icon="login"
           >
             Log in
           </Button>

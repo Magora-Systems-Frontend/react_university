@@ -1,11 +1,33 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import {bindActionCreators} from 'redux';
 import { ROUTES } from 'config/constants';
+import { logout } from 'pages/App/actions';
 import HeaderControls from './controls/HeaderControls'
+import HeaderUserControls from './user-controls/HeaderUserControls'
 
 import './header.sass';
 
+@connect(mapStateToProps, mapDispatchToProps)
 export class Header extends React.PureComponent {
+  static propTypes = {
+    authState: PropTypes.object,
+    logout: PropTypes.func,
+  };
+
+  renderControls = () => {
+    const { authState = {}, logout } = this.props;
+
+    if (authState.isAuth) {
+      return (
+       <HeaderUserControls logout={logout} />
+      );
+    }
+
+    return (<HeaderControls />);
+  };
 
   render() {
     return (
@@ -22,11 +44,24 @@ export class Header extends React.PureComponent {
           </Link>
 
           <div className="header__right-side">
-            <HeaderControls />
+            { this.renderControls() }
+
           </div>
 
         </div>
       </header>
     );
   }
+}
+
+function mapStateToProps(store = {}) {
+  const { global = {} } = store;
+  const { authState = {} } = global;
+  return { authState };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    logout: bindActionCreators(logout, dispatch),
+  };
 }
