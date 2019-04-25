@@ -14,6 +14,7 @@ class SignUpModal extends React.PureComponent {
         onCancel={this.props.hideModal}
         title={<TitleWithTextButton title="Sign Up" btnText="Log In" onClick={() =>  this.props.showModal('login')} />}
         closable={false}
+        style={{ maxWidth: '400px' }}
       >
         SignUp modal template
       </Modal>

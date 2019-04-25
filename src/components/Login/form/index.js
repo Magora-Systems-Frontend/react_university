@@ -1,7 +1,7 @@
 import React from 'react';
 import { reduxForm, propTypes, Field } from 'redux-form';
 import { TextField } from 'components';
-import { Icon } from 'antd';
+import { Icon, Button, Form } from 'antd';
 import { validateInput, validationTypes } from 'lib/validation';
 //
 
@@ -33,8 +33,10 @@ export class LoginForm extends React.PureComponent {
   };
 
   render() {
+    const { handleSubmit } = this.props;
+
     return (
-      <form className="login-form">
+      <form onSubmit={handleSubmit} className="login-form">
 
         <Field
           name="email"
@@ -52,6 +54,17 @@ export class LoginForm extends React.PureComponent {
           component={TextField}
           prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
         />
+
+        <Form.Item style={{ margin: '20px 0 0' }}>
+          <Button
+            type="primary"
+            htmlType="submit"
+            className="login-form-button"
+            style={{ width: '100%' }}
+          >
+            Log in
+          </Button>
+        </Form.Item>
 
       </form>
     );
