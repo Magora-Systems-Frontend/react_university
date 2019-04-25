@@ -18,10 +18,11 @@ npm i
 npm run compile
 
 # run local server
+# head over to http://0.0.0.0:8020
 npm run dev
 
 # run json-server
+# head over to http://0.0.0.0:8021
 npm run server
 
-# head over to http://0.0.0.0:8020
 ```
