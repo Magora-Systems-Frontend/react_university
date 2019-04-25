@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { reduxForm, propTypes, Field } from 'redux-form';
 import { TextField } from 'components';
 import {
@@ -33,6 +34,7 @@ const validate = (values) => {
 export class LoginForm extends React.PureComponent {
   static propTypes = {
     ...propTypes,
+    isLoading: PropTypes.bool,
   };
 
   render() {
@@ -69,6 +71,8 @@ export class LoginForm extends React.PureComponent {
             htmlType="submit"
             className="login-form-button"
             style={{ width: '100%' }}
+            loading={this.props.isLoading}
+            icon="login"
           >
             Log in
           </Button>

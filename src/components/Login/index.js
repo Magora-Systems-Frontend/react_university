@@ -12,9 +12,15 @@ export class Login extends React.PureComponent {
     hideModal: PropTypes.func,
   };
 
+  state = {
+    isLoading: false,
+  };
+
   onSubmit = async (values) => {
 
+    this.setState({ isLoading: true });
     const res = await login(values, this.props.dispatch);
+    this.setState({ isLoading: false });
 
     if (!res) {
       throw new SubmissionError({ email: 'Network error', password: 'Network error' });
@@ -31,7 +37,7 @@ export class Login extends React.PureComponent {
   render() {
     return (
       <div className="login">
-        <LoginForm onSubmit={this.onSubmit} />
+        <LoginForm onSubmit={this.onSubmit} isLoading={this.state.isLoading} />
       </div>
     );
   }
