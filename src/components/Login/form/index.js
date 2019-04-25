@@ -1,8 +1,10 @@
 import React from 'react';
 import { reduxForm, propTypes, Field } from 'redux-form';
 import { TextField } from 'components';
-import { Icon } from 'antd';
+import { Icon, Form } from 'antd';
 //
+
+const FormItem = Form.Item;
 
 const validate = (values) => {
   const errors = {};
@@ -11,6 +13,10 @@ const validate = (values) => {
 
   if (!values.email) {
     errors.email = 'Email is required';
+  }
+
+  if (!values.password) {
+    errors.password = 'Field is required';
   }
 
   return errors;
@@ -28,14 +34,29 @@ export class LoginForm extends React.PureComponent {
   render() {
     return (
       <form className="login-form">
-        <Field
-          name="email"
-          type="email"
-          label="Email:"
-          placeholder="Email"
-          component={TextField}
-          prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-        />
+
+        <FormItem>
+          <Field
+            name="email"
+            type="email"
+            label="Email:"
+            placeholder="Email"
+            component={TextField}
+            prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+          />
+        </FormItem>
+
+        <FormItem>
+          <Field
+            name="password"
+            type="password"
+            label="Email:"
+            placeholder="Password"
+            component={TextField}
+            prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
+          />
+        </FormItem>
+
       </form>
     );
   }

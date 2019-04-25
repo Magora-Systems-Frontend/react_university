@@ -15,14 +15,14 @@ export class TextField extends React.PureComponent {
     const {
       meta,
       input,
+      type,
     } = this.props;
 
+    const inputElement = type === 'password' ? Input.Password : Input;
+
     return (
-      <div className="text-field">
-        <Input
-          {...this.props}
-          {...input}
-        />
+      <div className="text-field" style={{ position: 'relative' }}>
+        {React.createElement(inputElement, { ...this.props, ...input })}
         {meta.error && meta.touched
           ? <AbsolutePositioningError>{meta.error}</AbsolutePositioningError> : null
         }
