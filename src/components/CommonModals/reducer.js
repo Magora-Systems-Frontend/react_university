@@ -17,6 +17,7 @@ function commonModalReducer(state = initialState, action = {}) {
     case 'HIDE_MODAL':
       return ({
         ...state,
+        modal: '',
         isShow: false,
       });
     default:

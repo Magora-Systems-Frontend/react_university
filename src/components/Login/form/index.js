@@ -1,22 +1,23 @@
 import React from 'react';
 import { reduxForm, propTypes, Field } from 'redux-form';
 import { TextField } from 'components';
-import { Icon, Form } from 'antd';
+import { Icon } from 'antd';
+import { validateInput, validationTypes } from 'lib/validation';
 //
-
-const FormItem = Form.Item;
 
 const validate = (values) => {
   const errors = {};
 
-  console.log(values);
-
   if (!values.email) {
-    errors.email = 'Email is required';
+    errors.email = 'Fill in all required fields';
+  } else {
+    if (!validateInput(validationTypes.EMAIL, values.email)) {
+      errors.email = 'Invalid email format';
+    }
   }
 
   if (!values.password) {
-    errors.password = 'Field is required';
+    errors.password = 'Fill in all required fields';
   }
 
   return errors;

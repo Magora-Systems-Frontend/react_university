@@ -66,6 +66,7 @@ module.exports = {
       library: makePath('../src/lib/'),
       pages: makePath('../src/pages/'),
       components: makePath('../src/components/'),
+      lib: makePath('../src/lib/'),
       config: makePath('../src/config'),
       utils: makePath('../src/utils'),
       node_modules: makePath('../node_modules')
