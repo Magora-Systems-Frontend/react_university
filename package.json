@@ -20,6 +20,7 @@
     "@babel/preset-react": "^7.0.0-beta.49",
     "babel-loader": "^8.0.0-beta.3",
     "babel-plugin-dynamic-import-webpack": "^1.1.0",
+    "body-parser": "^1.18.3",
     "css-loader": "^1.0.0",
     "directory-named-webpack-plugin": "^4.0.0",
     "eslint-bundle": "^1.0.2",
