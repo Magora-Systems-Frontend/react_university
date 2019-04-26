@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { SubmissionError } from 'redux-form';
 import { connect } from 'react-redux';
 import { login } from 'pages/App/actions';
+import { message } from 'antd';
 import { LoginForm } from './form';
 
 @connect(null, mapDispatchToProps)
@@ -31,39 +32,46 @@ export class Login extends React.PureComponent {
       throw new SubmissionError({ email: 'Unknown server error', password: 'Unknown server error' });
     }
 
+    message.success('Successful login!');
     this.props.hideModal();
   };
 
   onGoogleLoginClick = async () => {
-    console.log('google');
-    const auth2 = window.gapi.auth2.getAuthInstance();
-    const googleUser = await auth2.signIn();
 
-    const profile = googleUser.getBasicProfile();
+    let id_token;
+    try {
+      const GoogleAuth = window.gapi.auth2.getAuthInstance();
+      const GoogleUser = await GoogleAuth.signIn();
+      id_token = GoogleUser.getAuthResponse().id_token;
+    } catch (error) {
+      if (error.error === 'network_error') {
+        return message.error('Network error');
+      }
+      return;
+    }
 
-    console.log('ID: ' + profile.getId()); // не посылайте подобную информацию напрямую, на ваш сервер!
-    console.log('Full Name: ' + profile.getName());
-    console.log('Given Name: ' + profile.getGivenName());
-    console.log('Family Name: ' + profile.getFamilyName());
-    console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail());
+    /* You can get user profile info on client, but we will do it on server side */
+    // const profile = GoogleUser.getBasicProfile();
+    const requestValues = {
+      // firstName: profile.getGivenName(),
+      // lastName: profile.getFamilyName(),
+      // avatarUrl: profile.getImageUrl(),
+      // email: profile.getEmail(),
+      id_token: id_token,
+    };
 
-    // auth2.signIn().then(async (googleUser) => {
-    //
-    //   const profile = googleUser.getBasicProfile();
-    //   console.log('ID: ' + profile.getId()); // не посылайте подобную информацию напрямую, на ваш сервер!
-    //   console.log('Full Name: ' + profile.getName());
-    //   console.log('Given Name: ' + profile.getGivenName());
-    //   console.log('Family Name: ' + profile.getFamilyName());
-    //   console.log('Image URL: ' + profile.getImageUrl());
-    //   console.log('Email: ' + profile.getEmail());
-    //
-    //   const res = await login(values, this.props.dispatch, 'LOGIN_SERVER');
-    //
-    //   // токен
-    //   const id_token = googleUser.getAuthResponse().id_token;
-    //   console.log('ID Token: ' + id_token);
-    // });
+    const res = await login(requestValues, this.props.dispatch, 'LOGIN_GOOGLE');
+
+    if (!res) {
+      return message.error('Network error');
+    } else if (res.status === 410) {
+      return message.error('Invalid auth data!');
+    } else if (res.status !== 200) {
+      return message.error('Unknown server error');
+    }
+
+    message.success('Successful login!');
+    this.props.hideModal();
   };
 
   render() {

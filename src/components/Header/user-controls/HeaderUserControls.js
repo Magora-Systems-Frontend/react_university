@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import lodash from 'lodash';
 import {
   Avatar, Menu, Dropdown,
   Icon,
@@ -8,6 +9,7 @@ import {
 class HeaderUserControls extends React.PureComponent {
   static propTypes = {
     logout: PropTypes.func,
+    authState: PropTypes.object,
   };
 
   logOutClick = () => {
@@ -24,9 +26,12 @@ class HeaderUserControls extends React.PureComponent {
   );
 
   render() {
+    const { authState = {} } = this.props;
+    const avatarUrl = lodash.get(authState, 'userInfo.avatarUrl');
+
     return (
       <Dropdown overlay={this.renderMenu()} trigger={['click']} placement="bottomLeft">
-        <Avatar size={35} icon="user" style={{ cursor: 'pointer' }} />
+        <Avatar src={avatarUrl} size={35} icon="user" style={{ cursor: 'pointer' }} />
       </Dropdown>
     );
   }

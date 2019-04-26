@@ -1,6 +1,7 @@
 import { REACT_APP_GOOGLE_CLIENT_ID } from 'config/constants';
 
-const _onInit = auth2 => console.log('googleAuthInit init OK', auth2);
+// const _onInit = auth2 => console.log('googleAuthInit init OK', auth2);
+const _onInit = () => {};
 const _onError = err => console.log('googleAuthInit init error', err);
 
 export const googleAuthInit = () => {

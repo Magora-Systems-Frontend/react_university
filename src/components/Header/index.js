@@ -22,7 +22,7 @@ export class Header extends React.PureComponent {
 
     if (authState.isAuth) {
       return (
-       <HeaderUserControls logout={logout} />
+       <HeaderUserControls logout={logout} authState={authState} />
       );
     }
 
