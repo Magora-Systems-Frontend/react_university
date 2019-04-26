@@ -1,18 +1,14 @@
 const userLogin = async (req, res) => {
   const { email = '', password = '' } = req.body;
 
+  console.log(req.body);
+
   if (email === 'test@email.com' && password === '123456') {
     return res.status(200).send({
       status: 200,
       data: {
         accessToken: 'trueAccessToken',
         refreshToken: 'trueRefreshToken',
-        userInfo: {
-          email: 'test@email.com',
-          firstName: 'Semen',
-          lastName: 'Semenovich',
-          imageUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
-        },
       },
     });
   }
