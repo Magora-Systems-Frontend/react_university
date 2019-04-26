@@ -49,7 +49,8 @@ export class SignUpPhoneForm extends PureComponent {
       <form onSubmit={handleSubmit}>
         <Field
           name="phone"
-          type="text"
+          type="mask"
+          mask={'+7-999-999-99-99'}
           placeholder="Phone"
           error="error"
           component={TextField}
@@ -64,8 +65,8 @@ export class SignUpPhoneForm extends PureComponent {
         <div style={{display: 'flex', justifyContent: 'space-between'}}>
           <Field
             name="code"
-            type="code"
-            formatter={value => "+7-" + value.replace(/\B(?=(\d{3})+(?!\d))/g, '-')}
+            type="mask"
+            mask={'9999'}
             placeholder="Code"
             component={TextField}
             prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}

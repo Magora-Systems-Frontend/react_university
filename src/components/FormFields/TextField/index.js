@@ -1,7 +1,16 @@
 import React from 'react';
 import { fieldPropTypes } from 'redux-form';
 import { Input, Form, InputNumber } from 'antd';
+import ReactInputMask from 'react-input-mask';
 //
+
+const InputMask = (props) => {
+  return (
+    <ReactInputMask {...props}>
+      { (inputProps) => <Input {...inputProps} disabled={props.disabled ? props.disabled : null} /> }
+    </ReactInputMask>
+  );
+};
 
 export class TextField extends React.PureComponent {
   static propTypes = {
@@ -23,6 +32,9 @@ export class TextField extends React.PureComponent {
         break;
       case ('code'):
         inputElement = InputNumber;
+        break;
+      case ('mask'):
+        inputElement = InputMask;
         break;
       default:
         inputElement = Input
