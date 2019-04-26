@@ -74,6 +74,19 @@ export class LoginForm extends React.PureComponent {
             loading={this.props.isLoading}
             icon="login"
           >
+            Log in with Google
+          </Button>
+        </Form.Item>
+
+        <Form.Item style={{ margin: '0' }}>
+          <Button
+            type="primary"
+            htmlType="submit"
+            className="login-form-button"
+            style={{ width: '100%' }}
+            loading={this.props.isLoading}
+            icon="login"
+          >
             Log in
           </Button>
         </Form.Item>
