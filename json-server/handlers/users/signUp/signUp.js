@@ -12,7 +12,6 @@ const signUp = async (req, res) => {
   }
 
   return res.status(401).send({ message: 'Something went wrong' });
-
 };
 
 module.exports = signUp;

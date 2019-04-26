@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { fieldPropTypes } from 'redux-form';
-import { Input, Form } from 'antd';
+import { Input, Form, InputNumber } from 'antd';
 //
 
 export class TextField extends React.PureComponent {
@@ -17,7 +16,18 @@ export class TextField extends React.PureComponent {
       type,
     } = this.props;
 
-    const inputElement = type === 'password' ? Input.Password : Input;
+    let inputElement;
+    switch (type) {
+      case ('password'):
+        inputElement = Input.Password;
+        break;
+      case ('code'):
+        inputElement = InputNumber;
+        break;
+      default:
+        inputElement = Input
+    }
+
     const validateStatus = meta.error && meta.touched ? 'error' : '';
     const help = meta.error && meta.touched ? meta.error : '';
 
