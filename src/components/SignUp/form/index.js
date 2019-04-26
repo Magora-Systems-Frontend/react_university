@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { reduxForm, propTypes, Field } from 'redux-form';
 import { TextField } from 'components';
-import { Icon, Button, Form } from 'antd';
+import { Icon, Button, Form, Tooltip } from 'antd';
 import { validateInput, validationTypes, validatePassword } from 'lib/validation';
 
 const validate = (values) => {
@@ -56,6 +56,11 @@ export class SignUpForm extends PureComponent {
           error="error"
           component={TextField}
           prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+          suffix={
+            <Tooltip title="test@email.com aS123456">
+              <Icon type="info-circle" style={{ color: 'rgba(0,0,0,.45)' }} />
+            </Tooltip>
+          }
         />
 
         <Field

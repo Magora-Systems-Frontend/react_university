@@ -18,7 +18,7 @@ class SignUpModal extends PureComponent {
         footer={null}
         style={{ maxWidth: '400px' }}
       >
-        <SignUp />
+        <SignUp hideModal={this.props.hideModal}/>
       </Modal>
     );
   }

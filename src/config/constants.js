@@ -10,4 +10,5 @@ export const ROUTES = {
 
 export const API_METHODS = {
   LOGIN: '/users/login',
+  SIGN_UP: '/users/register',
 };
