@@ -27,8 +27,12 @@ npm run server
 
 ```
 
-### Credentials
+Credentials
+---------------
 Test accounts: https://intranet.magora.team/services/accountStorage/
 
-For Google Auth: magoramagorova@gmail.com (FrontendReactTemplate)
-https://console.developers.google.com/apis/
+###For Google Auth:
+magoramagorova@gmail.com (FrontendReactTemplate)
+- [Project Location](https://console.developers.google.com/apis/dashboard?pli=1&authuser=1&project=frontendreacttemplate&folder=&organizationId=&supportedpurview=project)
+- [API Docs](https://developers.google.com/identity/sign-in/web/reference)
+

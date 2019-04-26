@@ -34,10 +34,35 @@ export class Login extends React.PureComponent {
     this.props.hideModal();
   };
 
+  onGoogleLoginClick = () => {
+    console.log('google');
+    const auth2 = window.gapi.auth2.getAuthInstance();
+    auth2.signIn().then(googleUser => {
+
+      // метод возвращает объект пользователя
+      // где есть все необходимые нам поля
+      const profile = googleUser.getBasicProfile();
+      console.log('ID: ' + profile.getId()); // не посылайте подобную информацию напрямую, на ваш сервер!
+      console.log('Full Name: ' + profile.getName());
+      console.log('Given Name: ' + profile.getGivenName());
+      console.log('Family Name: ' + profile.getFamilyName());
+      console.log('Image URL: ' + profile.getImageUrl());
+      console.log('Email: ' + profile.getEmail());
+
+      // токен
+      const id_token = googleUser.getAuthResponse().id_token;
+      console.log('ID Token: ' + id_token);
+    });
+  };
+
   render() {
     return (
       <div className="login">
-        <LoginForm onSubmit={this.onSubmit} isLoading={this.state.isLoading} />
+        <LoginForm
+          onSubmit={this.onSubmit}
+          isLoading={this.state.isLoading}
+          onGoogleLoginClick={this.onGoogleLoginClick}
+        />
       </div>
     );
   }

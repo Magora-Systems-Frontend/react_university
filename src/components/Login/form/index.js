@@ -35,10 +35,11 @@ export class LoginForm extends React.PureComponent {
   static propTypes = {
     ...propTypes,
     isLoading: PropTypes.bool,
+    onGoogleLoginClick: PropTypes.func,
   };
 
   render() {
-    const { handleSubmit } = this.props;
+    const { handleSubmit, onGoogleLoginClick } = this.props;
 
     return (
       <form onSubmit={handleSubmit} className="login-form">
@@ -68,11 +69,11 @@ export class LoginForm extends React.PureComponent {
         <Form.Item style={{ margin: '0' }}>
           <Button
             type="primary"
-            htmlType="submit"
+            htmlType="button"
             className="login-form-button"
             style={{ width: '100%' }}
-            loading={this.props.isLoading}
-            icon="login"
+            icon="google"
+            onClick={onGoogleLoginClick}
           >
             Log in with Google
           </Button>
