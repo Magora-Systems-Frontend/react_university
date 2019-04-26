@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import { reduxForm, propTypes, Field } from 'redux-form';
 import { TextField } from 'components';
 import { Icon, Button, Form, Tooltip } from 'antd';
@@ -41,11 +42,12 @@ const validate = (values) => {
 
 export class SignUpForm extends PureComponent {
   static propTypes = {
+    submitting: PropTypes.bool,
     ...propTypes
-  }
+  };
 
   render() {
-    const { handleSubmit } = this.props;
+    const { handleSubmit, submitting } = this.props;
 
     return (
       <form onSubmit={handleSubmit} className="signup-form">
@@ -84,6 +86,7 @@ export class SignUpForm extends PureComponent {
             type="primary"
             htmlType="submit"
             className="signup-form-button"
+            loading={submitting}
             style={{ width: '100%' }}
           >
             Sign up
