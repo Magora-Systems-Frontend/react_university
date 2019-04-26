@@ -35,10 +35,11 @@ export class LoginForm extends React.PureComponent {
   static propTypes = {
     ...propTypes,
     isLoading: PropTypes.bool,
+    onGoogleLoginClick: PropTypes.func,
   };
 
   render() {
-    const { handleSubmit } = this.props;
+    const { handleSubmit, onGoogleLoginClick } = this.props;
 
     return (
       <form onSubmit={handleSubmit} className="login-form">
@@ -64,6 +65,19 @@ export class LoginForm extends React.PureComponent {
           component={TextField}
           prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
         />
+
+        <Form.Item style={{ margin: '0' }}>
+          <Button
+            type="primary"
+            htmlType="button"
+            className="login-form-button"
+            style={{ width: '100%' }}
+            icon="google"
+            onClick={onGoogleLoginClick}
+          >
+            Log in with Google
+          </Button>
+        </Form.Item>
 
         <Form.Item style={{ margin: '0' }}>
           <Button

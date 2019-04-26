@@ -7,6 +7,12 @@ const userLogin = async (req, res) => {
       data: {
         accessToken: 'trueAccessToken',
         refreshToken: 'trueRefreshToken',
+        userInfo: {
+          email: 'test@email.com',
+          firstName: 'Semen',
+          lastName: 'Semenovich',
+          avatarUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
+        },
       },
     });
   }

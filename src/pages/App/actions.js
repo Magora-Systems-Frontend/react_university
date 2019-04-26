@@ -6,12 +6,33 @@ import { saveItem, removeItem, KEYS } from 'utils/localStorage';
  * Application Actions
 */
 
-export async function login(values, dispatch) {
+/**
+ * Checks if a network request came back fine, and throws an error if not
+ *
+ * @param  {object} values   Body params
+ * @param  {function} dispatch   Redux dispatch function
+ * @param  {string} type   Login type 'LOGIN_SERVER', 'LOGIN_GOOGLE'
+ *
+ * @return {object|undefined} Returns the response, or throws an error
+ */
+export async function login(values, dispatch, type = 'COMMON') {
   const axios = getAxios();
+
+  let requestUrl;
+  switch (type) {
+    case 'LOGIN_SERVER':
+      requestUrl = API_METHODS.LOGIN;
+      break;
+    case 'LOGIN_GOOGLE':
+      requestUrl = API_METHODS.LOGIN_GOOGLE;
+      break;
+    default:
+      throw new Error('Provide valid login type!');
+  }
 
   let response;
   try {
-    response = await axios.post(API_METHODS.LOGIN, values);
+    response = await axios.post(requestUrl, values);
     const { data } = response;
 
     data.isAuth = true;
