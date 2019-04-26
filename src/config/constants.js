@@ -5,5 +5,6 @@ export const OVERLAY_LIFESPAN_MS = 5000;
 
 export const ROUTES = {
   'HOME_PAGE': '/',
-  'ADMIN_PANEL': '/admin-panel'
+  'ADMIN_PANEL': '/admin-panel',
+  'REGISTRATION_FORM': '/registration-form'
 };

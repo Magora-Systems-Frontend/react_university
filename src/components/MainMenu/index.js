@@ -37,6 +37,11 @@ class MainMenu extends React.Component {
             <Icon type="tool" />Administration Panel
           </Link>
         </Menu.Item>
+        <Menu.Item key="form">
+          <Link to={ROUTES.REGISTRATION_FORM}>
+            <Icon type="form" />Registration Form
+          </Link>
+        </Menu.Item>
       </Menu>
     );
   }
