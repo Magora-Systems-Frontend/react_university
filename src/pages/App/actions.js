@@ -30,7 +30,6 @@ export function setAuthState(authState) {
     type: 'APP_SET_AUTH_STATE',
     payload: {
       ...authState,
-      a: 'aaaa',
     },
   };
 }
