@@ -76,8 +76,38 @@ export class Login extends React.PureComponent {
 
   onFacebookLoginClick = async () => {
     window.FB.login((response) => {
+      if (!response.authResponse) {
+        return;
+      }
+      const { accessToken } = response.authResponse;
+      console.log(accessToken);
       console.log(response);
-    });
+      window.FB.api('/me', {locale: 'en_US', fields: 'id,first_name,last_name,email,picture'},
+        async (profileResponse) => {
+
+          const requestValues = {
+            firstName: profileResponse.first_name,
+            lastName: profileResponse.last_name,
+            avatarUrl: profileResponse.picture.data.url,
+            email: profileResponse.email,
+            accessToken,
+          };
+
+          const res = await login(requestValues, this.props.dispatch, 'LOGIN_FACEBOOK');
+
+          if (!res) {
+            return message.error('Network error');
+          } else if (res.status === 410) {
+            return message.error('Invalid auth data!');
+          } else if (res.status !== 200) {
+            return message.error('Unknown server error');
+          }
+
+          message.success('Successful login!');
+          this.props.hideModal();
+        });
+    }, { scope: 'email' });
+
   };
 
   onVKLoginClick = async () => {

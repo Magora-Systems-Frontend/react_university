@@ -26,6 +26,9 @@ export async function login(values, dispatch, type = 'COMMON') {
     case 'LOGIN_GOOGLE':
       requestUrl = API_METHODS.LOGIN_GOOGLE;
       break;
+    case 'LOGIN_FACEBOOK':
+      requestUrl = API_METHODS.LOGIN_FACEBOOK;
+      break;
     case 'LOGIN_VK':
       requestUrl = API_METHODS.LOGIN_VK;
       break;

@@ -15,6 +15,7 @@ export const ROUTES = {
 export const API_METHODS = {
   LOGIN: '/users/login',
   LOGIN_GOOGLE: '/users/login/google',
+  LOGIN_FACEBOOK: '/users/login/facebook',
   LOGIN_VK: '/users/login/vk',
   SIGN_UP: '/users/register',
   SIGN_UP_PHONE: '/users/register/phone',

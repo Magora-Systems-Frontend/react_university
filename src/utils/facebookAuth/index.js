@@ -6,7 +6,9 @@ export const facebookAuthInit = () => {
     appId: REACT_APP_FACEBOOK_APP_ID, // FB App ID
     autoLogAppEvents: true,
     xfbml: true,
-    version: 'v3.2'
+    version: 'v3.2',
+    cookie: false,
+    status: false,
   });
 
 };
