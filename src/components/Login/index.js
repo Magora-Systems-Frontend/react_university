@@ -118,7 +118,7 @@ export class Login extends React.PureComponent {
           message.success('Successful login!');
           this.props.hideModal();
         });
-    }, { scope: 'email, user_friends' });
+    }, { scope: 'email' }); /* user_friends - for user-friends permission (warning in login pop-up) */
 
   };
 
