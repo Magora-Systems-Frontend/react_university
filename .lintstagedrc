@@ -1,0 +1,12 @@
+{
+  "src/**/*.js": [
+    "eslint --ext .js --fix",
+    "npm run prettier",
+    "git add"
+  ],
+  "**/*.scss": [
+    "stylelint --syntax scss",
+    "npm run prettier",
+    "git add"
+  ]
+}
