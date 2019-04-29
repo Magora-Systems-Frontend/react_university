@@ -74,6 +74,43 @@ export class Login extends React.PureComponent {
     this.props.hideModal();
   };
 
+  onVKLoginClick = async () => {
+    let id_token;
+    // try {
+    //   const GoogleAuth = window.gapi.auth2.getAuthInstance();
+    //   const GoogleUser = await GoogleAuth.signIn();
+    //   id_token = GoogleUser.getAuthResponse().id_token;
+    // } catch (error) {
+    //   if (error.error === 'network_error') {
+    //     return message.error('Network error');
+    //   }
+    //   return;
+    // }
+    //
+    // /* You can get user profile info on client, but we will do it on server side */
+    // // const profile = GoogleUser.getBasicProfile();
+    // const requestValues = {
+    //   // firstName: profile.getGivenName(),
+    //   // lastName: profile.getFamilyName(),
+    //   // avatarUrl: profile.getImageUrl(),
+    //   // email: profile.getEmail(),
+    //   id_token: id_token,
+    // };
+
+    // const res = await login(requestValues, this.props.dispatch, 'LOGIN_VK');
+
+    // if (!res) {
+    //   return message.error('Network error');
+    // } else if (res.status === 410) {
+    //   return message.error('Invalid auth data!');
+    // } else if (res.status !== 200) {
+    //   return message.error('Unknown server error');
+    // }
+    //
+    // message.success('Successful login!');
+    // this.props.hideModal();
+  };
+
   render() {
     return (
       <div className="login">
@@ -81,6 +118,7 @@ export class Login extends React.PureComponent {
           onSubmit={this.onSubmit}
           isLoading={this.state.isLoading}
           onGoogleLoginClick={this.onGoogleLoginClick}
+          onVKLoginClick={this.onVKLoginClick}
         />
       </div>
     );
