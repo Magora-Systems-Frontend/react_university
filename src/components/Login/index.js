@@ -76,39 +76,51 @@ export class Login extends React.PureComponent {
 
   onVKLoginClick = async () => {
     let id_token;
+    let user;
+
     // try {
-    //   const GoogleAuth = window.gapi.auth2.getAuthInstance();
-    //   const GoogleUser = await GoogleAuth.signIn();
-    //   id_token = GoogleUser.getAuthResponse().id_token;
+    //   const VKAuth = await VK.Auth.login();
+    //   const VKUser = await VK.Auth.getLoginStatus;
+    //   console.log(VKUser);
+    //   id_token = VKUser;
     // } catch (error) {
     //   if (error.error === 'network_error') {
     //     return message.error('Network error');
     //   }
     //   return;
     // }
-    //
-    // /* You can get user profile info on client, but we will do it on server side */
-    // // const profile = GoogleUser.getBasicProfile();
-    // const requestValues = {
-    //   // firstName: profile.getGivenName(),
-    //   // lastName: profile.getFamilyName(),
-    //   // avatarUrl: profile.getImageUrl(),
-    //   // email: profile.getEmail(),
-    //   id_token: id_token,
-    // };
 
-    // const res = await login(requestValues, this.props.dispatch, 'LOGIN_VK');
-
-    // if (!res) {
-    //   return message.error('Network error');
-    // } else if (res.status === 410) {
-    //   return message.error('Invalid auth data!');
-    // } else if (res.status !== 200) {
-    //   return message.error('Unknown server error');
-    // }
+    VK.Auth.login(function(response) {
+      if (response.session) {
+        console.log(response);
+        id_token = response.session.mid;
+        user = response.session.user;
+      } else {
+        return;
+      }
+    });
     //
-    // message.success('Successful login!');
-    // this.props.hideModal();
+    const requestValues = {
+      // firstName: user.first_name,
+      // lastName: user.last_name,
+      // avatarUrl: user.href,
+      // email: user.nickname,
+      user_id: user.id,
+      id_token: id_token,
+    };
+    console.log(requestValues);
+    const res = login(requestValues, this.props.dispatch, 'LOGIN_VK');
+
+    if (!res) {
+      return message.error('Network error');
+    } else if (res.status === 410) {
+      return message.error('Invalid auth data!');
+    } else if (res.status !== 200) {
+      return message.error('Unknown server error');
+    }
+
+    message.success('Successful login!');
+    this.props.hideModal();
   };
 
   render() {
