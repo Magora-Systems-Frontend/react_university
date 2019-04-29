@@ -39,7 +39,7 @@ export class LoginForm extends React.PureComponent {
   };
 
   render() {
-    const { handleSubmit, onGoogleLoginClick } = this.props;
+    const { handleSubmit, onGoogleLoginClick, onVKLoginClick } = this.props;
 
     return (
       <form onSubmit={handleSubmit} className="login-form">
@@ -77,6 +77,18 @@ export class LoginForm extends React.PureComponent {
           >
             Log in with Google
           </Button>
+        </Form.Item>
+
+        <Form.Item style={{ margin: '0' }}>
+            <Button
+              type="primary"
+              htmlType="button"
+              className="login-form-button"
+              style={{ width: '100%' }}
+              onClick={onVKLoginClick}
+            >
+              Log in with VK
+            </Button>
         </Form.Item>
 
         <Form.Item style={{ margin: '0' }}>
