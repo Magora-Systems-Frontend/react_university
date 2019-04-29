@@ -4,6 +4,7 @@ import { ConnectedRouter } from 'connected-react-router'
 //
 import App from 'pages/App';
 import HomePage from 'pages/HomePage/Loadable';
+import RegistrationFormPage from 'pages/RegistrationFormPage/index';
 import NotFoundPage from 'pages/NotFoundPage/Loadable';
 import { history } from './store';
 import { ROUTES } from './config/constants';
@@ -26,6 +27,15 @@ export const routes = (
         render={(props) => (
           <App>
             <NotFoundPage {...props} />
+          </App>
+        )}
+      />
+      <Route
+        exact
+        path={ROUTES.REGISTRATION_FORM}
+        render={(props) => (
+          <App>
+            <RegistrationFormPage {...props} />
           </App>
         )}
       />

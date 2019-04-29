@@ -24,6 +24,7 @@ export class TextField extends React.PureComponent {
       input,
       type,
     } = this.props;
+    // console.log(this.props);
 
     let inputElement;
     switch (type) {
