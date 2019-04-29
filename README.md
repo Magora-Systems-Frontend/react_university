@@ -36,3 +36,6 @@ magoramagorova@gmail.com (FrontendReactTemplate)
 - [Project Location](https://console.developers.google.com/apis/dashboard?pli=1&authuser=1&project=frontendreacttemplate&folder=&organizationId=&supportedpurview=project)
 - [API Docs](https://developers.google.com/identity/sign-in/web/reference)
 
+###For Facebook Auth:
+testmagora@gmail.com y5 (FrontendReactTemplate)
+- [Project Location](https://developers.facebook.com/apps/2284406111882705/dashboard/)
