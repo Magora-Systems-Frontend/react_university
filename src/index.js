@@ -5,6 +5,7 @@ import Root from 'pages/Root';
 import store from './store';
 import * as axiosClient from 'utils/api/axiosClient';
 import { googleAuthInit } from 'utils/googleAuth';
+import { facebookAuthInit } from 'utils/facebookAuth';
 
 import './styles/app.scss';
 import 'antd/dist/antd.css';
@@ -19,5 +20,6 @@ if (NODE_ENV !== 'production') {
 }
 
 googleAuthInit();
+facebookAuthInit();
 axiosClient.init({ store, API_URL, API_VERSION });
 ReactDOM.render(<Root store={store} />, MOUNT_NODE);
