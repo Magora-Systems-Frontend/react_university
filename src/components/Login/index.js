@@ -64,7 +64,7 @@ export class Login extends React.PureComponent {
 
     if (!res) {
       return message.error('Network error');
-    } else if (res.status === 410) {
+    } else if (res.status === 401) {
       return message.error('Invalid auth data!');
     } else if (res.status !== 200) {
       return message.error('Unknown server error');
@@ -101,7 +101,7 @@ export class Login extends React.PureComponent {
             lastName: profileResponse.last_name,
             avatarUrl: profileResponse.picture.data.url,
             email: profileResponse.email,
-            accessToken,
+            accessToken: accessToken,
             userID,
           };
 
@@ -109,7 +109,7 @@ export class Login extends React.PureComponent {
 
           if (!res) {
             return message.error('Network error');
-          } else if (res.status === 410) {
+          } else if (res.status === 401) {
             return message.error('Invalid auth data!');
           } else if (res.status !== 200) {
             return message.error('Unknown server error');
