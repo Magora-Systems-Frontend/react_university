@@ -37,5 +37,6 @@ magoramagorova@gmail.com (FrontendReactTemplate)
 - [API Docs](https://developers.google.com/identity/sign-in/web/reference)
 
 ###For Facebook Auth:
-testmagora@gmail.com y5 (FrontendReactTemplate)
+testmagora@gmail.com (FrontendReactTemplate)
 - [Project Location](https://developers.facebook.com/apps/2284406111882705/dashboard/)
+- [API Docs](https://developers.facebook.com/docs/javascript/)

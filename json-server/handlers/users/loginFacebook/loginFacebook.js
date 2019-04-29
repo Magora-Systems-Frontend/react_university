@@ -2,10 +2,9 @@
 // const consts = require('../../../config/consts');
 
 const userLoginGoogle = async (req, res) => {
-  const { accessToken, ...body } = req.body;
+  const { accessToken, userID, ...body } = req.body;
 
-  console.log(accessToken);
-
+  // access token and userID should be verified
 
   return res.status(200).send({
     status: 200,

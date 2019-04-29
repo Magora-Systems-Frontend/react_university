@@ -8,7 +8,7 @@ export const facebookAuthInit = () => {
     xfbml: true,
     version: 'v3.2',
     cookie: false,
-    status: false,
+    status: true,
   });
 
 };

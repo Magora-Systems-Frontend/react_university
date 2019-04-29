@@ -79,11 +79,22 @@ export class Login extends React.PureComponent {
       if (!response.authResponse) {
         return;
       }
-      const { accessToken } = response.authResponse;
+      const { accessToken, userID } = response.authResponse;
       console.log(accessToken);
       console.log(response);
-      window.FB.api('/me', {locale: 'en_US', fields: 'id,first_name,last_name,email,picture'},
+      window.FB.api('/me', {locale: 'en_US', fields: 'id, first_name, last_name, email, picture'},
         async (profileResponse) => {
+
+          /*
+          * This method should return array of friends but it doesn't happen, because
+          * with according FB documentation user friends should also give permission
+          * for our application
+          * detailed: https://developers.facebook.com/docs/facebook-login/permissions#reference-user_friends
+          */
+
+          // window.FB.api(`/${userID}/friends`, 'GET', {}, function(response) {
+            // console.log(response);
+          // });
 
           const requestValues = {
             firstName: profileResponse.first_name,
@@ -91,6 +102,7 @@ export class Login extends React.PureComponent {
             avatarUrl: profileResponse.picture.data.url,
             email: profileResponse.email,
             accessToken,
+            userID,
           };
 
           const res = await login(requestValues, this.props.dispatch, 'LOGIN_FACEBOOK');
@@ -106,7 +118,7 @@ export class Login extends React.PureComponent {
           message.success('Successful login!');
           this.props.hideModal();
         });
-    }, { scope: 'email' });
+    }, { scope: 'email, user_friends' });
 
   };
 
