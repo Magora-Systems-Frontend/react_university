@@ -74,6 +74,12 @@ export class Login extends React.PureComponent {
     this.props.hideModal();
   };
 
+  onFacebookLoginClick = async () => {
+    window.FB.login((response) => {
+      console.log(response);
+    });
+  };
+
   onVKLoginClick = async () => {
     let id_token;
     // try {
@@ -118,6 +124,7 @@ export class Login extends React.PureComponent {
           onSubmit={this.onSubmit}
           isLoading={this.state.isLoading}
           onGoogleLoginClick={this.onGoogleLoginClick}
+          onFacebookLoginClick={this.onFacebookLoginClick}
           onVKLoginClick={this.onVKLoginClick}
         />
       </div>

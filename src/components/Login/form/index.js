@@ -36,10 +36,11 @@ export class LoginForm extends React.PureComponent {
     ...propTypes,
     isLoading: PropTypes.bool,
     onGoogleLoginClick: PropTypes.func,
+    onFacebookLoginClick: PropTypes.func,
   };
 
   render() {
-    const { handleSubmit, onGoogleLoginClick, onVKLoginClick } = this.props;
+    const { handleSubmit, onGoogleLoginClick, onFacebookLoginClick, onVKLoginClick } = this.props;
 
     return (
       <form onSubmit={handleSubmit} className="login-form">
@@ -76,6 +77,19 @@ export class LoginForm extends React.PureComponent {
             onClick={onGoogleLoginClick}
           >
             Log in with Google
+          </Button>
+        </Form.Item>
+
+        <Form.Item style={{ margin: '0' }}>
+          <Button
+            type="primary"
+            htmlType="button"
+            className="login-form-button"
+            style={{ width: '100%' }}
+            icon="facebook"
+            onClick={onFacebookLoginClick}
+          >
+            Log in with Facebook
           </Button>
         </Form.Item>
 
