@@ -52,7 +52,7 @@ export const routes = (
       />
       <Route
         exact
-        path={ROUTES.USER_PROFILE}
+        path={`${ROUTES.USER_PROFILE}/:id`}
         render={(props) => (
           <App>
             <UserProfilePage {...props} />

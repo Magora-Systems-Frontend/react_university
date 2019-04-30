@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import lodash from 'lodash';
+import { Link } from 'react-router-dom';
 import { Avatar, Menu, Dropdown, Icon } from 'antd';
+import { ROUTES } from 'config/constants';
 
 class HeaderUserControls extends React.PureComponent {
   static propTypes = {
@@ -15,7 +17,13 @@ class HeaderUserControls extends React.PureComponent {
 
   renderMenu = () => (
     <Menu>
-      <Menu.Item key="0" onClick={this.logOutClick}>
+      <Menu.Item key="0">
+        <Link to={`${ROUTES.USER_PROFILE}/own-user-profile`}>
+          <Icon type="user" />
+          &nbsp; View profile
+        </Link>
+      </Menu.Item>
+      <Menu.Item key="1" onClick={this.logOutClick}>
         <Icon type="logout" />
         Logout
       </Menu.Item>

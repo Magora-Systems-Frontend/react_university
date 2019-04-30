@@ -10,7 +10,7 @@ export const ROUTES = {
   ADMIN_PANEL: '/admin-panel',
   REGISTRATION_FORM: '/registration-form',
   PASSWORD_SET_FORM: '/password-set',
-  USER_PROFILE: '/user/:id',
+  USER_PROFILE: '/user',
 };
 
 export const API_METHODS = {
