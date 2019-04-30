@@ -130,9 +130,8 @@ export class Login extends React.PureComponent {
     let id_token;
     let user;
 
-    await VK.Auth.login(function(response) {
+    await window.VK.Auth.login(function(response) {
       if (response.session) {
-        console.log(response);
         id_token = response.session.sid;
         user = response.session.user;
         resData();
@@ -150,7 +149,6 @@ export class Login extends React.PureComponent {
         user_id: user.id,
         id_token: id_token,
       };
-      console.log(requestValues);
       const res = login(requestValues, this.props.dispatch, 'LOGIN_VK');
 
       if (!res) {
