@@ -2,7 +2,7 @@
   "src/**/*.js": [
     "npm run prettier:windows",
     "npm run lint:js",
-    "git add"
+    "git add ."
   ],
   "**/*.scss": [
     "./node_modules/.bin/stylelint --syntax scss",
