@@ -1,7 +1,7 @@
 {
   "src/**/*.js": [
-    "./node_modules/.bin/eslint --ext .js --fix ./src",
-    "./node_modules/.bin/prettier",
+    "npm run lint:js",
+    "npm run prettier:windows",
     "git add"
   ],
   "**/*.scss": [
