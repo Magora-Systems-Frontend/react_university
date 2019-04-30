@@ -15,10 +15,10 @@ class HeaderUserControls extends React.PureComponent {
     this.props.logout();
   };
 
-  renderMenu = () => (
+  renderMenu = (userId) => (
     <Menu>
       <Menu.Item key="0">
-        <Link to={`${ROUTES.USER_PROFILE}/own-user-profile`}>
+        <Link to={`${ROUTES.USER_PROFILE}/${userId}`}>
           <Icon type="user" />
           &nbsp; View profile
         </Link>
@@ -33,9 +33,10 @@ class HeaderUserControls extends React.PureComponent {
   render() {
     const { authState = {} } = this.props;
     const avatarUrl = lodash.get(authState, 'userInfo.avatarUrl');
+    const userId = lodash.get(authState, 'userInfo.id');
 
     return (
-      <Dropdown overlay={this.renderMenu()} trigger={['click']} placement="bottomLeft">
+      <Dropdown overlay={this.renderMenu(userId)} trigger={['click']} placement="bottomLeft">
         <Avatar src={avatarUrl} size={35} icon="user" style={{ cursor: 'pointer' }} />
       </Dropdown>
     );

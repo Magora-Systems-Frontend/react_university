@@ -22,4 +22,5 @@ export const API_METHODS = {
   SIGN_UP_PHONE: '/users/register/phone',
   PASSWORD_RECOVERY: '/users/password/recovery',
   PASSWORD_SET: '/users/password/set',
+  USERS: '/users',
 };
