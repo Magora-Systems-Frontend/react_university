@@ -36,3 +36,11 @@ magoramagorova@gmail.com (FrontendReactTemplate)
 - [Project Location](https://console.developers.google.com/apis/dashboard?pli=1&authuser=1&project=frontendreacttemplate&folder=&organizationId=&supportedpurview=project)
 - [API Docs](https://developers.google.com/identity/sign-in/web/reference)
 
+###For VK Auth:
+
+Локально ВК работает только с портом 80. Если перебросить localhost:8020 на 80, то всё начинает работать:
+
+1) sudo iptables -t nat -I OUTPUT -p tcp -d 127.0.0.1 --dport 80 -j REDIRECT --to-ports 8000
+2) в hosts добавить 127.0.0.1   127.0.0.1:8020
+3) доступно на 127.0.0.1
+

@@ -24,12 +24,6 @@ const userLoginVK = async (req, res) => {
     console.log(data);
   });
 
-  /*
-  * Check userId in DataBase and create user if user doesn't exist
-  * */
-
-  // login user
-
   return res.status(200).send({
     status: 200,
     data: {
