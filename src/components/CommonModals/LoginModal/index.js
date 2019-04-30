@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Modal } from 'antd';
-import { Login } from 'components';
-import { withCommonModals } from '../withCommonModals';
+import {Modal} from 'antd';
+import {Login} from 'components';
+import {withCommonModals} from '../withCommonModals';
 import TitleWithTextButton from '../_CommonModalComponents/TitleWithTextButton';
 
 @withCommonModals
 class LoginModal extends React.PureComponent {
   render() {
-    const { isShow, options } = this.props;
+    const { isShow } = this.props;
     return (
       <Modal
         visible={isShow}

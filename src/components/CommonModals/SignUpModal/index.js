@@ -1,14 +1,14 @@
-import React, { PureComponent } from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import { Modal } from 'antd';
-import { SignUp } from 'components';
-import { withCommonModals } from '../withCommonModals';
+import {Modal} from 'antd';
+import {SignUp} from 'components';
+import {withCommonModals} from '../withCommonModals';
 import TitleWithTextButton from '../_CommonModalComponents/TitleWithTextButton';
 
 @withCommonModals
 class SignUpModal extends PureComponent {
   render() {
-    const { isShow, options } = this.props;
+    const { isShow } = this.props;
     return (
       <Modal
         visible={isShow}
