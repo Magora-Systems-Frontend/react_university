@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { fieldPropTypes } from 'redux-form';
-import { Input, Form, Select } from 'antd';
-//
+// import PropTypes from 'prop-types';
+import {fieldPropTypes} from 'redux-form';
+import {Form, Select} from 'antd';
 
 export class SelectField extends React.PureComponent {
   static propTypes = {
@@ -11,7 +10,6 @@ export class SelectField extends React.PureComponent {
 
   render() {
     const { label, meta, input, options } = this.props;
-    console.log(this.props);
 
     const inputElement = Select;
     const validateStatus = meta.error && meta.touched ? 'error' : '';

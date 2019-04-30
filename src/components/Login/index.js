@@ -10,7 +10,7 @@ import { LoginForm } from './form';
   null,
   mapDispatchToProps
 )
-class Login extends React.PureComponent {
+export class Login extends React.PureComponent {
   static propTypes = {
     dispatch: PropTypes.func,
     showModal: PropTypes.func,
@@ -127,7 +127,7 @@ class Login extends React.PureComponent {
   };
 
   onVKLoginClick = async () => {
-    let id_token;
+    // let id_token;
     // try {
     //   const GoogleAuth = window.gapi.auth2.getAuthInstance();
     //   const GoogleUser = await GoogleAuth.signIn();
@@ -181,8 +181,6 @@ class Login extends React.PureComponent {
 
 function mapDispatchToProps(dispatch) {
   return {
-    dispatch,
+    dispatch
   };
 }
-
-export { Login };

@@ -4,5 +4,10 @@
     "jsx-a11y/href-no-hash": "off",
     "no-console": "warn",
     "valid-jsdoc": "warn"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "legacyDecorators": true
+    }
   }
 }
