@@ -1,7 +1,7 @@
 {
   "src/**/*.js": [
-    "npm run lint:js",
     "npm run prettier:windows",
+    "npm run lint:js",
     "git add"
   ],
   "**/*.scss": [
