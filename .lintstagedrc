@@ -5,8 +5,8 @@
     "git add"
   ],
   "**/*.scss": [
-    "./node_modules/.bin/stylelint --syntax scss",
-    "./node_modules/.bin/prettier",
+    "npm run prettier",
+    "npm run lint:style",
     "git add"
   ]
 }
