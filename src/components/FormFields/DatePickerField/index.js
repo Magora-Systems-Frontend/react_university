@@ -1,9 +1,9 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import {fieldPropTypes} from 'redux-form';
+import { fieldPropTypes } from 'redux-form';
 // import { InputMask } from 'react-text-mask';
 // import { DateTime } from 'react-datetime';
-import {DatePicker, Form} from 'antd';
+import { DatePicker, Form } from 'antd';
 
 export class DatePickerField extends React.Component {
   static propTypes = {

@@ -98,4 +98,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export { SignUp }
+export { SignUp };

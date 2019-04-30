@@ -43,7 +43,7 @@ export const routes = (
       <Route
         exact
         path={ROUTES.PASSWORD_SET_FORM}
-        render={(props) => (
+        render={props => (
           <App>
             <PasswordSetPage {...props} />
           </App>

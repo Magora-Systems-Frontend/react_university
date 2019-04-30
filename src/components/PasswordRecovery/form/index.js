@@ -3,14 +3,11 @@ import PropTypes from 'prop-types';
 import { reduxForm, propTypes, Field } from 'redux-form';
 import { TextField } from 'components';
 
-import {
-  Icon, Button, Form,
-  Tooltip,
-} from 'antd';
+import { Icon, Button, Form, Tooltip } from 'antd';
 
 import { validateInput, validationTypes } from 'lib/validation';
 
-const validate = (values) => {
+const validate = values => {
   const errors = {};
 
   if (!values.email) {
@@ -21,7 +18,7 @@ const validate = (values) => {
     }
   }
 
-  return errors
+  return errors;
 };
 
 class PasswordRecoveryFormComponent extends PureComponent {
@@ -33,7 +30,6 @@ class PasswordRecoveryFormComponent extends PureComponent {
 
   render() {
     const { handleSubmit } = this.props;
-
 
     return (
       <form onSubmit={handleSubmit}>
@@ -63,7 +59,7 @@ class PasswordRecoveryFormComponent extends PureComponent {
           </Button>
         </Form.Item>
       </form>
-    )
+    );
   }
 }
 

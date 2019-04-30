@@ -9,7 +9,7 @@ import reducer from './reducer';
 // CommonModals
 import LoginModal from './LoginModal';
 import SignUpModal from './SignUpModal';
-import PasswordRecoveryModal from './PasswordRecoveryModal'
+import PasswordRecoveryModal from './PasswordRecoveryModal';
 
 @connect(
   mapStateToProps,
@@ -23,9 +23,9 @@ class CommonModals extends React.PureComponent {
       case 'login':
         return <LoginModal isShow={isShow} options={options} />;
       case 'sign-up':
-        return (<SignUpModal isShow={isShow} options={options} />);
+        return <SignUpModal isShow={isShow} options={options} />;
       case 'passwordRecovery':
-        return (<PasswordRecoveryModal isShow={isShow} />);
+        return <PasswordRecoveryModal isShow={isShow} />;
       default:
         return null;
     }

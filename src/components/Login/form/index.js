@@ -65,7 +65,7 @@ class LoginFormComponent extends React.PureComponent {
             htmlType="button"
             className="forgot-password-form-button"
             style={{ width: '50%' }}
-            onClick={() =>  this.props.showModal('passwordRecovery')}
+            onClick={() => this.props.showModal('passwordRecovery')}
           >
             Forgot password
           </Button>

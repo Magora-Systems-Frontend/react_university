@@ -25,6 +25,7 @@ class Header extends React.PureComponent {
 
 
 
+
     console.log('aaaa');
 
     if (authState.isAuth) {
@@ -64,4 +65,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export { Header }
+export { Header };

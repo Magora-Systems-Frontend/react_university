@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 import Root from 'pages/Root';
 import store from './store';
 import * as axiosClient from 'utils/api/axiosClient';
-import {googleAuthInit} from 'utils/googleAuth';
-import {facebookAuthInit} from 'utils/facebookAuth';
+import { googleAuthInit } from 'utils/googleAuth';
+import { facebookAuthInit } from 'utils/facebookAuth';
 
 import './styles/app.scss';
 import 'antd/dist/antd.css';
@@ -19,9 +19,7 @@ if (NODE_ENV !== 'production') {
   }
 }
 
-const a = {
-
-};
+const a = {};
 
 googleAuthInit();
 facebookAuthInit();

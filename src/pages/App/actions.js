@@ -92,8 +92,7 @@ export async function passwordRecovery(values, dispatch) {
     response = await axios.post(API_METHODS.PASSWORD_RECOVERY, values);
     const { data } = response;
     dispatch(setAuthState(data));
-  }
-  catch (error) {
+  } catch (error) {
     return error;
   }
   return response;
@@ -107,8 +106,7 @@ export async function passwordSet(values, dispatch) {
     response = await axios.post(API_METHODS.PASSWORD_SET, values);
     const { data } = response;
     dispatch(setAuthState(data));
-  }
-  catch (error) {
+  } catch (error) {
     return error;
   }
   return response;

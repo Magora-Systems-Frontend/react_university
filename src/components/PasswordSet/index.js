@@ -1,19 +1,19 @@
 import React, { PureComponent } from 'react';
 import { PasswordSetForm } from './form';
 import { passwordSet } from 'pages/App/actions';
-import { SubmissionError } from "redux-form";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
+import { SubmissionError } from 'redux-form';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 class PasswordSetComponent extends PureComponent {
   static propTypes = {
     dispatch: PropTypes.func,
   };
 
-  onSubmit = async (values) => {
+  onSubmit = async values => {
     const res = await passwordSet(values, this.props.dispatch);
     if (!res) {
-      throw new SubmissionError({ newPassword: 'Network error'});
+      throw new SubmissionError({ newPassword: 'Network error' });
     }
 
     if (res.status === 401) {
@@ -26,16 +26,19 @@ class PasswordSetComponent extends PureComponent {
   render() {
     return (
       <div>
-        <PasswordSetForm onSubmit={this.onSubmit}/>
+        <PasswordSetForm onSubmit={this.onSubmit} />
       </div>
     );
   }
 }
 
-function mapDispatchToProps (dispatch) {
+function mapDispatchToProps(dispatch) {
   return {
     dispatch,
   };
 }
 
-export const PasswordSet = connect(null, mapDispatchToProps)(PasswordSetComponent);
+export const PasswordSet = connect(
+  null,
+  mapDispatchToProps
+)(PasswordSetComponent);

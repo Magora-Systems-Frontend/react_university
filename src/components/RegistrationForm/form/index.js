@@ -89,4 +89,4 @@ class RegistrationForm extends React.PureComponent {
   }
 }
 
-export { RegistrationForm }
+export { RegistrationForm };

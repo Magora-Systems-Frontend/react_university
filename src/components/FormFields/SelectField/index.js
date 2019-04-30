@@ -1,7 +1,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import {fieldPropTypes} from 'redux-form';
-import {Form, Select} from 'antd';
+import { fieldPropTypes } from 'redux-form';
+import { Form, Select } from 'antd';
 
 export class SelectField extends React.PureComponent {
   static propTypes = {

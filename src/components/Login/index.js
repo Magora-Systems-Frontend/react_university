@@ -148,9 +148,7 @@ export class Login extends React.PureComponent {
     //   // email: profile.getEmail(),
     //   id_token: id_token,
     // };
-
     // const res = await login(requestValues, this.props.dispatch, 'LOGIN_VK');
-
     // if (!res) {
     //   return message.error('Network error');
     // } else if (res.status === 410) {
@@ -181,6 +179,6 @@ export class Login extends React.PureComponent {
 
 function mapDispatchToProps(dispatch) {
   return {
-    dispatch
+    dispatch,
   };
 }

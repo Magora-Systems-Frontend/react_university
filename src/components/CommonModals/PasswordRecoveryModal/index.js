@@ -4,21 +4,21 @@ import { Modal } from 'antd';
 import { PasswordRecovery } from 'components';
 import { withCommonModals } from '../withCommonModals';
 
-
-export default @withCommonModals class PasswordRecoveryModal extends PureComponent {
-
+export default
+@withCommonModals
+class PasswordRecoveryModal extends PureComponent {
   render() {
     const { isShow } = this.props;
     return (
       <Modal
         visible={isShow}
         onCancel={this.props.hideModal}
-        title={"Password recovery"}
+        title={'Password recovery'}
         closable={false}
         footer={null}
         style={{ maxWidth: '400px' }}
       >
-        <PasswordRecovery hideModal={this.props.hideModal}/>
+        <PasswordRecovery hideModal={this.props.hideModal} />
       </Modal>
     );
   }

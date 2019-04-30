@@ -100,4 +100,4 @@ class SignUpPhoneForm extends PureComponent {
   }
 }
 
-export { SignUpPhoneForm }
+export { SignUpPhoneForm };

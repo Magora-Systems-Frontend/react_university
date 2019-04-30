@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Modal} from 'antd';
-import {Login} from 'components';
-import {withCommonModals} from '../withCommonModals';
+import { Modal } from 'antd';
+import { Login } from 'components';
+import { withCommonModals } from '../withCommonModals';
 import TitleWithTextButton from '../_CommonModalComponents/TitleWithTextButton';
 
-export default @withCommonModals class LoginModal extends React.PureComponent {
-
+export default
+@withCommonModals
+class LoginModal extends React.PureComponent {
   render() {
     const { isShow } = this.props;
     return (
@@ -18,10 +19,7 @@ export default @withCommonModals class LoginModal extends React.PureComponent {
         footer={null}
         style={{ maxWidth: '400px' }}
       >
-        <Login
-          hideModal={this.props.hideModal}
-          showModal={this.props.showModal}
-        />
+        <Login hideModal={this.props.hideModal} showModal={this.props.showModal} />
       </Modal>
     );
   }
