@@ -9,6 +9,7 @@ import reducer from './reducer';
 // CommonModals
 import LoginModal from './LoginModal';
 import SignUpModal from './SignUpModal';
+import PasswordRecoveryModal from './PasswordRecoveryModal'
 
 @connect(mapStateToProps, mapDispatchToProps)
 class CommonModals extends React.PureComponent {
@@ -20,6 +21,8 @@ class CommonModals extends React.PureComponent {
         return(<LoginModal isShow={isShow} options={options} />);
       case 'sign-up':
         return (<SignUpModal isShow={isShow} options={options} />);
+      case 'passwordRecovery':
+        return (<PasswordRecoveryModal isShow={isShow} />);
       default:
         return null;
     }

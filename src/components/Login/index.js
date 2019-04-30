@@ -6,10 +6,10 @@ import { login } from 'pages/App/actions';
 import { message } from 'antd';
 import { LoginForm } from './form';
 
-@connect(null, mapDispatchToProps)
-export class Login extends React.PureComponent {
+class LoginComponent extends React.PureComponent {
   static propTypes = {
     dispatch: PropTypes.func,
+    showModal: PropTypes.func,
     hideModal: PropTypes.func,
   };
 
@@ -81,6 +81,7 @@ export class Login extends React.PureComponent {
           onSubmit={this.onSubmit}
           isLoading={this.state.isLoading}
           onGoogleLoginClick={this.onGoogleLoginClick}
+          showModal={this.props.showModal}
         />
       </div>
     );
@@ -92,3 +93,5 @@ function mapDispatchToProps (dispatch) {
     dispatch,
   };
 }
+
+export const Login = connect(null, mapDispatchToProps)(LoginComponent);

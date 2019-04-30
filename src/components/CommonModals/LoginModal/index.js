@@ -5,8 +5,7 @@ import { Login } from 'components';
 import { withCommonModals } from '../withCommonModals';
 import TitleWithTextButton from '../_CommonModalComponents/TitleWithTextButton';
 
-@withCommonModals
-class LoginModal extends React.PureComponent {
+export default @withCommonModals class LoginModal extends React.PureComponent {
 
   render() {
     const { isShow, options } = this.props;
@@ -19,7 +18,10 @@ class LoginModal extends React.PureComponent {
         footer={null}
         style={{ maxWidth: '400px' }}
       >
-        <Login hideModal={this.props.hideModal} />
+        <Login
+          hideModal={this.props.hideModal}
+          showModal={this.props.showModal}
+        />
       </Modal>
     );
   }
@@ -31,5 +33,3 @@ LoginModal.propTypes = {
   showModal: PropTypes.func,
   hideModal: PropTypes.func,
 };
-
-export default LoginModal;

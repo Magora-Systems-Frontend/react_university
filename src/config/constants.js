@@ -8,7 +8,8 @@ export const REACT_APP_GOOGLE_CLIENT_ID = '609222573894-edqe5vhhjcuva643omnln4p4
 export const ROUTES = {
   'HOME_PAGE': '/',
   'ADMIN_PANEL': '/admin-panel',
-  'REGISTRATION_FORM': '/registration-form'
+  'REGISTRATION_FORM': '/registration-form',
+  'PASSWORD_SET_FORM': '/password-set',
 };
 
 export const API_METHODS = {
@@ -16,4 +17,6 @@ export const API_METHODS = {
   LOGIN_GOOGLE: '/users/login/google',
   SIGN_UP: '/users/register',
   SIGN_UP_PHONE: '/users/register/phone',
+  PASSWORD_RECOVERY: '/users/password/recovery',
+  PASSWORD_SET: '/users/password/set',
 };

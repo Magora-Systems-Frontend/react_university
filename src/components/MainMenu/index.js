@@ -42,6 +42,11 @@ class MainMenu extends React.Component {
             <Icon type="form" />Registration Form
           </Link>
         </Menu.Item>
+        <Menu.Item key="password-set">
+          <Link to={ROUTES.PASSWORD_SET_FORM}>
+            <Icon type="lock" />Password Set
+          </Link>
+        </Menu.Item>
       </Menu>
     );
   }

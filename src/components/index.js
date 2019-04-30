@@ -1,6 +1,7 @@
 export { Login } from './Login';
 export { SignUp } from './SignUp';
 export { Registration } from './RegistrationForm';
+export { PasswordRecovery } from './PasswordRecovery';
 
 export {
   CommonModals,
