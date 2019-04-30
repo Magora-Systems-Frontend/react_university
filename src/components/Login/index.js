@@ -21,7 +21,7 @@ export class Login extends React.PureComponent {
     isLoading: false,
   };
 
-  onSubmit = async values => {
+  onSubmit = async (values) => {
     this.setState({ isLoading: true });
     const res = await login(values, this.props.dispatch, 'LOGIN_SERVER');
     this.setState({ isLoading: false });
@@ -78,7 +78,7 @@ export class Login extends React.PureComponent {
 
   onFacebookLoginClick = async () => {
     window.FB.login(
-      response => {
+      (response) => {
         if (!response.authResponse) {
           return;
         }
@@ -86,7 +86,7 @@ export class Login extends React.PureComponent {
         window.FB.api(
           '/me',
           { locale: 'en_US', fields: 'id, first_name, last_name, email, picture' },
-          async profileResponse => {
+          async (profileResponse) => {
             /*
              * This method should return array of friends but it doesn't happen, because
              * with according FB documentation user friends should also give permission

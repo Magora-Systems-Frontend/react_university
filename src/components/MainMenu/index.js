@@ -9,7 +9,7 @@ class MainMenu extends React.Component {
     current: 'mail',
   };
 
-  handleClick = e => {
+  handleClick = (e) => {
     this.setState({
       current: e.key,
     });

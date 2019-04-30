@@ -24,7 +24,7 @@ class SignUp extends PureComponent {
     hideModal: PropTypes.func,
   };
 
-  onSubmit = async values => {
+  onSubmit = async (values) => {
     const res = await signUp(values, this.props.dispatch);
 
     if (!res) {
@@ -52,7 +52,7 @@ class SignUp extends PureComponent {
     this.props.hideModal();
   };
 
-  onSubmitPhone = async values => {
+  onSubmitPhone = async (values) => {
     const res = await signUpPhone(values, this.props.dispatch);
     if (!res) {
       throw new SubmissionError({ phone: 'Network error', code: 'Network error' });
@@ -81,8 +81,7 @@ class SignUp extends PureComponent {
           onClick={() => this.toggleRegistrationType()}
           type="default"
           htmlType="button"
-          style={{ width: '100%', marginBottom: '24px' }}
-        >
+          style={{ width: '100%', marginBottom: '24px' }}>
           {phoneSignUp ? 'E-mail sign up' : 'Phone sign up'}
         </Button>
 

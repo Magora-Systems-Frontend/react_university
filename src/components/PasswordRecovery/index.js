@@ -15,7 +15,7 @@ class PasswordRecoveryComponent extends PureComponent {
     isLoading: false,
   };
 
-  onSubmit = async values => {
+  onSubmit = async (values) => {
     const res = await passwordRecovery(values, this.props.dispatch);
 
     if (!res) {

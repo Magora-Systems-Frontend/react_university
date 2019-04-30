@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { validateInput, validationTypes } from 'lib/validation';
 import './registration-form.sass';
 
-const validate = values => {
+const validate = (values) => {
   const errors = {};
 
   if (!values.lastname) {

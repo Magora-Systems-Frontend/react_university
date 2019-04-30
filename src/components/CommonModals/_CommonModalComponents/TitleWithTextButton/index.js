@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './style.sass';
 
-const TitleWithTextButton = props => (
+const TitleWithTextButton = (props) => (
   <div className="common-modal-twtb">
     <div>{props.title}</div>
     <div className="common-modal-twtb__button" onClick={props.onClick}>

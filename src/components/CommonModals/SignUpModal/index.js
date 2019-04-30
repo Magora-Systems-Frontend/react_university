@@ -16,8 +16,7 @@ class SignUpModal extends PureComponent {
         title={<TitleWithTextButton title="Sign Up" btnText="Log In" onClick={() => this.props.showModal('login')} />}
         closable={false}
         footer={null}
-        style={{ maxWidth: '400px' }}
-      >
+        style={{ maxWidth: '400px' }}>
         <SignUp hideModal={this.props.hideModal} />
       </Modal>
     );

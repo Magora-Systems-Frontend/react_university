@@ -7,7 +7,7 @@ import { Icon, Button, Form, Tooltip } from 'antd';
 
 import { validateInput, validationTypes } from 'lib/validation';
 
-const validate = values => {
+const validate = (values) => {
   const errors = {};
 
   if (!values.email) {
@@ -53,8 +53,7 @@ class PasswordRecoveryFormComponent extends PureComponent {
             className="recovery-password-form-button"
             style={{ width: '100%' }}
             loading={this.props.isLoading}
-            icon="login"
-          >
+            icon="login">
             Recover password
           </Button>
         </Form.Item>

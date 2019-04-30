@@ -6,7 +6,7 @@ import { Icon, Button, Form } from 'antd';
 import { validatePassword } from 'lib/validation';
 import './index.sass';
 
-const validate = values => {
+const validate = (values) => {
   const errors = {};
 
   if (!values.newPassword) {
@@ -43,8 +43,7 @@ class PasswordSetFormComponent extends PureComponent {
             htmlType="submit"
             className="password-set-form-button"
             loading={submitting}
-            style={{ width: '100%' }}
-          >
+            style={{ width: '100%' }}>
             Change password
           </Button>
         </Form.Item>

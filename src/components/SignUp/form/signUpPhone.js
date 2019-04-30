@@ -4,7 +4,7 @@ import { reduxForm, propTypes, Field } from 'redux-form';
 import { TextField, MaskedNumberField } from 'components';
 import { Icon, Button, Form, Tooltip } from 'antd';
 
-const validate = values => {
+const validate = (values) => {
   const errors = {};
 
   return errors;
@@ -77,8 +77,7 @@ class SignUpPhoneForm extends PureComponent {
               type="default"
               htmlType="button"
               className="send-code-button"
-              disabled={disableCodeButton}
-            >
+              disabled={disableCodeButton}>
               Send code
             </Button>
           </Form.Item>
@@ -90,8 +89,7 @@ class SignUpPhoneForm extends PureComponent {
             htmlType="submit"
             className="signup-phone-form-button"
             loading={submitting}
-            style={{ width: '100%' }}
-          >
+            style={{ width: '100%' }}>
             Sign up
           </Button>
         </Form.Item>

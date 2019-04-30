@@ -10,7 +10,7 @@ class PasswordSetComponent extends PureComponent {
     dispatch: PropTypes.func,
   };
 
-  onSubmit = async values => {
+  onSubmit = async (values) => {
     const res = await passwordSet(values, this.props.dispatch);
     if (!res) {
       throw new SubmissionError({ newPassword: 'Network error' });

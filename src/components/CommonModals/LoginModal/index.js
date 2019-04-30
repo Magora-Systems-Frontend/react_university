@@ -17,8 +17,7 @@ class LoginModal extends React.PureComponent {
         title={<TitleWithTextButton title="Log In" btnText="Sign up" onClick={() => this.props.showModal('sign-up')} />}
         closable={false}
         footer={null}
-        style={{ maxWidth: '400px' }}
-      >
+        style={{ maxWidth: '400px' }}>
         <Login hideModal={this.props.hideModal} showModal={this.props.showModal} />
       </Modal>
     );

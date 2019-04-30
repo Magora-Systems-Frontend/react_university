@@ -6,7 +6,7 @@ import { Icon, Button, Form, Tooltip } from 'antd';
 import { validateInput, validationTypes } from 'lib/validation';
 //
 
-const validate = values => {
+const validate = (values) => {
   const errors = {};
 
   if (!values.email) {
@@ -65,8 +65,7 @@ class LoginFormComponent extends React.PureComponent {
             htmlType="button"
             className="forgot-password-form-button"
             style={{ width: '50%' }}
-            onClick={() => this.props.showModal('passwordRecovery')}
-          >
+            onClick={() => this.props.showModal('passwordRecovery')}>
             Forgot password
           </Button>
         </Form.Item>
@@ -78,8 +77,7 @@ class LoginFormComponent extends React.PureComponent {
             className="login-form-button"
             style={{ width: '100%' }}
             icon="google"
-            onClick={onGoogleLoginClick}
-          >
+            onClick={onGoogleLoginClick}>
             Log in with Google
           </Button>
         </Form.Item>
@@ -91,8 +89,7 @@ class LoginFormComponent extends React.PureComponent {
             className="login-form-button"
             style={{ width: '100%' }}
             icon="facebook"
-            onClick={onFacebookLoginClick}
-          >
+            onClick={onFacebookLoginClick}>
             Log in with Facebook
           </Button>
         </Form.Item>
@@ -103,8 +100,7 @@ class LoginFormComponent extends React.PureComponent {
             htmlType="button"
             className="login-form-button"
             style={{ width: '100%' }}
-            onClick={onVKLoginClick}
-          >
+            onClick={onVKLoginClick}>
             Log in with VK
           </Button>
         </Form.Item>
@@ -116,8 +112,7 @@ class LoginFormComponent extends React.PureComponent {
             className="login-form-button"
             style={{ width: '100%' }}
             loading={this.props.isLoading}
-            icon="login"
-          >
+            icon="login">
             Log in
           </Button>
         </Form.Item>

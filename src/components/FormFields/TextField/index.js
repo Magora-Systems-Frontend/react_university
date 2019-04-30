@@ -4,10 +4,10 @@ import { Input, Form, InputNumber } from 'antd';
 import ReactInputMask from 'react-input-mask';
 //
 
-const InputMask = props => {
+const InputMask = (props) => {
   return (
     <ReactInputMask {...props}>
-      {inputProps => <Input {...inputProps} disabled={props.disabled ? props.disabled : null} />}
+      {(inputProps) => <Input {...inputProps} disabled={props.disabled ? props.disabled : null} />}
     </ReactInputMask>
   );
 };

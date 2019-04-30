@@ -16,7 +16,7 @@ export const routes = (
       <Route
         exact
         path={ROUTES.HOME_PAGE}
-        render={props => (
+        render={(props) => (
           <App>
             <HomePage {...props} />
           </App>
@@ -25,7 +25,7 @@ export const routes = (
       <Route
         exact
         path={ROUTES.ADMIN_PANEL}
-        render={props => (
+        render={(props) => (
           <App>
             <NotFoundPage {...props} />
           </App>
@@ -34,7 +34,7 @@ export const routes = (
       <Route
         exact
         path={ROUTES.REGISTRATION_FORM}
-        render={props => (
+        render={(props) => (
           <App>
             <RegistrationFormPage {...props} />
           </App>
@@ -43,14 +43,14 @@ export const routes = (
       <Route
         exact
         path={ROUTES.PASSWORD_SET_FORM}
-        render={props => (
+        render={(props) => (
           <App>
             <PasswordSetPage {...props} />
           </App>
         )}
       />
       <Route
-        render={props => (
+        render={(props) => (
           <App>
             <NotFoundPage {...props} />
           </App>

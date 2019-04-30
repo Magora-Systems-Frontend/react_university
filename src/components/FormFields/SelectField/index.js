@@ -20,7 +20,7 @@ export class SelectField extends React.PureComponent {
         {React.createElement(
           inputElement,
           { ...this.props, ...input, defaultValue: options[0] },
-          options.map(item => React.createElement('Option', { value: item, key: item }, item))
+          options.map((item) => React.createElement('Option', { value: item, key: item }, item))
         )}
       </Form.Item>
     );

@@ -5,7 +5,7 @@ import { TextField } from 'components';
 import { Icon, Button, Form, Tooltip } from 'antd';
 import { validateInput, validationTypes, validatePassword } from 'lib/validation';
 
-const validate = values => {
+const validate = (values) => {
   const errors = {};
 
   if (!values.email) {
@@ -86,8 +86,7 @@ class SignUpForm extends PureComponent {
             htmlType="submit"
             className="signup-form-button"
             loading={submitting}
-            style={{ width: '100%' }}
-          >
+            style={{ width: '100%' }}>
             Sign up
           </Button>
         </Form.Item>

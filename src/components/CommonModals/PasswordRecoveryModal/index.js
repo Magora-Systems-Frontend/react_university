@@ -16,8 +16,7 @@ class PasswordRecoveryModal extends PureComponent {
         title={'Password recovery'}
         closable={false}
         footer={null}
-        style={{ maxWidth: '400px' }}
-      >
+        style={{ maxWidth: '400px' }}>
         <PasswordRecovery hideModal={this.props.hideModal} />
       </Modal>
     );

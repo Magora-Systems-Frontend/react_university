@@ -28,7 +28,7 @@ export function validateInput(scheme, value) {
 }
 
 export function validateForm(state, data) {
-  return Object.keys(state).every(name => {
+  return Object.keys(state).every((name) => {
     const { vldScheme } = state[name];
     const value = data[name];
     return validateInput(vldScheme, value);
