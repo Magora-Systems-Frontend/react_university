@@ -23,6 +23,10 @@ class Header extends React.PureComponent {
   renderControls = () => {
     const { authState = {}, logout } = this.props;
 
+
+
+    console.log('aaaa');
+
     if (authState.isAuth) {
       return <HeaderUserControls logout={logout} authState={authState} />;
     }
