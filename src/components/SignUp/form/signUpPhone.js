@@ -4,17 +4,16 @@ import { reduxForm, propTypes, Field } from 'redux-form';
 import { TextField, MaskedNumberField } from 'components';
 import { Icon, Button, Form, Tooltip } from 'antd';
 
-const validate = (values) => {
+const validate = values => {
   const errors = {};
 
-  return errors
+  return errors;
 };
 
 @reduxForm({
   form: 'signUpPhone',
-  validate
+  validate,
 })
-
 export class SignUpPhoneForm extends PureComponent {
   static propTypes = {
     handleSubmit: PropTypes.func,
@@ -25,21 +24,21 @@ export class SignUpPhoneForm extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      disableCodeButton: false
+      disableCodeButton: false,
     };
   }
 
   sendCode = () => {
     this.setState({
-      disableCodeButton: !this.state.disableCodeButton
+      disableCodeButton: !this.state.disableCodeButton,
     });
     alert('Your code: 1234');
     const that = this;
-    setTimeout((function () {
+    setTimeout(function() {
       that.setState({
-        disableCodeButton: !that.state.disableCodeButton
+        disableCodeButton: !that.state.disableCodeButton,
       });
-    }), 30000)
+    }, 30000);
   };
 
   render() {
@@ -62,7 +61,7 @@ export class SignUpPhoneForm extends PureComponent {
           }
         />
 
-        <div style={{display: 'flex', justifyContent: 'space-between'}}>
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
           <Field
             name="code"
             type="mask"
@@ -85,7 +84,6 @@ export class SignUpPhoneForm extends PureComponent {
           </Form.Item>
         </div>
 
-
         <Form.Item style={{ margin: '0' }}>
           <Button
             type="primary"
@@ -98,6 +96,6 @@ export class SignUpPhoneForm extends PureComponent {
           </Button>
         </Form.Item>
       </form>
-    )
+    );
   }
 }

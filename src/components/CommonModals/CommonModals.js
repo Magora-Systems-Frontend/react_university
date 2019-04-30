@@ -10,28 +10,26 @@ import reducer from './reducer';
 import LoginModal from './LoginModal';
 import SignUpModal from './SignUpModal';
 
-@connect(mapStateToProps, mapDispatchToProps)
+@connect(
+  mapStateToProps,
+  mapDispatchToProps
+)
 class CommonModals extends React.PureComponent {
   renderModal = () => {
     const { commonModals } = this.props;
     const { modal = '', isShow, options } = commonModals;
     switch (modal) {
       case 'login':
-        return(<LoginModal isShow={isShow} options={options} />);
+        return <LoginModal isShow={isShow} options={options} />;
       case 'sign-up':
-        return (<SignUpModal isShow={isShow} options={options} />);
+        return <SignUpModal isShow={isShow} options={options} />;
       default:
         return null;
     }
   };
 
   render() {
-
-    return (
-      <React.Fragment>
-        { this.renderModal() }
-      </React.Fragment>
-    );
+    return <React.Fragment>{this.renderModal()}</React.Fragment>;
   }
 }
 
@@ -46,12 +44,10 @@ function mapStateToProps(state) {
   };
 }
 
-function mapDispatchToProps (dispatch) {
+function mapDispatchToProps(dispatch) {
   return {};
 }
 
 const withReducer = injectReducer({ key: 'commonModals', reducer });
 
-export default compose(
-  withReducer,
-)(CommonModals);
+export default compose(withReducer)(CommonModals);

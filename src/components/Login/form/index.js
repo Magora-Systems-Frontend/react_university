@@ -2,14 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { reduxForm, propTypes, Field } from 'redux-form';
 import { TextField } from 'components';
-import {
-  Icon, Button, Form,
-  Tooltip,
-} from 'antd';
+import { Icon, Button, Form, Tooltip } from 'antd';
 import { validateInput, validationTypes } from 'lib/validation';
 //
 
-const validate = (values) => {
+const validate = values => {
   const errors = {};
 
   if (!values.email) {
@@ -36,14 +33,14 @@ export class LoginForm extends React.PureComponent {
     ...propTypes,
     isLoading: PropTypes.bool,
     onGoogleLoginClick: PropTypes.func,
+    onFacebookLoginClick: PropTypes.func,
   };
 
   render() {
-    const { handleSubmit, onGoogleLoginClick } = this.props;
+    const { handleSubmit, onGoogleLoginClick, onFacebookLoginClick, onVKLoginClick } = this.props;
 
     return (
       <form onSubmit={handleSubmit} className="login-form">
-
         <Field
           name="email"
           type="email"
@@ -82,6 +79,31 @@ export class LoginForm extends React.PureComponent {
         <Form.Item style={{ margin: '0' }}>
           <Button
             type="primary"
+            htmlType="button"
+            className="login-form-button"
+            style={{ width: '100%' }}
+            icon="facebook"
+            onClick={onFacebookLoginClick}
+          >
+            Log in with Facebook
+          </Button>
+        </Form.Item>
+
+        <Form.Item style={{ margin: '0' }}>
+          <Button
+            type="primary"
+            htmlType="button"
+            className="login-form-button"
+            style={{ width: '100%' }}
+            onClick={onVKLoginClick}
+          >
+            Log in with VK
+          </Button>
+        </Form.Item>
+
+        <Form.Item style={{ margin: '0' }}>
+          <Button
+            type="primary"
             htmlType="submit"
             className="login-form-button"
             style={{ width: '100%' }}
@@ -91,7 +113,6 @@ export class LoginForm extends React.PureComponent {
             Log in
           </Button>
         </Form.Item>
-
       </form>
     );
   }

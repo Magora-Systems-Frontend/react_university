@@ -2,7 +2,7 @@
 const initialState = {
   modal: '',
   isShow: false,
-  options: {}
+  options: {},
 };
 
 function commonModalReducer(state = initialState, action = {}) {
@@ -10,16 +10,16 @@ function commonModalReducer(state = initialState, action = {}) {
 
   switch (type) {
     case 'SHOW_MODAL':
-      return ({
+      return {
         ...state,
         ...payload,
-      });
+      };
     case 'HIDE_MODAL':
-      return ({
+      return {
         ...state,
         modal: '',
         isShow: false,
-      });
+      };
     default:
       return state;
   }

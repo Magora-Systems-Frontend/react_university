@@ -10,7 +10,10 @@ import { Header } from 'components/Header';
 import { CommonModals } from 'components';
 import { setAuthState } from './actions';
 
-@connect(mapStateToProps, mapDispatchToProps)
+@connect(
+  mapStateToProps,
+  mapDispatchToProps
+)
 class App extends React.PureComponent {
   componentDidMount() {
     this.props.setAuthState(loadStore(KEYS.AUTH));
@@ -23,7 +26,7 @@ class App extends React.PureComponent {
       <Wrapper>
         <Header />
         <CommonModals />
-        <MainMenu style={{'textAlign': 'center'}} route={route} />
+        <MainMenu style={{ textAlign: 'center' }} route={route} />
         {this.props.children}
         {/* Here could be header / footer / static blocks and etc */}
       </Wrapper>

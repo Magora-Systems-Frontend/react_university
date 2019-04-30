@@ -4,7 +4,7 @@ import { saveItem, removeItem, KEYS } from 'utils/localStorage';
 
 /*
  * Application Actions
-*/
+ */
 
 /**
  * Checks if a network request came back fine, and throws an error if not
@@ -26,6 +26,12 @@ export async function login(values, dispatch, type = 'COMMON') {
     case 'LOGIN_GOOGLE':
       requestUrl = API_METHODS.LOGIN_GOOGLE;
       break;
+    case 'LOGIN_FACEBOOK':
+      requestUrl = API_METHODS.LOGIN_FACEBOOK;
+      break;
+    case 'LOGIN_VK':
+      requestUrl = API_METHODS.LOGIN_VK;
+      break;
     default:
       throw new Error('Provide valid login type!');
   }
@@ -38,7 +44,6 @@ export async function login(values, dispatch, type = 'COMMON') {
     data.isAuth = true;
     saveItem(KEYS.AUTH, data);
     dispatch(setAuthState(data));
-
   } catch (error) {
     return error;
   }
@@ -56,7 +61,6 @@ export async function signUp(values, dispatch) {
     data.isAuth = true;
     saveItem(KEYS.AUTH, data);
     dispatch(setAuthState(data));
-
   } catch (error) {
     return error;
   }
@@ -74,7 +78,6 @@ export async function signUpPhone(values, dispatch) {
     data.isAuth = true;
     saveItem(KEYS.AUTH, data);
     dispatch(setAuthState(data));
-
   } catch (error) {
     return error;
   }

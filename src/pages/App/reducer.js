@@ -10,15 +10,15 @@ function appReducer(state = initialState, action = {}) {
 
   switch (type) {
     case 'APP_CLEAR_AUTH_STATE':
-      return ({
+      return {
         ...state,
         authState: { isAuth: false },
-      });
+      };
     case 'APP_SET_AUTH_STATE':
-      return ({
+      return {
         ...state,
         authState: { ...payload },
-      });
+      };
     default:
       return state;
   }

@@ -2,10 +2,7 @@ export { Login } from './Login';
 export { SignUp } from './SignUp';
 export { Registration } from './RegistrationForm';
 
-export {
-  CommonModals,
-  withCommonModals,
-} from './CommonModals';
+export { CommonModals, withCommonModals } from './CommonModals';
 
 export { TextField } from './FormFields';
 

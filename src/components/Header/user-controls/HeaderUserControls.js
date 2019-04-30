@@ -1,10 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import lodash from 'lodash';
-import {
-  Avatar, Menu, Dropdown,
-  Icon,
-} from 'antd';
+import { Avatar, Menu, Dropdown, Icon } from 'antd';
 
 class HeaderUserControls extends React.PureComponent {
   static propTypes = {

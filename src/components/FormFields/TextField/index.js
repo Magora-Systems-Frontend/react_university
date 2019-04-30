@@ -4,10 +4,10 @@ import { Input, Form, InputNumber } from 'antd';
 import ReactInputMask from 'react-input-mask';
 //
 
-const InputMask = (props) => {
+const InputMask = props => {
   return (
     <ReactInputMask {...props}>
-      { (inputProps) => <Input {...inputProps} disabled={props.disabled ? props.disabled : null} /> }
+      {inputProps => <Input {...inputProps} disabled={props.disabled ? props.disabled : null} />}
     </ReactInputMask>
   );
 };
@@ -18,38 +18,29 @@ export class TextField extends React.PureComponent {
   };
 
   render() {
-    const {
-      label,
-      meta,
-      input,
-      type,
-    } = this.props;
+    const { label, meta, input, type } = this.props;
     // console.log(this.props);
 
     let inputElement;
     switch (type) {
-      case ('password'):
+      case 'password':
         inputElement = Input.Password;
         break;
-      case ('code'):
+      case 'code':
         inputElement = InputNumber;
         break;
-      case ('mask'):
+      case 'mask':
         inputElement = InputMask;
         break;
       default:
-        inputElement = Input
+        inputElement = Input;
     }
 
     const validateStatus = meta.error && meta.touched ? 'error' : '';
     const help = meta.error && meta.touched ? meta.error : '';
 
-    return(
-      <Form.Item
-        label={label}
-        validateStatus={validateStatus}
-        help={help}
-      >
+    return (
+      <Form.Item label={label} validateStatus={validateStatus} help={help}>
         {React.createElement(inputElement, { ...this.props, ...input })}
       </Form.Item>
     );

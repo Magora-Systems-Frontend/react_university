@@ -6,7 +6,9 @@ import './style.sass';
 const TitleWithTextButton = props => (
   <div className="common-modal-twtb">
     <div>{props.title}</div>
-    <div className="common-modal-twtb__button" onClick={props.onClick}>{props.btnText}</div>
+    <div className="common-modal-twtb__button" onClick={props.onClick}>
+      {props.btnText}
+    </div>
   </div>
 );
 

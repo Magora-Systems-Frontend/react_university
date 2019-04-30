@@ -13,12 +13,12 @@ class SignUpModal extends PureComponent {
       <Modal
         visible={isShow}
         onCancel={this.props.hideModal}
-        title={<TitleWithTextButton title="Sign Up" btnText="Log In" onClick={() =>  this.props.showModal('login')} />}
+        title={<TitleWithTextButton title="Sign Up" btnText="Log In" onClick={() => this.props.showModal('login')} />}
         closable={false}
         footer={null}
         style={{ maxWidth: '400px' }}
       >
-        <SignUp hideModal={this.props.hideModal}/>
+        <SignUp hideModal={this.props.hideModal} />
       </Modal>
     );
   }
