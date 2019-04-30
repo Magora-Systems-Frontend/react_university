@@ -8,6 +8,7 @@ const userLogin = async (req, res) => {
         accessToken: 'trueAccessToken',
         refreshToken: 'trueRefreshToken',
         userInfo: {
+          id: 'e36fdb10-6b38-11e9-a15c-c95eeb7cf1d5',
           email: 'test@email.com',
           firstName: 'Semen',
           lastName: 'Semenovich',

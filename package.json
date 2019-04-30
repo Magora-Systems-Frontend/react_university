@@ -103,6 +103,7 @@
     "redux-thunk": "^2.3.0",
     "style-loader": "^0.21.0",
     "styled-components": "^3.3.3",
+    "uuid": "^3.3.2",
     "vksdk": "^5.3.2"
   }
 }

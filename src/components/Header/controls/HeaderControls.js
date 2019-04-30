@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'antd';
 import { withCommonModals } from 'components';
-
 import './header-controls.scss';
 
 @withCommonModals

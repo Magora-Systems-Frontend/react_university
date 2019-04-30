@@ -9,6 +9,11 @@ const PORT = 8021;
 
 server.use(bodyParser.json());
 
+// now you can access to /api/users as to /users from db.json
+server.use(jsonServer.rewriter({
+  '/api/*': '/$1',
+}));
+
 // in app routes you can add validation, authentication etc..
 appRoutes(server);
 
