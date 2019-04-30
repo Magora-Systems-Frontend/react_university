@@ -24,11 +24,7 @@ const validate = values => {
   return errors;
 };
 
-@reduxForm({
-  form: 'login',
-  validate,
-})
-export class LoginForm extends React.PureComponent {
+class LoginFormComponent extends React.PureComponent {
   static propTypes = {
     ...propTypes,
     isLoading: PropTypes.bool,
@@ -62,6 +58,18 @@ export class LoginForm extends React.PureComponent {
           component={TextField}
           prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
         />
+
+        <Form.Item style={{ margin: '0', textAlign: 'right' }}>
+          <Button
+            type="default"
+            htmlType="button"
+            className="forgot-password-form-button"
+            style={{ width: '50%' }}
+            onClick={() =>  this.props.showModal('passwordRecovery')}
+          >
+            Forgot password
+          </Button>
+        </Form.Item>
 
         <Form.Item style={{ margin: '0' }}>
           <Button
@@ -117,3 +125,8 @@ export class LoginForm extends React.PureComponent {
     );
   }
 }
+
+export const LoginForm = reduxForm({
+  form: 'login',
+  validate,
+})(LoginFormComponent);

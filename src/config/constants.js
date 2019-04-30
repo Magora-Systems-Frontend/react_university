@@ -6,9 +6,10 @@ export const REACT_APP_GOOGLE_CLIENT_ID = '609222573894-edqe5vhhjcuva643omnln4p4
 export const REACT_APP_FACEBOOK_APP_ID = '2284406111882705';
 
 export const ROUTES = {
-  HOME_PAGE: '/',
-  ADMIN_PANEL: '/admin-panel',
-  REGISTRATION_FORM: '/registration-form',
+  'HOME_PAGE': '/',
+  'ADMIN_PANEL': '/admin-panel',
+  'REGISTRATION_FORM': '/registration-form',
+  'PASSWORD_SET_FORM': '/password-set',
 };
 
 export const API_METHODS = {
@@ -18,4 +19,6 @@ export const API_METHODS = {
   LOGIN_VK: '/users/login/vk',
   SIGN_UP: '/users/register',
   SIGN_UP_PHONE: '/users/register/phone',
+  PASSWORD_RECOVERY: '/users/password/recovery',
+  PASSWORD_SET: '/users/password/set',
 };
