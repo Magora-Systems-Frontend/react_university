@@ -40,3 +40,11 @@ magoramagorova@gmail.com (FrontendReactTemplate)
 testmagora@gmail.com (FrontendReactTemplate)
 - [Project Location](https://developers.facebook.com/apps/2284406111882705/dashboard/)
 - [API Docs](https://developers.facebook.com/docs/javascript/)
+###For VK Auth:
+
+Локально ВК работает только с портом 80. Если перебросить localhost:8020 на 80, то всё начинает работать:
+
+1) sudo iptables -t nat -I OUTPUT -p tcp -d 127.0.0.1 --dport 80 -j REDIRECT --to-ports 8000
+2) в hosts добавить 127.0.0.1   127.0.0.1:8020
+3) доступно на 127.0.0.1
+
