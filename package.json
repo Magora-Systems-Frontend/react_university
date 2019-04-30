@@ -9,7 +9,8 @@
     "build": "webpack --config webpack/webpack.production.js",
     "serve": "serve -l 8020 public --single",
     "lint:js": "eslint --ext .js src",
-    "lint:style": "stylelint \"src/**/*.scss\" --syntax scss"
+    "lint:style": "stylelint \"src/**/*.scss\" --syntax scss",
+    "prettier": "prettier --write 'src/**/*.{js,scss}'"
   },
   "author": "",
   "license": "ISC",
