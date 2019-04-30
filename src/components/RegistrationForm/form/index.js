@@ -37,7 +37,7 @@ const validate = values => {
   form: 'registration',
   validate,
 })
-export class RegistrationForm extends React.PureComponent {
+class RegistrationForm extends React.PureComponent {
   static propTypes = {
     ...propTypes,
     submitting: PropTypes.bool,
@@ -88,3 +88,5 @@ export class RegistrationForm extends React.PureComponent {
     );
   }
 }
+
+export { RegistrationForm }

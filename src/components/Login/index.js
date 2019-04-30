@@ -13,6 +13,7 @@ import { LoginForm } from './form';
 class Login extends React.PureComponent {
   static propTypes = {
     dispatch: PropTypes.func,
+    showModal: PropTypes.func,
     hideModal: PropTypes.func,
   };
 
@@ -171,6 +172,7 @@ class Login extends React.PureComponent {
           onGoogleLoginClick={this.onGoogleLoginClick}
           onFacebookLoginClick={this.onFacebookLoginClick}
           onVKLoginClick={this.onVKLoginClick}
+          showModal={this.props.showModal}
         />
       </div>
     );

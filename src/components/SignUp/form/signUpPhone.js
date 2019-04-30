@@ -14,7 +14,7 @@ const validate = values => {
   form: 'signUpPhone',
   validate,
 })
-export class SignUpPhoneForm extends PureComponent {
+class SignUpPhoneForm extends PureComponent {
   static propTypes = {
     handleSubmit: PropTypes.func,
     submitting: PropTypes.bool,
@@ -99,3 +99,5 @@ export class SignUpPhoneForm extends PureComponent {
     );
   }
 }
+
+export { SignUpPhoneForm }

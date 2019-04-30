@@ -11,7 +11,7 @@ import { Button } from 'antd';
   null,
   mapDispatchToProps
 )
-export class SignUp extends PureComponent {
+class SignUp extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -97,3 +97,5 @@ function mapDispatchToProps(dispatch) {
     dispatch,
   };
 }
+
+export { SignUp }

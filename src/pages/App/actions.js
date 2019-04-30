@@ -85,6 +85,35 @@ export async function signUpPhone(values, dispatch) {
   return response;
 }
 
+export async function passwordRecovery(values, dispatch) {
+  const axios = getAxios();
+  let response;
+  try {
+    response = await axios.post(API_METHODS.PASSWORD_RECOVERY, values);
+    const { data } = response;
+    dispatch(setAuthState(data));
+  }
+  catch (error) {
+    return error;
+  }
+  return response;
+}
+
+export async function passwordSet(values, dispatch) {
+  const axios = getAxios();
+  let response;
+
+  try {
+    response = await axios.post(API_METHODS.PASSWORD_SET, values);
+    const { data } = response;
+    dispatch(setAuthState(data));
+  }
+  catch (error) {
+    return error;
+  }
+  return response;
+}
+
 export function setAuthState(authState) {
   return {
     type: 'APP_SET_AUTH_STATE',
