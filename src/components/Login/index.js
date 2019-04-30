@@ -10,7 +10,7 @@ import { LoginForm } from './form';
   null,
   mapDispatchToProps
 )
-class Login extends React.PureComponent {
+export class Login extends React.PureComponent {
   static propTypes = {
     dispatch: PropTypes.func,
     hideModal: PropTypes.func,
@@ -179,8 +179,6 @@ class Login extends React.PureComponent {
 
 function mapDispatchToProps(dispatch) {
   return {
-    dispatch,
+    dispatch
   };
 }
-
-export { Login };

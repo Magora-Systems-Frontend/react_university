@@ -14,7 +14,7 @@ import './header.sass';
   mapStateToProps,
   mapDispatchToProps
 )
-class Header extends React.PureComponent {
+export class Header extends React.PureComponent {
   static propTypes = {
     authState: PropTypes.object,
     logout: PropTypes.func,
@@ -59,5 +59,3 @@ function mapDispatchToProps(dispatch) {
     logout: bindActionCreators(logout, dispatch),
   };
 }
-
-export { Header };
