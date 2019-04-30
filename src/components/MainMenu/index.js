@@ -4,13 +4,12 @@ import { Menu, Icon } from 'antd';
 //
 import { ROUTES } from '../../config/constants';
 
-
 class MainMenu extends React.Component {
   state = {
     current: 'mail',
   };
 
-  handleClick = (e) => {
+  handleClick = e => {
     this.setState({
       current: e.key,
     });
@@ -22,24 +21,23 @@ class MainMenu extends React.Component {
     // console.info({route});
 
     return (
-      <Menu
-        style={style}
-        onClick={this.handleClick}
-        selectedKeys={[this.state.current]}
-        mode="horizontal" >
+      <Menu style={style} onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
         <Menu.Item key="table">
           <Link to={ROUTES.HOME_PAGE}>
-            <Icon type="table" />Notes
+            <Icon type="table" />
+            Notes
           </Link>
         </Menu.Item>
         <Menu.Item key="tool">
           <Link to={ROUTES.ADMIN_PANEL}>
-            <Icon type="tool" />Administration Panel
+            <Icon type="tool" />
+            Administration Panel
           </Link>
         </Menu.Item>
         <Menu.Item key="form">
           <Link to={ROUTES.REGISTRATION_FORM}>
-            <Icon type="form" />Registration Form
+            <Icon type="form" />
+            Registration Form
           </Link>
         </Menu.Item>
         <Menu.Item key="password-set">

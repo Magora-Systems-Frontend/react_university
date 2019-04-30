@@ -2,16 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import {bindActionCreators} from 'redux';
+import { bindActionCreators } from 'redux';
 import { ROUTES } from 'config/constants';
 import { logout } from 'pages/App/actions';
-import HeaderControls from './controls/HeaderControls'
-import HeaderUserControls from './user-controls/HeaderUserControls'
+import HeaderControls from './controls/HeaderControls';
+import HeaderUserControls from './user-controls/HeaderUserControls';
 
 import './header.sass';
 
-@connect(mapStateToProps, mapDispatchToProps)
-export class Header extends React.PureComponent {
+@connect(
+  mapStateToProps,
+  mapDispatchToProps
+)
+class Header extends React.PureComponent {
   static propTypes = {
     authState: PropTypes.object,
     logout: PropTypes.func,
@@ -21,33 +24,24 @@ export class Header extends React.PureComponent {
     const { authState = {}, logout } = this.props;
 
     if (authState.isAuth) {
-      return (
-       <HeaderUserControls logout={logout} authState={authState} />
-      );
+      return <HeaderUserControls logout={logout} authState={authState} />;
     }
 
-    return (<HeaderControls />);
+    return <HeaderControls />;
   };
 
   render() {
     return (
       <header className="header">
         <div className="full-width header__container">
-
           <Link to={ROUTES.HOME_PAGE} className="header__left-side">
             <div className="header__logo">
-              <img className="header__logo-img" src="./icons/logo.svg" alt="logo"/>
-              <span className="header__logo-text">
-                React template app
-              </span>
+              <img className="header__logo-img" src="./icons/logo.svg" alt="logo" />
+              <span className="header__logo-text">React template app</span>
             </div>
           </Link>
 
-          <div className="header__right-side">
-            { this.renderControls() }
-
-          </div>
-
+          <div className="header__right-side">{this.renderControls()}</div>
         </div>
       </header>
     );
@@ -65,3 +59,5 @@ function mapDispatchToProps(dispatch) {
     logout: bindActionCreators(logout, dispatch),
   };
 }
+
+export { Header }

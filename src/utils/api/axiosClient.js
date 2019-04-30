@@ -4,7 +4,7 @@ let axiosClient = null;
 
 class AxiosClient {
   constructor(props = {}) {
-    Object.keys(props).forEach((propName) => {
+    Object.keys(props).forEach(propName => {
       this[`_${propName}`] = props[propName];
     });
 
@@ -13,7 +13,7 @@ class AxiosClient {
       timeout: 5000,
     });
 
-    localAxios.interceptors.request.use((config) => {
+    localAxios.interceptors.request.use(config => {
       const store = this._store;
       const state = store.getState();
       const accessToken = lodash.get(state, 'user.accessToken');
@@ -32,7 +32,7 @@ class AxiosClient {
 
     localAxios.interceptors.response.use(
       response => Promise.resolve(lodash.get(response, 'data', null)),
-      error => Promise.reject(error.response),
+      error => Promise.reject(error.response)
     );
 
     this._client = localAxios;
@@ -55,7 +55,4 @@ function getAxios() {
   return axiosClient.getAxios();
 }
 
-export {
-  init,
-  getAxios
-}
+export { init, getAxios };

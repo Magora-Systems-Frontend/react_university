@@ -11,14 +11,17 @@ import LoginModal from './LoginModal';
 import SignUpModal from './SignUpModal';
 import PasswordRecoveryModal from './PasswordRecoveryModal'
 
-@connect(mapStateToProps, mapDispatchToProps)
+@connect(
+  mapStateToProps,
+  mapDispatchToProps
+)
 class CommonModals extends React.PureComponent {
   renderModal = () => {
     const { commonModals } = this.props;
     const { modal = '', isShow, options } = commonModals;
     switch (modal) {
       case 'login':
-        return(<LoginModal isShow={isShow} options={options} />);
+        return <LoginModal isShow={isShow} options={options} />;
       case 'sign-up':
         return (<SignUpModal isShow={isShow} options={options} />);
       case 'passwordRecovery':
@@ -29,12 +32,7 @@ class CommonModals extends React.PureComponent {
   };
 
   render() {
-
-    return (
-      <React.Fragment>
-        { this.renderModal() }
-      </React.Fragment>
-    );
+    return <React.Fragment>{this.renderModal()}</React.Fragment>;
   }
 }
 
@@ -49,12 +47,10 @@ function mapStateToProps(state) {
   };
 }
 
-function mapDispatchToProps (dispatch) {
+function mapDispatchToProps(dispatch) {
   return {};
 }
 
 const withReducer = injectReducer({ key: 'commonModals', reducer });
 
-export default compose(
-  withReducer,
-)(CommonModals);
+export default compose(withReducer)(CommonModals);

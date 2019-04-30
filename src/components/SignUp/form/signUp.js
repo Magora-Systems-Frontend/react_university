@@ -5,7 +5,7 @@ import { TextField } from 'components';
 import { Icon, Button, Form, Tooltip } from 'antd';
 import { validateInput, validationTypes, validatePassword } from 'lib/validation';
 
-const validate = (values) => {
+const validate = values => {
   const errors = {};
 
   if (!values.email) {
@@ -19,7 +19,7 @@ const validate = (values) => {
   if (!values.password) {
     errors.password = 'Fill in all required fields';
   } else {
-    if (!validatePassword(values.password)){
+    if (!validatePassword(values.password)) {
       errors.password = 'Password must be at 6 - 40 characters, including numbers, lowercase and uppercase letters';
     }
   }
@@ -39,11 +39,10 @@ const validate = (values) => {
   form: 'signUp',
   validate,
 })
-
-export class SignUpForm extends PureComponent {
+class SignUpForm extends PureComponent {
   static propTypes = {
     submitting: PropTypes.bool,
-    ...propTypes
+    ...propTypes,
   };
 
   render() {
@@ -95,5 +94,6 @@ export class SignUpForm extends PureComponent {
       </form>
     );
   }
-
 }
+
+export { SignUpForm }

@@ -1,6 +1,6 @@
 /*
  * Common Modal Actions
-*/
+ */
 
 export function showModal(modal, options) {
   return {

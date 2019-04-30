@@ -10,11 +10,13 @@ export const saveItem = (key, store = {}) => {
   localStorageHelper.setItem(`${KEYS.STORE}${key}`, JSON.stringify(store));
 };
 
-export const loadStore = (key) => {
+export const loadStore = key => {
   let store = {};
   const data = localStorageHelper.getItem(`${KEYS.STORE}${key}`);
   if (!data) return store;
-  try { store = JSON.parse(data); } catch (e) {}
+  try {
+    store = JSON.parse(data);
+  } catch (e) {}
   return store;
 };
 

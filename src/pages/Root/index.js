@@ -7,18 +7,14 @@ import { routes } from '../../routes';
 import ErrorBoundary from '../../components/ErrorBoundary';
 import MainWrapper from '../../components/MainWrapper';
 
-
 function Root({ store }) {
   return (
     <Provider store={store}>
       <MainWrapper>
-        <Helmet itleTemplate="%s - Notes"
-                defaultTitle="Notes">
+        <Helmet itleTemplate="%s - Notes" defaultTitle="Notes">
           <meta name="description" content="Sample Application" />
         </Helmet>
-        <ErrorBoundary>
-          {routes}
-        </ErrorBoundary>
+        <ErrorBoundary>{routes}</ErrorBoundary>
       </MainWrapper>
     </Provider>
   );

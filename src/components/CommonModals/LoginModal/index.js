@@ -13,7 +13,7 @@ export default @withCommonModals class LoginModal extends React.PureComponent {
       <Modal
         visible={isShow}
         onCancel={this.props.hideModal}
-        title={<TitleWithTextButton title="Log In" btnText="Sign up" onClick={() =>  this.props.showModal('sign-up')} />}
+        title={<TitleWithTextButton title="Log In" btnText="Sign up" onClick={() => this.props.showModal('sign-up')} />}
         closable={false}
         footer={null}
         style={{ maxWidth: '400px' }}

@@ -9,7 +9,9 @@
     "build": "webpack --config webpack/webpack.production.js",
     "serve": "serve -l 8020 public --single",
     "lint:js": "eslint --ext .js src",
-    "lint:style": "stylelint \"src/**/*.scss\" --syntax scss"
+    "lint:style": "stylelint \"src/**/*.scss\" --syntax scss",
+    "prettier": "prettier --write 'src/**/*.{js,scss}'",
+    "prettier:windows": "prettier --write src/**/*.{js,scss}"
   },
   "author": "",
   "license": "ISC",
@@ -51,6 +53,7 @@
     "jsonwebtoken": "^8.5.1",
     "lint-staged": "^8.1.5",
     "node": "^11.14.0",
+    "node-fetch": "^2.4.1",
     "node-sass": "^4.9.2",
     "nodemon": "^1.18.11",
     "prettier": "^1.17.0",
@@ -101,17 +104,5 @@
     "redux-thunk": "^2.3.0",
     "style-loader": "^0.21.0",
     "styled-components": "^3.3.3"
-  },
-  "lint-staged": {
-    "src/**/*.js": [
-      "eslint --ext .js --fix",
-      "npm run prettier",
-      "git add"
-    ],
-    "**/*.scss": [
-      "stylelint --syntax scss",
-      "npm run prettier",
-      "git add"
-    ]
   }
 }

@@ -3,10 +3,7 @@ export { SignUp } from './SignUp';
 export { Registration } from './RegistrationForm';
 export { PasswordRecovery } from './PasswordRecovery';
 
-export {
-  CommonModals,
-  withCommonModals,
-} from './CommonModals';
+export { CommonModals, withCommonModals } from './CommonModals';
 
 export { TextField } from './FormFields';
 

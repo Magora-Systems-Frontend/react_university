@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { ConnectedRouter } from 'connected-react-router'
+import { ConnectedRouter } from 'connected-react-router';
 //
 import App from 'pages/App';
 import HomePage from 'pages/HomePage/Loadable';
@@ -16,7 +16,7 @@ export const routes = (
       <Route
         exact
         path={ROUTES.HOME_PAGE}
-        render={(props) => (
+        render={props => (
           <App>
             <HomePage {...props} />
           </App>
@@ -25,7 +25,7 @@ export const routes = (
       <Route
         exact
         path={ROUTES.ADMIN_PANEL}
-        render={(props) => (
+        render={props => (
           <App>
             <NotFoundPage {...props} />
           </App>
@@ -34,7 +34,7 @@ export const routes = (
       <Route
         exact
         path={ROUTES.REGISTRATION_FORM}
-        render={(props) => (
+        render={props => (
           <App>
             <RegistrationFormPage {...props} />
           </App>
@@ -50,7 +50,7 @@ export const routes = (
         )}
       />
       <Route
-        render={(props) => (
+        render={props => (
           <App>
             <NotFoundPage {...props} />
           </App>

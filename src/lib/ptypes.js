@@ -9,11 +9,6 @@ export const overlaysPT = PT.arrayOf(
   })
 );
 
-export const historyPT = PT.objectOf(
-  PT.oneOfType([PT.object, PT.func, PT.number, PT.string]),
-);
+export const historyPT = PT.objectOf(PT.oneOfType([PT.object, PT.func, PT.number, PT.string]));
 
-export const childrenPT = PT.oneOfType([
-  PT.element,
-  PT.arrayOf(PT.element),
-]);
+export const childrenPT = PT.oneOfType([PT.element, PT.arrayOf(PT.element)]);
