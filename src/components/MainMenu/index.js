@@ -16,9 +16,7 @@ class MainMenu extends React.Component {
   };
 
   render() {
-    const { style = {}, route } = this.props;
-
-    // console.info({route});
+    const { style = {} } = this.props;
 
     return (
       <Menu style={style} onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">

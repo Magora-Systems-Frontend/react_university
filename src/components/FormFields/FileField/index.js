@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { fieldPropTypes } from 'redux-form';
-import { Form, Upload, Button, Icon, Modal } from 'antd';
+// import PropTypes from 'prop-types';
+import {fieldPropTypes} from 'redux-form';
+import {Button, Form, Icon, Modal, Upload} from 'antd';
 
 export class FileField extends React.PureComponent {
   state = {
@@ -23,7 +23,7 @@ export class FileField extends React.PureComponent {
   };
 
   render() {
-    const { label, meta, input, action, change } = this.props;
+    const { label, meta, /*input, action,*/ change } = this.props;
 
     const { previewVisible, previewImage } = this.state;
 

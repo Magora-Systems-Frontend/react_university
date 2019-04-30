@@ -126,7 +126,7 @@ class Login extends React.PureComponent {
   };
 
   onVKLoginClick = async () => {
-    let id_token;
+    // let id_token;
     // try {
     //   const GoogleAuth = window.gapi.auth2.getAuthInstance();
     //   const GoogleUser = await GoogleAuth.signIn();

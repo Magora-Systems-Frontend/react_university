@@ -28,7 +28,7 @@ const validate = values => {
   form: 'login',
   validate,
 })
-export class LoginForm extends React.PureComponent {
+class LoginForm extends React.PureComponent {
   static propTypes = {
     ...propTypes,
     isLoading: PropTypes.bool,
@@ -117,3 +117,5 @@ export class LoginForm extends React.PureComponent {
     );
   }
 }
+
+export { LoginForm };
