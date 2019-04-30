@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Button } from 'antd';
 import { withCommonModals } from 'components';
 
-import './header-controls.sass';
+import './header-controls.scss';
 
 @withCommonModals
 class HeaderControls extends React.PureComponent {

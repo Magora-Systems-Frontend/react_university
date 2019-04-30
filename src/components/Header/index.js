@@ -8,7 +8,7 @@ import { logout } from 'pages/App/actions';
 import HeaderControls from './controls/HeaderControls';
 import HeaderUserControls from './user-controls/HeaderUserControls';
 
-import './header.sass';
+import './header.scss';
 
 @connect(
   mapStateToProps,
