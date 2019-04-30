@@ -10,8 +10,7 @@
     "serve": "serve -l 8020 public --single",
     "lint:js": "eslint --ext .js src",
     "lint:style": "stylelint \"src/**/*.scss\" --syntax scss",
-    "prettier": "prettier --write 'src/**/*.{js,scss}'",
-    "prettier:windows": "prettier --write src/**/*.{js,scss}"
+    "prettier": "prettier --write src/**/*.{js,scss}"
   },
   "author": "",
   "license": "ISC",
