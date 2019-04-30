@@ -19,8 +19,6 @@ if (NODE_ENV !== 'production') {
   }
 }
 
-const a = {};
-
 googleAuthInit();
 facebookAuthInit();
 axiosClient.init({ store, API_URL, API_VERSION });
