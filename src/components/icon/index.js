@@ -10,15 +10,7 @@ GLYPH.CALENDAR = require('./glyphs/calendar.svg').default;
 GLYPH.DEFAULT_AVATAR = require('./glyphs/default-avatar.svg').default;
 GLYPH.DOUBLE_ARROW = require('./glyphs/double-arrow.svg').default;
 
-const Icon = ({
-  className,
-  glyph,
-  fill,
-  height,
-  stroke,
-  strokeWidth,
-  width,
-}) => {
+const Icon = ({ className, glyph, fill, height, stroke, strokeWidth, width }) => {
   return (
     <svg
       stroke={stroke}

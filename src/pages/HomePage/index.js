@@ -8,18 +8,17 @@ import injectReducer from '../../utils/injectReducer';
 import Section from './Section';
 import reducer from './reducer';
 
-
-@connect(mapStateToProps, mapDispatchToProps)
+@connect(
+  mapStateToProps,
+  mapDispatchToProps
+)
 class HomePage extends React.PureComponent {
   render() {
     return (
       <article>
         <Helmet>
           <title>Notes</title>
-          <meta
-            name="description"
-            content="Notes"
-          />
+          <meta name="description" content="Notes" />
         </Helmet>
         <div>
           <Section>
@@ -33,19 +32,17 @@ class HomePage extends React.PureComponent {
 
 HomePage.propTypes = {
   loading: PropTypes.bool,
-  onSubmitForm: PropTypes.func
+  onSubmitForm: PropTypes.func,
 };
 
 function mapStateToProps(state) {
   return {};
 }
 
-function mapDispatchToProps (dispatch) {
+function mapDispatchToProps(dispatch) {
   return {};
 }
 
 const withReducer = injectReducer({ key: 'home', reducer });
 
-export default compose(
-  withReducer,
-)(HomePage);
+export default compose(withReducer)(HomePage);

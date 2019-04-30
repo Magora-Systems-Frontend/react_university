@@ -6,7 +6,10 @@ import { login } from 'pages/App/actions';
 import { message } from 'antd';
 import { LoginForm } from './form';
 
-@connect(null, mapDispatchToProps)
+@connect(
+  null,
+  mapDispatchToProps
+)
 export class Login extends React.PureComponent {
   static propTypes = {
     dispatch: PropTypes.func,
@@ -17,8 +20,7 @@ export class Login extends React.PureComponent {
     isLoading: false,
   };
 
-  onSubmit = async (values) => {
-
+  onSubmit = async values => {
     this.setState({ isLoading: true });
     const res = await login(values, this.props.dispatch, 'LOGIN_SERVER');
     this.setState({ isLoading: false });
@@ -37,7 +39,6 @@ export class Login extends React.PureComponent {
   };
 
   onGoogleLoginClick = async () => {
-
     let id_token;
     try {
       const GoogleAuth = window.gapi.auth2.getAuthInstance();
@@ -75,51 +76,55 @@ export class Login extends React.PureComponent {
   };
 
   onFacebookLoginClick = async () => {
-    window.FB.login((response) => {
-      if (!response.authResponse) {
-        return;
-      }
-      const { accessToken, userID } = response.authResponse;
-      console.log(accessToken);
-      console.log(response);
-      window.FB.api('/me', {locale: 'en_US', fields: 'id, first_name, last_name, email, picture'},
-        async (profileResponse) => {
+    window.FB.login(
+      response => {
+        if (!response.authResponse) {
+          return;
+        }
+        const { accessToken, userID } = response.authResponse;
+        console.log(accessToken);
+        console.log(response);
+        window.FB.api(
+          '/me',
+          { locale: 'en_US', fields: 'id, first_name, last_name, email, picture' },
+          async profileResponse => {
+            /*
+             * This method should return array of friends but it doesn't happen, because
+             * with according FB documentation user friends should also give permission
+             * for our application
+             * detailed: https://developers.facebook.com/docs/facebook-login/permissions#reference-user_friends
+             */
 
-          /*
-          * This method should return array of friends but it doesn't happen, because
-          * with according FB documentation user friends should also give permission
-          * for our application
-          * detailed: https://developers.facebook.com/docs/facebook-login/permissions#reference-user_friends
-          */
-
-          // window.FB.api(`/${userID}/friends`, 'GET', {}, function(response) {
+            // window.FB.api(`/${userID}/friends`, 'GET', {}, function(response) {
             // console.log(response);
-          // });
+            // });
 
-          const requestValues = {
-            firstName: profileResponse.first_name,
-            lastName: profileResponse.last_name,
-            avatarUrl: profileResponse.picture.data.url,
-            email: profileResponse.email,
-            accessToken: accessToken,
-            userID,
-          };
+            const requestValues = {
+              firstName: profileResponse.first_name,
+              lastName: profileResponse.last_name,
+              avatarUrl: profileResponse.picture.data.url,
+              email: profileResponse.email,
+              accessToken: accessToken,
+              userID,
+            };
 
-          const res = await login(requestValues, this.props.dispatch, 'LOGIN_FACEBOOK');
+            const res = await login(requestValues, this.props.dispatch, 'LOGIN_FACEBOOK');
 
-          if (!res) {
-            return message.error('Network error');
-          } else if (res.status === 401) {
-            return message.error('Invalid auth data!');
-          } else if (res.status !== 200) {
-            return message.error('Unknown server error');
+            if (!res) {
+              return message.error('Network error');
+            } else if (res.status === 401) {
+              return message.error('Invalid auth data!');
+            } else if (res.status !== 200) {
+              return message.error('Unknown server error');
+            }
+
+            message.success('Successful login!');
+            this.props.hideModal();
           }
-
-          message.success('Successful login!');
-          this.props.hideModal();
-        });
-    }, { scope: 'email' }); /* user_friends - for user-friends permission (warning in login pop-up) */
-
+        );
+      },
+      { scope: 'email' }
+    ); /* user_friends - for user-friends permission (warning in login pop-up) */
   };
 
   onVKLoginClick = async () => {
@@ -174,7 +179,7 @@ export class Login extends React.PureComponent {
   }
 }
 
-function mapDispatchToProps (dispatch) {
+function mapDispatchToProps(dispatch) {
   return {
     dispatch,
   };

@@ -16,11 +16,14 @@ class HeaderControls extends React.PureComponent {
   };
 
   render() {
-
     return (
       <div className="header-controls">
-        <Button type="primary" onClick={this.showLoginModal}>Log in</Button>
-        <Button type="primary" onClick={this.showSignUpModal}>Sign up</Button>
+        <Button type="primary" onClick={this.showLoginModal}>
+          Log in
+        </Button>
+        <Button type="primary" onClick={this.showSignUpModal}>
+          Sign up
+        </Button>
       </div>
     );
   }

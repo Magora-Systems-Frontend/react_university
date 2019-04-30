@@ -4,7 +4,7 @@ import { saveItem, removeItem, KEYS } from 'utils/localStorage';
 
 /*
  * Application Actions
-*/
+ */
 
 /**
  * Checks if a network request came back fine, and throws an error if not
@@ -44,7 +44,6 @@ export async function login(values, dispatch, type = 'COMMON') {
     data.isAuth = true;
     saveItem(KEYS.AUTH, data);
     dispatch(setAuthState(data));
-
   } catch (error) {
     return error;
   }
@@ -62,7 +61,6 @@ export async function signUp(values, dispatch) {
     data.isAuth = true;
     saveItem(KEYS.AUTH, data);
     dispatch(setAuthState(data));
-
   } catch (error) {
     return error;
   }
@@ -80,7 +78,6 @@ export async function signUpPhone(values, dispatch) {
     data.isAuth = true;
     saveItem(KEYS.AUTH, data);
     dispatch(setAuthState(data));
-
   } catch (error) {
     return error;
   }

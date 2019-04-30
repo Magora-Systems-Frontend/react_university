@@ -30,7 +30,7 @@ ul.overlay .overlay-failure {
   background: var(--error);
 }
 
-@media(min-width: 980px) {
+@media (min-width: 980px) {
   ul.overlay {
     display: flex;
     flex-flow: column;

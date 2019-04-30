@@ -1,5 +1,4 @@
-export const messages = {
-};
+export const messages = {};
 export const RETRY_REMOTE_REQUEST_MS = 60000;
 export const OVERLAY_LIFESPAN_MS = 5000;
 
@@ -7,9 +6,9 @@ export const REACT_APP_GOOGLE_CLIENT_ID = '609222573894-edqe5vhhjcuva643omnln4p4
 export const REACT_APP_FACEBOOK_APP_ID = '2284406111882705';
 
 export const ROUTES = {
-  'HOME_PAGE': '/',
-  'ADMIN_PANEL': '/admin-panel',
-  'REGISTRATION_FORM': '/registration-form'
+  HOME_PAGE: '/',
+  ADMIN_PANEL: '/admin-panel',
+  REGISTRATION_FORM: '/registration-form',
 };
 
 export const API_METHODS = {

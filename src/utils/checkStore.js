@@ -12,10 +12,7 @@ export default function checkStore(store) {
     subscribe: isFunction,
     getState: isFunction,
     replaceReducer: isFunction,
-    injectedReducers: isObject
+    injectedReducers: isObject,
   };
-  invariant(
-    conformsTo(store, shape),
-    '(app/utils...) injectors: Expected a valid redux store'
-  );
+  invariant(conformsTo(store, shape), '(app/utils...) injectors: Expected a valid redux store');
 }

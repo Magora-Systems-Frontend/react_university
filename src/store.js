@@ -1,9 +1,9 @@
-import { createStore, applyMiddleware, compose } from 'redux'
-import thunk from 'redux-thunk'
-import { routerMiddleware } from 'connected-react-router'
+import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
+import { routerMiddleware } from 'connected-react-router';
 import { createBrowserHistory } from 'history';
 //
-import createReducer from './reducers'
+import createReducer from './reducers';
 import { loadStore } from './utils/localStorage';
 
 const initialState = loadStore();
@@ -16,7 +16,7 @@ if (process.env.NODE_ENV !== 'production') {
   const devToolsExtension = window.__REDUX_DEVTOOLS_EXTENSION__;
 
   if (typeof devToolsExtension === 'function') {
-    enhancers.push(devToolsExtension())
+    enhancers.push(devToolsExtension());
   }
 }
 
@@ -25,10 +25,7 @@ const composedEnhancers = compose(
   ...enhancers
 );
 
-const store = createStore(
-  createReducer(initialState, { history }),
-  composedEnhancers
-);
+const store = createStore(createReducer(initialState, { history }), composedEnhancers);
 
 store.injectedReducers = injectedReducers;
 
