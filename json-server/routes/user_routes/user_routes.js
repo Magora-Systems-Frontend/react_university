@@ -9,13 +9,13 @@ const passwordSet = require('../../handlers/users/password/passwordSet');
 
 module.exports = function(server) {
 
-  server.post('/users/login', userLogin);
-  server.post('/users/login/google', userLoginGoogle);
-  server.post('/users/login/facebook', userLoginFacebook);
+  server.post('/api/users/login', userLogin);
+  server.post('/api/users/login/google', userLoginGoogle);
+  server.post('/api/users/login/facebook', userLoginFacebook);
 
-  server.post('/users/register', signUp);
-  server.post('/users/register/phone', signUpPhone);
+  server.post('/api/users/register', signUp);
+  server.post('/api/users/register/phone', signUpPhone);
 
-  server.post('/users/password/recovery', passwordRecovery);
-  server.post('/users/password/set', passwordSet);
+  server.post('/api/users/password/recovery', passwordRecovery);
+  server.post('/api/users/password/set', passwordSet);
 };

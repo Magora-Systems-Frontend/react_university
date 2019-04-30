@@ -17,7 +17,7 @@ module.exports = merge(common, {
     host: config.HOST,
     port: config.PORT,
     proxy: {
-      '/**': {
+      '/api/**': {
         target: API_URL,
         secure: false,
         changeOrigin: true,

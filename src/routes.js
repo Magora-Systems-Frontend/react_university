@@ -4,8 +4,9 @@ import { ConnectedRouter } from 'connected-react-router';
 //
 import App from 'pages/App';
 import HomePage from 'pages/HomePage/Loadable';
-import RegistrationFormPage from 'pages/RegistrationFormPage/index';
-import PasswordSetPage from 'pages/PasswordSetPage/index';
+import RegistrationFormPage from 'pages/RegistrationFormPage';
+import PasswordSetPage from 'pages/PasswordSetPage';
+import UserProfilePage from 'pages/UserProfile';
 import NotFoundPage from 'pages/NotFoundPage/Loadable';
 import { history } from './store';
 import { ROUTES } from './config/constants';
@@ -46,6 +47,15 @@ export const routes = (
         render={(props) => (
           <App>
             <PasswordSetPage {...props} />
+          </App>
+        )}
+      />
+      <Route
+        exact
+        path={ROUTES.USER_PROFILE}
+        render={(props) => (
+          <App>
+            <UserProfilePage {...props} />
           </App>
         )}
       />

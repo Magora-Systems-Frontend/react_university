@@ -9,7 +9,7 @@ class AxiosClient {
     });
 
     const localAxios = axios.create({
-      baseURL: process.env.NODE_ENV === 'development' ? '/' : `${this._API_URL}/api/v${this._API_VERSION}`,
+      baseURL: process.env.NODE_ENV === 'development' ? '/api/' : `${this._API_URL}/api/v${this._API_VERSION}`,
       timeout: 5000,
     });
 
