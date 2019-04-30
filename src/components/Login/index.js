@@ -82,8 +82,6 @@ class Login extends React.PureComponent {
           return;
         }
         const { accessToken, userID } = response.authResponse;
-        console.log(accessToken);
-        console.log(response);
         window.FB.api(
           '/me',
           { locale: 'en_US', fields: 'id, first_name, last_name, email, picture' },
