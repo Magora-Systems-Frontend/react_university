@@ -23,7 +23,13 @@ class HeaderUserControls extends React.PureComponent {
           &nbsp; View profile
         </Link>
       </Menu.Item>
-      <Menu.Item key="1" onClick={this.logOutClick}>
+      <Menu.Item key="1">
+        <Link to={`${ROUTES.USER_PROFILE}/${userId}/edit`}>
+          <Icon type="edit" />
+          &nbsp; Edit profile
+        </Link>
+      </Menu.Item>
+      <Menu.Item key="2" onClick={this.logOutClick}>
         <Icon type="logout" />
         Logout
       </Menu.Item>

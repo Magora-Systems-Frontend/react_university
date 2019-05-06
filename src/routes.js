@@ -7,6 +7,7 @@ import HomePage from 'pages/HomePage/Loadable';
 import RegistrationFormPage from 'pages/RegistrationFormPage';
 import PasswordSetPage from 'pages/PasswordSetPage';
 import UserProfilePage from 'pages/UserProfile';
+import UserProfileEditPage from 'pages/UserProfileEdit';
 import NotFoundPage from 'pages/NotFoundPage/Loadable';
 import { history } from './store';
 import { ROUTES } from './config/constants';
@@ -56,6 +57,15 @@ export const routes = (
         render={(props) => (
           <App>
             <UserProfilePage {...props} />
+          </App>
+        )}
+      />
+      <Route
+        exact
+        path={`${ROUTES.USER_PROFILE}/:id/edit`}
+        render={(props) => (
+          <App>
+            <UserProfileEditPage {...props} />
           </App>
         )}
       />
