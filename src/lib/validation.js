@@ -8,7 +8,7 @@ export const validationTypes = {
 
 const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const textRegex = /^([a-zA-Zа-яА-Я.-]){0,45}$/;
-const nickNameRegex = /^([a-zA-Zа-яА-Я._]){0,45}$/;
+const nickNameRegex = /^([0-9a-zA-Zа-яА-Я._]){0,45}$/;
 
 export function validateInput(scheme, value) {
   switch (scheme) {

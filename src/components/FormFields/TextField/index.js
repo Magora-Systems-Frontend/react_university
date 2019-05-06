@@ -32,6 +32,7 @@ export class TextField extends React.PureComponent {
       case 'mask':
         inputElement = InputMask;
         break;
+      case 'text':
       default:
         inputElement = Input;
     }
