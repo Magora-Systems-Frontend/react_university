@@ -11,7 +11,7 @@ export class DatePickerField extends React.Component {
   };
 
   render() {
-    const { label, meta, /*input,*/ change } = this.props;
+    const { label, meta, input } = this.props;
 
     const inputElement = DatePicker;
     const validateStatus = meta.error && meta.touched ? 'error' : '';
@@ -19,7 +19,11 @@ export class DatePickerField extends React.Component {
 
     return (
       <Form.Item label={label} validateStatus={validateStatus} help={help}>
-        {React.createElement(inputElement, { ...this.props, onChange: change })}
+        {React.createElement(inputElement, {
+          ...this.props,
+          onChange: input.onChange,
+          onFocus: input.onFocus,
+        })}
       </Form.Item>
     );
   }
