@@ -7,41 +7,70 @@ import LoadingIndicator from 'components/LoadingIndicator';
 import reducer from './reducer';
 import { getUserProfile } from './actions';
 
+import './user.scss';
+
+const mapStateToProps = ({ userState }) => ({
+  userState,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  getUserProfile: bindActionCreators(getUserProfile, dispatch),
+});
+
 @connect(
   mapStateToProps,
   mapDispatchToProps
 )
-class UserProfilePage extends React.PureComponent {
+export default class UserProfilePage extends React.PureComponent {
+  static propTypes = {
+    match: PropTypes.object,
+    userState: PropTypes.object,
+    getUserProfile: PropTypes.func,
+  };
+
+  static defaultProps = {
+    match: {},
+    userState: {},
+    getUserProfile: Function.prototype,
+  };
+
   async componentDidMount() {
     const { match } = this.props;
     const { params } = match;
     const { id: userId } = params;
-    this.props.getUserProfile(userId);
+    await this.props.getUserProfile(userId);
   }
 
   render() {
+    const { userState } = this.props;
+    const { payload } = userState;
     return (
-      <LoadingIndicator>
-        <div>userProfile</div>
-      </LoadingIndicator>
+      <div className="user">
+        <div className="user__logo-container">
+          <img className="user__logo-container_img" src={payload.avatarUrl} alt="" />
+          <div className="user__logo-container_name">
+            {payload.firstName} {payload.lastName}
+          </div>
+        </div>
+        <div className="user__text-container">
+          <div className="user__text-container_item">
+            <div className="title">First Name:</div>
+            <div className="text">{payload.firstName}</div>
+          </div>
+          <div className="user__text-container_item">
+            <div className="title">Last Name:</div>
+            <div className="text">{payload.lastName}</div>
+          </div>
+          <div className="user__text-container_item">
+            <div className="title">Email:</div>
+            <div className="text">{payload.email}</div>
+          </div>
+          <div className="user__text-container_item">
+            <div className="title">City:</div>
+            <div className="text">{payload.city}</div>
+          </div>
+        </div>
+      </div>
     );
   }
 }
-
-UserProfilePage.propTypes = {
-  match: PropTypes.object,
-};
-
-function mapStateToProps(state) {
-  return {};
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    getUserProfile: bindActionCreators(getUserProfile, dispatch),
-  };
-}
-
-const withReducer = injectReducer({ key: 'userProfilePage', reducer });
-
-export default compose(withReducer)(UserProfilePage);

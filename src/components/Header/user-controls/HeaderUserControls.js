@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import lodash from 'lodash';
 import { Link } from 'react-router-dom';
 import { Avatar, Menu, Dropdown, Icon } from 'antd';
-import { ROUTES } from 'config/constants';
+import { ROUTES } from '../../../config/constants';
 
 class HeaderUserControls extends React.PureComponent {
   static propTypes = {

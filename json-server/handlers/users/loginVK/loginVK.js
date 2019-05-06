@@ -21,21 +21,21 @@ const userLoginVK = async (req, res) => {
 // Request 'users.get' method
   vk.request('users.get', {'user_id' : user_id}, function(data) {
     userData = data;
-    console.log(data);
-  });
 
-  return res.status(200).send({
-    status: 200,
-    data: {
-      accessToken: accessToken,
-      refreshToken: 'trueRefreshToken',
-      userInfo: {
-        email: data.nickname,
-        firstName: data.first_name,
-        lastName: data.last_name,
-        avatarUrl: data.id,
+    return res.status(200).send({
+      status: 200,
+      data: {
+        accessToken: accessToken,
+        refreshToken: 'trueRefreshToken',
+        userInfo: {
+          email: data.nickname,
+          firstName: data.first_name,
+          lastName: data.last_name,
+          avatarUrl: data.id,
+        },
       },
-    },
+    });
+
   });
 
 };
