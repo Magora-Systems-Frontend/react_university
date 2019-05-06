@@ -19,7 +19,9 @@ if (NODE_ENV !== 'production') {
   }
 }
 
-googleAuthInit();
-facebookAuthInit();
+window.onload = () => {
+  googleAuthInit();
+  facebookAuthInit();
+};
 axiosClient.init({ store, API_URL, API_VERSION });
 ReactDOM.render(<Root store={store} />, MOUNT_NODE);
