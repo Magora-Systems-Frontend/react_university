@@ -5,6 +5,11 @@ function userProfileReducer(state = initialState, action = {}) {
   const { type, payload } = action;
 
   switch (type) {
+    case 'APP_GET_USER_STATE':
+      return {
+        ...state,
+        payload,
+      };
     default:
       return state;
   }

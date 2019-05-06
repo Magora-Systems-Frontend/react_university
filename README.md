@@ -42,11 +42,12 @@ testmagora@gmail.com (FrontendReactTemplate)
 - [API Docs](https://developers.facebook.com/docs/javascript/)
 ###For VK Auth:
 
-Локально ВК работает только с портом 80. Если перебросить localhost:8020 на 80, то всё начинает работать:
+Locally VK works only with port 80. If you transfer localhost: 8020 to 80, then everything starts working
+:
 
 1) sudo iptables -t nat -I OUTPUT -p tcp -d 127.0.0.1 --dport 80 -j REDIRECT --to-ports 8000
-2) в hosts добавить 127.0.0.1   127.0.0.1:8020
-3) доступно на 127.0.0.1
+2) in hosts added 127.0.0.1   127.0.0.1:8020
+3) start 127.0.0.1
 
 credentials: 79134564157/gemanaPoPo
 
