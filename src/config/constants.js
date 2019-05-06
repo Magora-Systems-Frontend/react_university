@@ -14,6 +14,8 @@ export const ROUTES = {
 };
 
 export const API_METHODS = {
+  COUNTRIES: '/countries',
+  CITIES: '/countries/cities',
   LOGIN: '/users/login',
   LOGIN_GOOGLE: '/users/login/google',
   LOGIN_FACEBOOK: '/users/login/facebook',

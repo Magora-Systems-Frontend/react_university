@@ -6,8 +6,4 @@ export { EditProfile } from './EditProfileForm';
 
 export { CommonModals, withCommonModals } from './CommonModals';
 
-export { TextField } from './FormFields';
-
-export { SelectField } from './FormFields';
-export { FileField } from './FormFields';
-export { DatePickerField } from './FormFields';
+export { CityField, DatePickerField, FileField, SelectField, TextField } from './FormFields';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { reduxForm, propTypes, Field } from 'redux-form';
-import { TextField, SelectField, FileField, DatePickerField } from 'components';
+import { TextField, SelectField, FileField, DatePickerField, CityField } from 'components';
 import PropTypes from 'prop-types';
 import { validateInput, validationTypes } from 'lib/validation';
 import './registration-form.sass';
@@ -66,7 +66,7 @@ class RegistrationForm extends React.PureComponent {
           component={TextField}
         />
         <Field label="Username" name="username" type="text" placeholder="Username" error="aaa" component={TextField} />
-        <Field label="City" name="city" type="text" placeholder="City" error="aaa" component={TextField} />
+        <Field label="City" name="city" type="text" placeholder="City" component={CityField} />
         <Field label="Gender" name="gender" placeholder="Gender" error="aaa" options={gender} component={SelectField} />
         <Field
           label="Date of Birth"
