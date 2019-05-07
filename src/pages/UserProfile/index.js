@@ -43,7 +43,7 @@ export default class UserProfilePage extends React.PureComponent {
 
   render() {
     const { userState } = this.props;
-    const { payload } = userState;
+    const { payload = {} } = userState;
     return (
       <div className="user">
         <div className="user__logo-container">
