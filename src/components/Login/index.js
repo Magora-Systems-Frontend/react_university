@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { login } from 'pages/App/actions';
 import { message } from 'antd';
 import { LoginForm } from './form';
+import { API_METHODS } from '../../config/constants';
 
 @connect(
   null,
@@ -23,7 +24,7 @@ export class Login extends React.PureComponent {
 
   onSubmit = async (values) => {
     this.setState({ isLoading: true });
-    const res = await login(values, this.props.dispatch, 'LOGIN_SERVER');
+    const res = await login(values, this.props.dispatch, API_METHODS.LOGIN);
     this.setState({ isLoading: false });
 
     if (!res) {
@@ -62,7 +63,7 @@ export class Login extends React.PureComponent {
       id_token: id_token,
     };
 
-    const res = await login(requestValues, this.props.dispatch, 'LOGIN_GOOGLE');
+    const res = await login(requestValues, this.props.dispatch, API_METHODS.LOGIN_GOOGLE);
 
     if (!res) {
       return message.error('Network error');
@@ -107,7 +108,7 @@ export class Login extends React.PureComponent {
               userID,
             };
 
-            const res = await login(requestValues, this.props.dispatch, 'LOGIN_FACEBOOK');
+            const res = await login(requestValues, this.props.dispatch, API_METHODS.LOGIN_FACEBOOK);
 
             if (!res) {
               return message.error('Network error');
@@ -149,7 +150,7 @@ export class Login extends React.PureComponent {
         user_id: user.id,
         id_token: id_token,
       };
-      const res = login(requestValues, this.props.dispatch, 'LOGIN_VK');
+      const res = login(requestValues, this.props.dispatch, API_METHODS.LOGIN_VK);
 
       if (!res) {
         return message.error('Network error');

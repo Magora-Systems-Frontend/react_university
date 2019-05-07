@@ -1,6 +1,6 @@
 import { getAxios } from 'utils/api/axiosClient';
-import { API_METHODS } from 'config/constants';
 import { saveItem, removeItem, KEYS } from 'utils/localStorage';
+import { API_METHODS, ACTIONS_CONSTANTS } from '../../config/constants';
 
 /*
  * Application Actions
@@ -18,24 +18,7 @@ import { saveItem, removeItem, KEYS } from 'utils/localStorage';
 export async function login(values, dispatch, type = 'COMMON') {
   const axios = getAxios();
 
-  let requestUrl;
-  switch (type) {
-    case 'LOGIN_SERVER':
-      requestUrl = API_METHODS.LOGIN;
-      break;
-    case 'LOGIN_GOOGLE':
-      requestUrl = API_METHODS.LOGIN_GOOGLE;
-      break;
-    case 'LOGIN_FACEBOOK':
-      requestUrl = API_METHODS.LOGIN_FACEBOOK;
-      break;
-    case 'LOGIN_VK':
-      requestUrl = API_METHODS.LOGIN_VK;
-      break;
-    default:
-      throw new Error('Provide valid login type!');
-  }
-
+  let requestUrl = type;
   let response;
   try {
     response = await axios.post(requestUrl, values);
@@ -114,7 +97,7 @@ export async function passwordSet(values, dispatch) {
 
 export function setAuthState(authState) {
   return {
-    type: 'APP_SET_AUTH_STATE',
+    type: ACTIONS_CONSTANTS.APP_SET_AUTH_STATE,
     payload: {
       ...authState,
     },
@@ -125,6 +108,6 @@ export function logout() {
   removeItem(KEYS.AUTH);
 
   return {
-    type: 'APP_CLEAR_AUTH_STATE',
+    type: ACTIONS_CONSTANTS.APP_CLEAR_AUTH_STATE,
   };
 }
