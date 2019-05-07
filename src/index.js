@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 //
-import Root from 'pages/Root';
+import { Root } from 'pages';
 import store from './store';
 import * as axiosClient from 'utils/api/axiosClient';
 import { googleAuthInit } from 'utils/googleAuth';

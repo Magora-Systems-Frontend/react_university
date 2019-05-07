@@ -95,7 +95,6 @@ export class Login extends React.PureComponent {
              */
 
             // window.FB.api(`/${userID}/friends`, 'GET', {}, function(response) {
-            // console.log(response);
             // });
 
             const requestValues = {
@@ -122,8 +121,8 @@ export class Login extends React.PureComponent {
           }
         );
       },
-      { scope: 'email' }
-    ); /* user_friends - for user-friends permission (warning in login pop-up) */
+      { scope: 'email' } /* user_friends - for user-friends permission (warning in login pop-up) */
+    );
   };
 
   onVKLoginClick = async () => {

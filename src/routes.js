@@ -1,16 +1,19 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { ConnectedRouter } from 'connected-react-router';
+import { ROUTES } from 'config/constants';
+// pages
+import {
+  App,
+  HomePage,
+  NotFoundPage,
+  PasswordSetPage,
+  RegistrationFormPage,
+  UserProfilePage,
+  UserProfileEditPage,
+} from 'pages';
 //
-import App from 'pages/App';
-import HomePage from 'pages/HomePage/Loadable';
-import RegistrationFormPage from 'pages/RegistrationFormPage';
-import PasswordSetPage from 'pages/PasswordSetPage';
-import UserProfilePage from 'pages/UserProfile';
-import UserProfileEditPage from 'pages/UserProfileEdit';
-import NotFoundPage from 'pages/NotFoundPage/Loadable';
 import { history } from './store';
-import { ROUTES } from './config/constants';
 
 export const routes = (
   <ConnectedRouter history={history}>
@@ -79,5 +82,3 @@ export const routes = (
     </Switch>
   </ConnectedRouter>
 );
-
-export default routes;

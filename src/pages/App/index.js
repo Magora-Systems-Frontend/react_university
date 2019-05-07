@@ -14,7 +14,7 @@ import { setAuthState } from './actions';
   mapStateToProps,
   mapDispatchToProps
 )
-class App extends React.PureComponent {
+export class App extends React.PureComponent {
   componentDidMount() {
     this.props.setAuthState(loadStore(KEYS.AUTH));
   }
@@ -49,5 +49,3 @@ App.propTypes = {
   children: PT.element.isRequired,
   setAuthState: PT.func,
 };
-
-export default App;

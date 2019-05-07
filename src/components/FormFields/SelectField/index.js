@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import { fieldPropTypes } from 'redux-form';
 import { Form, Select } from 'antd';
 
