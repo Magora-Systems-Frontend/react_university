@@ -18,8 +18,12 @@ export class SelectField extends React.PureComponent {
       <Form.Item label={label} validateStatus={validateStatus} help={help}>
         {React.createElement(
           inputElement,
-          { ...this.props, ...input, defaultValue: options[0] },
-          options.map((item) => React.createElement('Option', { value: item, key: item }, item))
+          { ...this.props, ...input },
+          options.map((option, index) => (
+            <Select.Option key={index} value={option}>
+              {option}
+            </Select.Option>
+          ))
         )}
       </Form.Item>
     );

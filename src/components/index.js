@@ -10,3 +10,4 @@ export { ErrorBoundary } from './ErrorBoundary';
 export { CommonModals, withCommonModals } from './CommonModals';
 
 export { CityField, DatePickerField, FileField, SelectField, TextField } from './FormFields';
+export { FileFieldSimple } from './FormFieldsSimple';

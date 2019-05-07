@@ -3,7 +3,7 @@ import React from 'react';
 import { fieldPropTypes } from 'redux-form';
 import { Button, Form, Icon, Modal, Upload } from 'antd/lib/index';
 
-export class FileField extends React.PureComponent {
+export class FileFieldSimple extends React.PureComponent {
   state = {
     previewVisible: false,
     previewImage: '',

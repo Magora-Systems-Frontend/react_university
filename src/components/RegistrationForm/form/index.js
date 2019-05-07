@@ -1,6 +1,6 @@
 import React from 'react';
 import { reduxForm, propTypes, Field } from 'redux-form';
-import { TextField, SelectField, FileField, DatePickerField, CityField } from 'components';
+import { TextField, SelectField, DatePickerField, CityField, FileFieldSimple } from 'components';
 import PropTypes from 'prop-types';
 import { validateInput, validationTypes } from 'lib/validation';
 import './registration-form.sass';
@@ -77,7 +77,7 @@ class RegistrationForm extends React.PureComponent {
           component={DatePickerField}
         />
 
-        <Field label="Photo" name="date" error="aaa" action="test" change={onFileChange} component={FileField} />
+        <Field label="Photo" name="photo" error="aaa" action="test" change={onFileChange} component={FileFieldSimple} />
 
         <div className="registration-form__submit">
           <button className="registration-form__submit-btn ant-btn ant-btn-primary" disabled={submitting}>

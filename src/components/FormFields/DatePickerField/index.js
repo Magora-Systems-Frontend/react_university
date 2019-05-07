@@ -4,6 +4,7 @@ import { fieldPropTypes } from 'redux-form';
 // import { InputMask } from 'react-text-mask';
 // import { DateTime } from 'react-datetime';
 import { DatePicker, Form } from 'antd';
+import moment from 'moment';
 
 export class DatePickerField extends React.Component {
   static propTypes = {
@@ -21,6 +22,7 @@ export class DatePickerField extends React.Component {
       <Form.Item label={label} validateStatus={validateStatus} help={help}>
         {React.createElement(inputElement, {
           ...this.props,
+          value: input.value ? moment(input.value) : null,
           onChange: input.onChange,
           onFocus: input.onFocus,
         })}

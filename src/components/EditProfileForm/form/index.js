@@ -11,6 +11,7 @@ const gender = ['Not choosen', 'Male', 'Female'];
 @reduxForm({
   form: 'editProfile',
   validate,
+  enableReinitialize: true,
 })
 export class EditProfileForm extends React.PureComponent {
   static propTypes = {
@@ -24,15 +25,15 @@ export class EditProfileForm extends React.PureComponent {
       <form className="edit-profile-form" onSubmit={handleSubmit}>
         <h2>Edit Profile</h2>
 
-        <Field label="Last Name" name="lastname" placeholder="Last Name" component={TextField} />
+        <Field label="Last Name" name="lastName" placeholder="Last Name" component={TextField} />
 
-        <Field label="First Name" name="firstname" placeholder="First Name" component={TextField} />
+        <Field label="First Name" name="firstName" placeholder="First Name" component={TextField} />
 
         <Field label="Patronymic" name="patronymic" placeholder="Patronymic" component={TextField} />
 
-        <Field label="Username" name="username" placeholder="Username" component={TextField} />
+        <Field label="Username" name="userName" placeholder="Username" component={TextField} />
 
-        <Field label="Photo" name="date" action="test" component={FileField} />
+        <Field label="Photo" name="photo" action="test" component={FileField} />
 
         <Field label="Date of Birth" name="date" placeholder="Select date..." component={DatePickerField} />
 

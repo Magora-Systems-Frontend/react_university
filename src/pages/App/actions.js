@@ -95,6 +95,24 @@ export async function passwordSet(values, dispatch) {
   return response;
 }
 
+export function updateProfile(values) {
+  return (dispatch, getState) => {
+    // here will be connection with server
+
+    const { global = {} } = getState();
+    const { authState = {} } = global;
+    dispatch(
+      setAuthState({
+        ...authState,
+        userInfo: {
+          ...authState.userInfo,
+          ...values,
+        },
+      })
+    );
+  };
+}
+
 export function setAuthState(authState) {
   return {
     type: ACTIONS_CONSTANTS.APP_SET_AUTH_STATE,
