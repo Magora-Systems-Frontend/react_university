@@ -1,6 +1,6 @@
 import React from 'react';
 import { reduxForm, propTypes, Field } from 'redux-form';
-import { TextField, SelectField, DatePickerField, CityField, FileFieldSimple } from 'components';
+import { TextField, SelectField, DatePickerField, CityField, FileField } from 'components';
 import PropTypes from 'prop-types';
 import { validateInput, validationTypes } from 'lib/validation';
 import './registration-form.sass';
@@ -37,7 +37,7 @@ const validate = (values) => {
   form: 'registration',
   validate,
 })
-class RegistrationForm extends React.PureComponent {
+export class RegistrationForm extends React.PureComponent {
   static propTypes = {
     ...propTypes,
     submitting: PropTypes.bool,
@@ -81,7 +81,7 @@ class RegistrationForm extends React.PureComponent {
           component={DatePickerField}
         />
 
-        <Field label="Photo" name="photo" error="aaa" action="test" change={onFileChange} component={FileFieldSimple} />
+        <Field label="Photo" name="photo" error="aaa" action="test" change={onFileChange} component={FileField} />
 
         <div className="registration-form__submit">
           <button className="registration-form__submit-btn ant-btn ant-btn-primary" disabled={submitting}>
@@ -92,5 +92,3 @@ class RegistrationForm extends React.PureComponent {
     );
   }
 }
-
-export { RegistrationForm };

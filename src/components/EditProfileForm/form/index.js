@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { reduxForm, propTypes, Field } from 'redux-form';
 import { TextField, SelectField, FileField, DatePickerField } from 'components';
 import { validate } from './validate';
@@ -33,7 +32,15 @@ export class EditProfileForm extends React.PureComponent {
 
         <Field label="Username" name="userName" placeholder="Username" component={TextField} />
 
-        <Field label="Photo" name="photo" action="test" component={FileField} />
+        <Field
+          label="Photo"
+          name="photo"
+          action="test"
+          component={FileField}
+          inputProps={{
+            multiple: false,
+          }}
+        />
 
         <Field label="Date of Birth" name="date" placeholder="Select date..." component={DatePickerField} />
 

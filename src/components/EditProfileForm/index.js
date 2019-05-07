@@ -12,7 +12,18 @@ import { EditProfileForm } from './form';
 )
 export class EditProfile extends React.PureComponent {
   onSubmit = (values) => {
-    this.props.updateProfile(values);
+    const { userInfo } = this.props;
+    let avatarUrl = userInfo.avatarUrl;
+
+    const { photo = {} } = values;
+    const { fileList = [] } = photo;
+    if (fileList.length) {
+      avatarUrl = fileList[0].thumbUrl;
+    }
+    this.props.updateProfile({
+      ...values,
+      avatarUrl,
+    });
 
     window.scrollTo(0, 0);
     message.success('Profile edited!');
@@ -25,12 +36,12 @@ export class EditProfile extends React.PureComponent {
       <EditProfileForm
         onSubmit={this.onSubmit}
         initialValues={{
-          lastName: userInfo.lastName,
-          firstName: userInfo.firstName,
-          patronymic: userInfo.patronymic,
-          userName: userInfo.userName,
-          date: userInfo.date,
-          gender: userInfo.gender,
+          lastName: userInfo.lastName || '',
+          firstName: userInfo.firstName || '',
+          patronymic: userInfo.patronymic || '',
+          userName: userInfo.userName || '',
+          date: userInfo.date || '',
+          gender: userInfo.gender || '',
         }}
       />
     );
