@@ -4,8 +4,8 @@ import { SubmissionError } from 'redux-form';
 import { connect } from 'react-redux';
 import { login } from 'pages/App/actions';
 import { message } from 'antd';
+import { API_METHODS } from 'config/constants';
 import { LoginForm } from './form';
-import { API_METHODS } from '../../config/constants';
 
 @connect(
   null,

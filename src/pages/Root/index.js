@@ -3,9 +3,8 @@ import { Provider } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import PT from 'prop-types';
 //
-import { routes } from '../../routes';
-import ErrorBoundary from '../../components/ErrorBoundary';
-import MainWrapper from '../../components/MainWrapper';
+import { MainWrapper, ErrorBoundary } from 'components';
+import { routes } from 'routes';
 
 export function Root({ store }) {
   return (

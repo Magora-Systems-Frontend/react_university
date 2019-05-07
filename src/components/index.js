@@ -2,7 +2,10 @@ export { Login } from './Login';
 export { SignUp } from './SignUp';
 export { Registration } from './RegistrationForm';
 export { PasswordRecovery } from './PasswordRecovery';
+export { PasswordSet } from './PasswordSet';
 export { EditProfile } from './EditProfileForm';
+export { MainWrapper } from './MainWrapper';
+export { ErrorBoundary } from './ErrorBoundary';
 
 export { CommonModals, withCommonModals } from './CommonModals';
 

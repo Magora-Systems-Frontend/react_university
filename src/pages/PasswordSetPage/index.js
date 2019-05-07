@@ -3,7 +3,7 @@ import injectReducer from '../../utils/injectReducer';
 import reducer from '../HomePage/reducer';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import { PasswordSet } from '../../components/PasswordSet';
+import { PasswordSet } from 'components';
 
 const withReducer = injectReducer({ key: 'PasswordSetPage', reducer });
 

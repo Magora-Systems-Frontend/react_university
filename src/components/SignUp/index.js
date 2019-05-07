@@ -1,11 +1,11 @@
 import React, { PureComponent } from 'react';
-import { SignUpForm } from './form/signUp';
-import { SignUpPhoneForm } from './form/signUpPhone';
 import { connect } from 'react-redux';
 import { signUp, signUpPhone } from 'pages/App/actions';
 import PropTypes from 'prop-types';
 import { SubmissionError } from 'redux-form';
 import { Button } from 'antd';
+import { SignUpForm } from './form/signUp';
+import { SignUpPhoneForm } from './form/signUpPhone';
 
 @connect(
   null,

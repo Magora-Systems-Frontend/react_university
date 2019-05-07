@@ -2,7 +2,7 @@ import React from 'react';
 //
 import { Wrapper } from './index.styled';
 
-class ErrorBoundary extends React.Component {
+export class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { error: null, errorInfo: null };
@@ -33,5 +33,3 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-
-export default ErrorBoundary;
