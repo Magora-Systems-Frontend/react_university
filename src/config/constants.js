@@ -26,3 +26,9 @@ export const API_METHODS = {
   PASSWORD_SET: '/users/password/set',
   USERS: '/users',
 };
+
+export const ACTIONS_CONSTANTS = {
+  APP_SET_AUTH_STATE: 'APP_SET_AUTH_STATE',
+  APP_CLEAR_AUTH_STATE: 'APP_CLEAR_AUTH_STATE',
+  APP_GET_USER_STATE: 'APP_GET_USER_STATE',
+};

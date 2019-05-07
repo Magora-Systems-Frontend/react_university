@@ -1,5 +1,5 @@
 import { getAxios } from 'utils/api/axiosClient';
-import { API_METHODS } from 'config/constants';
+import { API_METHODS, ACTIONS_CONSTANTS } from '../../config/constants';
 
 export function getUserProfile(userId) {
   const url = `${API_METHODS.USERS}/${userId}`;
@@ -22,7 +22,7 @@ export function getUserProfile(userId) {
 
 export function getUserState(state) {
   return {
-    type: 'APP_GET_USER_STATE',
+    type: ACTIONS_CONSTANTS.APP_GET_USER_STATE,
     payload: state,
   };
 }
