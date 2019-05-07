@@ -1,18 +1,19 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
-import Section from '../HomePage';
 import PropTypes from 'prop-types';
-import injectReducer from '../../utils/injectReducer';
-import reducer from '../HomePage/reducer';
+import injectReducer from 'utils/injectReducer';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import { Registration } from '../../components/RegistrationForm/index';
+import { Registration } from 'components';
+import reducer from '../HomePage/reducer';
+
+const withReducer = injectReducer({ key: 'RegistrationFormPage', reducer });
 
 @connect(
   mapStateToProps,
   mapDispatchToProps
 )
-class RegistrationFormPage extends React.PureComponent {
+@compose(withReducer)
+export class RegistrationFormPage extends React.PureComponent {
   render() {
     return (
       <article>
@@ -34,7 +35,3 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {};
 }
-
-const withReducer = injectReducer({ key: 'RegistrationFormPage', reducer });
-
-export default compose(withReducer)(RegistrationFormPage);

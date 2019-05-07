@@ -5,11 +5,14 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { PasswordSet } from '../../components/PasswordSet';
 
+const withReducer = injectReducer({ key: 'PasswordSetPage', reducer });
+
 @connect(
   mapStateToProps,
   mapDispatchToProps
 )
-class PasswordSetPage extends PureComponent {
+@compose(withReducer)
+export class PasswordSetPage extends PureComponent {
   render() {
     return <PasswordSet />;
   }
@@ -22,7 +25,3 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {};
 }
-
-const withReducer = injectReducer({ key: 'PasswordSetPage', reducer });
-
-export default compose(withReducer)(PasswordSetPage);

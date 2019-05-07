@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { EditProfile } from 'components';
 
-class UserProfileEditPage extends React.PureComponent {
+export class UserProfileEditPage extends React.PureComponent {
   async componentDidMount() {
     // const { match } = this.props;
     // const { params } = match;
@@ -17,5 +17,3 @@ class UserProfileEditPage extends React.PureComponent {
 UserProfileEditPage.propTypes = {
   match: PropTypes.object,
 };
-
-export default UserProfileEditPage;

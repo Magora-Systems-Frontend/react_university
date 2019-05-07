@@ -7,7 +7,7 @@ import { routes } from '../../routes';
 import ErrorBoundary from '../../components/ErrorBoundary';
 import MainWrapper from '../../components/MainWrapper';
 
-function Root({ store }) {
+export function Root({ store }) {
   return (
     <Provider store={store}>
       <MainWrapper>
@@ -23,5 +23,3 @@ function Root({ store }) {
 Root.propTypes = {
   store: PT.objectOf(PT.oneOfType([PT.func, PT.object])).isRequired,
 };
-
-export default Root;
