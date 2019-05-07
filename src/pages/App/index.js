@@ -15,6 +15,16 @@ import { setAuthState } from './actions';
   mapDispatchToProps
 )
 export class App extends React.PureComponent {
+  static propTypes = {
+    children: PT.element.isRequired,
+    setAuthState: PT.func,
+  };
+
+  static defaultProps = {
+    children: '',
+    setAuthState: Function.prototype,
+  };
+
   componentDidMount() {
     this.props.setAuthState(loadStore(KEYS.AUTH));
   }
@@ -44,8 +54,3 @@ function mapDispatchToProps(dispatch) {
     setAuthState: bindActionCreators(setAuthState, dispatch),
   };
 }
-
-App.propTypes = {
-  children: PT.element.isRequired,
-  setAuthState: PT.func,
-};

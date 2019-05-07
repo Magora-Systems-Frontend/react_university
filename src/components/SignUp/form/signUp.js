@@ -45,6 +45,10 @@ class SignUpForm extends PureComponent {
     ...propTypes,
   };
 
+  static defaultProps = {
+    submitting: false,
+  };
+
   render() {
     const { handleSubmit, submitting } = this.props;
 

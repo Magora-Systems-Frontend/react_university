@@ -1,4 +1,6 @@
 // The initial state of the App
+import { ACTIONS_CONSTANTS } from '../../config/constants';
+
 const initialState = {
   modal: '',
   isShow: false,
@@ -9,12 +11,12 @@ function commonModalReducer(state = initialState, action = {}) {
   const { type, payload } = action;
 
   switch (type) {
-    case 'SHOW_MODAL':
+    case ACTIONS_CONSTANTS.SHOW_MODAL:
       return {
         ...state,
         ...payload,
       };
-    case 'HIDE_MODAL':
+    case ACTIONS_CONSTANTS.HIDE_MODAL:
       return {
         ...state,
         modal: '',

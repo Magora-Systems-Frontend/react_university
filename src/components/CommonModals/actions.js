@@ -2,9 +2,11 @@
  * Common Modal Actions
  */
 
+import { ACTIONS_CONSTANTS } from '../../config/constants';
+
 export function showModal(modal, options) {
   return {
-    type: 'SHOW_MODAL',
+    type: ACTIONS_CONSTANTS.SHOW_MODAL,
     payload: {
       modal,
       options,
@@ -15,6 +17,6 @@ export function showModal(modal, options) {
 
 export function hideModal() {
   return {
-    type: 'HIDE_MODAL',
+    type: ACTIONS_CONSTANTS.HIDE_MODAL,
   };
 }

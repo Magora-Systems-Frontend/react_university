@@ -28,6 +28,11 @@ class PasswordRecoveryFormComponent extends PureComponent {
     handleSubmit: PropTypes.func,
   };
 
+  static defaultProps = {
+    isLoading: false,
+    handleSubmit: Function.prototype,
+  };
+
   render() {
     const { handleSubmit } = this.props;
 

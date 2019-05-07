@@ -13,6 +13,11 @@ export class CityFieldSimple extends React.PureComponent {
     citiesFieldProps: PropTypes.object, // ant-design Autocomplete props
   };
 
+  static defaultProps = {
+    countriesFieldProps: {},
+    citiesFieldProps: {},
+  };
+
   // memoize cities here after fetch
   countryCities = {};
 

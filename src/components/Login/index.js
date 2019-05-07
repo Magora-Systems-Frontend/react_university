@@ -18,6 +18,12 @@ export class Login extends React.PureComponent {
     hideModal: PropTypes.func,
   };
 
+  static defaultProps = {
+    dispatch: Function.prototype,
+    showModal: Function.prototype,
+    hideModal: Function.prototype,
+  };
+
   state = {
     isLoading: false,
   };
