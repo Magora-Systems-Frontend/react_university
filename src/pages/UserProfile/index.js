@@ -62,6 +62,10 @@ export default class UserProfilePage extends React.PureComponent {
             <div className="text">{payload.lastName}</div>
           </div>
           <div className="user__text-container_item">
+            <div className="title">User Name:</div>
+            <div className="text">{payload.username}</div>
+          </div>
+          <div className="user__text-container_item">
             <div className="title">Email:</div>
             <div className="text">{payload.email}</div>
           </div>
