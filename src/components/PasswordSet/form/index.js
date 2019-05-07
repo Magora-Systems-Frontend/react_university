@@ -24,6 +24,10 @@ class PasswordSetFormComponent extends PureComponent {
     submitting: PropTypes.bool,
   };
 
+  static defaultProps = {
+    submitting: false,
+  };
+
   render() {
     const { handleSubmit, submitting } = this.props;
 

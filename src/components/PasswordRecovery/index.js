@@ -11,6 +11,11 @@ class PasswordRecoveryComponent extends PureComponent {
     hideModal: PropTypes.func,
   };
 
+  static defaultProps = {
+    dispatch: Function.prototype,
+    hideModal: Function.prototype,
+  };
+
   state = {
     isLoading: false,
   };

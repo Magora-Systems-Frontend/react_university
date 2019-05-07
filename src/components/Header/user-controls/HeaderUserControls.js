@@ -5,10 +5,15 @@ import { Link } from 'react-router-dom';
 import { Avatar, Menu, Dropdown, Icon } from 'antd';
 import { ROUTES } from '../../../config/constants';
 
-class HeaderUserControls extends React.PureComponent {
+export default class HeaderUserControls extends React.PureComponent {
   static propTypes = {
     logout: PropTypes.func,
     authState: PropTypes.object,
+  };
+
+  static defaultProps = {
+    logout: Function.prototype,
+    authState: {},
   };
 
   logOutClick = () => {
@@ -48,5 +53,3 @@ class HeaderUserControls extends React.PureComponent {
     );
   }
 }
-
-export default HeaderUserControls;

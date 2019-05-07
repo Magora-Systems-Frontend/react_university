@@ -40,6 +40,10 @@ CommonModals.propTypes = {
   commonModals: PropTypes.object, // commonModals redux store
 };
 
+CommonModals.defaultProps = {
+  commonModals: {},
+};
+
 function mapStateToProps(state) {
   const { commonModals = {} } = state;
   return {

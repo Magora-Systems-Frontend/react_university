@@ -30,3 +30,10 @@ LoginModal.propTypes = {
   showModal: PropTypes.func,
   hideModal: PropTypes.func,
 };
+
+LoginModal.defaultProps = {
+  isShow: false,
+  options: {},
+  showModal: Function.prototype,
+  hideModal: Function.prototype,
+};

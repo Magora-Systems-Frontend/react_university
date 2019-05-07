@@ -28,3 +28,9 @@ PasswordRecoveryModal.propTypes = {
   hideModal: PropTypes.func,
   showModal: PropTypes.func,
 };
+
+PasswordRecoveryModal.defaultProps = {
+  isShow: false,
+  hideModal: Function.prototype,
+  showModal: Function.prototype,
+};

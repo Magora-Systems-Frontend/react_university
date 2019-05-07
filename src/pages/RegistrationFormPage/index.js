@@ -14,6 +14,16 @@ const withReducer = injectReducer({ key: 'RegistrationFormPage', reducer });
 )
 @compose(withReducer)
 export class RegistrationFormPage extends React.PureComponent {
+  static propTypes = {
+    loading: PropTypes.bool,
+    onSubmitForm: PropTypes.func,
+  };
+
+  static defaultProps = {
+    loading: false,
+    onSubmitForm: Function.prototype,
+  };
+
   render() {
     return (
       <article>
@@ -22,11 +32,6 @@ export class RegistrationFormPage extends React.PureComponent {
     );
   }
 }
-
-RegistrationFormPage.propTypes = {
-  loading: PropTypes.bool,
-  onSubmitForm: PropTypes.func,
-};
 
 function mapStateToProps(state) {
   return {};
