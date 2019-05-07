@@ -3,6 +3,14 @@ import PropTypes from 'prop-types';
 import { EditProfile } from 'components';
 
 export class UserProfileEditPage extends React.PureComponent {
+  static propTypes = {
+    match: PropTypes.object,
+  };
+
+  static defaultProps = {
+    match: {},
+  };
+
   async componentDidMount() {
     // const { match } = this.props;
     // const { params } = match;
@@ -13,7 +21,3 @@ export class UserProfileEditPage extends React.PureComponent {
     return <EditProfile />;
   }
 }
-
-UserProfileEditPage.propTypes = {
-  match: PropTypes.object,
-};

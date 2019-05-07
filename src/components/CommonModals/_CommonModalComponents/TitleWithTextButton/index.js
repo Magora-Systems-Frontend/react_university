@@ -18,4 +18,8 @@ TitleWithTextButton.propTypes = {
   onClick: PropTypes.func.isRequired,
 };
 
+TitleWithTextButton.defaultProps = {
+  onClick: Function.prototype,
+};
+
 export default TitleWithTextButton;

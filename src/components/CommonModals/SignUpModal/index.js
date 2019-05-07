@@ -4,6 +4,7 @@ import { Modal } from 'antd';
 import { SignUp } from 'components';
 import { withCommonModals } from '../withCommonModals';
 import TitleWithTextButton from '../_CommonModalComponents/TitleWithTextButton';
+import PasswordRecoveryModal from '../PasswordRecoveryModal';
 
 @withCommonModals
 class SignUpModal extends PureComponent {
@@ -28,6 +29,13 @@ SignUpModal.propTypes = {
   options: PropTypes.object,
   showModal: PropTypes.func,
   hideModal: PropTypes.func,
+};
+
+SignUpModal.defaultProps = {
+  isShow: false,
+  options: {},
+  hideModal: Function.prototype,
+  showModal: Function.prototype,
 };
 
 export default SignUpModal;

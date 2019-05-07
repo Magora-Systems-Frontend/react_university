@@ -5,7 +5,15 @@ import { withCommonModals } from 'components';
 import './header-controls.scss';
 
 @withCommonModals
-class HeaderControls extends React.PureComponent {
+export default class HeaderControls extends React.PureComponent {
+  static propTypes = {
+    showModal: PropTypes.func,
+  };
+
+  static defaultProps = {
+    showModal: Function.prototype,
+  };
+
   showLoginModal = () => {
     this.props.showModal('login');
   };
@@ -27,9 +35,3 @@ class HeaderControls extends React.PureComponent {
     );
   }
 }
-
-HeaderControls.propTypes = {
-  showModal: PropTypes.func,
-};
-
-export default HeaderControls;

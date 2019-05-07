@@ -10,6 +10,10 @@ class PasswordSetComponent extends PureComponent {
     dispatch: PropTypes.func,
   };
 
+  static defaultProps = {
+    dispatch: Function.prototype,
+  };
+
   onSubmit = async (values) => {
     const res = await passwordSet(values, this.props.dispatch);
     if (!res) {

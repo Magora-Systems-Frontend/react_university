@@ -24,6 +24,11 @@ class SignUp extends PureComponent {
     hideModal: PropTypes.func,
   };
 
+  static defaultProps = {
+    dispatch: Function.prototype,
+    hideModal: Function.prototype,
+  };
+
   onSubmit = async (values) => {
     const res = await signUp(values, this.props.dispatch);
 

@@ -32,6 +32,12 @@ class LoginFormComponent extends React.PureComponent {
     onFacebookLoginClick: PropTypes.func,
   };
 
+  static defaultProps = {
+    isLoading: false,
+    onGoogleLoginClick: Function.prototype,
+    onFacebookLoginClick: Function.prototype,
+  };
+
   render() {
     const { handleSubmit, onGoogleLoginClick, onFacebookLoginClick, onVKLoginClick } = this.props;
 

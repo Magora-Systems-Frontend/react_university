@@ -21,6 +21,11 @@ class SignUpPhoneForm extends PureComponent {
     ...propTypes,
   };
 
+  static defaultProps = {
+    handleSubmit: Function.prototype,
+    submitting: false,
+  };
+
   constructor(props) {
     super(props);
     this.state = {

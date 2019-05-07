@@ -50,4 +50,9 @@ Circle.propTypes = {
   rotate: PropTypes.number,
 };
 
+Circle.defaultProps = {
+  delay: null,
+  rotate: null,
+};
+
 export default Circle;

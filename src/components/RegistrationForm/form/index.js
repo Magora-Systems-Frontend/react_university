@@ -43,6 +43,10 @@ class RegistrationForm extends React.PureComponent {
     submitting: PropTypes.bool,
   };
 
+  static defaultProps = {
+    submitting: false,
+  };
+
   render() {
     const { handleSubmit, submitting, onDateChange, onFileChange } = this.props;
     const gender = ['Not choosen', 'Male', 'Female'];
