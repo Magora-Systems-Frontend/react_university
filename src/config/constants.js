@@ -5,6 +5,7 @@ export const {
   NODE_ENV,
   REACT_APP_GOOGLE_CLIENT_ID = '609222573894-edqe5vhhjcuva643omnln4p4b88p33mm.apps.googleusercontent.com',
   REACT_APP_FACEBOOK_APP_ID = '2284406111882705',
+  REDUX_LOGGER_IS_ENABLED = false,
 } = process.env || {};
 
 export const messages = {};

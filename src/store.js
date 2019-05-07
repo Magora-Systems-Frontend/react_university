@@ -1,16 +1,21 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
+import { REDUX_LOGGER_IS_ENABLED } from 'config/constants';
 import { routerMiddleware } from 'connected-react-router';
 import { createBrowserHistory } from 'history';
 //
+import { loadStore } from 'utils/localStorage';
+import reduxLoggerMiddleware from 'utils/reduxLoggerMiddleware';
 import createReducer from './reducers';
-import { loadStore } from './utils/localStorage';
 
 const initialState = loadStore();
 const injectedReducers = {};
 const enhancers = [];
 export const history = createBrowserHistory();
 const middleware = [thunk, routerMiddleware(history)];
+if (REDUX_LOGGER_IS_ENABLED) {
+  middleware.push(reduxLoggerMiddleware);
+}
 
 if (process.env.NODE_ENV !== 'production') {
   const devToolsExtension = window.__REDUX_DEVTOOLS_EXTENSION__;
