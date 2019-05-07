@@ -23,7 +23,7 @@ export class FileField extends React.PureComponent {
   };
 
   render() {
-    const { label, meta, /*input, action,*/ change } = this.props;
+    const { label, meta, change } = this.props;
 
     const { previewVisible, previewImage } = this.state;
 

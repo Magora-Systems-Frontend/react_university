@@ -2,17 +2,11 @@ import React from 'react';
 import { RegistrationForm } from './form';
 
 export class Registration extends React.PureComponent {
-  onSubmit = (values) => {
-    console.log(values);
-  };
+  onSubmit = (values) => {};
 
-  dateChange = (value) => {
-    console.log(value._d);
-  };
+  dateChange = (value) => {};
 
-  fileChange = (value) => {
-    console.log(value.file);
-  };
+  fileChange = (value) => {};
 
   render() {
     return (
