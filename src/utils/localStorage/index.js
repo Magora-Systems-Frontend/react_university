@@ -1,8 +1,8 @@
+import { LOCAL_STORAGE_PREFIX } from 'config/constants';
 import * as localStorageHelper from './localStorage';
 
-const PREFIX = process.env.WEB_APP_PREFIX || '@REACT_TEMPLATE_APP';
 export const KEYS = {
-  STORE: `${PREFIX}_$`,
+  STORE: `${LOCAL_STORAGE_PREFIX}_$`,
   AUTH: 'AUTH',
 };
 

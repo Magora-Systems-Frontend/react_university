@@ -15,18 +15,6 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
-            plugins: [
-              ['@babel/plugin-proposal-decorators', { legacy: true }],
-              '@babel/plugin-proposal-class-properties',
-              "@babel/plugin-proposal-object-rest-spread",
-              "@babel/plugin-transform-regenerator",
-              "@babel/plugin-transform-runtime",
-              '@babel/plugin-syntax-dynamic-import',
-              'babel-plugin-dynamic-import-webpack'
-            ],
-          },
         },
       },
       {
@@ -65,15 +53,6 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx', '.css'],
-    alias: {
-      library: makePath('../src/lib/'),
-      pages: makePath('../src/pages/'),
-      components: makePath('../src/components/'),
-      lib: makePath('../src/lib/'),
-      config: makePath('../src/config'),
-      utils: makePath('../src/utils'),
-      node_modules: makePath('../node_modules')
-    },
     plugins: [
       new DirectoryNamedWebpackPlugin({
         honorIndex: true,

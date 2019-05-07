@@ -1,4 +1,4 @@
-import { ACTIONS_CONSTANTS } from '../../config/constants';
+import { ACTIONS_CONSTANTS } from 'config/constants';
 
 // The initial state of the App
 const initialState = {
