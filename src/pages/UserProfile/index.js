@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import injectReducer from 'utils/injectReducer';
 import { bindActionCreators, compose } from 'redux';
 import { connect } from 'react-redux';
-import LoadingIndicator from 'components/LoadingIndicator';
-import reducer from './reducer';
 import { getUserProfile } from './actions';
+
+import lang from './lang.json';
 
 import './user.scss';
 
@@ -54,23 +53,23 @@ export class UserProfilePage extends React.PureComponent {
         </div>
         <div className="user__text-container">
           <div className="user__text-container_item">
-            <div className="title">First Name:</div>
+            <div className="title">{lang.EN.firstName}:</div>
             <div className="text">{payload.firstName}</div>
           </div>
           <div className="user__text-container_item">
-            <div className="title">Last Name:</div>
+            <div className="title">{lang.EN.lastName}:</div>
             <div className="text">{payload.lastName}</div>
           </div>
           <div className="user__text-container_item">
-            <div className="title">User Name:</div>
+            <div className="title">{lang.EN.userName}:</div>
             <div className="text">{payload.username}</div>
           </div>
           <div className="user__text-container_item">
-            <div className="title">Email:</div>
+            <div className="title">{lang.EN.email}:</div>
             <div className="text">{payload.email}</div>
           </div>
           <div className="user__text-container_item">
-            <div className="title">City:</div>
+            <div className="title">{lang.EN.city}:</div>
             <div className="text">{payload.city}</div>
           </div>
         </div>

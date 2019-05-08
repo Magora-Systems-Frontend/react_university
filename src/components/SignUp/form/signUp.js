@@ -5,30 +5,32 @@ import { TextField } from 'components';
 import { Icon, Button, Form, Tooltip } from 'antd';
 import { validateInput, validationTypes, validatePassword } from 'lib/validation';
 
+import lang from '../lang.json';
+
 const validate = (values) => {
   const errors = {};
 
   if (!values.email) {
-    errors.email = 'Fill in all required fields';
+    errors.email = lang.errors.required_field;
   } else {
     if (!validateInput(validationTypes.EMAIL, values.email)) {
-      errors.email = 'Invalid email format';
+      errors.email = lang.errors.invalid_email;
     }
   }
 
   if (!values.password) {
-    errors.password = 'Fill in all required fields';
+    errors.password = lang.errors.required_field;
   } else {
     if (!validatePassword(values.password)) {
-      errors.password = 'Password must be at 6 - 40 characters, including numbers, lowercase and uppercase letters';
+      errors.password = lang.errors.invalid_pass;
     }
   }
 
   if (!values.confirmPassword) {
-    errors.confirmPassword = 'Fill in all required fields';
+    errors.confirmPassword = lang.errors.required_field;
   } else {
     if (values.confirmPassword !== values.password) {
-      errors.confirmPassword = 'Enter equal passwords';
+      errors.confirmPassword = lang.errors.invalid_confirm_pass;
     }
   }
 
@@ -57,7 +59,7 @@ class SignUpForm extends PureComponent {
         <Field
           name="email"
           type="email"
-          placeholder="Email"
+          placeholder={lang.EN.email}
           error="error"
           component={TextField}
           prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
@@ -71,7 +73,7 @@ class SignUpForm extends PureComponent {
         <Field
           name="password"
           type="password"
-          placeholder="Password"
+          placeholder={lang.EN.password}
           component={TextField}
           prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
         />
@@ -79,7 +81,7 @@ class SignUpForm extends PureComponent {
         <Field
           name="confirmPassword"
           type="password"
-          placeholder="Confirm password"
+          placeholder={lang.EN.confirm}
           component={TextField}
           prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
         />
@@ -91,7 +93,7 @@ class SignUpForm extends PureComponent {
             className="signup-form-button"
             loading={submitting}
             style={{ width: '100%' }}>
-            Sign up
+            {lang.EN.signUp}
           </Button>
         </Form.Item>
       </form>

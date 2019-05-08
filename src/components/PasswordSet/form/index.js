@@ -6,13 +6,15 @@ import { Icon, Button, Form } from 'antd';
 import { validatePassword } from 'lib/validation';
 import './index.sass';
 
+import lang from '../lang.json';
+
 const validate = (values) => {
   const errors = {};
 
   if (!values.newPassword) {
-    errors.newPassword = 'Create new password';
+    errors.newPassword = lang.errors.required_field;
   } else if (!validatePassword(values.newPassword)) {
-    errors.newPassword = 'Password must be at 6 - 40 characters, including numbers, lowercase and uppercase letters';
+    errors.newPassword = lang.errors.invalid_new_pass;
   }
 
   return errors;
@@ -34,7 +36,7 @@ class PasswordSetFormComponent extends PureComponent {
     return (
       <form onSubmit={handleSubmit} className="password-set-form">
         <Field
-          label="New Password"
+          label={lang.EN.password}
           name="newPassword"
           type="text"
           component={TextField}
@@ -48,7 +50,7 @@ class PasswordSetFormComponent extends PureComponent {
             className="password-set-form-button"
             loading={submitting}
             style={{ width: '100%' }}>
-            Change password
+            {lang.EN.changePass}
           </Button>
         </Form.Item>
       </form>

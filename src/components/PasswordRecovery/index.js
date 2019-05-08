@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { passwordRecovery } from 'pages/App/actions';
 import { PasswordRecoveryForm } from './form';
 
+import lang from './lang.json';
+
 class PasswordRecoveryComponent extends PureComponent {
   static propTypes = {
     dispatch: PropTypes.func,
@@ -25,16 +27,14 @@ class PasswordRecoveryComponent extends PureComponent {
 
     if (!res) {
       throw new SubmissionError({
-        email: 'Network error',
-        password: 'Network error',
-        confirmPassword: 'Network error',
+        email: lang.errors.network_error,
       });
     }
 
     if (res.status === 401) {
-      throw new SubmissionError({ email: 'Invalid email' });
+      throw new SubmissionError({ email: lang.errors.invalid_email });
     } else if (res.status !== 200) {
-      throw new SubmissionError({ email: 'Unknown server error' });
+      throw new SubmissionError({ email: lang.errors.unknown_server });
     }
 
     this.props.hideModal();

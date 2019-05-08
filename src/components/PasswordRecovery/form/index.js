@@ -7,14 +7,16 @@ import { Icon, Button, Form, Tooltip } from 'antd';
 
 import { validateInput, validationTypes } from 'lib/validation';
 
+import lang from '../lang.json';
+
 const validate = (values) => {
   const errors = {};
 
   if (!values.email) {
-    errors.email = 'Fill in all required fields';
+    errors.email = lang.errors.required_field;
   } else {
     if (!validateInput(validationTypes.EMAIL, values.email)) {
-      errors.email = 'Invalid email format';
+      errors.email = lang.errors.invalid_email;
     }
   }
 
@@ -41,7 +43,7 @@ class PasswordRecoveryFormComponent extends PureComponent {
         <Field
           name="email"
           type="email"
-          placeholder="Email"
+          placeholder={lang.EN.email}
           component={TextField}
           prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
           suffix={
@@ -59,7 +61,7 @@ class PasswordRecoveryFormComponent extends PureComponent {
             style={{ width: '100%' }}
             loading={this.props.isLoading}
             icon="login">
-            Recover password
+            {lang.EN.btn}
           </Button>
         </Form.Item>
       </form>
