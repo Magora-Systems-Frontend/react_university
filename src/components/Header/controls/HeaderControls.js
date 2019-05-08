@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Button } from 'antd';
 import { withCommonModals } from 'components';
 import './header-controls.scss';
+import lang from './lang.json';
 
 @withCommonModals
 export default class HeaderControls extends React.PureComponent {
@@ -23,13 +24,16 @@ export default class HeaderControls extends React.PureComponent {
   };
 
   render() {
+    const {
+      EN: { loginTitle, signTitle },
+    } = lang;
     return (
       <div className="header-controls">
         <Button type="primary" onClick={this.showLoginModal}>
-          Log in
+          {loginTitle}
         </Button>
         <Button type="primary" onClick={this.showSignUpModal}>
-          Sign up
+          {signTitle}
         </Button>
       </div>
     );

@@ -2,10 +2,7 @@ import React from 'react';
 import { reduxForm, propTypes, Field } from 'redux-form';
 import { TextField, SelectField, FileField, DatePickerField } from 'components';
 import { validate } from './validate';
-
-import './edit-profile-form.scss';
-
-const gender = ['Not choosen', 'Male', 'Female'];
+import lang from './lang.json';
 
 @reduxForm({
   form: 'editProfile',
@@ -19,34 +16,58 @@ export class EditProfileForm extends React.PureComponent {
 
   render() {
     const { handleSubmit } = this.props;
+    const {
+      EN: {
+        formTitle,
+        fields: { lastName, firstName, patronymic, userName, photo, date, gender },
+        submitTitle,
+      },
+    } = lang;
 
     return (
-      <form className="edit-profile-form" onSubmit={handleSubmit}>
-        <h2>Edit Profile</h2>
+      <form onSubmit={handleSubmit}>
+        <h2>{formTitle}</h2>
 
-        <Field label="Last Name" name="lastName" placeholder="Last Name" component={TextField} />
-
-        <Field label="First Name" name="firstName" placeholder="First Name" component={TextField} />
-
-        <Field label="Patronymic" name="patronymic" placeholder="Patronymic" component={TextField} />
-
-        <Field label="Username" name="userName" placeholder="Username" component={TextField} />
+        <Field label={lastName.label} name={lastName.name} placeholder={lastName.placeholder} component={TextField} />
 
         <Field
-          label="Photo"
-          name="photo"
-          action="test"
+          label={firstName.label}
+          name={firstName.name}
+          placeholder={firstName.placeholder}
+          component={TextField}
+        />
+
+        <Field
+          label={patronymic.label}
+          name={patronymic.name}
+          placeholder={patronymic.placeholder}
+          component={TextField}
+        />
+
+        <Field label={userName.label} name={userName.name} placeholder={userName.placeholder} component={TextField} />
+
+        <Field
+          label={photo.label}
+          name={photo.name}
+          action={photo.action}
           component={FileField}
           inputProps={{
             multiple: false,
           }}
         />
 
-        <Field label="Date of Birth" name="date" placeholder="Select date..." component={DatePickerField} />
+        <Field label={date.label} name={date.name} placeholder={date.placeholder} component={DatePickerField} />
 
-        <Field label="Gender" name="gender" placeholder="Gender" error="aaa" options={gender} component={SelectField} />
+        <Field
+          label={gender.label}
+          name={gender.name}
+          placeholder={gender.placeholder}
+          error={gender.error}
+          options={gender.options}
+          component={SelectField}
+        />
 
-        <button className="ant-btn ant-btn-primary">Send</button>
+        <button className="ant-btn ant-btn-primary">{submitTitle}</button>
       </form>
     );
   }

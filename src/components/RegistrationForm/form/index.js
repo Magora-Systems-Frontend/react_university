@@ -3,7 +3,6 @@ import { reduxForm, propTypes, Field } from 'redux-form';
 import { TextField, SelectField, DatePickerField, CityField, FileField } from 'components';
 import PropTypes from 'prop-types';
 import { validateInput, validationTypes } from 'lib/validation';
-import './registration-form.sass';
 
 import lang from '../lang.json';
 
@@ -53,7 +52,7 @@ export class RegistrationForm extends React.PureComponent {
     const { handleSubmit, submitting, onDateChange, onFileChange } = this.props;
     const gender = lang.gender;
     return (
-      <form className="registration-form" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <h2>Registration Form</h2>
         <Field
           label={lang.EN.lastName}
