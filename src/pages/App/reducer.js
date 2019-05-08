@@ -1,4 +1,5 @@
 import { ACTIONS_CONSTANTS } from 'config/constants';
+import { updateState } from 'utils/reducer';
 
 // The initial state of the App
 const initialState = {
@@ -12,15 +13,9 @@ function appReducer(state = initialState, action = {}) {
 
   switch (type) {
     case ACTIONS_CONSTANTS.APP_CLEAR_AUTH_STATE:
-      return {
-        ...state,
-        authState: { isAuth: false },
-      };
+      return updateState({ ...state }, { authState: { isAuth: false } });
     case ACTIONS_CONSTANTS.APP_SET_AUTH_STATE:
-      return {
-        ...state,
-        authState: { ...payload },
-      };
+      return updateState({ ...state }, { authState: { ...payload } });
     default:
       return state;
   }
