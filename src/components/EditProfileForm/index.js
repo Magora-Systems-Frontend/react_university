@@ -4,6 +4,7 @@ import { message } from 'antd';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { updateProfile } from 'pages/App/actions';
+import { FormWrapper } from 'components';
 import { EditProfileForm } from './form';
 
 @connect(
@@ -33,17 +34,19 @@ export class EditProfile extends React.PureComponent {
     const { userInfo } = this.props;
 
     return (
-      <EditProfileForm
-        onSubmit={this.onSubmit}
-        initialValues={{
-          lastName: userInfo.lastName || '',
-          firstName: userInfo.firstName || '',
-          patronymic: userInfo.patronymic || '',
-          userName: userInfo.userName || '',
-          date: userInfo.date || '',
-          gender: userInfo.gender || '',
-        }}
-      />
+      <FormWrapper>
+        <EditProfileForm
+          onSubmit={this.onSubmit}
+          initialValues={{
+            lastName: userInfo.lastName || '',
+            firstName: userInfo.firstName || '',
+            patronymic: userInfo.patronymic || '',
+            userName: userInfo.userName || '',
+            date: userInfo.date || '',
+            gender: userInfo.gender || '',
+          }}
+        />
+      </FormWrapper>
     );
   }
 }

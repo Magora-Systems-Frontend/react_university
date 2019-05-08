@@ -4,7 +4,6 @@ import { TextField } from 'components';
 import PropTypes from 'prop-types';
 import { Icon, Button, Form } from 'antd';
 import { validatePassword } from 'lib/validation';
-import './index.sass';
 
 const validate = (values) => {
   const errors = {};
@@ -32,7 +31,7 @@ class PasswordSetFormComponent extends PureComponent {
     const { handleSubmit, submitting } = this.props;
 
     return (
-      <form onSubmit={handleSubmit} className="password-set-form">
+      <form onSubmit={handleSubmit}>
         <Field
           label="New Password"
           name="newPassword"
@@ -42,12 +41,7 @@ class PasswordSetFormComponent extends PureComponent {
         />
 
         <Form.Item style={{ margin: '0' }}>
-          <Button
-            type="primary"
-            htmlType="submit"
-            className="password-set-form-button"
-            loading={submitting}
-            style={{ width: '100%' }}>
+          <Button type="primary" htmlType="submit" loading={submitting} style={{ width: '100%' }}>
             Change password
           </Button>
         </Form.Item>

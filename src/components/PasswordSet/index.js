@@ -1,9 +1,10 @@
 import React, { PureComponent } from 'react';
-import { PasswordSetForm } from './form';
-import { passwordSet } from 'pages/App/actions';
+import PropTypes from 'prop-types';
 import { SubmissionError } from 'redux-form';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+import { passwordSet } from 'pages/App/actions';
+import { FormWrapper } from 'components';
+import { PasswordSetForm } from './form';
 
 class PasswordSetComponent extends PureComponent {
   static propTypes = {
@@ -29,9 +30,9 @@ class PasswordSetComponent extends PureComponent {
 
   render() {
     return (
-      <div>
+      <FormWrapper>
         <PasswordSetForm onSubmit={this.onSubmit} />
-      </div>
+      </FormWrapper>
     );
   }
 }

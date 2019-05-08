@@ -3,8 +3,6 @@ import { reduxForm, propTypes, Field } from 'redux-form';
 import { TextField, SelectField, FileField, DatePickerField } from 'components';
 import { validate } from './validate';
 
-import './edit-profile-form.scss';
-
 const gender = ['Not choosen', 'Male', 'Female'];
 
 @reduxForm({
@@ -21,7 +19,7 @@ export class EditProfileForm extends React.PureComponent {
     const { handleSubmit } = this.props;
 
     return (
-      <form className="edit-profile-form" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <h2>Edit Profile</h2>
 
         <Field label="Last Name" name="lastName" placeholder="Last Name" component={TextField} />
