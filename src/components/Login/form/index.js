@@ -119,7 +119,7 @@ class LoginFormComponent extends React.PureComponent {
             style={{ width: '100%' }}
             loading={this.props.isLoading}
             icon="login">
-            Log in
+            Login
           </Button>
         </Form.Item>
       </form>
