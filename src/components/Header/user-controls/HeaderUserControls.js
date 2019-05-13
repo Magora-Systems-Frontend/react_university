@@ -4,6 +4,7 @@ import lodash from 'lodash';
 import { Link } from 'react-router-dom';
 import { Avatar, Menu, Dropdown, Icon } from 'antd';
 import { ROUTES } from 'config/constants';
+import lang from './lang.json';
 
 export default class HeaderUserControls extends React.PureComponent {
   static propTypes = {
@@ -20,26 +21,31 @@ export default class HeaderUserControls extends React.PureComponent {
     this.props.logout();
   };
 
-  renderMenu = (userId) => (
-    <Menu>
-      <Menu.Item key="0">
-        <Link to={`${ROUTES.USER_PROFILE}/${userId}`}>
-          <Icon type="user" />
-          &nbsp; View profile
-        </Link>
-      </Menu.Item>
-      <Menu.Item key="1">
-        <Link to={`${ROUTES.USER_PROFILE}/${userId}/edit`}>
-          <Icon type="edit" />
-          &nbsp; Edit profile
-        </Link>
-      </Menu.Item>
-      <Menu.Item key="2" onClick={this.logOutClick}>
-        <Icon type="logout" />
-        Logout
-      </Menu.Item>
-    </Menu>
-  );
+  renderMenu = (userId) => {
+    const {
+      EN: { viewTitle, editTitle, logoutTitle },
+    } = lang;
+    return (
+      <Menu>
+        <Menu.Item key="0">
+          <Link to={`${ROUTES.USER_PROFILE}/${userId}`}>
+            <Icon type="user" />
+            {viewTitle}
+          </Link>
+        </Menu.Item>
+        <Menu.Item key="1">
+          <Link to={`${ROUTES.USER_PROFILE}/${userId}/edit`}>
+            <Icon type="edit" />
+            {editTitle}
+          </Link>
+        </Menu.Item>
+        <Menu.Item key="2" onClick={this.logOutClick}>
+          <Icon type="logout" />
+          {logoutTitle}
+        </Menu.Item>
+      </Menu>
+    );
+  };
 
   render() {
     const { authState = {} } = this.props;

@@ -6,6 +6,7 @@ import { login } from 'pages/App/actions';
 import { message } from 'antd';
 import { API_METHODS } from 'config/constants';
 import { LoginForm } from './form';
+import lang from './lang.json';
 
 @connect(
   null,
@@ -32,29 +33,31 @@ export class Login extends React.PureComponent {
     this.setState({ isLoading: true });
     const res = await login(values, this.props.dispatch, API_METHODS.LOGIN);
     this.setState({ isLoading: false });
+    const { success, errors } = lang;
 
     if (!res) {
-      throw new SubmissionError({ email: 'Network error', password: 'Network error' });
+      throw new SubmissionError({ email: errors.network_error, password: errors.network_error });
     }
     if (res.status === 401) {
-      throw new SubmissionError({ email: 'Invalid email or password', password: 'Invalid email or password' });
+      throw new SubmissionError({ email: errors.invalid_data, password: errors.invalid_data });
     } else if (res.status !== 200) {
-      throw new SubmissionError({ email: 'Unknown server error', password: 'Unknown server error' });
+      throw new SubmissionError({ email: errors.unknown_server, password: errors.unknown_server });
     }
 
-    message.success('Successful login!');
+    message.success(success.login);
     this.props.hideModal();
   };
 
   onGoogleLoginClick = async () => {
     let id_token;
+    const { success, errors } = lang;
     try {
       const GoogleAuth = window.gapi.auth2.getAuthInstance();
       const GoogleUser = await GoogleAuth.signIn();
       id_token = GoogleUser.getAuthResponse().id_token;
     } catch (error) {
       if (error.error === 'network_error') {
-        return message.error('Network error');
+        return message.error(errors.network_error);
       }
       return;
     }
@@ -72,14 +75,14 @@ export class Login extends React.PureComponent {
     const res = await login(requestValues, this.props.dispatch, API_METHODS.LOGIN_GOOGLE);
 
     if (!res) {
-      return message.error('Network error');
+      return message.error(errors.network_error);
     } else if (res.status === 401) {
-      return message.error('Invalid auth data!');
+      return message.error(errors.invalid_auth_data);
     } else if (res.status !== 200) {
-      return message.error('Unknown server error');
+      return message.error(errors.unknown_server);
     }
 
-    message.success('Successful login!');
+    message.success(success.login);
     this.props.hideModal();
   };
 
@@ -114,16 +117,16 @@ export class Login extends React.PureComponent {
             };
 
             const res = await login(requestValues, this.props.dispatch, API_METHODS.LOGIN_FACEBOOK);
-
+            const { success, errors } = lang;
             if (!res) {
-              return message.error('Network error');
+              return message.error(errors.network_error);
             } else if (res.status === 401) {
-              return message.error('Invalid auth data!');
+              return message.error(errors.invalid_auth_data);
             } else if (res.status !== 200) {
-              return message.error('Unknown server error');
+              return message.error(errors.unknown_server);
             }
 
-            message.success('Successful login!');
+            message.success(success.login);
             this.props.hideModal();
           }
         );
@@ -156,16 +159,17 @@ export class Login extends React.PureComponent {
         id_token: id_token,
       };
       const res = login(requestValues, this.props.dispatch, API_METHODS.LOGIN_VK);
+      const { success, errors } = lang;
 
       if (!res) {
-        return message.error('Network error');
-      } else if (res.status === 410) {
-        return message.error('Invalid auth data!');
+        return message.error(errors.network_error);
+      } else if (res.status === 401) {
+        return message.error(errors.invalid_auth_data);
       } else if (res.status !== 200) {
-        return message.error('Unknown server error');
+        return message.error(errors.unknown_server);
       }
 
-      message.success('Successful login!');
+      message.success(success.login);
       this.props.hideModal();
     };
   };

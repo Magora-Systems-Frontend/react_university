@@ -1,0 +1,19 @@
+{
+  "EN": {
+    "email": "Email",
+    "password": "Password",
+    "confirm": "Confirm password",
+    "signUp": "Sign Up",
+    "emailSignUp": "Email Sign Up",
+    "phoneSignUp": "Phone Sign Up"
+  },
+  "errors": {
+    "network_error": "Network error",
+    "unknown_server": "Unknown server error",
+    "invalid_field": "Invalid email or password",
+    "required_field": "Fill in all required fields",
+    "invalid_email": "Invalid email format",
+    "invalid_pass": "Password must be at 6 - 40 characters, including numbers, lowercase and uppercase letters",
+    "invalid_confirm_pass": "Enter equal passwords"
+  }
+}

@@ -4,29 +4,31 @@ import { TextField, SelectField, DatePickerField, CityField, FileField } from 'c
 import PropTypes from 'prop-types';
 import { validateInput, validationTypes } from 'lib/validation';
 
+import lang from '../lang.json';
+
 const validate = (values) => {
   const errors = {};
 
   if (!values.lastname) {
-    errors.lastname = 'Fill in all required fields';
+    errors.lastname = lang.errors.required_field;
   } else if (!validateInput(validationTypes.TEXT, values.lastname)) {
-    errors.lastname = 'Last name must contain only the following characters: A-Z, a-z, ., -';
+    errors.lastname = lang.errors.invalid_lastname;
   }
 
   if (!values.firstname) {
-    errors.firstname = 'Fill in all required fields';
+    errors.firstname = lang.errors.required_field;
   } else if (!validateInput(validationTypes.TEXT, values.firstname)) {
-    errors.firstname = 'First name must contain only the following characters: A-Z, a-z, ., -';
+    errors.firstname = lang.errors.invalid_firstname;
   }
 
   if (!values.username) {
-    errors.username = 'Fill in all required fields';
+    errors.username = lang.errors.required_field;
   } else if (!validateInput(validationTypes.NICK, values.username)) {
-    errors.username = 'Nickname must contain only the following characters: A-Z, a-z, ., _';
+    errors.username = lang.errors.invalid_nickname;
   }
 
   if (!values.city) {
-    errors.city = 'Fill in all required fields';
+    errors.city = lang.errors.required_field;
   }
 
   return errors;
@@ -48,43 +50,64 @@ export class RegistrationForm extends React.PureComponent {
 
   render() {
     const { handleSubmit, submitting, onDateChange, onFileChange } = this.props;
-    const gender = ['Not choosen', 'Male', 'Female'];
+    const gender = lang.gender;
     return (
       <form onSubmit={handleSubmit}>
         <h2>Registration Form</h2>
         <Field
-          label="Last Name"
+          label={lang.EN.lastName}
           name="lastname"
           type="text"
-          placeholder="Last Name"
+          placeholder={lang.EN.lastName}
           error="aaa"
           component={TextField}
         />
         <Field
-          label="First Name"
+          label={lang.EN.firstName}
           name="firstname"
           type="text"
-          placeholder="First Name"
+          placeholder={lang.EN.firstName}
           error="aaa"
           component={TextField}
         />
-        <Field label="Username" name="username" type="text" placeholder="Username" error="aaa" component={TextField} />
-        <Field label="City" name="city" type="text" placeholder="City" component={CityField} />
-        <Field label="Gender" name="gender" placeholder="Gender" error="aaa" options={gender} component={SelectField} />
         <Field
-          label="Date of Birth"
+          label={lang.EN.userName}
+          name="username"
+          type="text"
+          placeholder={lang.EN.userName}
+          error="aaa"
+          component={TextField}
+        />
+        <Field label={lang.EN.city} name="city" type="text" placeholder={lang.EN.city} component={CityField} />
+        <Field
+          label={lang.EN.gender}
+          name="gender"
+          placeholder={lang.EN.gender}
+          error="aaa"
+          options={gender}
+          component={SelectField}
+        />
+        <Field
+          label={lang.EN.dob}
           name="date"
           error="aaa"
           change={onDateChange}
-          placeholder="Select date..."
+          placeholder={lang.EN.selectDate}
           component={DatePickerField}
         />
 
-        <Field label="Photo" name="photo" error="aaa" action="test" change={onFileChange} component={FileField} />
+        <Field
+          label={lang.EN.photo}
+          name="photo"
+          error="aaa"
+          action="test"
+          change={onFileChange}
+          component={FileField}
+        />
 
         <div className="registration-form__submit">
           <button className="registration-form__submit-btn ant-btn ant-btn-primary" disabled={submitting}>
-            Send
+            {lang.EN.send}
           </button>
         </div>
       </form>

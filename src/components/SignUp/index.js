@@ -7,6 +7,8 @@ import { Button } from 'antd';
 import { SignUpForm } from './form/signUp';
 import { SignUpPhoneForm } from './form/signUpPhone';
 
+import lang from './lang.json';
+
 @connect(
   null,
   mapDispatchToProps
@@ -34,23 +36,23 @@ class SignUp extends PureComponent {
 
     if (!res) {
       throw new SubmissionError({
-        email: 'Network error',
-        password: 'Network error',
-        confirmPassword: 'Network error',
+        email: lang.errors.network_error,
+        password: lang.errors.network_error,
+        confirmPassword: lang.errors.network_error,
       });
     }
 
     if (res.status === 401) {
       throw new SubmissionError({
-        email: 'Invalid email or password',
-        password: 'Invalid email or password',
-        confirmPassword: 'Network error',
+        email: lang.errors.invalid_field,
+        password: lang.errors.invalid_field,
+        confirmPassword: lang.errors.invalid_field,
       });
     } else if (res.status !== 200) {
       throw new SubmissionError({
-        email: 'Unknown server error',
-        password: 'Unknown server error',
-        confirmPassword: 'Unknown server error',
+        email: lang.errors.unknown_server,
+        password: lang.errors.unknown_server,
+        confirmPassword: lang.errors.unknown_server,
       });
     }
 
@@ -60,13 +62,13 @@ class SignUp extends PureComponent {
   onSubmitPhone = async (values) => {
     const res = await signUpPhone(values, this.props.dispatch);
     if (!res) {
-      throw new SubmissionError({ phone: 'Network error', code: 'Network error' });
+      throw new SubmissionError({ phone: lang.errors.network_error, code: lang.errors.network_error });
     }
 
     if (res.status === 401) {
-      throw new SubmissionError({ phone: 'Invalid phone or code', code: 'Invalid phone or code' });
+      throw new SubmissionError({ phone: lang.errors.invalid_field, code: lang.errors.invalid_field });
     } else if (res.status !== 200) {
-      throw new SubmissionError({ phone: 'Unknown server error', code: 'Unknown server error' });
+      throw new SubmissionError({ phone: lang.errors.unknown_server, code: lang.errors.unknown_server });
     }
 
     this.props.hideModal();
@@ -87,7 +89,7 @@ class SignUp extends PureComponent {
           type="default"
           htmlType="button"
           style={{ width: '100%', marginBottom: '24px' }}>
-          {phoneSignUp ? 'E-mail sign up' : 'Phone sign up'}
+          {phoneSignUp ? lang.EN.emailSignUp : lang.EN.phoneSignUp}
         </Button>
 
         {phoneSignUp ? <SignUpPhoneForm onSubmit={this.onSubmitPhone} /> : <SignUpForm onSubmit={this.onSubmit} />}

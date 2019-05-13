@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { updateProfile } from 'pages/App/actions';
 import { FormWrapper } from 'components';
 import { EditProfileForm } from './form';
+import lang from './lang.json';
 
 @connect(
   mapStateToProps,
@@ -14,6 +15,10 @@ import { EditProfileForm } from './form';
 export class EditProfile extends React.PureComponent {
   onSubmit = (values) => {
     const { userInfo } = this.props;
+    const {
+      EN: { messages },
+    } = lang;
+
     let avatarUrl = userInfo.avatarUrl;
 
     const { photo = {} } = values;
@@ -27,7 +32,7 @@ export class EditProfile extends React.PureComponent {
     });
 
     window.scrollTo(0, 0);
-    message.success('Profile edited!');
+    message.success(messages.success);
   };
 
   render() {

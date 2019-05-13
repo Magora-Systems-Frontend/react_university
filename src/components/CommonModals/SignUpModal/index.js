@@ -4,17 +4,20 @@ import { Modal } from 'antd';
 import { SignUp } from 'components';
 import { withCommonModals } from '../withCommonModals';
 import TitleWithTextButton from '../_CommonModalComponents/TitleWithTextButton';
-import PasswordRecoveryModal from '../PasswordRecoveryModal';
+import lang from './lang.json';
 
 @withCommonModals
 class SignUpModal extends PureComponent {
   render() {
     const { isShow } = this.props;
+    const {
+      EN: { title, btnText },
+    } = lang;
     return (
       <Modal
         visible={isShow}
         onCancel={this.props.hideModal}
-        title={<TitleWithTextButton title="Sign Up" btnText="Log In" onClick={() => this.props.showModal('login')} />}
+        title={<TitleWithTextButton title={title} btnText={btnText} onClick={() => this.props.showModal('login')} />}
         closable={false}
         footer={null}
         style={{ maxWidth: '400px' }}>

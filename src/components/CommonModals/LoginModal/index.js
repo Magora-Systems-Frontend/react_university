@@ -4,17 +4,21 @@ import { Modal } from 'antd';
 import { Login } from 'components';
 import { withCommonModals } from '../withCommonModals';
 import TitleWithTextButton from '../_CommonModalComponents/TitleWithTextButton';
+import lang from './lang.json';
 
 export default
 @withCommonModals
 class LoginModal extends React.PureComponent {
   render() {
     const { isShow } = this.props;
+    const {
+      EN: { title, btnText },
+    } = lang;
     return (
       <Modal
         visible={isShow}
         onCancel={this.props.hideModal}
-        title={<TitleWithTextButton title="Log In" btnText="Sign up" onClick={() => this.props.showModal('sign-up')} />}
+        title={<TitleWithTextButton title={title} btnText={btnText} onClick={() => this.props.showModal('sign-up')} />}
         closable={false}
         footer={null}
         style={{ maxWidth: '400px' }}>

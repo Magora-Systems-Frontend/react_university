@@ -7,7 +7,7 @@ import { ROUTES } from 'config/constants';
 import { logout } from 'pages/App/actions';
 import HeaderControls from './controls/HeaderControls';
 import HeaderUserControls from './user-controls/HeaderUserControls';
-
+import lang from './lang.json';
 import './header.scss';
 
 @connect(
@@ -37,7 +37,7 @@ class Header extends React.PureComponent {
           <Link to={ROUTES.HOME_PAGE} className="header__left-side">
             <div className="header__logo">
               <img className="header__logo-img" src="./icons/logo.svg" alt="logo" />
-              <span className="header__logo-text">React template app</span>
+              <span className="header__logo-text">{lang.EN.headerTitle}</span>
             </div>
           </Link>
 
