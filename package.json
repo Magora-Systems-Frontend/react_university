@@ -26,6 +26,7 @@
     "@babel/preset-env": "^7.0.0-beta.49",
     "@babel/preset-react": "^7.0.0-beta.49",
     "@babel/runtime": "^7.4.3",
+    "@hot-loader/react-dom": "^16.8.6",
     "autoprefixer": "^8.6.1",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
