@@ -7,6 +7,7 @@ import { compose } from 'redux';
 import injectReducer from '../../utils/injectReducer';
 import Section from './Section';
 import reducer from './reducer';
+import { FindCourse, Advantages } from 'components';
 
 const withReducer = injectReducer({ key: 'home', reducer });
 
@@ -30,14 +31,11 @@ export class HomePage extends React.PureComponent {
     return (
       <article>
         <Helmet>
-          <title>Notes</title>
+          <title>Courses</title>
           <meta name="description" content="Notes" />
         </Helmet>
-        <div>
-          <Section>
-            <h1>Home Page</h1>
-          </Section>
-        </div>
+        <FindCourse />
+        <Advantages />
       </article>
     );
   }

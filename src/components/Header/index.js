@@ -7,6 +7,10 @@ import { ROUTES } from 'config/constants';
 import { logout } from 'pages/App/actions';
 import HeaderControls from './controls/HeaderControls';
 import HeaderUserControls from './user-controls/HeaderUserControls';
+import HeaderSearch from './search/HeaderSearch';
+import HeaderInvite from './invite/HeaderInvite';
+import HeaderCart from './cart/HeaderCart';
+import HeaderCatalog from './catalog/HeaderCatalog';
 import lang from './lang.json';
 import './header.scss';
 
@@ -41,6 +45,11 @@ class Header extends React.PureComponent {
             </div>
           </Link>
 
+          <HeaderCatalog />
+
+          <HeaderSearch maxWidth="800px" />
+          <HeaderInvite />
+          <HeaderCart />
           <div className="header__right-side">{this.renderControls()}</div>
         </div>
       </header>

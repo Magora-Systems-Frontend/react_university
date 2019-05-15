@@ -7,6 +7,8 @@ export { EditProfile } from './EditProfileForm';
 export { MainWrapper } from './MainWrapper';
 export { FormWrapper } from './FormWrapper';
 export { ErrorBoundary } from './ErrorBoundary';
+export { FindCourse } from './Sections/FindCourse/FindCourse';
+export { Advantages } from './Sections/Advantages/Advantages';
 
 export { CommonModals, withCommonModals } from './CommonModals';
 

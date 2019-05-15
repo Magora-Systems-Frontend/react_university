@@ -18,7 +18,7 @@ export class TextField extends React.PureComponent {
   };
 
   render() {
-    const { label, meta, input, type } = this.props;
+    const { label, meta, input, type, cssmodify } = this.props;
 
     let inputElement;
     switch (type) {
@@ -31,6 +31,8 @@ export class TextField extends React.PureComponent {
       case 'mask':
         inputElement = InputMask;
         break;
+      case 'search':
+        inputElement = Input.Search;
       case 'text':
       default:
         inputElement = Input;
@@ -40,7 +42,7 @@ export class TextField extends React.PureComponent {
     const help = meta.error && meta.touched ? meta.error : '';
 
     return (
-      <Form.Item label={label} validateStatus={validateStatus} help={help}>
+      <Form.Item label={label} validateStatus={validateStatus} help={help} style={cssmodify}>
         {React.createElement(inputElement, { ...this.props, ...input })}
       </Form.Item>
     );
