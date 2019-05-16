@@ -5,9 +5,8 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 
 import injectReducer from '../../utils/injectReducer';
-import Section from './Section';
 import reducer from './reducer';
-import { FindCourse, Advantages } from 'components';
+import { FindCourse, Advantages, Courses } from 'components';
 
 const withReducer = injectReducer({ key: 'home', reducer });
 
@@ -36,6 +35,7 @@ export class HomePage extends React.PureComponent {
         </Helmet>
         <FindCourse />
         <Advantages />
+        <Courses />
       </article>
     );
   }

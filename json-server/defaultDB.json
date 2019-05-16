@@ -10,5 +10,13 @@
       "city": "Tagiiiiiiiil",
       "username": "SEMA"
     }
+  ],
+  "courses": [
+    {
+      "Development": {
+        "title": "123123",
+        "description": "123123"
+      }
+    }
   ]
 }

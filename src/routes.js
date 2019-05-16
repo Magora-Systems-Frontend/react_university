@@ -27,58 +27,6 @@ export const routes = (
           </App>
         )}
       />
-      <Route
-        exact
-        path={ROUTES.ADMIN_PANEL}
-        render={(props) => (
-          <App>
-            <NotFoundPage {...props} />
-          </App>
-        )}
-      />
-      <Route
-        exact
-        path={ROUTES.REGISTRATION_FORM}
-        render={(props) => (
-          <App>
-            <RegistrationFormPage {...props} />
-          </App>
-        )}
-      />
-      <Route
-        exact
-        path={ROUTES.PASSWORD_SET_FORM}
-        render={(props) => (
-          <App>
-            <PasswordSetPage {...props} />
-          </App>
-        )}
-      />
-      <Route
-        exact
-        path={`${ROUTES.USER_PROFILE}/:id`}
-        render={(props) => (
-          <App>
-            <UserProfilePage {...props} />
-          </App>
-        )}
-      />
-      <Route
-        exact
-        path={`${ROUTES.USER_PROFILE}/:id/edit`}
-        render={(props) => (
-          <App>
-            <UserProfileEditPage {...props} />
-          </App>
-        )}
-      />
-      <Route
-        render={(props) => (
-          <App>
-            <NotFoundPage {...props} />
-          </App>
-        )}
-      />
     </Switch>
   </ConnectedRouter>
 );

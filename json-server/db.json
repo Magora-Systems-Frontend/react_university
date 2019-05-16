@@ -1,14 +1,115 @@
 {
   "posts": [],
-  "users": [
+  "courses": [
     {
-      "id": "e36fdb10-6b38-11e9-a15c-c95eeb7cf1d5",
-      "email": "test@email.com",
-      "firstName": "Semen",
-      "lastName": "Semenovich",
-      "avatarUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
-      "city": "Tagiiiiiiiil",
-      "username": "SEMA"
+      "id": "Photography",
+      "posts": [
+        {
+          "title": "iPhone Photography | Take Professional Photos On Your iPhone",
+          "author": "Dale McManus",
+          "img": "https://i.udemycdn.com/course/240x135/1392122_6c4c_3.jpg",
+          "price": "руб.4,799",
+          "currentPrice": "руб.899",
+          "stars": 4.8,
+          "rating": "2,860",
+          "description": "123123"
+        },
+        {
+          "title": "Posing Like A Pro: The Ultimate Posing Flow! Part 2",
+          "author": "Sandy Dee",
+          "img": "https://i.udemycdn.com/course/240x135/1329886_4e9f_3.jpg",
+          "price": "руб.19,799",
+          "currentPrice": "руб.899",
+          "stars": 4.5,
+          "rating": "94",
+          "description": "123123"
+        },
+        {
+          "title": "Photography Masterclass: A Complete Guide to Photography",
+          "author": "Phil Ebiner",
+          "img": "https://i.udemycdn.com/course/240x135/1462428_639f_7.jpg",
+          "price": "руб.19,799",
+          "currentPrice": "руб.899",
+          "stars": 4.6,
+          "rating": "16,318",
+          "description": "123123"
+        },
+        {
+          "title": "Adobe Lightroom Classic CC & CC: Photo Editing Masterclass",
+          "author": "Phil Ebiner",
+          "img": "https://i.udemycdn.com/course/240x135/926234_4a1a_3.jpg",
+          "price": "руб.19,799",
+          "currentPrice": "руб.899",
+          "stars": 4.4,
+          "rating": "3,595",
+          "description": "123123"
+        },
+        {
+          "title": "The Complete Video Production Bootcamp",
+          "author": "William Carnahan",
+          "img": "https://i.udemycdn.com/course/240x135/1027180_475e_5.jpg",
+          "price": "руб.19,799",
+          "currentPrice": "руб.899",
+          "stars": 4.5,
+          "rating": "3,639",
+          "description": "123123"
+        }
+      ]
+    },
+    {
+      "id": "Development",
+      "posts": [
+        {
+          "title": "Complete Python Bootcamp: Go from zero to hero in Python 3",
+          "author": "Pierian Data International by Jose Portilla",
+          "img": "https://i.udemycdn.com/course/240x135/567828_67d0.jpg",
+          "price": "руб.19,299",
+          "currentPrice": "руб.899",
+          "stars": 4.5,
+          "rating": "149,783",
+          "description": "123123"
+        },
+        {
+          "title": "The Web Developer Bootcamp",
+          "author": "Colt Steele",
+          "img": "https://i.udemycdn.com/course/240x135/625204_436a_2.jpg",
+          "price": "руб.19,799",
+          "currentPrice": "руб.899",
+          "stars": 4.7,
+          "rating": "118,998",
+          "description": "123123"
+        },
+        {
+          "title": "The Complete Web Developer Course 2.0",
+          "author": "Rob Percival",
+          "img": "https://i.udemycdn.com/course/240x135/764164_de03_2.jpg",
+          "price": "руб.19,799",
+          "currentPrice": "руб.899",
+          "stars": 4.5,
+          "rating": "47,230",
+          "description": "123123"
+        },
+        {
+          "title": "The Complete JavaScript Course 2019: Build Real Projects!",
+          "author": "Jonas Schmedtmann",
+          "img": "https://i.udemycdn.com/course/240x135/851712_fc61_5.jpg",
+          "price": "руб.19,799",
+          "currentPrice": "руб.899",
+          "stars": 4.6,
+          "rating": "42,953",
+          "description": "123123"
+        },
+        {
+          "title": "Unreal Engine C++ Developer: Learn C++ and Make Video Games",
+          "author": "Ben Tristem",
+          "img": "https://i.udemycdn.com/course/240x135/657932_c7e0_3.jpg",
+          "price": "руб.19,799",
+          "currentPrice": "руб.899",
+          "stars": 4.4,
+          "rating": "24,850",
+          "description": "123123"
+        }
+      ]
     }
   ]
 }

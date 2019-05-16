@@ -1,0 +1,35 @@
+.custom-btn {
+  align-content: center;
+  border: none;
+  border-radius: 0;
+  border-bottom: 6px solid transparent;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  color: #29303b;
+  display: flex;
+  margin-top: 0 !important;
+  text-align: left;
+  white-space: normal;
+  width: inherit;
+  margin-bottom: 0;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  padding: 11px 12px;
+  font-size: 15px;
+  line-height: 1.35135;
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+}
+
+.custom-btn:active {
+  border-color: #007791;
+  color: #14171c;
+}
+
+.custom-btn__active {
+  border-color: #007791;
+  color: #14171c;
+}

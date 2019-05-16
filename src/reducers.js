@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router';
 //
 import globalReducer from './pages/App/reducer';
-import userProfileReducer from './pages/UserProfile/reducer';
+import coursesReducer from './pages/HomePage/reducer';
 
 /**
  * Creates the main reducer with the dynamically injected ones
@@ -13,7 +13,7 @@ export default function createReducer(injectedReducers, { history }) {
     global: globalReducer,
     router: connectRouter(history),
     form: formReducer,
-    userState: userProfileReducer,
+    coursesState: coursesReducer,
     ...injectedReducers,
   });
 }

@@ -1,15 +1,17 @@
-// The initial state of the App
-const initialState = {
-  loading: false,
-};
+import { ACTIONS_CONSTANTS_COURSES } from '../../config/constants';
+import { updateState } from 'utils/reducer';
 
-function reducer(state = initialState, action = {}) {
+const initialState = {};
+
+function coursesReducer(state = initialState, action = {}) {
   const { type, payload } = action;
 
   switch (type) {
+    case ACTIONS_CONSTANTS_COURSES.COURSES_GET_SUCCESS:
+      return updateState({ ...state }, { payload });
     default:
       return state;
   }
 }
 
-export default reducer;
+export default coursesReducer;

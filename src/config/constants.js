@@ -32,6 +32,7 @@ export const API_METHODS = {
   PASSWORD_RECOVERY: '/users/password/recovery',
   PASSWORD_SET: '/users/password/set',
   USERS: '/users',
+  COURSES: '/courses',
 };
 
 export const ACTIONS_CONSTANTS = {
@@ -40,4 +41,8 @@ export const ACTIONS_CONSTANTS = {
   APP_GET_USER_STATE: 'APP_GET_USER_STATE',
   SHOW_MODAL: 'SHOW_MODAL',
   HIDE_MODAL: 'HIDE_MODAL',
+};
+
+export const ACTIONS_CONSTANTS_COURSES = {
+  COURSES_GET_SUCCESS: 'COURSES_GET_SUCCESS',
 };
