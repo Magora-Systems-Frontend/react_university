@@ -4,5 +4,11 @@
       "placeholder": "Enter text",
       "name": "search"
     }
+  },
+  "RU": {
+    "search": {
+      "name": "text",
+      "placeholder": "Ищите что угодно"
+    }
   }
 }

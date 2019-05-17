@@ -13,6 +13,7 @@ import HeaderCart from './cart/HeaderCart';
 import HeaderCatalog from './catalog/HeaderCatalog';
 import lang from './lang.json';
 import './header.scss';
+import logo from './logo.svg';
 
 @connect(
   mapStateToProps,
@@ -38,19 +39,23 @@ class Header extends React.PureComponent {
     return (
       <header className="header">
         <div className="full-width header__container">
-          <Link to={ROUTES.HOME_PAGE} className="header__left-side">
-            <div className="header__logo">
-              <img className="header__logo-img" src="./icons/logo.svg" alt="logo" />
-              <span className="header__logo-text">{lang.EN.headerTitle}</span>
-            </div>
-          </Link>
-
-          <HeaderCatalog />
-
-          <HeaderSearch maxWidth="800px" />
-          <HeaderInvite />
-          <HeaderCart />
-          <div className="header__right-side">{this.renderControls()}</div>
+          <div className="header__logo_container">
+            <Link to={ROUTES.HOME_PAGE}>
+              <div className="header__logo">
+                <img width="110px" src={logo} alt="logo" />
+              </div>
+            </Link>
+          </div>
+          <div className="header__left-side">
+            <HeaderCatalog />
+            <HeaderSearch maxWidth="800px" />
+            <HeaderInvite />
+          </div>
+          <div className="header__right-side">
+            <HeaderCart />
+            <div className="header__right-side-divider" />
+            {this.renderControls()}
+          </div>
         </div>
       </header>
     );

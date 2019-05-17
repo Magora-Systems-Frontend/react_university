@@ -1,0 +1,14 @@
+.dropdown__empty-cart {
+  display: block;
+  border-top: none;
+  text-align: center;
+  padding: 20px;
+  &-link {
+    color: #007791;
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 13px;
+  }
+}

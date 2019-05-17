@@ -1,24 +1,8 @@
 .header-catalog {
-  &-title {
-    &_wrapper {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-      &:hover .header-catalog__list {
-        display: block;
-        position: absolute;
-        left: 0;
-        top: calc(100%);
-      }
-    }
-    &__text {
-      margin-left: 10px;
-    }
-  }
-  &__list {
-    display: none;
-    background-color: #fff;
-  }
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-left: 10px;
 }

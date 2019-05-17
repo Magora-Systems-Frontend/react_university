@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import lang from './lang.json';
 import { Field, reduxForm } from 'redux-form';
 import { TextField } from 'components';
+import './header-search.scss';
 
 @reduxForm({
   form: 'HEADER_SEARCH',
@@ -14,21 +15,21 @@ export default class HeaderSearch extends Component {
 
   render() {
     const {
-      EN: {
+      RU: {
         search: { placeholder, name },
       },
     } = lang;
     const { maxWidth } = this.props;
     return (
       <form
-        style={{ maxWidth: maxWidth, width: '400px' }}
+        className="header-search-form"
         onSubmit={(e, value) => {
           e.preventDefault();
           console.log(value);
         }}>
         <Field
           name={name}
-          type="search"
+          type="text"
           cssmodify={{ marginBottom: 0 }}
           placeholder={placeholder}
           component={TextField}

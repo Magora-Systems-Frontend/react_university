@@ -1,5 +1,6 @@
 {
-  "EN": {
-    "tooltipTitle": "Cart is empty"
+  "RU": {
+    "text": "Корзина пуста",
+    "linkText": "Продолжить поиск"
   }
 }

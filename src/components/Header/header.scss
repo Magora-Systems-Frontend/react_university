@@ -1,7 +1,30 @@
 .header {
   box-shadow: 0 4px 4px rgba(69, 79, 99, 0.16);
-  height: 52px;
+  height: 65px;
   position: relative;
+  &__right-side {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &-divider {
+      display: block;
+      margin-left: 16px;
+    }
+  }
+  &__left-side {
+    height: 100%;
+    flex: 1;
+    min-width: 1px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  &__logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .header__container {
@@ -14,13 +37,11 @@
 
 .header__logo {
   line-height: 100%;
-  &-img {
-    width: 30px;
-  }
-  &-text {
-    font-size: 1rem;
-    margin-left: 0.5rem;
-    font-weight: 600;
-    color: #1b2126;
+  margin: 0 16px 0 0;
+  &_contatiner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 }
