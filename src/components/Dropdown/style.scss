@@ -22,7 +22,6 @@
     text-align: left;
     background-color: #fff;
     border: none;
-    border-radius: 2px;
     box-shadow: 0 4px 16px rgba(20, 23, 28, 0.25);
     background-clip: padding-box;
     &:before {
@@ -46,6 +45,19 @@
       width: 0;
       border-color: transparent transparent #fff transparent;
       top: -12px;
+    }
+    &_right {
+      top: calc(100% + 10px);
+      left: unset;
+      right: 5px;
+      &:before {
+        left: unset;
+        right: 7px;
+      }
+      &:after {
+        left: unset;
+        right: 7px;
+      }
     }
   }
 }

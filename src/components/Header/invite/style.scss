@@ -1,0 +1,8 @@
+.invite-to-courses {
+  &_wrapper {
+    display: block;
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+}

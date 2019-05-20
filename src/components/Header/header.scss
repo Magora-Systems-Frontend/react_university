@@ -1,7 +1,11 @@
 .header {
+  display: block;
   box-shadow: 0 4px 4px rgba(69, 79, 99, 0.16);
   height: 65px;
   position: relative;
+  @media (max-width: 767px) {
+    display: none;
+  }
   &__right-side {
     display: flex;
     align-items: center;
@@ -43,5 +47,32 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+  }
+}
+
+.header-mobile {
+  box-shadow: 0 4px 4px rgba(69, 79, 99, 0.16);
+  &__content {
+    display: none;
+    @media (max-width: 767px) {
+      padding: 3px;
+      display: flex;
+      justify-content: space-between;
+    }
+    &-search {
+      cursor: pointer;
+    }
+    &-logo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    &-left {
+      display: flex;
+    }
+  }
+  &__search {
+    padding: 5px 0 15px;
   }
 }

@@ -44,7 +44,7 @@ export default class HeaderCatalog extends Component {
     ];
     return (
       <Dropdown dropdownType="menu" menu={data}>
-        <Wrapper margin="0 2px" padding="10px 0">
+        <Wrapper margin="0 2px" padding="9px 0">
           <div className="header-catalog">
             <Icon style={{ fontSize: '20px', marginRight: '4px' }} type="appstore" />
             {catalogTitle}

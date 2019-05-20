@@ -26,7 +26,7 @@ export default class HeaderControls extends React.PureComponent {
 
   render() {
     const {
-      EN: { loginTitle, signTitle },
+      RU: { loginTitle, signTitle },
     } = lang;
     return (
       <div className="header-controls">

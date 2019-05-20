@@ -10,9 +10,10 @@ export default class Dropdown extends Component {
     menu: PropTypes.array,
     text: PropTypes.string,
     linkText: PropTypes.string,
+    bubleArrowPosition: PropTypes.string,
   };
   render() {
-    const { children, dropdownType, menu, text, linkText, width } = this.props;
+    const { children, dropdownType, menu, text, linkText, width, bubbleArrowPosition } = this.props;
     const dropdownsList = {
       menu: <Menu menu={menu} />,
       emptyCart: <EmptyCart text={text} linkText={linkText} />,
@@ -20,7 +21,9 @@ export default class Dropdown extends Component {
     return (
       <div className="dropdown">
         {children}
-        <div className="dropdown__bubble" style={{ width: width }}>
+        <div
+          className={`dropdown__bubble ${bubbleArrowPosition === 'right' && 'dropdown__bubble_right'} `}
+          style={{ width: width }}>
           {dropdownsList[dropdownType]}
         </div>
       </div>
