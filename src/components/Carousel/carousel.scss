@@ -12,8 +12,8 @@
   color: #007791;
   font-size: 24px;
   height: 47px;
-  line-height: 1;
-  padding: 11px 0;
+  line-height: 47px;
+  //padding: 11px 0;
   text-align: center;
   transform: translateY(-50%);
   transition: 300ms;
@@ -29,8 +29,14 @@
 
 .carousel__arrow-right {
   right: -23.5px;
+  @media (max-width: 768px) {
+    right: 0;
+  }
 }
 
 .carousel__arrow-left {
   left: -23.5px;
+  @media (max-width: 768px) {
+    left: 0;
+  }
 }
