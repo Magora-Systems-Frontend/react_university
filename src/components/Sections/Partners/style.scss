@@ -1,0 +1,33 @@
+.partners {
+  &_main-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__text {
+    color: #686f7a;
+    font-size: 13px;
+    padding-top: 16px;
+    text-align: center;
+  }
+  &__logos {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 32px;
+    width: 100%;
+    @media (max-width: 768px) {
+      width: 300px;
+    }
+  }
+  &__logo-item {
+    margin: 0 32px 8px;
+    @media (max-width: 992px) {
+      margin: 0 16px 8px;
+    }
+    @media (max-width: 768px) {
+      margin: 8px 16px;
+    }
+  }
+}

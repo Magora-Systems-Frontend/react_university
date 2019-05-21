@@ -6,7 +6,7 @@ import { compose } from 'redux';
 
 import injectReducer from '../../utils/injectReducer';
 import reducer from './reducer';
-import { FindCourse, Advantages, Courses } from 'components';
+import { FindCourse, Advantages, Courses, Partners } from 'components';
 
 const withReducer = injectReducer({ key: 'home', reducer });
 
@@ -36,6 +36,7 @@ export class HomePage extends React.PureComponent {
         <FindCourse />
         <Advantages />
         <Courses />
+        <Partners />
       </article>
     );
   }
