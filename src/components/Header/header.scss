@@ -59,6 +59,9 @@
       display: flex;
       justify-content: space-between;
     }
+    &-menu {
+      cursor: pointer;
+    }
     &-search {
       cursor: pointer;
     }

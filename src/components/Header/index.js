@@ -8,6 +8,7 @@ import { ROUTES } from 'config/constants';
 import { logout } from 'pages/App/actions';
 import { Wrapper } from 'components/Wrapper';
 import Dropdown from 'components/Dropdown';
+import MobileLeftMenu from 'components/MobileLeftMenu';
 import HeaderControls from './controls/HeaderControls';
 import HeaderUserControls from './user-controls/HeaderUserControls';
 import HeaderSearch from './search/HeaderSearch';
@@ -27,12 +28,20 @@ class Header extends Component {
     super(props);
     this.state = {
       showMobileSearch: false,
+      showMobileNav: false,
     };
   }
 
   toggleMobileSearch = () => {
     this.setState({
       showMobileSearch: !this.state.showMobileSearch,
+    });
+  };
+
+  toggleMobileNav = () => {
+    const { showMobileNav } = this.state;
+    this.setState({
+      showMobileNav: !showMobileNav,
     });
   };
 
@@ -56,7 +65,7 @@ class Header extends Component {
         cart: { text, linkText },
       },
     } = lang;
-    const { showMobileSearch } = this.state;
+    const { showMobileSearch, showMobileNav } = this.state;
     return (
       <Fragment>
         <header className="header">
@@ -87,9 +96,11 @@ class Header extends Component {
         <header className="header-mobile">
           <div className="header-mobile__content">
             <div className="header-mobile__content-left">
-              <Wrapper padding="12px">
-                <Icon type="menu" style={{ fontSize: '22px' }} />
-              </Wrapper>
+              <div className="header-mobile__content-search" onClick={this.toggleMobileNav}>
+                <Wrapper padding="12px">
+                  <Icon type="menu" style={{ fontSize: '22px' }} />
+                </Wrapper>
+              </div>
               <div className="header-mobile__content-search" onClick={this.toggleMobileSearch}>
                 <Wrapper padding="12px">
                   <Icon type="search" style={{ fontSize: '22px' }} />
@@ -118,6 +129,7 @@ class Header extends Component {
             </div>
           )}
         </header>
+        <MobileLeftMenu show={showMobileNav} toggleMenu={this.toggleMobileNav} />
       </Fragment>
     );
   }

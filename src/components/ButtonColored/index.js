@@ -18,6 +18,7 @@ export default class ButtonColored extends Component {
       colored: 'btn_colored',
       transparent: 'btn_transparent',
       search: 'btn_search',
+      mobileLogin: 'btn_mobile-login',
     };
     return (
       <button
