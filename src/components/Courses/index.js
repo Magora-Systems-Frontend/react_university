@@ -5,7 +5,7 @@ import { ButtonCoursesType } from '../ButtonCoursesType';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getCourses } from '../../pages/HomePage/actions';
+import { getCourses, getCoursesPopular } from '../../pages/HomePage/actions';
 import { CarouselCourses } from '../CarouselCourses';
 
 const mapStateToProps = ({ coursesState }) => ({
@@ -14,6 +14,7 @@ const mapStateToProps = ({ coursesState }) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   getCourses: bindActionCreators(getCourses, dispatch),
+  getCoursesPopular: bindActionCreators(getCoursesPopular, dispatch),
 });
 
 @connect(
@@ -24,32 +25,28 @@ export class Courses extends React.PureComponent {
   static propTypes = {
     coursesState: PropTypes.object,
     getCourses: PropTypes.func,
+    getCoursesPopular: PropTypes.func,
   };
 
   static defaultProps = {
     coursesState: {},
     getCourses: Function.prototype,
+    getCoursesPopular: Function.prototype,
   };
 
   clickButton = (values) => {
-    // console.log(values);
     this.props.getCourses(values);
   };
 
   async componentDidMount() {
-    // const { match } = this.props;
-    // const { params } = match;
-    // const { id: userId } = params;
     await this.props.getCourses('Development');
-    // console.log('111');
+    await this.props.getCoursesPopular('Popular');
   }
 
   render() {
-    // console.log(this.props);
     const { coursesState } = this.props;
-    const { payload = {} } = coursesState;
-    // const { posts } = payload;
-    // console.log(payload);
+    const { payload = {}, payloadPopular = {} } = coursesState;
+
     return (
       <div className="courses">
         <div className="courses__block-selection">
@@ -65,6 +62,10 @@ export class Courses extends React.PureComponent {
               <CarouselCourses dataCourses={payload} />
             </div>
           </div>
+        </div>
+        <div className="courses__block-popular">
+          <div className="courses__block-popular_title">Students are viewing</div>
+          <CarouselCourses dataCourses={payloadPopular} />
         </div>
       </div>
     );

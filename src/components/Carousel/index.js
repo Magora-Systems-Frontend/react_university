@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
-
-import './carousel.scss';
 import { ItemCourse } from '../ItemCourse';
 import { Icon } from 'antd';
-// import '~slick-carousel/slick/slick.css';
+
+import './carousel.scss';
+import { ItemComment } from '../ItemComment';
 
 const Arrow = (props) => {
   const { onClick, direction } = props;
@@ -25,15 +25,24 @@ export class Carousel extends React.Component {
   static propTypes = {
     options: PropTypes.object,
     data: PropTypes.array,
+    typeItem: PropTypes.string,
+    id: PropTypes.string,
   };
 
   static defaultProps = {
     options: {},
     data: [],
+    typeItem: '',
+    id: '',
   };
 
   renderItem = (item, index) => {
-    return <ItemCourse data={item} key={index} />;
+    const { typeItem, id } = this.props;
+    if (typeItem === 'course') {
+      return <ItemCourse id={id} data={item} key={index} />;
+    } else if (typeItem === 'comments') {
+      return <ItemComment data={item} key={index} />;
+    }
   };
 
   render() {
@@ -42,19 +51,11 @@ export class Carousel extends React.Component {
     const settings = {
       dots: false,
       infinite: true,
-      slidesToShow: 4,
       slidesToScroll: 1,
       initialSlide: 0,
       prevArrow: <Arrow direction="left" />,
       nextArrow: <Arrow direction="right" />,
-      responsive: [
-        {
-          breakpoint: 1440,
-          settings: {
-            slidesToShow: 3,
-          },
-        },
-      ],
+      ...options,
     };
 
     return (

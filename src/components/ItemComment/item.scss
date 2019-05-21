@@ -1,0 +1,62 @@
+.item-comment {
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px 0 rgba(20, 23, 28, 0.15);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 260px;
+  padding: 32px;
+  margin-right: 13px;
+}
+
+.item-comment__info {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5em;
+  align-items: center;
+  display: flex;
+  margin-bottom: 18px;
+}
+
+.item-comment__info_icon {
+  width: 64px;
+  height: 64px;
+  margin-right: 18px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  max-width: 100%;
+}
+
+.item-comment__info_noIcon {
+  width: 64px;
+  height: 64px;
+  margin-right: 18px;
+  border-radius: 50%;
+  background-color: rgb(104, 111, 122);
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.item-comment__info_name {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+
+.item-comment__description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+.slick-active:nth-of-type(3n) {
+  .item-comment {
+    margin: 0;
+  }
+}
