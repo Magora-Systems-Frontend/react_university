@@ -146,6 +146,9 @@
 .item__popover {
   width: 320px;
   padding: 15px;
+  @media (max-width: 500px) {
+    width: 250px;
+  }
 }
 
 .item__popover_update {

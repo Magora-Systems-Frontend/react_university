@@ -13,6 +13,11 @@ export { Button } from './button';
 export { CarouselCourses } from './CarouselCourses';
 export { ItemCourse } from './ItemCourse';
 export { Carousel } from './Carousel';
+export { Recommendations } from './Recommendations';
+export { TopCategories } from './TopCategories';
+export { ItemCategory } from './ItemCategory';
+export { Comments } from './Comments';
+export { ItemComment } from './ItemComment';
 
 export { CommonModals, withCommonModals } from './CommonModals';
 

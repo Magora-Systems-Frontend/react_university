@@ -5,6 +5,7 @@ import { ItemCourse } from '../ItemCourse';
 import { Icon } from 'antd';
 
 import './carousel.scss';
+import { ItemComment } from '../ItemComment';
 
 const Arrow = (props) => {
   const { onClick, direction } = props;
@@ -39,6 +40,8 @@ export class Carousel extends React.Component {
     const { typeItem, id } = this.props;
     if (typeItem === 'course') {
       return <ItemCourse id={id} data={item} key={index} />;
+    } else if (typeItem === 'comments') {
+      return <ItemComment data={item} key={index} />;
     }
   };
 
