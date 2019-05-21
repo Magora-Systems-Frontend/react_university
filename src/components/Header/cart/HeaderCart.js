@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import lang from './lang.json';
-import { Icon, Tooltip } from 'antd';
+import { Icon } from 'antd';
+import './style.scss';
 
 export default class HeaderCart extends Component {
   render() {
-    const {
-      EN: { tooltipTitle },
-    } = lang;
     return (
-      <Tooltip title={tooltipTitle} placement="bottomRight">
-        <Icon type="shopping-cart" />
-      </Tooltip>
+      <div className="shopping-list">
+        <div className="shopping-list__icon">
+          <Icon style={{ fontSize: '20px' }} type="shopping-cart" />
+        </div>
+      </div>
     );
   }
 }

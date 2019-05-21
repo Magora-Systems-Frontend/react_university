@@ -1,5 +1,11 @@
 {
   "EN": {
     "headerTitle": "Courses"
+  },
+  "RU": {
+    "cart" : {
+      "text": "Корзина пуста",
+      "linkText": "Продолжить поиск"
+    }
   }
 }

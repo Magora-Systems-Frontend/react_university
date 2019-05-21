@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { Icon } from 'antd';
 import { ROUTES } from 'config/constants';
 import { logout } from 'pages/App/actions';
+import { Wrapper } from 'components/Wrapper';
+import Dropdown from 'components/Dropdown';
 import HeaderControls from './controls/HeaderControls';
 import HeaderUserControls from './user-controls/HeaderUserControls';
 import HeaderSearch from './search/HeaderSearch';
@@ -13,12 +16,26 @@ import HeaderCart from './cart/HeaderCart';
 import HeaderCatalog from './catalog/HeaderCatalog';
 import lang from './lang.json';
 import './header.scss';
+import logo from './logo.svg';
 
 @connect(
   mapStateToProps,
   mapDispatchToProps
 )
-class Header extends React.PureComponent {
+class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showMobileSearch: false,
+    };
+  }
+
+  toggleMobileSearch = () => {
+    this.setState({
+      showMobileSearch: !this.state.showMobileSearch,
+    });
+  };
+
   static propTypes = {
     authState: PropTypes.object,
     logout: PropTypes.func,
@@ -26,7 +43,6 @@ class Header extends React.PureComponent {
 
   renderControls = () => {
     const { authState = {}, logout } = this.props;
-
     if (authState.isAuth) {
       return <HeaderUserControls logout={logout} authState={authState} />;
     }
@@ -35,24 +51,74 @@ class Header extends React.PureComponent {
   };
 
   render() {
+    const {
+      RU: {
+        cart: { text, linkText },
+      },
+    } = lang;
+    const { showMobileSearch } = this.state;
     return (
-      <header className="header">
-        <div className="full-width header__container">
-          <Link to={ROUTES.HOME_PAGE} className="header__left-side">
-            <div className="header__logo">
-              <img className="header__logo-img" src="./icons/logo.svg" alt="logo" />
-              <span className="header__logo-text">{lang.EN.headerTitle}</span>
+      <Fragment>
+        <header className="header">
+          <div className="full-width header__container">
+            <div className="header__logo_container">
+              <Link to={ROUTES.HOME_PAGE}>
+                <div className="header__logo">
+                  <img width="110px" src={logo} alt="logo" />
+                </div>
+              </Link>
             </div>
-          </Link>
-
-          <HeaderCatalog />
-
-          <HeaderSearch maxWidth="800px" />
-          <HeaderInvite />
-          <HeaderCart />
-          <div className="header__right-side">{this.renderControls()}</div>
-        </div>
-      </header>
+            <div className="header__left-side">
+              <HeaderCatalog />
+              <HeaderSearch maxWidth="800px" />
+              <HeaderInvite />
+            </div>
+            <div className="header__right-side">
+              <Dropdown dropdownType="emptyCart" text={text} linkText={linkText} width="270px">
+                <Wrapper margin="0 2px" padding="10px 0">
+                  <HeaderCart />
+                </Wrapper>
+              </Dropdown>
+              <div className="header__right-side-divider" />
+              {this.renderControls()}
+            </div>
+          </div>
+        </header>
+        <header className="header-mobile">
+          <div className="header-mobile__content">
+            <div className="header-mobile__content-left">
+              <Wrapper padding="12px">
+                <Icon type="menu" style={{ fontSize: '22px' }} />
+              </Wrapper>
+              <div className="header-mobile__content-search" onClick={this.toggleMobileSearch}>
+                <Wrapper padding="12px">
+                  <Icon type="search" style={{ fontSize: '22px' }} />
+                </Wrapper>
+              </div>
+            </div>
+            <div className="header-mobile__content-logo">
+              <Link to={ROUTES.HOME_PAGE}>
+                <div className="header__logo">
+                  <img width="110px" src={logo} alt="logo" />
+                </div>
+              </Link>
+            </div>
+            <Dropdown
+              dropdownType="emptyCart"
+              text={text}
+              linkText={linkText}
+              bubbleArrowPosition="right"
+              width="270px">
+              <HeaderCart />
+            </Dropdown>
+          </div>
+          {showMobileSearch && (
+            <div className="header-mobile__search">
+              <HeaderSearch maxWidth="100%" />
+            </div>
+          )}
+        </header>
+      </Fragment>
     );
   }
 }

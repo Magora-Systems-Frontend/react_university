@@ -2,7 +2,7 @@ import React from 'react';
 import { fieldPropTypes } from 'redux-form';
 import { Input, Form, InputNumber } from 'antd';
 import ReactInputMask from 'react-input-mask';
-//
+import './style.scss';
 
 const InputMask = (props) => {
   return (
@@ -18,7 +18,7 @@ export class TextField extends React.PureComponent {
   };
 
   render() {
-    const { label, meta, input, type, cssmodify } = this.props;
+    const { label, meta, input, type, cssmodify, ...tailProps } = this.props;
 
     let inputElement;
     switch (type) {
@@ -33,9 +33,14 @@ export class TextField extends React.PureComponent {
         break;
       case 'search':
         inputElement = Input.Search;
+        break;
       case 'text':
+        inputElement = (props) => (
+          <input placeholder={props.placeholder} className="header-search-form__control header-search-form__input" />
+        );
+        break;
       default:
-        inputElement = Input;
+        inputElement = () => <input className="header-search-form__input" />;
     }
 
     const validateStatus = meta.error && meta.touched ? 'error' : '';

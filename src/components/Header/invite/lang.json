@@ -2,5 +2,10 @@
   "EN" : {
     "tooltipTitle": "Help other people be better",
     "buttonText": "Begin teach"
+  },
+  "RU" : {
+    "text": "Ваши знания станут проводником в мире возможностей и достигнут миллионов.",
+    "linkText": "Подробнее",
+    "buttonText": "Преподавайте на Udemy"
   }
 }

@@ -2,21 +2,55 @@ import React, { Component } from 'react';
 import lang from './lang.json';
 import { Icon, List } from 'antd';
 import './catalog.scss';
+import Dropdown from 'components/Dropdown';
+import { Wrapper } from 'components/Wrapper';
 
 export default class HeaderCatalog extends Component {
   render() {
     const {
-      EN: { catalogTitle },
+      RU: { catalogTitle },
     } = lang;
-    const data = ['Develop', 'Business', 'IT', 'Design', 'Marketing'];
+    const data = [
+      {
+        title: 'Develop',
+        icon: 'https://img.icons8.com/material/24/000000/phone.png',
+        subitems: [
+          {
+            title: 'Frontend',
+            subitems: [
+              {
+                title: 'React',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Business',
+        icon: 'https://img.icons8.com/material/24/000000/phone.png',
+      },
+      {
+        title: 'IT',
+        icon: 'https://img.icons8.com/material/24/000000/phone.png',
+      },
+      {
+        title: 'Design',
+        icon: 'https://img.icons8.com/material/24/000000/phone.png',
+      },
+      {
+        title: 'Marketing',
+        icon: 'https://img.icons8.com/material/24/000000/phone.png',
+      },
+    ];
     return (
-      <div className="header-catalog-title_wrapper">
-        <Icon type="table" />
-        <div className="header-catalog-title__text">{catalogTitle}</div>
-        <div className="header-catalog__list">
-          <List bordered dataSource={data} renderItem={(item) => <List.Item>{item}</List.Item>} />
-        </div>
-      </div>
+      <Dropdown dropdownType="menu" menu={data}>
+        <Wrapper margin="0 2px" padding="9px 0">
+          <div className="header-catalog">
+            <Icon style={{ fontSize: '20px', marginRight: '4px' }} type="appstore" />
+            {catalogTitle}
+          </div>
+        </Wrapper>
+      </Dropdown>
     );
   }
 }

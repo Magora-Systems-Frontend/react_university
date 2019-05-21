@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button } from 'antd';
+import ButtonColored from 'components/ButtonColored';
 import { withCommonModals } from 'components';
 import './header-controls.scss';
 import lang from './lang.json';
+import { Wrapper } from 'components/Wrapper';
 
 @withCommonModals
 export default class HeaderControls extends React.PureComponent {
@@ -25,16 +26,20 @@ export default class HeaderControls extends React.PureComponent {
 
   render() {
     const {
-      EN: { loginTitle, signTitle },
+      RU: { loginTitle, signTitle },
     } = lang;
     return (
       <div className="header-controls">
-        <Button type="primary" onClick={this.showLoginModal}>
-          {loginTitle}
-        </Button>
-        <Button type="primary" onClick={this.showSignUpModal}>
-          {signTitle}
-        </Button>
+        <Wrapper margin="0 2px" padding="10px 0">
+          <ButtonColored onClick={this.showLoginModal} colorStyle="bordered">
+            {loginTitle}
+          </ButtonColored>
+        </Wrapper>
+        <Wrapper margin="0 2px" padding="10px 0">
+          <ButtonColored onClick={this.showSignUpModal} colorStyle="colored">
+            {signTitle}
+          </ButtonColored>
+        </Wrapper>
       </div>
     );
   }

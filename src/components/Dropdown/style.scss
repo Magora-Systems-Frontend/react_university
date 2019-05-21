@@ -1,0 +1,63 @@
+.dropdown {
+  position: relative;
+  height: 100%;
+  &:hover {
+    .dropdown__bubble {
+      display: block;
+    }
+  }
+  &__bubble {
+    position: absolute;
+    top: calc(100% - 2px);
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    max-width: calc(100vw - 30px);
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 15px;
+    text-align: left;
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 4px 16px rgba(20, 23, 28, 0.25);
+    background-clip: padding-box;
+    &:before {
+      border-color: transparent transparent #e8e9eb transparent;
+      top: -14px;
+      border-style: solid;
+      border-width: 0 10px 13px;
+      content: '';
+      height: 0;
+      position: absolute;
+      left: 14px;
+      width: 0;
+    }
+    &:after {
+      border-style: solid;
+      border-width: 0 10px 13px;
+      content: '';
+      height: 0;
+      position: absolute;
+      left: 14px;
+      width: 0;
+      border-color: transparent transparent #fff transparent;
+      top: -12px;
+    }
+    &_right {
+      top: calc(100% + 10px);
+      left: unset;
+      right: 5px;
+      &:before {
+        left: unset;
+        right: 7px;
+      }
+      &:after {
+        left: unset;
+        right: 7px;
+      }
+    }
+  }
+}
