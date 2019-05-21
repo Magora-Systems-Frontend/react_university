@@ -1,0 +1,18 @@
+{
+  "RU": {
+    "invites": [
+      {
+        "id": "teacher",
+        "title": "Преподавайте на Udemy",
+        "description": "Преподавайте то, что любите. Udemy предоставляет вам инструменты для создания онлайн-курса.",
+        "btnTitle": "Станьте преподавателем"
+      },
+      {
+        "id": "business",
+        "title": "Udemy for Business",
+        "description": "Получите неограниченный доступ к более чем 3 000 лучших курсов на Udemy для своей команды.",
+        "btnTitle": "Получить Udemy for Business"
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+.non-student {
+  background: #f7f8fa;
+  display: flex;
+  flex-direction: row;
+  padding: 0 20px 22px;
+  border-bottom: 1px solid #e8e9eb;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding-bottom: 22px;
+  }
+  &__block {
+    flex: 1;
+    padding: 28px 30px;
+    text-align: center;
+    &:first-child {
+      border-right: 1px solid #dedfe0;
+      border-bottom: none;
+      @media (max-width: 768px) {
+        border-right: none;
+        border-bottom: 1px solid #dedfe0;
+      }
+    }
+    &-text {
+      max-width: 320px;
+      margin: 0 auto;
+    }
+    &-title {
+      font-size: 19px;
+      font-weight: 600;
+      line-height: 1.47em;
+      color: #505763;
+    }
+    &-description {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5em;
+      padding-top: 5px;
+      @media (max-width: 768px) {
+        padding-top: 3px;
+      }
+    }
+    &-button {
+      padding-top: 20px;
+      text-align: center;
+    }
+  }
+}

@@ -7,6 +7,8 @@ export { FormWrapper } from './FormWrapper';
 export { ErrorBoundary } from './ErrorBoundary';
 export { FindCourse } from './Sections/FindCourse/FindCourse';
 export { Advantages } from './Sections/Advantages/Advantages';
+export { Partners } from './Sections/Partners';
+export { NonStudents } from './Sections/NonStudents';
 export { Courses } from './Courses';
 export { ButtonCoursesType } from './ButtonCoursesType';
 export { Button } from './button';

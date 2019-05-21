@@ -1,0 +1,42 @@
+{
+  "RU": {
+    "partners": [
+      {
+        "id": 1,
+        "link": "https://i.udemycdn.com/partner-logos/booking-logo.svg",
+        "width": 151,
+        "height": 26
+      },
+      {
+        "id": 2,
+        "link": "https://i.udemycdn.com/partner-logos/volkswagen-logo.svg",
+        "width": 32,
+        "height": 32
+      },
+      {
+        "id": 3,
+        "link": "https://i.udemycdn.com/partner-logos/mercedes-logo.svg",
+        "width": 118,
+        "height": 28
+      },
+      {
+        "id": 4,
+        "link": "https://i.udemycdn.com/partner-logos/pinterest-logo.svg",
+        "width": 115,
+        "height": 28
+      },
+      {
+        "id": 5,
+        "link": "https://i.udemycdn.com/partner-logos/adidas-logo.svg",
+        "width": 47,
+        "height": 32
+      },
+      {
+        "id": 6,
+        "link": "https://i.udemycdn.com/partner-logos/eventbrite-logo.svg",
+        "width": 115,
+        "height": 32
+      }
+    ]
+  }
+}

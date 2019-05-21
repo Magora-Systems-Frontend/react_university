@@ -16,7 +16,7 @@ export default class MobileLeftMenu extends Component {
       RU: { menuTitle, loginTitle, menu },
     } = lang;
     const list = menu.map((item) => (
-      <li>
+      <li key={item.id}>
         <a className="mobile-nav__menu-item" href={item.link}>
           {item.title}
         </a>
