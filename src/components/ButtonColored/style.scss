@@ -78,3 +78,18 @@
     color: #fff;
   }
 }
+
+.btn_mobile-login {
+  display: block;
+  width: 100%;
+  padding: 11px 16px;
+  font-weight: 600;
+  text-align: left;
+  color: #007791;
+  border-color: transparent;
+  background-color: transparent;
+  &:hover {
+    background: #f2f3f5;
+    color: #003845;
+  }
+}
