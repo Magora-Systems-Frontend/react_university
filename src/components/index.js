@@ -15,8 +15,10 @@ export { Button } from './button';
 export { CarouselCourses } from './CarouselCourses';
 export { ItemCourse } from './ItemCourse';
 export { Carousel } from './Carousel';
+export { Footer } from './Footer';
 
 export { CommonModals, withCommonModals } from './CommonModals';
 
 export { CityField, DatePickerField, FileField, SelectField, TextField } from './FormFields';
+export { SimpleSelect } from './Fields';
 export { FileFieldSimple } from './FormFieldsSimple';

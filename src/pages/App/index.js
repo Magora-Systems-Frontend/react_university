@@ -6,6 +6,7 @@ import { loadStore, KEYS } from 'utils/localStorage';
 //
 import { Wrapper } from './index.styled';
 import { Header } from 'components/Header';
+import { Footer } from 'components/Footer';
 import { CommonModals } from 'components';
 import { setAuthState } from './actions';
 
@@ -37,6 +38,7 @@ export class App extends React.PureComponent {
         <CommonModals />
         {this.props.children}
         {/* Here could be header / footer / static blocks and etc */}
+        <Footer />
       </Wrapper>
     );
   }
