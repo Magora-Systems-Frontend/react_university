@@ -1,0 +1,32 @@
+.comments {
+  background-color: #f7f8fa;
+  position: relative;
+  width: 100%;
+}
+
+.comments__wrapper {
+  margin: 30px auto;
+  padding: 30px 15px;
+  min-width: 320px;
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+  @media (min-width: 992px) {
+    width: 970px;
+  }
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+  @media (min-width: 1440px) {
+    max-width: 1405px;
+    width: 100%;
+  }
+}
+
+.comments__wrapper_title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33em;
+  color: #29303b;
+  margin-bottom: 15px;
+}

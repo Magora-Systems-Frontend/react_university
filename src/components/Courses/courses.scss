@@ -1,6 +1,6 @@
 .courses {
   position: relative;
-  margin: 0 auto 100px;
+  margin: 0 auto 20px;
   padding: 0 15px;
   min-width: 320px;
   @media (min-width: 768px) {
@@ -22,13 +22,26 @@
   display: flex;
 }
 
+.courses__block-popular {
+  width: 100%;
+  margin: 25px auto;
+}
+
+.courses__block-popular_title {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.47em;
+  color: #505763;
+  margin: 0 0 10px;
+}
+
 .courses__block-selection_description {
   background: #f7f8fa;
   display: flex;
   flex: 1 0 auto;
   flex-direction: column;
   justify-content: center;
-  margin: 15px 15px 28px 0;
+  margin: 15px 15px 0 0;
   max-width: calc(216px * 2 + 15px);
   padding: 0 32px;
   @media (min-width: 992px) and (max-width: 1200px) {

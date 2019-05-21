@@ -1,0 +1,42 @@
+.categories {
+  position: relative;
+  margin: 30px auto;
+  padding: 0 15px;
+  min-width: 320px;
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+  @media (min-width: 992px) {
+    width: 970px;
+  }
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+  @media (min-width: 1440px) {
+    max-width: 1405px;
+    width: 100%;
+  }
+}
+
+.categories__title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33em;
+  margin-bottom: 8px;
+  color: #29303b;
+}
+
+.categories__items {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 20px;
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: 992px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
