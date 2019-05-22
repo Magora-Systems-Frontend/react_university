@@ -1,5 +1,5 @@
-import { ACTIONS_CONSTANTS_COURSES } from '../../config/constants';
 import { updateState } from 'utils/reducer';
+import { ACTIONS_CONSTANTS_COURSES } from '../../config/constants';
 
 const initialState = {};
 

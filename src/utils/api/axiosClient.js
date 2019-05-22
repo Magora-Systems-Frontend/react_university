@@ -43,10 +43,7 @@ class AxiosClient {
   }
 }
 
-/**
- *
- * @param props
- */
+//@param props
 function init(props) {
   axiosClient = new AxiosClient(props);
 }

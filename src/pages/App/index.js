@@ -4,10 +4,9 @@ import { connect } from 'react-redux';
 import PT from 'prop-types';
 import { loadStore, KEYS } from 'utils/localStorage';
 //
-import { Wrapper } from './index.styled';
 import { Header } from 'components/Header';
 import { Footer } from 'components/Footer';
-import { CommonModals } from 'components';
+import { Wrapper } from './index.styled';
 import { setAuthState } from './actions';
 
 @connect(
@@ -22,7 +21,6 @@ export class App extends React.PureComponent {
 
   static defaultProps = {
     children: '',
-    setAuthState: Function.prototype,
   };
 
   componentDidMount() {
@@ -30,12 +28,9 @@ export class App extends React.PureComponent {
   }
 
   render() {
-    const { route } = this.props;
-
     return (
       <Wrapper>
         <Header />
-        <CommonModals />
         {this.props.children}
         {/* Here could be header / footer / static blocks and etc */}
         <Footer />

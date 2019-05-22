@@ -1,6 +1,6 @@
 import React from 'react';
-import { Wrapper } from './index.styled';
 import PT from 'prop-types';
+import { Wrapper } from './index.styled';
 
 export const MainWrapper = (props) => <Wrapper>{props.children}</Wrapper>;
 

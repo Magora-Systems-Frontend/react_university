@@ -11,9 +11,10 @@ export default class Dropdown extends Component {
     text: PropTypes.string,
     linkText: PropTypes.string,
     bubleArrowPosition: PropTypes.string,
+    isMobile: PropTypes.bool,
   };
   render() {
-    const { children, dropdownType, menu, text, linkText, width, bubbleArrowPosition } = this.props;
+    const { children, dropdownType, menu, text, linkText, width, bubblePosition, isMobile } = this.props;
     const dropdownsList = {
       menu: <Menu menu={menu} />,
       emptyCart: <EmptyCart text={text} linkText={linkText} />,
@@ -22,7 +23,8 @@ export default class Dropdown extends Component {
       <div className="dropdown">
         {children}
         <div
-          className={`dropdown__bubble ${bubbleArrowPosition === 'right' && 'dropdown__bubble_right'} `}
+          className={`dropdown__bubble ${bubblePosition === 'left' && 'dropdown__bubble_right'} ${isMobile &&
+            'dropdown__bubble_mobile'}`}
           style={{ width: width }}>
           {dropdownsList[dropdownType]}
         </div>

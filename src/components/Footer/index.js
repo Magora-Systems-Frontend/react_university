@@ -7,21 +7,21 @@ import logo from './logo.svg';
 export class Footer extends Component {
   render() {
     const {
-      RU: { links, languages, laws },
+      EN: { links, languages, laws },
     } = lang;
     const list = links.map((item) => (
       <li key={item.id} className="links__item">
-        <a href={item.link}>{item.title}</a>
+        <a href="javascript:void(0)">{item.title}</a>
       </li>
     ));
     const languagesList = languages.map((item) => (
       <li key={item}>
-        <a href="/">{item}</a>
+        <a href="javascript:void(0)">{item}</a>
       </li>
     ));
     const listLaws = laws.map((item) => (
       <li key={item.id}>
-        <a href={item.link}>{item.title}</a>
+        <a href="javascript:void(0)">{item.title}</a>
       </li>
     ));
     const options = [
@@ -41,7 +41,7 @@ export class Footer extends Component {
             <ul className="links">{list}</ul>
           </div>
           <div className="col-sm-3">
-            <SimpleSelect options={options} placeholder="Выберите язык" />
+            <SimpleSelect options={options} placeholder="Choose language" />
           </div>
         </div>
         <div className="row footer__languages">
@@ -59,7 +59,7 @@ export class Footer extends Component {
             <div className="footer__copyright-logo">
               <img src={logo} alt="" />
             </div>
-            <div className="footer__copyright-text">Авторские права © 2019 Udemy, Inc.</div>
+            <div className="footer__copyright-text">Copyright © 2019 Udemy, Inc.</div>
           </div>
           <div className="col-sm-6 footer__copyright-right">
             <ul className="footer__copyright-laws">{listLaws}</ul>

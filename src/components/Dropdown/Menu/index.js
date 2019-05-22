@@ -3,26 +3,6 @@ import PropTypes from 'prop-types';
 import { Icon } from 'antd';
 import './style.scss';
 
-class SubLevel extends PureComponent {
-  render() {
-    const { item } = this.props;
-    const sublevel =
-      item &&
-      item.subitems &&
-      item.subitems.length > 0 &&
-      item.subitems.map((item) => <SubLevel item={item} key={item.title} />);
-    return (
-      <li className="dropdown__menu-sub-level__item">
-        <a href="" className="dropdown__link">
-          <span className="text">{item.title}</span>
-          {item && item.subitems && <Icon type="right" />}
-        </a>
-        {sublevel && <ul className="dropdown__menu-sub-level">{sublevel}</ul>}
-      </li>
-    );
-  }
-}
-
 class FirstLevel extends PureComponent {
   render() {
     const { item } = this.props;
@@ -30,15 +10,48 @@ class FirstLevel extends PureComponent {
       item &&
       item.subitems &&
       item.subitems.length > 0 &&
-      item.subitems.map((item) => <SubLevel item={item} key={item.title} />);
+      item.subitems.map((item) => <SecondLevel item={item} key={item.title} />);
     return (
       <li className="dropdown__menu-item">
-        <a href="/" className="dropdown__link">
+        <a href="javascript:void(0)" className="dropdown__link">
           <img src={item.icon} alt="" />
           <span className="text">{item.title}</span>
           {item && item.subitems && <Icon type="right" />}
         </a>
-        {sublevel && <ul className="dropdown__menu-sub-level">{sublevel}</ul>}
+        {sublevel && <ul className="dropdown__menu-second-level">{sublevel}</ul>}
+      </li>
+    );
+  }
+}
+
+class SecondLevel extends PureComponent {
+  render() {
+    const { item } = this.props;
+    const sublevel =
+      item &&
+      item.subitems &&
+      item.subitems.length > 0 &&
+      item.subitems.map((item) => <ThirdLevel item={item} key={item.title} />);
+    return (
+      <li className="dropdown__menu-second-level-item">
+        <a href="javascript:void(0)" className="dropdown__link">
+          <span className="text">{item.title}</span>
+          {item && item.subitems && <Icon type="right" />}
+        </a>
+        {sublevel && <ul className="dropdown__menu-third-level">{sublevel}</ul>}
+      </li>
+    );
+  }
+}
+
+class ThirdLevel extends Component {
+  render() {
+    const { item } = this.props;
+    return (
+      <li className="dropdown__menu-third-level-item">
+        <a href="javascript:void(0)" className="dropdown__link">
+          <span className="text">{item.title}</span>
+        </a>
       </li>
     );
   }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import './find-course.scss';
 import SectionSearch from './SearchForm';
 import lang from './lang.json';
@@ -7,7 +6,7 @@ import lang from './lang.json';
 export class FindCourse extends Component {
   render() {
     const {
-      RU: { title, description },
+      EN: { title, description },
     } = lang;
     return (
       <section className="find-course">

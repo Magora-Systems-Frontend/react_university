@@ -3,15 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import { ConnectedRouter } from 'connected-react-router';
 import { ROUTES } from 'config/constants';
 // pages
-import {
-  App,
-  HomePage,
-  NotFoundPage,
-  PasswordSetPage,
-  RegistrationFormPage,
-  UserProfilePage,
-  UserProfileEditPage,
-} from 'pages';
+import { App, HomePage } from 'pages';
 //
 import { history } from './store';
 

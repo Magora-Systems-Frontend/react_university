@@ -1,9 +1,9 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
-import { getCategories } from '../../pages/HomePage/actions';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { ItemCategory } from '../ItemCategory';
+import { getCategories } from '../../pages/HomePage/actions';
+import { ItemCategory } from './ItemCategory';
 
 import './index.scss';
 

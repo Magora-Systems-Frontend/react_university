@@ -1,9 +1,8 @@
 import React from 'react';
 
 import './button.scss';
-import { Button } from '../button';
-import { Select } from 'antd/lib/select';
 import PropTypes from 'prop-types';
+import Button from 'components/Button';
 
 export class ButtonCoursesType extends React.PureComponent {
   static propTypes = {
@@ -44,13 +43,14 @@ export class ButtonCoursesType extends React.PureComponent {
         {btnTitles.map((option, index) => (
           <Button
             key={index}
-            className={getClass('custom-btn__active', index)}
-            title={option}
+            colorStyle="category"
+            modificationClass={getClass('btn_category-toggle_active', index)}
             onClick={(event) => {
               this.stateBtn(option, index);
               clickButton(option);
-            }}
-          />
+            }}>
+            {option}
+          </Button>
         ))}
       </div>
     );

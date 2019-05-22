@@ -1,6 +1,9 @@
 {
   "EN": {
-    "headerTitle": "Courses"
+    "cart" : {
+      "text": "Your cart is empty.",
+      "linkText": "Keep shopping"
+    }
   },
   "RU": {
     "cart" : {

@@ -1,12 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ButtonColored from 'components/ButtonColored';
-import { withCommonModals } from 'components';
+import Button from 'components/Button';
 import './header-controls.scss';
-import lang from './lang.json';
 import { Wrapper } from 'components/Wrapper';
+import lang from './lang.json';
 
-@withCommonModals
 export default class HeaderControls extends React.PureComponent {
   static propTypes = {
     showModal: PropTypes.func,
@@ -16,29 +14,17 @@ export default class HeaderControls extends React.PureComponent {
     showModal: Function.prototype,
   };
 
-  showLoginModal = () => {
-    this.props.showModal('login');
-  };
-
-  showSignUpModal = () => {
-    this.props.showModal('sign-up');
-  };
-
   render() {
     const {
-      RU: { loginTitle, signTitle },
+      EN: { loginTitle, signTitle },
     } = lang;
     return (
       <div className="header-controls">
         <Wrapper margin="0 2px" padding="10px 0">
-          <ButtonColored onClick={this.showLoginModal} colorStyle="bordered">
-            {loginTitle}
-          </ButtonColored>
+          <Button colorStyle="bordered">{loginTitle}</Button>
         </Wrapper>
         <Wrapper margin="0 2px" padding="10px 0">
-          <ButtonColored onClick={this.showSignUpModal} colorStyle="colored">
-            {signTitle}
-          </ButtonColored>
+          <Button colorStyle="colored">{signTitle}</Button>
         </Wrapper>
       </div>
     );

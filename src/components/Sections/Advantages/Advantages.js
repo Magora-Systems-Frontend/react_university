@@ -6,7 +6,7 @@ import lang from './lang.json';
 export class Advantages extends Component {
   render() {
     const {
-      RU: { advantages },
+      EN: { advantages },
     } = lang;
     const advantagesList = advantages.map((item) => (
       <div className="advantages-section__item" key={item.title}>

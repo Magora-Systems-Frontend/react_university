@@ -4,8 +4,6 @@ import { Helmet } from 'react-helmet';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 
-import injectReducer from '../../utils/injectReducer';
-import reducer from './reducer';
 import {
   FindCourse,
   Advantages,
@@ -16,6 +14,8 @@ import {
   Partners,
   NonStudents,
 } from 'components';
+import injectReducer from '../../utils/injectReducer';
+import reducer from './reducer';
 
 const withReducer = injectReducer({ key: 'home', reducer });
 

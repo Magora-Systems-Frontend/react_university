@@ -2,6 +2,7 @@ const styles = {
   container: (provided) => ({
     ...provided,
     border: '1px solid #686f7a',
+    borderRadius: '3px',
     '&:hover, &:focus': {
       borderColor: '#29303b',
     },
@@ -11,8 +12,15 @@ const styles = {
   }),
   control: (provided) => ({
     ...provided,
-    borderRadius: 0,
-    border: '0',
+    border: 0,
+    borderRadius: '3px',
+    boxShadow: 'none',
+    '&:hover': {
+      border: 0,
+    },
+    '&:focus': {
+      boxShadow: 'none',
+    },
   }),
   menu: (provided) => ({
     ...provided,

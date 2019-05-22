@@ -1,11 +1,12 @@
 {
   "EN" : {
-    "tooltipTitle": "Help other people be better",
-    "buttonText": "Begin teach"
+    "buttonText": "Teach on business",
+    "text": "Turn what you know into an opportunity and reach millions around the world.",
+    "linkText": "Learn more"
   },
   "RU" : {
+    "buttonText": "Преподавайте на Udemy",
     "text": "Ваши знания станут проводником в мире возможностей и достигнут миллионов.",
-    "linkText": "Подробнее",
-    "buttonText": "Преподавайте на Udemy"
+    "linkText": "Подробнее"
   }
 }

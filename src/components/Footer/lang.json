@@ -1,45 +1,50 @@
 {
-  "RU": {
+  "EN": {
     "links": [
       {
         "id": 1,
-        "title": "Преподавайте на Udemy",
-        "link": "/"
+        "title": "Udemy for Business"
+
       },
       {
         "id": 2,
-        "title": "Приложение Udemy",
-        "link": "/"
+        "title": "Teach on Udemy"
+
       },
       {
         "id": 3,
-        "title": "О нас",
-        "link": "/"
+        "title": "Udemy app"
+
       },
       {
         "id": 4,
-        "title": "Карьера",
-        "link": "/"
+        "title": "About us"
+
       },
       {
         "id": 5,
-        "title": "Блог",
-        "link": "/"
+        "title": "Careers"
+
       },
       {
         "id": 6,
-        "title": "Темы",
-        "link": "/"
+        "title": "Blog"
+
       },
       {
         "id": 7,
-        "title": "Поддержка",
-        "link": "/"
+        "title": "Topics"
+
       },
       {
         "id": 8,
-        "title": "Партнер",
-        "link": "/"
+        "title": "Support"
+
+      },
+      {
+        "id": 9,
+        "title": "Affiliate"
+
       }
     ],
     "languages": [
@@ -48,18 +53,76 @@
     "laws": [
       {
         "id": 1,
-        "title": "Условия использования",
-        "link": "/"
+        "title": "Terms"
       },
       {
         "id": 2,
-        "title": "Политика конфиденциальности и Политика использования файлов cookie",
-        "link": "/"
+        "title": "Privacy Policy and Cookie Policy"
       },
       {
         "id": 3,
-        "title": "Темы",
-        "link": "/"
+        "title": "Topics"
+      }
+    ]
+  },
+  "RU": {
+    "links": [
+      {
+        "id": 1,
+        "title": "Преподавайте на Udemy"
+
+      },
+      {
+        "id": 2,
+        "title": "Приложение Udemy"
+
+      },
+      {
+        "id": 3,
+        "title": "О нас"
+
+      },
+      {
+        "id": 4,
+        "title": "Карьера"
+
+      },
+      {
+        "id": 5,
+        "title": "Блог"
+
+      },
+      {
+        "id": 6,
+        "title": "Темы"
+
+      },
+      {
+        "id": 7,
+        "title": "Поддержка"
+
+      },
+      {
+        "id": 8,
+        "title": "Партнер"
+
+      }
+    ],
+    "languages": [
+      "Deutsch", "Español", "Français", "Bahasa", "Indonesia"
+    ],
+    "laws": [
+      {
+        "id": 1,
+        "title": "Условия использования"
+      },
+      {
+        "id": 2,
+        "title": "Политика конфиденциальности и Политика использования файлов cookie"
+      },
+      {
+        "id": 3,
+        "title": "Темы"
       }
     ]
   }

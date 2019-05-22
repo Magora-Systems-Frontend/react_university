@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
-import lang from './lang.json';
 import { Wrapper } from 'components/Wrapper';
-import ButtonColored from 'components/ButtonColored';
+import Button from 'components/Button';
 import Dropdown from 'components/Dropdown';
+import lang from './lang.json';
 import './style.scss';
 
 export default class HeaderInvite extends Component {
   render() {
     const {
-      RU: { text, linkText, buttonText },
+      EN: { text, linkText, buttonText },
     } = lang;
     return (
       <div className="invite-to-courses_wrapper">
-        <Dropdown dropdownType="emptyCart" text={text} linkText={linkText} width="330px">
+        <Dropdown dropdownType="emptyCart" text={text} linkText={linkText} width="330px" bubblePosition="left">
           <Wrapper margin="0 2px" padding="9px 0">
-            <ButtonColored colorStyle="transparent" cssModify={{ fontWeight: 'normal' }}>
+            <Button colorStyle="transparent" cssModify={{ fontWeight: 'normal' }}>
               {buttonText}
-            </ButtonColored>
+            </Button>
           </Wrapper>
         </Dropdown>
       </div>

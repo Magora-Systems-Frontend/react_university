@@ -1,21 +1,40 @@
 {
+  "EN": {
+    "menuTitle": "MORE FROM UDEMY",
+    "loginTitle": "Sign up / Log in",
+    "menu": [
+      {
+        "title": "Teach on Udemy",
+        "id": "1"
+      },
+      {
+        "title": "Udemy for Business",
+        "id": "2"
+      },
+      {
+        "title": "Get the app",
+        "id": "3"
+      },
+      {
+        "title": "Help",
+        "id": "4"
+      }
+    ]
+  },
   "RU": {
     "menuTitle": "Другие продукты Udemy",
     "loginTitle": "Зарегистрироваться / войти",
     "menu": [
       {
         "title": "Преподавайте на Udemy",
-        "link": "/",
         "id": "1"
       },
       {
         "title": "Скачать приложение",
-        "link": "/",
         "id": "2"
       },
       {
         "title": "Помощь",
-        "link": "/",
         "id": "3"
       }
     ]

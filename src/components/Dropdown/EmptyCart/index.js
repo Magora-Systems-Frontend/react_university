@@ -12,7 +12,7 @@ export default class EmptyCart extends Component {
     return (
       <div className="dropdown__empty-cart">
         {text}
-        <a href="#" className="dropdown__empty-cart-link">
+        <a href="javascript:void(0)" className="dropdown__empty-cart-link">
           {linkText}
         </a>
       </div>

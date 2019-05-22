@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import lang from './lang.json';
 import { Field, reduxForm } from 'redux-form';
 import { Icon } from 'antd';
 import { TextField } from 'components';
 import './header-search.scss';
-import ButtonColored from 'components/ButtonColored';
+import Button from 'components/Button';
+import lang from './lang.json';
 
 @reduxForm({
   form: 'HEADER_SEARCH',
@@ -13,16 +12,15 @@ import ButtonColored from 'components/ButtonColored';
 export default class HeaderSearch extends Component {
   render() {
     const {
-      RU: {
+      EN: {
         search: { placeholder, name },
       },
     } = lang;
     return (
       <form
         className="header-search-form"
-        onSubmit={(e, value) => {
+        onSubmit={(e) => {
           e.preventDefault();
-          console.log(value);
         }}>
         <Field
           name={name}
@@ -31,9 +29,9 @@ export default class HeaderSearch extends Component {
           placeholder={placeholder}
           component={TextField}
         />
-        <ButtonColored colorStyle="search" type="submit">
+        <Button colorStyle="search" type="submit">
           <Icon type="search" />
-        </ButtonColored>
+        </Button>
       </form>
     );
   }

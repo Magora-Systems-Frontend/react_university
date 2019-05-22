@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
-import { ItemCourse } from '../ItemCourse';
 import { Icon } from 'antd';
-
+import { ItemCourse } from './ItemCourse';
+import { ItemComment } from './ItemComment';
 import './carousel.scss';
-import { ItemComment } from '../ItemComment';
 
 const Arrow = (props) => {
   const { onClick, direction } = props;

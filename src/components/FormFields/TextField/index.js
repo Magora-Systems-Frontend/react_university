@@ -1,16 +1,7 @@
 import React from 'react';
 import { fieldPropTypes } from 'redux-form';
-import { Input, Form, InputNumber } from 'antd';
-import ReactInputMask from 'react-input-mask';
+import { Input, Form } from 'antd';
 import './style.scss';
-
-const InputMask = (props) => {
-  return (
-    <ReactInputMask {...props}>
-      {(inputProps) => <Input {...inputProps} disabled={props.disabled ? props.disabled : null} />}
-    </ReactInputMask>
-  );
-};
 
 export class TextField extends React.PureComponent {
   static propTypes = {
@@ -22,15 +13,6 @@ export class TextField extends React.PureComponent {
 
     let inputElement;
     switch (type) {
-      case 'password':
-        inputElement = Input.Password;
-        break;
-      case 'code':
-        inputElement = InputNumber;
-        break;
-      case 'mask':
-        inputElement = InputMask;
-        break;
       case 'search':
         inputElement = (props) => (
           <input placeholder={props.placeholder} className="header-search-form__control header-search-form__input" />

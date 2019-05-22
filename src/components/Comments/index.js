@@ -1,8 +1,8 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
-import { getCategories, getComments } from '../../pages/HomePage/actions';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { getComments } from '../../pages/HomePage/actions';
 
 import './index.scss';
 import { Carousel } from '../Carousel';

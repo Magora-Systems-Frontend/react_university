@@ -1,13 +1,13 @@
 {
   "EN": {
     "search": {
-      "placeholder": "Enter text",
+      "placeholder": "Search for anything",
       "name": "search"
     }
   },
   "RU": {
     "search": {
-      "name": "text",
+      "name": "search",
       "placeholder": "Ищите что угодно"
     }
   }

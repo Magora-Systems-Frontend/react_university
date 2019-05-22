@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import lang from './lang.json';
-import { Icon, List } from 'antd';
-import './catalog.scss';
+import { Icon } from 'antd';
 import Dropdown from 'components/Dropdown';
 import { Wrapper } from 'components/Wrapper';
+import './catalog.scss';
+import lang from './lang.json';
 
 export default class HeaderCatalog extends Component {
   render() {
     const {
-      RU: { catalogTitle },
+      EN: { catalogTitle },
     } = lang;
     const data = [
       {
@@ -16,10 +16,51 @@ export default class HeaderCatalog extends Component {
         icon: 'https://img.icons8.com/material/24/000000/phone.png',
         subitems: [
           {
-            title: 'Frontend',
+            title: 'All development',
+          },
+          {
+            title: 'Web Development',
             subitems: [
               {
+                title: 'Popular topics',
+              },
+              {
+                title: 'JS',
+              },
+              {
                 title: 'React',
+              },
+              {
+                title: 'Angular',
+              },
+              {
+                title: 'CSS',
+              },
+              {
+                title: 'PHP',
+              },
+            ],
+          },
+          {
+            title: 'Mobile apps',
+            subitems: [
+              {
+                title: 'Popular topics',
+              },
+              {
+                title: 'JS',
+              },
+              {
+                title: 'React',
+              },
+              {
+                title: 'Angular',
+              },
+              {
+                title: 'CSS',
+              },
+              {
+                title: 'PHP',
               },
             ],
           },

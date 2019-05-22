@@ -24,6 +24,11 @@ import logo from './logo.svg';
   mapDispatchToProps
 )
 class Header extends Component {
+  static propTypes = {
+    authState: PropTypes.object,
+    logout: PropTypes.func,
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -45,11 +50,6 @@ class Header extends Component {
     });
   };
 
-  static propTypes = {
-    authState: PropTypes.object,
-    logout: PropTypes.func,
-  };
-
   renderControls = () => {
     const { authState = {}, logout } = this.props;
     if (authState.isAuth) {
@@ -61,7 +61,7 @@ class Header extends Component {
 
   render() {
     const {
-      RU: {
+      EN: {
         cart: { text, linkText },
       },
     } = lang;
@@ -83,7 +83,7 @@ class Header extends Component {
               <HeaderInvite />
             </div>
             <div className="header__right-side">
-              <Dropdown dropdownType="emptyCart" text={text} linkText={linkText} width="270px">
+              <Dropdown dropdownType="emptyCart" bubblePosition="left" text={text} linkText={linkText} width="270px">
                 <Wrapper margin="0 2px" padding="10px 0">
                   <HeaderCart />
                 </Wrapper>
@@ -118,7 +118,8 @@ class Header extends Component {
               dropdownType="emptyCart"
               text={text}
               linkText={linkText}
-              bubbleArrowPosition="right"
+              bubblePosition="left"
+              isMobile
               width="270px">
               <HeaderCart />
             </Dropdown>

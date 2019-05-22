@@ -1,4 +1,20 @@
 {
+  "EN": {
+    "invites": [
+      {
+        "id": "teacher",
+        "title": "Teach on Udemy",
+        "description": "Teach what you love. Udemy gives you the tools to create an online course.",
+        "btnTitle": "Start teaching"
+      },
+      {
+        "id": "business",
+        "title": "Udemy for Business",
+        "description": "Get unlimited access to 3,000+ of Udemy’s top courses for your team.",
+        "btnTitle": "Get Udemy for business"
+      }
+    ]
+  },
   "RU": {
     "invites": [
       {

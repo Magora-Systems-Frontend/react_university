@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 import { TextField } from 'components';
 import { Icon } from 'antd';
-import ButtonColored from 'components/ButtonColored';
+import Button from 'components/Button';
 import lang from './lang.json';
 import './search-form.scss';
 
@@ -17,16 +17,15 @@ export default class SearchForm extends Component {
 
   render() {
     const {
-      RU: { formPlaceholder },
+      EN: { formPlaceholder },
     } = lang;
     const { maxWidth } = this.props;
     return (
       <form
         className="search-course-form"
         style={{ maxWidth: maxWidth, width: '100%' }}
-        onSubmit={(e, value) => {
+        onSubmit={(e) => {
           e.preventDefault();
-          console.log(value);
         }}>
         <Field
           name="text"
@@ -35,9 +34,9 @@ export default class SearchForm extends Component {
           placeholder={formPlaceholder}
           component={TextField}
         />
-        <ButtonColored colorStyle="search" type="submit">
+        <Button colorStyle="search" type="submit">
           <Icon type="search" />
-        </ButtonColored>
+        </Button>
       </form>
     );
   }
