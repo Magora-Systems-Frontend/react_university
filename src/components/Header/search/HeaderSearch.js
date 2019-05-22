@@ -26,7 +26,7 @@ export default class HeaderSearch extends Component {
         }}>
         <Field
           name={name}
-          type="text"
+          type="search"
           cssmodify={{ marginBottom: 0, flex: 1, border: 0, height: '44px' }}
           placeholder={placeholder}
           component={TextField}

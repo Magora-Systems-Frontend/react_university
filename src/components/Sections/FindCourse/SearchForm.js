@@ -30,7 +30,7 @@ export default class SearchForm extends Component {
         }}>
         <Field
           name="text"
-          type="text"
+          type="search"
           cssmodify={{ marginBottom: 0, flex: 1, border: 0, height: '44px' }}
           placeholder={formPlaceholder}
           component={TextField}
