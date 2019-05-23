@@ -2,10 +2,10 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getComments } from '../../pages/HomePage/actions';
-
+import { Carousel } from 'components/Carousel';
+import { getComments } from '../../../pages/HomePage/actions';
 import './index.scss';
-import { Carousel } from '../Carousel';
+import '../sections.scss';
 
 const mapStateToProps = ({ commentsState }) => ({
   commentsState,
@@ -58,7 +58,7 @@ export class Comments extends React.PureComponent {
 
     return (
       <div className="comments">
-        <div className="comments__wrapper">
+        <div className="comments__wrapper content_container">
           <div className="comments__wrapper_title">What our students have to say</div>
           <Carousel id="comments" data={payload} options={options} typeItem="comments" />
         </div>

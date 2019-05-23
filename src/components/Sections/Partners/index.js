@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './style.scss';
+import '../sections.scss';
 import booking from './booking-logo.svg';
 import volkswagen from './volkswagen-logo.svg';
 import mercedes from './mercedes-logo.svg';
@@ -53,11 +54,13 @@ export class Partners extends Component {
       </div>
     ));
     return (
-      <section className="partners_main-page">
-        <div className="partners__text">Trusted by companies of all sizes</div>
-        <a href="javascript:void(0)">
-          <div className="partners__logos">{list}</div>
-        </a>
+      <section className="partners_main-page-wrapper">
+        <div className="partners_main-page">
+          <div className="partners__text">Trusted by companies of all sizes</div>
+          <a href="javascript:void(0)">
+            <div className="partners__logos">{list}</div>
+          </a>
+        </div>
       </section>
     );
   }

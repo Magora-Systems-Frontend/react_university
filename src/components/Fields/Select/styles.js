@@ -3,6 +3,7 @@ const styles = {
     ...provided,
     border: '1px solid #686f7a',
     borderRadius: '3px',
+    width: '160px',
     '&:hover, &:focus': {
       borderColor: '#29303b',
     },

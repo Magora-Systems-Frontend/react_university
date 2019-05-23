@@ -1,5 +1,6 @@
 import React from 'react';
 import './courses.scss';
+import '../sections.scss';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -48,23 +49,25 @@ export class Courses extends React.PureComponent {
 
     return (
       <div className="courses">
-        <div className="courses__block-selection">
-          <div className="courses__block-selection_description">
-            <div className="courses__block-selection_lead-test">The world’s largest selection of courses</div>
-            <div className="courses__block-selection_sub-test">
-              Choose from over 100,000 online video courses with new additions published every month
+        <div className="content_container">
+          <div className="courses__block-selection">
+            <div className="courses__block-selection_description">
+              <div className="courses__block-selection_lead-test">The world’s largest selection of courses</div>
+              <div className="courses__block-selection_sub-test">
+                Choose from over 100,000 online video courses with new additions published every month
+              </div>
+            </div>
+            <div className="courses__block-selection_unit-container">
+              <div className="courses__block-selection_unit-container-content">
+                <ButtonCoursesType clickButton={this.clickButton} />
+                <CarouselCourses dataCourses={payload} />
+              </div>
             </div>
           </div>
-          <div className="courses__block-selection_unit-container">
-            <div className="courses__block-selection_unit-container-content">
-              <ButtonCoursesType clickButton={this.clickButton} />
-              <CarouselCourses dataCourses={payload} />
-            </div>
+          <div className="courses__block-popular">
+            <div className="courses__block-popular_title">Students are viewing</div>
+            <CarouselCourses dataCourses={payloadPopular} />
           </div>
-        </div>
-        <div className="courses__block-popular">
-          <div className="courses__block-popular_title">Students are viewing</div>
-          <CarouselCourses dataCourses={payloadPopular} />
         </div>
       </div>
     );

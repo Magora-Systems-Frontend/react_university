@@ -92,3 +92,14 @@
     }
   }
 }
+.language-select_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+.footer-divider {
+  margin: 0;
+  height: 6px;
+  width: 100%;
+  background-color: #ec5252;
+}

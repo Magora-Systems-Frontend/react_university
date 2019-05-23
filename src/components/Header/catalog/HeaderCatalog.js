@@ -13,7 +13,7 @@ export default class HeaderCatalog extends Component {
     const data = [
       {
         title: 'Develop',
-        icon: 'https://img.icons8.com/material/24/000000/phone.png',
+        icon: 'https://img.icons8.com/ios/50/000000/source-code-filled.png',
         subitems: [
           {
             title: 'All development',
@@ -68,19 +68,19 @@ export default class HeaderCatalog extends Component {
       },
       {
         title: 'Business',
-        icon: 'https://img.icons8.com/material/24/000000/phone.png',
+        icon: 'https://img.icons8.com/ios/50/000000/statistics.png',
       },
       {
         title: 'IT',
-        icon: 'https://img.icons8.com/material/24/000000/phone.png',
+        icon: 'https://img.icons8.com/pastel-glyph/50/000000/monitor.png',
       },
       {
         title: 'Design',
-        icon: 'https://img.icons8.com/material/24/000000/phone.png',
+        icon: 'https://img.icons8.com/ios/50/000000/web-design.png',
       },
       {
         title: 'Marketing',
-        icon: 'https://img.icons8.com/material/24/000000/phone.png',
+        icon: 'https://img.icons8.com/wired/50/000000/marketing.png',
       },
     ];
     return (

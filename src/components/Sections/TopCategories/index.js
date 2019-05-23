@@ -2,9 +2,9 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getCategories } from '../../pages/HomePage/actions';
+import { getCategories } from '../../../pages/HomePage/actions';
 import { ItemCategory } from './ItemCategory';
-
+import '../sections.scss';
 import './index.scss';
 
 const mapStateToProps = ({ categoriesState }) => ({
@@ -40,11 +40,13 @@ export class TopCategories extends React.PureComponent {
 
     return (
       <div className="categories">
-        <div className="categories__title">Top categories</div>
-        <div className="categories__items">
-          {payload.map((item, index) => (
-            <ItemCategory data={item} key={index} />
-          ))}
+        <div className="content_container">
+          <div className="categories__title">Top categories</div>
+          <div className="categories__items">
+            {payload.map((item, index) => (
+              <ItemCategory data={item} key={index} />
+            ))}
+          </div>
         </div>
       </div>
     );

@@ -9,9 +9,9 @@ export { ButtonCoursesType } from './ButtonCoursesType';
 export { CarouselCourses } from './CarouselCourses';
 export { Carousel } from './Carousel';
 export { Recommendations } from './Sections/Recommendations';
-export { TopCategories } from './TopCategories';
-export { ItemCategory } from './TopCategories/ItemCategory';
-export { Comments } from './Comments';
+export { TopCategories } from './Sections/TopCategories';
+export { ItemCategory } from './Sections/TopCategories/ItemCategory';
+export { Comments } from './Sections/Comments';
 export { Footer } from './Footer';
 
 export { TextField } from './FormFields';
