@@ -1,0 +1,14 @@
+{
+  "EN": {
+    "updated": "Last updated:",
+    "lectures": "lectures",
+    "hours": "hours",
+    "cart": "Add to cart"
+  },
+  "RU": {
+    "updated": "Последнее обновление:",
+    "lectures": "лекций",
+    "hours": "часов",
+    "cart": "Добавить в корзину"
+  }
+}

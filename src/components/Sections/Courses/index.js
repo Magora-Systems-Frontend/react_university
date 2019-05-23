@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import { ButtonCoursesType } from 'components/ButtonCoursesType';
 import { CarouselCourses } from 'components/CarouselCourses';
 import { getCourses, getCoursesPopular } from '../../../pages/HomePage/actions';
+import lang from './lang.json';
 
 const mapStateToProps = ({ coursesState }) => ({
   coursesState,
@@ -46,16 +47,16 @@ export class Courses extends React.PureComponent {
   render() {
     const { coursesState } = this.props;
     const { payload = {}, payloadPopular = {} } = coursesState;
-
+    const {
+      EN: { title, description, viewing },
+    } = lang;
     return (
       <div className="courses">
         <div className="content_container">
           <div className="courses__block-selection">
             <div className="courses__block-selection_description">
-              <div className="courses__block-selection_lead-test">The world’s largest selection of courses</div>
-              <div className="courses__block-selection_sub-test">
-                Choose from over 100,000 online video courses with new additions published every month
-              </div>
+              <div className="courses__block-selection_lead-test">{title}</div>
+              <div className="courses__block-selection_sub-test">{description}</div>
             </div>
             <div className="courses__block-selection_unit-container">
               <div className="courses__block-selection_unit-container-content">
@@ -65,7 +66,7 @@ export class Courses extends React.PureComponent {
             </div>
           </div>
           <div className="courses__block-popular">
-            <div className="courses__block-popular_title">Students are viewing</div>
+            <div className="courses__block-popular_title">{viewing}</div>
             <CarouselCourses dataCourses={payloadPopular} />
           </div>
         </div>

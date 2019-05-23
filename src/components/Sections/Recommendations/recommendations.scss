@@ -17,7 +17,8 @@
   display: block;
 }
 
-.recomendations__banner_icons {
+.recomendations__banner_icons,
+.recomendations__banner_text {
   margin: 40px 0;
   display: flex;
   align-items: center;
@@ -25,9 +26,18 @@
   width: 100%;
 }
 
-.recomendations__banner_icons .anticon {
+.recomendations__banner_text .anticon:first-child {
+  margin-left: 150px;
+}
+
+.recomendations__banner_text .anticon:last-child {
+  margin-right: 150px;
+}
+
+.recomendations__banner_icons .anticon,
+.recomendations__banner_text .anticon {
   font-size: 32px;
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     display: none;
   }
 }

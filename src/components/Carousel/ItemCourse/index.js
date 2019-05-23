@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import StarRatings from 'react-star-ratings';
 import { Popover, Icon } from 'antd';
+import lang from './lang.json';
 
 import './item.scss';
 
@@ -19,10 +20,15 @@ export class ItemCourse extends React.PureComponent {
   render() {
     const { data = {}, id = '' } = this.props;
     const { objective = [] } = data;
+    const {
+      EN: { updated, lectures, hours, cart },
+    } = lang;
 
     const content = (
       <div className="item__popover">
-        <div className="item__popover_update">Last updated: {data.update}</div>
+        <div className="item__popover_update">
+          {updated} {data.update}
+        </div>
         <div className="item__popover_title">{data.title}</div>
         <div className="item__popover_category">
           <span>{data.category}</span> | {id}
@@ -30,15 +36,19 @@ export class ItemCourse extends React.PureComponent {
         <div className="item__popover_info">
           <div className="item-info">
             <Icon type="play-circle" />
-            <span>{data.lectures} lectures</span>
+            <span>
+              {data.lectures} {lectures}
+            </span>
           </div>
           <div className="item-info">
             <Icon type="clock-circle" />
-            <span>{data.hours} hours</span>
+            <span>
+              {data.hours} {hours}
+            </span>
           </div>
           <div className="item-info">
             <Icon type="project" />
-            <span>{data.levels} lectures</span>
+            <span>{data.levels}</span>
           </div>
         </div>
         <div className="item__popover_description">{data.description}</div>
@@ -48,7 +58,7 @@ export class ItemCourse extends React.PureComponent {
           ))}
         </ul>
         <div className="item__popover_buttons">
-          <div className="item__popover_add-card">Add to cart</div>
+          <div className="item__popover_add-card">{cart}</div>
           <div className="item__popover_add-wishlist">
             <Icon type="heart" />
           </div>

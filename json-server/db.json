@@ -7,7 +7,7 @@
         {
           "title": "iPhone Photography | Take Professional Photos On Your iPhone",
           "author": "Dale McManus",
-          "img": "https://i.udemycdn.com/course/240x135/1392122_6c4c_3.jpg",
+          "img": "/assets/images/courses/1392122_6c4c_3.jpg",
           "price": "руб.4,799",
           "currentPrice": "руб.899",
           "stars": 4.8,
@@ -27,7 +27,7 @@
         {
           "title": "Posing Like A Pro: The Ultimate Posing Flow! Part 2",
           "author": "Sandy Dee",
-          "img": "https://i.udemycdn.com/course/240x135/1329886_4e9f_3.jpg",
+          "img": "/assets/images/courses/1329886_4e9f_3.jpg",
           "price": "руб.19,799",
           "currentPrice": "руб.899",
           "stars": 4.5,
@@ -47,7 +47,7 @@
         {
           "title": "Photography Masterclass: A Complete Guide to Photography",
           "author": "Phil Ebiner",
-          "img": "https://i.udemycdn.com/course/240x135/1462428_639f_7.jpg",
+          "img": "/assets/images/courses/1462428_639f_7.jpg",
           "price": "руб.19,799",
           "currentPrice": "руб.899",
           "stars": 4.6,
@@ -67,7 +67,7 @@
         {
           "title": "Adobe Lightroom Classic CC & CC: Photo Editing Masterclass",
           "author": "Phil Ebiner",
-          "img": "https://i.udemycdn.com/course/240x135/926234_4a1a_3.jpg",
+          "img": "/assets/images/courses/926234_4a1a_3.jpg",
           "price": "руб.19,799",
           "currentPrice": "руб.899",
           "stars": 4.4,
@@ -87,7 +87,7 @@
         {
           "title": "The Complete Video Production Bootcamp",
           "author": "William Carnahan",
-          "img": "https://i.udemycdn.com/course/240x135/1027180_475e_5.jpg",
+          "img": "/assets/images/courses/1027180_475e_5.jpg",
           "price": "руб.19,799",
           "currentPrice": "руб.899",
           "stars": 4.5,
@@ -112,7 +112,7 @@
         {
           "title": "Complete Python Bootcamp: Go from zero to hero in Python 3",
           "author": "Pierian Data International by Jose Portilla",
-          "img": "https://i.udemycdn.com/course/240x135/567828_67d0.jpg",
+          "img": "/assets/images/courses/567828_67d0.jpg",
           "price": "руб.19,299",
           "currentPrice": "руб.899",
           "stars": 4.5,
@@ -132,7 +132,7 @@
         {
           "title": "The Web Developer Bootcamp",
           "author": "Colt Steele",
-          "img": "https://i.udemycdn.com/course/240x135/625204_436a_2.jpg",
+          "img": "/assets/images/courses/625204_436a_2.jpg",
           "price": "руб.19,799",
           "currentPrice": "руб.899",
           "stars": 4.7,
@@ -152,7 +152,7 @@
         {
           "title": "The Complete Web Developer Course 2.0",
           "author": "Rob Percival",
-          "img": "https://i.udemycdn.com/course/240x135/764164_de03_2.jpg",
+          "img": "/assets/images/courses/764164_de03_2.jpg",
           "price": "руб.19,799",
           "currentPrice": "руб.899",
           "stars": 4.5,
@@ -172,7 +172,7 @@
         {
           "title": "The Complete JavaScript Course 2019: Build Real Projects!",
           "author": "Jonas Schmedtmann",
-          "img": "https://i.udemycdn.com/course/240x135/851712_fc61_5.jpg",
+          "img": "/assets/images/courses/851712_fc61_5.jpg",
           "price": "руб.19,799",
           "currentPrice": "руб.899",
           "stars": 4.6,
@@ -192,7 +192,7 @@
         {
           "title": "Unreal Engine C++ Developer: Learn C++ and Make Video Games",
           "author": "Ben Tristem",
-          "img": "https://i.udemycdn.com/course/240x135/657932_c7e0_3.jpg",
+          "img": "/assets/images/courses/657932_c7e0_3.jpg",
           "price": "руб.19,799",
           "currentPrice": "руб.899",
           "stars": 4.4,
@@ -217,7 +217,7 @@
         {
           "title": "Complete Python Bootcamp: Go from zero to hero in Python 3",
           "author": "Pierian Data International by Jose Portilla",
-          "img": "https://i.udemycdn.com/course/240x135/567828_67d0.jpg",
+          "img": "/assets/images/courses/567828_67d0.jpg",
           "price": "руб.19,299",
           "currentPrice": "руб.899",
           "stars": 4.5,
@@ -237,7 +237,7 @@
         {
           "title": "Photography Masterclass: A Complete Guide to Photography",
           "author": "Phil Ebiner",
-          "img": "https://i.udemycdn.com/course/240x135/1462428_639f_7.jpg",
+          "img": "/assets/images/courses/1462428_639f_7.jpg",
           "price": "руб.19,799",
           "currentPrice": "руб.899",
           "stars": 4.6,
@@ -257,7 +257,7 @@
         {
           "title": "The Complete JavaScript Course 2019: Build Real Projects!",
           "author": "Jonas Schmedtmann",
-          "img": "https://i.udemycdn.com/course/240x135/851712_fc61_5.jpg",
+          "img": "/assets/images/courses/851712_fc61_5.jpg",
           "price": "руб.19,799",
           "currentPrice": "руб.899",
           "stars": 4.6,
@@ -277,7 +277,7 @@
         {
           "title": "Adobe Lightroom Classic CC & CC: Photo Editing Masterclass",
           "author": "Phil Ebiner",
-          "img": "https://i.udemycdn.com/course/240x135/926234_4a1a_3.jpg",
+          "img": "/assets/images/courses/926234_4a1a_3.jpg",
           "price": "руб.19,799",
           "currentPrice": "руб.899",
           "stars": 4.4,
@@ -297,7 +297,7 @@
         {
           "title": "The Complete Video Production Bootcamp",
           "author": "William Carnahan",
-          "img": "https://i.udemycdn.com/course/240x135/1027180_475e_5.jpg",
+          "img": "/assets/images/courses/1027180_475e_5.jpg",
           "price": "руб.19,799",
           "currentPrice": "руб.899",
           "stars": 4.5,
@@ -317,7 +317,7 @@
         {
           "title": "The Complete Web Developer Course 2.0",
           "author": "Rob Percival",
-          "img": "https://i.udemycdn.com/course/240x135/764164_de03_2.jpg",
+          "img": "/assets/images/courses/764164_de03_2.jpg",
           "price": "руб.19,799",
           "currentPrice": "руб.899",
           "stars": 4.5,
@@ -337,7 +337,7 @@
         {
           "title": "Unreal Engine C++ Developer: Learn C++ and Make Video Games",
           "author": "Ben Tristem",
-          "img": "https://i.udemycdn.com/course/240x135/657932_c7e0_3.jpg",
+          "img": "/assets/images/courses/657932_c7e0_3.jpg",
           "price": "руб.19,799",
           "currentPrice": "руб.899",
           "stars": 4.4,
@@ -394,12 +394,12 @@
   "comments": [
     {
       "title": "Borivoje",
-      "icon": "https://i.udemycdn.com/user/100x100/8872940_27b4_3.jpg",
+      "icon": "/assets/images/comments/8872940_27b4_3.jpg",
       "description": "Udemy is a life saver. I don't have the time or money for a college education. My goal is to become a freelance web developer, and thanks to Udemy, I'm really close."
     },
     {
       "title": "Dipesh",
-      "icon": "https://i.udemycdn.com/user/100x100/22869844_edad.jpg",
+      "icon": "/assets/images/comments/22869844_edad.jpg",
       "description":"I believe in lifelong learning and Udemy is a great place to learn from experts. I've learned a lot and recommend it to all my friends.\n"
     },
     {
@@ -409,12 +409,12 @@
     },
     {
       "title": "Zulaika",
-      "icon": "https://i.udemycdn.com/user/100x100/26154780_76c8.jpg",
+      "icon": "/assets/images/comments/26154780_76c8.jpg",
       "description":"I work in project management and joined Udemy because I get great courses for less. The instructors are fantastic, interesting, and helpful. I plan to use Udemy for a long time!\n"
     },
     {
       "title": "Marco",
-      "icon": "https://i.udemycdn.com/user/100x100/31841220_f398_2.jpg",
+      "icon": "/assets/images/comments/31841220_f398_2.jpg",
       "description":"Thank you Udemy! You've renewed my passion for learning and my dream of becoming a web developer."
     },
     {

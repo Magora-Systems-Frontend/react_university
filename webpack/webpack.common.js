@@ -1,9 +1,15 @@
 const path = require('path');
 const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
 const makePath = to => path.resolve(__dirname, to);
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src',
+  plugins: [
+    new CopyWebpackPlugin([
+      { from: makePath('../src/assets'), to: makePath('../public/assets/') },
+    ])
+  ],
   output: {
     filename: 'bundle.js',
     path: makePath('../public'),
