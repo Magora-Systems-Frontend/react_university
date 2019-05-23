@@ -15,14 +15,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.49",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/plugin-proposal-decorators": "^7.4.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-transform-regenerator": "^7.4.3",
     "@babel/plugin-transform-runtime": "^7.4.3",
-    "@babel/polyfill": "^7.4.3",
     "@babel/preset-env": "^7.0.0-beta.49",
     "@babel/preset-react": "^7.0.0-beta.49",
     "@babel/runtime": "^7.4.3",
@@ -33,7 +31,6 @@
     "babel-loader": "^8.0.5",
     "babel-plugin-dynamic-import-webpack": "^1.1.0",
     "babel-plugin-module-resolver": "^3.2.0",
-    "babel-polyfill": "^6.26.0",
     "body-parser": "^1.18.3",
     "css-loader": "^1.0.0",
     "directory-named-webpack-plugin": "^4.0.0",
@@ -66,6 +63,7 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "@babel/core": "^7.4.5",
     "antd": "^3.18.1",
     "axios": "^0.18.0",
     "bootstrap": "^4.1.1",
