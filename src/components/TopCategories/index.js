@@ -6,6 +6,7 @@ import { getCategories } from '../../pages/HomePage/actions';
 import { ItemCategory } from './ItemCategory';
 
 import './index.scss';
+import lang from './lang.json';
 
 const mapStateToProps = ({ categoriesState }) => ({
   categoriesState,
@@ -37,10 +38,13 @@ export class TopCategories extends React.PureComponent {
   render() {
     const { categoriesState } = this.props;
     const { payload = [] } = categoriesState;
+    const {
+      EN: { title },
+    } = lang;
 
     return (
       <div className="categories">
-        <div className="categories__title">Top categories</div>
+        <div className="categories__title">{title}</div>
         <div className="categories__items">
           {payload.map((item, index) => (
             <ItemCategory data={item} key={index} />

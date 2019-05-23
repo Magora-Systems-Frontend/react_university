@@ -1,34 +1,20 @@
 import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { Icon } from 'antd';
 import { ROUTES } from 'config/constants';
-import { logout } from 'pages/App/actions';
 import { Wrapper } from 'components/Wrapper';
 import Dropdown from 'components/Dropdown';
 import MobileLeftMenu from 'components/MobileLeftMenu';
 import HeaderControls from './controls/HeaderControls';
-import HeaderUserControls from './user-controls/HeaderUserControls';
 import HeaderSearch from './search/HeaderSearch';
 import HeaderInvite from './invite/HeaderInvite';
 import HeaderCart from './cart/HeaderCart';
 import HeaderCatalog from './catalog/HeaderCatalog';
 import lang from './lang.json';
 import './header.scss';
-import logo from './logo.svg';
+import logo from '/assets/images/logo.svg';
 
-@connect(
-  mapStateToProps,
-  mapDispatchToProps
-)
-class Header extends Component {
-  static propTypes = {
-    authState: PropTypes.object,
-    logout: PropTypes.func,
-  };
-
+export class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -51,11 +37,6 @@ class Header extends Component {
   };
 
   renderControls = () => {
-    const { authState = {}, logout } = this.props;
-    if (authState.isAuth) {
-      return <HeaderUserControls logout={logout} authState={authState} />;
-    }
-
     return <HeaderControls />;
   };
 
@@ -135,17 +116,3 @@ class Header extends Component {
     );
   }
 }
-
-function mapStateToProps(store = {}) {
-  const { global = {} } = store;
-  const { authState = {} } = global;
-  return { authState };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    logout: bindActionCreators(logout, dispatch),
-  };
-}
-
-export { Header };

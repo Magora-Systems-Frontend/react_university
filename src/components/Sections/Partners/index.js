@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './style.scss';
-import booking from './booking-logo.svg';
-import volkswagen from './volkswagen-logo.svg';
-import mercedes from './mercedes-logo.svg';
-import pinterest from './pinterest-logo.svg';
-import adidas from './adidas-logo.svg';
-import eventbrite from './eventbrite-logo.svg';
+import booking from '/assets/images/partners/booking-logo.svg';
+import volkswagen from '/assets/images/partners/volkswagen-logo.svg';
+import mercedes from '/assets/images/partners/mercedes-logo.svg';
+import pinterest from '/assets/images/partners/pinterest-logo.svg';
+import adidas from '/assets/images/partners/adidas-logo.svg';
+import eventbrite from '/assets/images/partners/eventbrite-logo.svg';
 
 export class Partners extends Component {
   render() {

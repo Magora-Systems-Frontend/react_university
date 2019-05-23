@@ -2,6 +2,7 @@ import React from 'react';
 
 import './recommendations.scss';
 import { Icon } from 'antd';
+import lang from './lang.json';
 
 export class Recommendations extends React.PureComponent {
   static propTypes = {};
@@ -9,6 +10,10 @@ export class Recommendations extends React.PureComponent {
   static defaultProps = {};
 
   render() {
+    const {
+      EN: { title, desc, btn },
+    } = lang;
+
     return (
       <div className="recomendations">
         <div className="recomendations__top-border" />
@@ -20,7 +25,7 @@ export class Recommendations extends React.PureComponent {
             <Icon type="contacts" />
             <Icon type="gateway" />
           </div>
-          <div className="recomendations__banner_icons">
+          <div className="recomendations__banner_text">
             <Icon type="bar-chart" />
             <div className="recomendations__banner_text-center">
               <div className="title">Get personalized recommendations</div>

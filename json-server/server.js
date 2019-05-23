@@ -1,7 +1,7 @@
 const jsonServer = require('json-server');
 const bodyParser = require('body-parser');
 const server = jsonServer.create();
-const appRoutes = require('./routes/index');
+// const appRoutes = require('./routes/index');
 const middlewares = jsonServer.defaults();
 const router = jsonServer.router('./json-server/db.json');
 
@@ -10,7 +10,7 @@ const PORT = 8021;
 server.use(bodyParser.json());
 
 // in app routes you can add validation, authentication etc..
-appRoutes(server);
+// appRoutes(server);
 
 // now you can access to /api/users as to /users from db.json
 server.use(jsonServer.rewriter({

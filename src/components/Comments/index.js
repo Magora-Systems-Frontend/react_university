@@ -6,6 +6,7 @@ import { getComments } from '../../pages/HomePage/actions';
 
 import './index.scss';
 import { Carousel } from '../Carousel';
+import lang from './lang.json';
 
 const mapStateToProps = ({ commentsState }) => ({
   commentsState,
@@ -37,6 +38,10 @@ export class Comments extends React.PureComponent {
   render() {
     const { commentsState } = this.props;
     const { payload = [] } = commentsState;
+    const {
+      EN: { title },
+    } = lang;
+
     const options = {
       slidesToShow: 3,
       slidesToScroll: 3,
@@ -59,7 +64,7 @@ export class Comments extends React.PureComponent {
     return (
       <div className="comments">
         <div className="comments__wrapper">
-          <div className="comments__wrapper_title">What our students have to say</div>
+          <div className="comments__wrapper_title">{title}</div>
           <Carousel id="comments" data={payload} options={options} typeItem="comments" />
         </div>
       </div>
