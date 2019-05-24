@@ -4,12 +4,28 @@ import Dropdown from 'components/Dropdown';
 import { Wrapper } from 'components/Wrapper';
 import './catalog.scss';
 import lang from './lang.json';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
+const mapStateToProps = ({ languageState }) => ({
+  languageState,
+});
+
+@connect(mapStateToProps)
 export default class HeaderCatalog extends Component {
+  static propTypes = {
+    languageState: PropTypes.object,
+  };
+
+  static defaultProps = {
+    languageState: {},
+  };
+
   render() {
-    const {
-      EN: { catalogTitle },
-    } = lang;
+    const { languageState = {} } = this.props;
+    const { language } = languageState;
+    const { catalogTitle } = lang[language];
+
     const data = [
       {
         title: 'Develop',

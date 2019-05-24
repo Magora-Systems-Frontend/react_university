@@ -3,12 +3,28 @@ import Button from 'components/Button';
 import lang from './lang.json';
 import './style.scss';
 import '../sections.scss';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
+const mapStateToProps = ({ languageState }) => ({
+  languageState,
+});
+
+@connect(mapStateToProps)
 export class NonStudents extends Component {
+  static propTypes = {
+    languageState: PropTypes.object,
+  };
+
+  static defaultProps = {
+    languageState: {},
+  };
+
   render() {
-    const {
-      EN: { invites },
-    } = lang;
+    const { languageState = {} } = this.props;
+    const { language } = languageState;
+    const { invites } = lang[language];
+
     const blocks = invites.map((item) => (
       <div className="non-student__block" key={item.id}>
         <div className="non-student__block-text">

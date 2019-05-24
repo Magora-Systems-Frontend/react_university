@@ -5,17 +5,32 @@ import { TextField } from 'components';
 import './header-search.scss';
 import Button from 'components/Button';
 import lang from './lang.json';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+
+const mapStateToProps = ({ languageState }) => ({
+  languageState,
+});
 
 @reduxForm({
   form: 'HEADER_SEARCH',
 })
+@connect(mapStateToProps)
 export default class HeaderSearch extends Component {
+  static propTypes = {
+    languageState: PropTypes.object,
+  };
+
+  static defaultProps = {
+    languageState: {},
+  };
   render() {
+    const { languageState = {} } = this.props;
+    const { language } = languageState;
     const {
-      EN: {
-        search: { placeholder, name },
-      },
-    } = lang;
+      search: { placeholder, name },
+    } = lang[language];
+
     return (
       <form
         className="header-search-form"

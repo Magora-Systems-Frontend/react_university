@@ -8,8 +8,9 @@ import '../sections.scss';
 import './index.scss';
 import lang from './lang.json';
 
-const mapStateToProps = ({ categoriesState }) => ({
-  categoriesState,
+const mapStateToProps = (state) => ({
+  languageState: state.languageState,
+  categoriesState: state.categoriesState,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -23,11 +24,13 @@ const mapDispatchToProps = (dispatch) => ({
 export class TopCategories extends React.PureComponent {
   static propTypes = {
     categoriesState: PropTypes.object,
+    languageState: PropTypes.object,
     getCategories: PropTypes.func,
   };
 
   static defaultProps = {
     categoriesState: {},
+    languageState: {},
     getCategories: Function.prototype,
   };
 
@@ -36,11 +39,10 @@ export class TopCategories extends React.PureComponent {
   }
 
   render() {
-    const { categoriesState } = this.props;
+    const { categoriesState, languageState = {} } = this.props;
     const { payload = [] } = categoriesState;
-    const {
-      EN: { title },
-    } = lang;
+    const { language } = languageState;
+    const { title } = lang[language];
 
     return (
       <div className="categories">

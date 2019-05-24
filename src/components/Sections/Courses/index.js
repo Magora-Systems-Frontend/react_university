@@ -1,7 +1,7 @@
 import React from 'react';
 import './courses.scss';
 import '../sections.scss';
-import { bindActionCreators } from 'redux';
+import { bindActionCreators, combineReducers } from 'redux';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { ButtonCoursesType } from 'components/ButtonCoursesType';
@@ -9,8 +9,9 @@ import { CarouselCourses } from 'components/CarouselCourses';
 import { getCourses, getCoursesPopular } from '../../../pages/HomePage/actions';
 import lang from './lang.json';
 
-const mapStateToProps = ({ coursesState }) => ({
-  coursesState,
+const mapStateToProps = (state) => ({
+  coursesState: state.coursesState,
+  languageState: state.languageState,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -25,12 +26,14 @@ const mapDispatchToProps = (dispatch) => ({
 export class Courses extends React.PureComponent {
   static propTypes = {
     coursesState: PropTypes.object,
+    languageState: PropTypes.object,
     getCourses: PropTypes.func,
     getCoursesPopular: PropTypes.func,
   };
 
   static defaultProps = {
     coursesState: {},
+    languageState: {},
     getCourses: Function.prototype,
     getCoursesPopular: Function.prototype,
   };
@@ -45,11 +48,11 @@ export class Courses extends React.PureComponent {
   }
 
   render() {
-    const { coursesState } = this.props;
+    const { coursesState, languageState = {} } = this.props;
     const { payload = {}, payloadPopular = {} } = coursesState;
-    const {
-      EN: { title, description, viewing },
-    } = lang;
+    const { language } = languageState;
+    const { title, description, viewing } = lang[language];
+
     return (
       <div className="courses">
         <div className="content_container">
