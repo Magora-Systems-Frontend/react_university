@@ -98,7 +98,7 @@ export class Footer extends Component {
         </footer>
         <hr className="language-divider" />
         <footer className="footer_bottom content_container">
-          <div className="row footer__copyright content_container">
+          <div className="row footer__copyright">
             <div className="col-sm-6 footer__copyright-left">
               <div className="footer__copyright-logo">
                 <img src={logo} alt="" />

@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npm-run-all --parallel wds server",
-    "wds": "webpack-dev-server --config webpack/webpack.development.js",
+    "dev": "webpack-dev-server --config webpack/webpack.development.js",
     "build": "npm-run-all client --parallel serve server",
     "client": "webpack --config webpack/webpack.production.js",
     "serve": "serve -l 8020 public --single",

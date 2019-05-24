@@ -14,7 +14,10 @@ after cloning the repo:
 # install packages
 $ npm i
 
-# to run dev build and server
+# to run server
+$ npm run server
+
+# to run dev 
 # head over to http://0.0.0.0:8020
 $ npm run dev
 

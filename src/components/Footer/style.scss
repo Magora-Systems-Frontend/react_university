@@ -82,7 +82,9 @@
     &-laws {
       display: flex;
       justify-content: flex-end;
+      flex-wrap: wrap;
       margin-bottom: 0;
+      padding-left: 0;
       & > li {
         display: inline-block;
         padding: 6px;
