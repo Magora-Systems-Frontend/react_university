@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --config webpack/webpack.development.js",
     "build": "npm-run-all client --parallel serve server",
-    "client": "webpack --config webpack/webpack.production.js",
+    "client": "NODE_ENV=production webpack --config webpack/webpack.production.js",
     "serve": "serve -l 8020 public --single",
     "server": "nodemon ./json-server/server.js",
     "lint:js": "eslint --ext .js src",
@@ -27,6 +27,7 @@
     "husky": "^2.1.0",
     "lint-staged": "^8.1.5",
     "prettier": "^1.17.0",
+    "react-hot-loader": "^4.8.4",
     "stylelint": "^10.0.1",
     "stylelint-config-prettier": "^5.1.0",
     "stylelint-config-standard": "^18.3.0",
@@ -71,7 +72,6 @@
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-helmet": "^5.2.0",
-    "react-hot-loader": "^4.8.4",
     "react-loadable": "^5.5.0",
     "react-redux": "^5.0.7",
     "react-router": "^4.3.1",
@@ -88,7 +88,6 @@
     "style-loader": "^0.21.0",
     "styled-components": "^3.3.3",
     "uglifyjs-webpack-plugin": "^1.2.7",
-    "uuid": "^3.3.2",
     "webpack": "^4.11.1",
     "webpack-cli": "^3.0.3",
     "webpack-merge": "^4.1.3"

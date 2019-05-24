@@ -1,6 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import { ConnectedRouter } from 'connected-react-router';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { ROUTES } from 'config/constants';
 // pages
 import { App, HomePage } from 'pages';
@@ -8,7 +7,7 @@ import { App, HomePage } from 'pages';
 import { history } from './store';
 
 export const routes = (
-  <ConnectedRouter history={history}>
+  <BrowserRouter history={history}>
     <Switch>
       <Route
         exact
@@ -20,5 +19,5 @@ export const routes = (
         )}
       />
     </Switch>
-  </ConnectedRouter>
+  </BrowserRouter>
 );
