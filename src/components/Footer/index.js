@@ -3,12 +3,43 @@ import { SimpleSelect } from 'components/Fields';
 import './style.scss';
 import lang from './lang.json';
 import logo from './logo.svg';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { getLanguage } from '../../pages/HomePage/actions';
+import PropTypes from 'prop-types';
 
+const mapStateToProps = ({ languageState }) => ({
+  languageState,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  getLanguage: bindActionCreators(getLanguage, dispatch),
+});
+
+@connect(
+  mapStateToProps,
+  mapDispatchToProps
+)
 export class Footer extends Component {
+  static propTypes = {
+    languageState: PropTypes.object,
+    getLanguage: PropTypes.func,
+  };
+
+  static defaultProps = {
+    languageState: {},
+    getLanguage: Function.prototype,
+  };
+
+  changeLanguage = (event) => {
+    this.props.getLanguage(event.value);
+  };
+
   render() {
-    const {
-      EN: { links, languages, laws },
-    } = lang;
+    const { languageState = {} } = this.props;
+    const { language } = languageState;
+    const { links, languages, laws } = lang[language];
+
     const list = links.map((item) => (
       <li key={item.id} className="links__item">
         <a href="javascript:void(0)">{item.title}</a>
@@ -27,11 +58,11 @@ export class Footer extends Component {
     const options = [
       {
         label: 'English',
-        value: 'en',
+        value: 'EN',
       },
       {
         label: 'Русский',
-        value: 'ru',
+        value: 'RU',
       },
     ];
     return (
@@ -43,11 +74,12 @@ export class Footer extends Component {
             </div>
             <div className="col-sm-3 language-select_wrapper">
               <SimpleSelect
+                onChange={this.changeLanguage}
                 options={options}
                 placeholder="Choose language"
                 defaultValue={{
-                  label: 'Русский',
-                  value: 'ru',
+                  label: 'English',
+                  value: 'EN',
                 }}
               />
             </div>

@@ -8,8 +8,9 @@ import './index.scss';
 import '../sections.scss';
 import lang from './lang.json';
 
-const mapStateToProps = ({ commentsState }) => ({
-  commentsState,
+const mapStateToProps = (state) => ({
+  languageState: state.languageState,
+  commentsState: state.commentsState,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -23,11 +24,13 @@ const mapDispatchToProps = (dispatch) => ({
 export class Comments extends React.PureComponent {
   static propTypes = {
     commentsState: PropTypes.object,
+    languageState: PropTypes.object,
     getComments: PropTypes.func,
   };
 
   static defaultProps = {
     commentsState: {},
+    languageState: {},
     getComments: Function.prototype,
   };
 
@@ -36,11 +39,10 @@ export class Comments extends React.PureComponent {
   }
 
   render() {
-    const { commentsState } = this.props;
+    const { commentsState, languageState = {} } = this.props;
     const { payload = [] } = commentsState;
-    const {
-      EN: { title },
-    } = lang;
+    const { language } = languageState;
+    const { title } = lang[language];
 
     const options = {
       slidesToShow: 3,

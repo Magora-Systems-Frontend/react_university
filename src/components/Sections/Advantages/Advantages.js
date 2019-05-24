@@ -3,12 +3,27 @@ import './advantages.scss';
 import '../sections.scss';
 import { Icon } from 'antd';
 import lang from './lang.json';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
+const mapStateToProps = ({ languageState }) => ({
+  languageState,
+});
+
+@connect(mapStateToProps)
 export class Advantages extends Component {
+  static propTypes = {
+    languageState: PropTypes.object,
+  };
+
+  static defaultProps = {
+    languageState: {},
+  };
   render() {
-    const {
-      EN: { advantages },
-    } = lang;
+    const { languageState = {} } = this.props;
+    const { language } = languageState;
+    const { advantages } = lang[language];
+
     const advantagesList = advantages.map((item) => (
       <div className="advantages-section__item" key={item.title}>
         <div className="advantages-section__item-icon">
@@ -20,6 +35,7 @@ export class Advantages extends Component {
         </div>
       </div>
     ));
+
     return (
       <section className="advantages-section_wrapper">
         <div className="advantages-section content_container">{advantagesList}</div>

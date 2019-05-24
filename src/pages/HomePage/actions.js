@@ -4,6 +4,7 @@ import {
   ACTIONS_CONSTANTS_COURSES,
   ACTIONS_CONSTANTS_CATEGORIES,
   ACTIONS_CONSTANTS_COMMENTS,
+  ACTIONS_CONSTANTS_LANGUAGE,
 } from '../../config/constants';
 
 export function getCourses(title) {
@@ -82,6 +83,14 @@ export function getComments() {
   };
 }
 
+export function getLanguage(event) {
+  let response = event === 'EN' ? 'RU' : 'EN';
+
+  return (dispatch, getState) => {
+    dispatch(getLanguageState(event));
+  };
+}
+
 export function getCoursesState(state) {
   return {
     type: ACTIONS_CONSTANTS_COURSES.COURSES_GET_SUCCESS,
@@ -106,6 +115,13 @@ export function getCategoriesState(state) {
 export function getCommentsState(state) {
   return {
     type: ACTIONS_CONSTANTS_COMMENTS.COMMENTS_GET_SUCCESS,
+    payload: state,
+  };
+}
+
+export function getLanguageState(state) {
+  return {
+    type: ACTIONS_CONSTANTS_LANGUAGE.CURRENT_LANGUAGE,
     payload: state,
   };
 }
