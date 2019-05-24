@@ -3,16 +3,27 @@ import React from 'react';
 import './recommendations.scss';
 import { Icon } from 'antd';
 import lang from './lang.json';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
+const mapStateToProps = ({ languageState }) => ({
+  languageState,
+});
+
+@connect(mapStateToProps)
 export class Recommendations extends React.PureComponent {
-  static propTypes = {};
+  static propTypes = {
+    languageState: PropTypes.object,
+  };
 
-  static defaultProps = {};
+  static defaultProps = {
+    languageState: {},
+  };
 
   render() {
-    const {
-      EN: { title, desc, btn },
-    } = lang;
+    const { languageState = {} } = this.props;
+    const { language } = languageState;
+    const { title, desc, btn } = lang[language];
 
     return (
       <div className="recomendations">
@@ -28,9 +39,9 @@ export class Recommendations extends React.PureComponent {
           <div className="recomendations__banner_text">
             <Icon type="bar-chart" />
             <div className="recomendations__banner_text-center">
-              <div className="title">Get personalized recommendations</div>
-              <div className="subtitle">Answer a few questions for your top picks</div>
-              <button className="button">Get started</button>
+              <div className="title">{title}</div>
+              <div className="subtitle">{desc}</div>
+              <button className="button">{btn}</button>
             </div>
             <Icon type="form" />
           </div>

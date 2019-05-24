@@ -3,26 +3,33 @@ import PropTypes from 'prop-types';
 import StarRatings from 'react-star-ratings';
 import { Popover, Icon } from 'antd';
 import lang from './lang.json';
+import { connect } from 'react-redux';
 
 import './item.scss';
 
+const mapStateToProps = ({ languageState }) => ({
+  languageState,
+});
+
+@connect(mapStateToProps)
 export class ItemCourse extends React.PureComponent {
   static propTypes = {
+    languageState: PropTypes.object,
     data: PropTypes.object,
     id: PropTypes.string,
   };
 
   static defaultProps = {
+    languageState: {},
     data: {},
     id: '',
   };
 
   render() {
-    const { data = {}, id = '' } = this.props;
+    const { data = {}, id = '', languageState = {} } = this.props;
     const { objective = [] } = data;
-    const {
-      EN: { updated, lectures, hours, cart },
-    } = lang;
+    const { language } = languageState;
+    const { updated, lectures, hours, cart } = lang[language];
 
     const content = (
       <div className="item__popover">

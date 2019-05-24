@@ -13,8 +13,23 @@ import HeaderCatalog from './catalog/HeaderCatalog';
 import lang from './lang.json';
 import './header.scss';
 import logo from '/assets/images/logo.svg';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
+const mapStateToProps = ({ languageState }) => ({
+  languageState,
+});
+
+@connect(mapStateToProps)
 export class Header extends Component {
+  static propTypes = {
+    languageState: PropTypes.object,
+  };
+
+  static defaultProps = {
+    showModal: Function.prototype,
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -41,12 +56,13 @@ export class Header extends Component {
   };
 
   render() {
+    const { languageState = {} } = this.props;
+    const { language } = languageState;
     const {
-      EN: {
-        cart: { text, linkText },
-      },
-    } = lang;
+      cart: { text, linkText },
+    } = lang[language];
     const { showMobileSearch, showMobileNav } = this.state;
+
     return (
       <Fragment>
         <header className="header">
