@@ -56,7 +56,7 @@
     }
   }
   &__copyright {
-    margin: 40px auto 0;
+    margin: 30px auto;
     &-left {
       display: flex;
       justify-content: flex-start;
@@ -75,7 +75,8 @@
     }
     &-laws {
       display: flex;
-      flex-direction: column;
+      justify-content: flex-end;
+      margin-bottom: 0;
       & > li {
         display: inline-block;
         padding: 6px;
@@ -91,4 +92,15 @@
       }
     }
   }
+}
+.language-select_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+.footer-divider {
+  margin: 0;
+  height: 6px;
+  width: 100%;
+  background-color: #ec5252;
 }

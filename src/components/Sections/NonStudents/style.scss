@@ -8,6 +8,7 @@
     flex-direction: column;
     padding-bottom: 22px;
   }
+
   &__block {
     flex: 1;
     padding: 28px 30px;
@@ -25,10 +26,15 @@
       margin: 0 auto;
     }
     &-title {
+      display: block;
       font-size: 19px;
       font-weight: 600;
       line-height: 1.47em;
       color: #505763;
+      &:hover {
+        text-decoration: none;
+        color: #505763;
+      }
     }
     &-description {
       font-size: 16px;

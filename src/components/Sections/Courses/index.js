@@ -1,5 +1,6 @@
 import React from 'react';
 import './courses.scss';
+import '../sections.scss';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -51,21 +52,23 @@ export class Courses extends React.PureComponent {
     } = lang;
     return (
       <div className="courses">
-        <div className="courses__block-selection">
-          <div className="courses__block-selection_description">
-            <div className="courses__block-selection_lead-test">{title}</div>
-            <div className="courses__block-selection_sub-test">{description}</div>
-          </div>
-          <div className="courses__block-selection_unit-container">
-            <div className="courses__block-selection_unit-container-content">
-              <ButtonCoursesType clickButton={this.clickButton} />
-              <CarouselCourses dataCourses={payload} />
+        <div className="content_container">
+          <div className="courses__block-selection">
+            <div className="courses__block-selection_description">
+              <div className="courses__block-selection_lead-test">{title}</div>
+              <div className="courses__block-selection_sub-test">{description}</div>
+            </div>
+            <div className="courses__block-selection_unit-container">
+              <div className="courses__block-selection_unit-container-content">
+                <ButtonCoursesType clickButton={this.clickButton} />
+                <CarouselCourses dataCourses={payload} />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="courses__block-popular">
-          <div className="courses__block-popular_title">{viewing}</div>
-          <CarouselCourses dataCourses={payloadPopular} />
+          <div className="courses__block-popular">
+            <div className="courses__block-popular_title">{viewing}</div>
+            <CarouselCourses dataCourses={payloadPopular} />
+          </div>
         </div>
       </div>
     );

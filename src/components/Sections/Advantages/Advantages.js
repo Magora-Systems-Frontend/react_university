@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './advantages.scss';
+import '../sections.scss';
 import { Icon } from 'antd';
 import lang from './lang.json';
 
@@ -21,7 +22,7 @@ export class Advantages extends Component {
     ));
     return (
       <section className="advantages-section_wrapper">
-        <div className="advantages-section">{advantagesList}</div>
+        <div className="advantages-section content_container">{advantagesList}</div>
       </section>
     );
   }

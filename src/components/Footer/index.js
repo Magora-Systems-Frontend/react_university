@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { SimpleSelect } from 'components/Fields';
 import './style.scss';
 import lang from './lang.json';
@@ -35,37 +35,47 @@ export class Footer extends Component {
       },
     ];
     return (
-      <footer className="container-fluid footer_main">
-        <div className="row">
-          <div className="hidden-xs col-sm-9">
-            <ul className="links">{list}</ul>
-          </div>
-          <div className="col-sm-3">
-            <SimpleSelect options={options} placeholder="Choose language" />
-          </div>
-        </div>
-        <div className="row footer__languages">
-          <div className="col-12">
-            <ul className="footer__language-list">
-              <li>
-                <b>Local Home Pages</b>
-              </li>
-              {languagesList}
-            </ul>
-          </div>
-        </div>
-        <div className="row footer__copyright">
-          <div className="col-sm-6 footer__copyright-left">
-            <div className="footer__copyright-logo">
-              <img src={logo} alt="" />
+      <Fragment>
+        <footer className="container-fluid footer_main">
+          <div className="row">
+            <div className="hidden-xs col-sm-9">
+              <ul className="links">{list}</ul>
             </div>
-            <div className="footer__copyright-text">Copyright © 2019 Udemy, Inc.</div>
+            <div className="col-sm-3 language-select_wrapper">
+              <SimpleSelect
+                options={options}
+                placeholder="Choose language"
+                defaultValue={{
+                  label: 'Русский',
+                  value: 'ru',
+                }}
+              />
+            </div>
           </div>
-          <div className="col-sm-6 footer__copyright-right">
-            <ul className="footer__copyright-laws">{listLaws}</ul>
+          <div className="row footer__languages">
+            <div className="col-12">
+              <ul className="footer__language-list">
+                <li>
+                  <b>Local Home Pages</b>
+                </li>
+                {languagesList}
+              </ul>
+            </div>
           </div>
-        </div>
-      </footer>
+          <div className="row footer__copyright">
+            <div className="col-sm-6 footer__copyright-left">
+              <div className="footer__copyright-logo">
+                <img src={logo} alt="" />
+              </div>
+              <div className="footer__copyright-text">Copyright © 2019 Udemy, Inc.</div>
+            </div>
+            <div className="col-sm-6 footer__copyright-right">
+              <ul className="footer__copyright-laws">{listLaws}</ul>
+            </div>
+          </div>
+        </footer>
+        <hr className="footer-divider" />
+      </Fragment>
     );
   }
 }
