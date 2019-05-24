@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { SimpleSelect } from 'components/Fields';
 import './style.scss';
+import '../Sections/sections.scss';
 import lang from './lang.json';
 import logo from './logo.svg';
 
@@ -36,7 +37,7 @@ export class Footer extends Component {
     ];
     return (
       <Fragment>
-        <footer className="container-fluid footer_main">
+        <footer className="footer_main content_container">
           <div className="row">
             <div className="hidden-xs col-sm-9">
               <ul className="links">{list}</ul>
@@ -62,7 +63,10 @@ export class Footer extends Component {
               </ul>
             </div>
           </div>
-          <div className="row footer__copyright">
+        </footer>
+        <hr className="language-divider" />
+        <footer className="footer_bottom content_container">
+          <div className="row footer__copyright content_container">
             <div className="col-sm-6 footer__copyright-left">
               <div className="footer__copyright-logo">
                 <img src={logo} alt="" />
