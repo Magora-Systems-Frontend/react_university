@@ -34,7 +34,7 @@ npm i --production
 
 run prod build and server
 head over to  http://localhost:8020
-$ npm run dev
+$ npm run build
 
 
 ```
