@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Icon } from 'antd';
 import Dropdown from 'components/Dropdown';
 import { Wrapper } from 'components/Wrapper';
 import './catalog.scss';
@@ -106,7 +105,7 @@ export default class HeaderCatalog extends Component {
       <Dropdown dropdownType="menu" menu={data}>
         <Wrapper margin="0 2px" padding="9px 0">
           <div className="header-catalog">
-            <Icon width={140} height={86} glyph={GLYPH('edit')} />
+            <Icon width={15} height={13} glyph={GLYPH.catalog} />
             {/*<Icon style={{ fontSize: '20px', marginRight: '4px' }} type="appstore" />*/}
             {catalogTitle}
           </div>

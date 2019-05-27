@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
-import { Icon } from 'antd';
+import { Icon, GLYPH } from 'components/Icon';
 import { ItemCourse } from './ItemCourse';
 import { ItemComment } from './ItemComment';
 import './carousel.scss';
@@ -15,7 +15,8 @@ const Arrow = (props) => {
         event.stopPropagation();
         onClick();
       }}>
-      <Icon type={direction} />
+      {direction === 'left' && <Icon glyph={GLYPH.arrowLeft} width={20} />}
+      {direction === 'right' && <Icon glyph={GLYPH.arrowRight} width={20} />}
     </div>
   );
 };

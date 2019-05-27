@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
-import { Icon } from 'antd';
 import { TextField } from 'components';
 import './header-search.scss';
 import Button from 'components/Button';
 import lang from './lang.json';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { GLYPH, Icon } from 'components/Icon';
 
 const mapStateToProps = ({ languageState }) => ({
   languageState,
@@ -44,8 +44,8 @@ export default class HeaderSearch extends Component {
           placeholder={placeholder}
           component={TextField}
         />
-        <Button colorStyle="search" type="submit">
-          <Icon type="search" />
+        <Button colorStyle="search" type="submit" modificationClass="header-search-form__submit">
+          <Icon glyph={GLYPH.search} fill="#ec5252" />
         </Button>
       </form>
     );

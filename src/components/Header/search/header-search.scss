@@ -6,3 +6,11 @@
   background-color: #f2f3f5;
   outline: none;
 }
+
+.header-search-form__submit {
+  &:hover {
+    svg {
+      fill: #fff;
+    }
+  }
+}
