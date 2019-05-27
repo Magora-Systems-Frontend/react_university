@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Icon } from 'antd';
+// import { Icon } from 'antd';
+import { Icon, GLYPH } from 'components';
 import Dropdown from 'components/Dropdown';
 import { Wrapper } from 'components/Wrapper';
 import './catalog.scss';
-import lang from './lang.json';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import lang from './lang.json';
 
 const mapStateToProps = ({ languageState }) => ({
   languageState,
@@ -103,7 +104,11 @@ export default class HeaderCatalog extends Component {
       <Dropdown dropdownType="menu" menu={data}>
         <Wrapper margin="0 2px" padding="9px 0">
           <div className="header-catalog">
-            <Icon style={{ fontSize: '20px', marginRight: '4px' }} type="appstore" />
+            {/*<Icon*/}
+            {/*glyph="logo"*/}
+            {/*className="test"*/}
+            {/*/>*/}
+            {/*<Icon style={{ fontSize: '20px', marginRight: '4px' }} type="appstore" />*/}
             {catalogTitle}
           </div>
         </Wrapper>
