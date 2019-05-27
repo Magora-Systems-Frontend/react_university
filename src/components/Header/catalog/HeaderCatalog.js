@@ -104,10 +104,7 @@ export default class HeaderCatalog extends Component {
       <Dropdown dropdownType="menu" menu={data}>
         <Wrapper margin="0 2px" padding="9px 0">
           <div className="header-catalog">
-            {/*<Icon*/}
-            {/*glyph="logo"*/}
-            {/*className="test"*/}
-            {/*/>*/}
+            <Icon glyph={GLYPH.CALENDAR} />
             {/*<Icon style={{ fontSize: '20px', marginRight: '4px' }} type="appstore" />*/}
             {catalogTitle}
           </div>

@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 
 require('./icon.sass');
 
-// const GLYPH = {};
+const GLYPH = {};
 //
 // GLYPH.ARROW = require('./glyphs/arrow.svg').default;
-// GLYPH.CALENDAR = require('./glyphs/calendar.svg').default;
+GLYPH.CALENDAR = require('./assets/calendar.svg');
 // GLYPH.DEFAULT_AVATAR = require('./glyphs/default-avatar.svg').default;
 // GLYPH.DOUBLE_ARROW = require('./glyphs/double-arrow.svg').default;
 // // GLYPH.LOGO = require('./glyphs/logo.svg').default;
 
-const Icon = ({ className, glyph, fill, height, stroke, strokeWidth, width, name }) => {
+const Icon = ({ className, glyph, fill, height, stroke, strokeWidth, width }) => {
   return (
     <svg
       stroke={stroke}
@@ -21,7 +21,8 @@ const Icon = ({ className, glyph, fill, height, stroke, strokeWidth, width, name
       fill={fill}
       className={`svg-icon ${className}`}
       dangerouslySetInnerHTML={{
-        __html: `<use xlink:href=#${require(`./assets/${glyph}.svg`).default}>`,
+        // __html: `<!--<use xlink:href=#${require(`./assets/${glyph}.svg`).default}>-->`,
+        __html: `<use xlink:href="#${glyph.id}"/>`,
       }}
     />
   );
@@ -47,4 +48,4 @@ Icon.propTypes = {
   strokeWidth: PropTypes.number,
 };
 
-export { Icon };
+export { Icon, GLYPH };

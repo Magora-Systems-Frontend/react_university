@@ -10,7 +10,7 @@ export default class Dropdown extends Component {
     menu: PropTypes.array,
     text: PropTypes.string,
     linkText: PropTypes.string,
-    bubleArrowPosition: PropTypes.string,
+    bubblePosition: PropTypes.string,
     isMobile: PropTypes.bool,
   };
   render() {
