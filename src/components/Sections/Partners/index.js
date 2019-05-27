@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './style.scss';
 import '../sections.scss';
-import booking from '/assets/images/partners/booking-logo.svg';
-import volkswagen from '/assets/images/partners/volkswagen-logo.svg';
-import mercedes from '/assets/images/partners/mercedes-logo.svg';
-import pinterest from '/assets/images/partners/pinterest-logo.svg';
-import adidas from '/assets/images/partners/adidas-logo.svg';
-import eventbrite from '/assets/images/partners/eventbrite-logo.svg';
+import booking from '/assets/images/partners/booking-logo.png';
+import volkswagen from '/assets/images/partners/volkswagen-logo.png';
+import mercedes from '/assets/images/partners/mercedes-logo.png';
+import pinterest from '/assets/images/partners/pinterest-logo.png';
+import adidas from '/assets/images/partners/adidas-logo.png';
+import eventbrite from '/assets/images/partners/eventbrite-logo.png';
 
 export class Partners extends Component {
   render() {
@@ -45,7 +45,7 @@ export class Partners extends Component {
         id: 6,
         link: eventbrite,
         width: 115,
-        height: 32,
+        height: 19,
       },
     ];
     const list = partners.map((item) => (
