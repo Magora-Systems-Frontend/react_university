@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
 import { ROUTES } from 'config/constants';
 // pages
 import { App, HomePage } from 'pages';
@@ -7,7 +7,7 @@ import { App, HomePage } from 'pages';
 import { history } from './store';
 
 export const routes = (
-  <BrowserRouter history={history}>
+  <Router history={history}>
     <Switch>
       <Route
         exact
@@ -19,5 +19,5 @@ export const routes = (
         )}
       />
     </Switch>
-  </BrowserRouter>
+  </Router>
 );

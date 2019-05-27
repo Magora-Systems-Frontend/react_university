@@ -13,6 +13,7 @@ export { TopCategories } from './Sections/TopCategories';
 export { ItemCategory } from './Sections/TopCategories/ItemCategory';
 export { Comments } from './Sections/Comments';
 export { Footer } from './Footer';
+export { Icon } from './Icon';
 
 export { TextField } from './FormFields';
 export { SimpleSelect } from './Fields';
