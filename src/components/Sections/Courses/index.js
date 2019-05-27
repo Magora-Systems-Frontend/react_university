@@ -1,7 +1,7 @@
 import React from 'react';
 import './courses.scss';
 import '../sections.scss';
-import { bindActionCreators, combineReducers } from 'redux';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { ButtonCoursesType } from 'components/ButtonCoursesType';

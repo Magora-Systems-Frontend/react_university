@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import StarRatings from 'react-star-ratings';
 import { Popover, Icon } from 'antd';
-import lang from './lang.json';
 import { connect } from 'react-redux';
+import lang from './lang.json';
 
 import './item.scss';
 

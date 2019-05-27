@@ -31,8 +31,14 @@
       }
     }
   }
-  &__languages {
-    border-bottom: 1px solid #e8e9eb;
+  &_bottom {
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: #fff;
+    color: #a1a7b3;
+    font-size: 13px;
+    line-height: 18px;
+    width: 100%;
   }
   &__language-list {
     margin-top: 30px;
@@ -76,7 +82,9 @@
     &-laws {
       display: flex;
       justify-content: flex-end;
+      flex-wrap: wrap;
       margin-bottom: 0;
+      padding-left: 0;
       & > li {
         display: inline-block;
         padding: 6px;
@@ -98,9 +106,16 @@
   justify-content: flex-end;
   align-items: baseline;
 }
+.language-divider {
+  margin: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #e8e9eb;
+  border: 0;
+}
 .footer-divider {
   margin: 0;
-  height: 6px;
+  height: 1px;
   width: 100%;
   background-color: #ec5252;
 }
