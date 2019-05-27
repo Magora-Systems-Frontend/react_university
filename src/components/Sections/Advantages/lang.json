@@ -14,7 +14,7 @@
       {
         "title": "Lifetime access",
         "description": "Learn on your schedule",
-        "iconType": "clock-circle"
+        "iconType": "clockCircle"
       }
     ]
   },
@@ -33,7 +33,7 @@
       {
         "title": "Пожизненный доступ",
         "description": "Учитесь в собственном темпе",
-        "iconType": "clock-circle"
+        "iconType": "clockCircle"
       }
     ]
   }

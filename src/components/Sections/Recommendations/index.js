@@ -1,10 +1,10 @@
 import React from 'react';
 
 import './recommendations.scss';
-import { Icon } from 'antd';
+import { GLYPH, Icon } from 'components/Icon';
 import lang from './lang.json';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+import Propglyphs from 'prop-types';
 
 const mapStateToProps = ({ languageState }) => ({
   languageState,
@@ -12,8 +12,8 @@ const mapStateToProps = ({ languageState }) => ({
 
 @connect(mapStateToProps)
 export class Recommendations extends React.PureComponent {
-  static propTypes = {
-    languageState: PropTypes.object,
+  static propglyphs = {
+    languageState: Propglyphs.object,
   };
 
   static defaultProps = {
@@ -30,27 +30,27 @@ export class Recommendations extends React.PureComponent {
         <div className="recomendations__top-border" />
         <div className="recomendations__banner">
           <div className="recomendations__banner_icons">
-            <Icon type="profile" />
-            <Icon type="deployment-unit" />
-            <Icon type="environment" />
-            <Icon type="contacts" />
-            <Icon type="gateway" />
+            <Icon glyph={GLYPH.profile} fill="#ffffff" width={30} height={30} />
+            <Icon glyph={GLYPH.deployment} fill="#ffffff" width={30} height={30} />
+            <Icon glyph={GLYPH.environment} fill="#ffffff" width={30} height={30} />
+            <Icon glyph={GLYPH.contacts} fill="#ffffff" width={30} height={30} />
+            <Icon glyph={GLYPH.gateway} fill="#ffffff" width={30} height={30} />
           </div>
           <div className="recomendations__banner_text">
-            <Icon type="bar-chart" />
+            <Icon glyph={GLYPH.barChart} fill="#ffffff" width={30} height={30} />
             <div className="recomendations__banner_text-center">
               <div className="title">{title}</div>
               <div className="subtitle">{desc}</div>
               <button className="button">{btn}</button>
             </div>
-            <Icon type="form" />
+            <Icon glyph={GLYPH.form} fill="#ffffff" width={30} height={30} />
           </div>
           <div className="recomendations__banner_icons">
-            <Icon type="paper-clip" />
-            <Icon type="wifi" />
-            <Icon type="user" />
-            <Icon type="shake" />
-            <Icon type="search" />
+            <Icon glyph={GLYPH.paperClip} fill="#ffffff" width={30} height={30} />
+            <Icon glyph={GLYPH.wifi} fill="#ffffff" width={30} height={30} />
+            <Icon glyph={GLYPH.user} fill="#ffffff" width={30} height={30} />
+            <Icon glyph={GLYPH.shake} fill="#ffffff" width={30} height={30} />
+            <Icon glyph={GLYPH.search} fill="#ffffff" width={30} height={30} />
           </div>
         </div>
       </div>

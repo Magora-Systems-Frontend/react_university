@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
 import { TextField } from 'components';
-import { Icon } from 'antd';
+import { GLYPH, Icon } from 'components/Icon';
 import Button from 'components/Button';
 import lang from './lang.json';
 import './search-form.scss';
-import { connect } from 'react-redux';
 
 const mapStateToProps = ({ languageState }) => ({
   languageState,
@@ -46,8 +46,8 @@ export default class SearchForm extends Component {
           placeholder={formPlaceholder}
           component={TextField}
         />
-        <Button colorStyle="search" type="submit">
-          <Icon type="search" />
+        <Button colorStyle="search" type="submit" modificationClass="search-course-form__submit">
+          <Icon glyph={GLYPH.search} fill="#ec5252" />
         </Button>
       </form>
     );

@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { Icon } from 'antd';
 import { ROUTES } from 'config/constants';
 import { Wrapper } from 'components/Wrapper';
 import Dropdown from 'components/Dropdown';
@@ -10,6 +9,7 @@ import HeaderSearch from './search/HeaderSearch';
 import HeaderInvite from './invite/HeaderInvite';
 import HeaderCart from './cart/HeaderCart';
 import HeaderCatalog from './catalog/HeaderCatalog';
+import { GLYPH, Icon } from 'components/Icon';
 import lang from './lang.json';
 import './header.scss';
 import logo from '/assets/images/logo.svg';
@@ -70,7 +70,7 @@ export class Header extends Component {
             <div className="header__logo_container">
               <Link to={ROUTES.HOME_PAGE}>
                 <div className="header__logo">
-                  <img width="110px" src={logo} alt="logo" />
+                  <Icon width={110} glyph={GLYPH.logo} />
                 </div>
               </Link>
             </div>
@@ -95,19 +95,19 @@ export class Header extends Component {
             <div className="header-mobile__content-left">
               <div className="header-mobile__content-search" onClick={this.toggleMobileNav}>
                 <Wrapper padding="12px">
-                  <Icon type="menu" style={{ fontSize: '22px' }} />
+                  <Icon width={22} glyph={GLYPH.menu} />
                 </Wrapper>
               </div>
               <div className="header-mobile__content-search" onClick={this.toggleMobileSearch}>
                 <Wrapper padding="12px">
-                  <Icon type="search" style={{ fontSize: '22px' }} />
+                  <Icon width={22} glyph={GLYPH.search} />
                 </Wrapper>
               </div>
             </div>
             <div className="header-mobile__content-logo">
               <Link to={ROUTES.HOME_PAGE}>
                 <div className="header__logo">
-                  <img width="110px" src={logo} alt="logo" />
+                  <Icon width={110} glyph={GLYPH.logo} />
                 </div>
               </Link>
             </div>

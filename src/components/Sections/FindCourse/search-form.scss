@@ -8,3 +8,11 @@
   font-size: 20px;
   outline: none;
 }
+
+.search-course-form__submit {
+  &:hover {
+    svg {
+      fill: #fff;
+    }
+  }
+}
