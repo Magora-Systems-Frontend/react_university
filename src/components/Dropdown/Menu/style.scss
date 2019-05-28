@@ -24,10 +24,6 @@
       }
       &:hover {
         background: #f2f3f5;
-        & > .dropdown__menu-second-level {
-          display: block;
-          z-index: 10;
-        }
       }
     }
     &-second-level,
@@ -37,7 +33,7 @@
       padding: 22px 0;
       top: 0;
       left: 270px;
-      display: none;
+      display: block;
       list-style: none;
       height: 100%;
       background: #f7f8fa;
@@ -59,10 +55,6 @@
             background-color: #f2f3f5;
             text-decoration: none;
           }
-        }
-        &:hover > .dropdown__menu-third-level {
-          display: block;
-          z-index: 10;
         }
       }
     }

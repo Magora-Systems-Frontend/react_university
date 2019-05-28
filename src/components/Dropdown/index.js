@@ -13,21 +13,38 @@ export default class Dropdown extends Component {
     bubleArrowPosition: PropTypes.string,
     isMobile: PropTypes.bool,
   };
+
+  constructor() {
+    super();
+    this.state = {
+      displayBubble: false,
+    };
+  }
+
+  toggleBubble = () => {
+    this.setState({
+      displayBubble: !this.state.displayBubble,
+    });
+  };
+
   render() {
     const { children, dropdownType, menu, text, linkText, width, bubblePosition, isMobile } = this.props;
+    const { displayBubble } = this.state;
     const dropdownsList = {
       menu: <Menu menu={menu} />,
       emptyCart: <EmptyCart text={text} linkText={linkText} />,
     };
     return (
-      <div className="dropdown">
+      <div className="dropdown" onMouseEnter={this.toggleBubble} onMouseLeave={this.toggleBubble}>
         {children}
-        <div
-          className={`dropdown__bubble ${bubblePosition === 'left' && 'dropdown__bubble_right'} ${isMobile &&
-            'dropdown__bubble_mobile'}`}
-          style={{ width: width }}>
-          {dropdownsList[dropdownType]}
-        </div>
+        {displayBubble && (
+          <div
+            className={`dropdown__bubble ${bubblePosition === 'left' && 'dropdown__bubble_right'} ${isMobile &&
+              'dropdown__bubble_mobile'}`}
+            style={{ width: width }}>
+            {dropdownsList[dropdownType]}
+          </div>
+        )}
       </div>
     );
   }

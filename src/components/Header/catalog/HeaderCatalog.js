@@ -7,8 +7,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import lang from './lang.json';
 
-// const EDIT = require('../../../assets/icons/edit.svg').default;
-
 const mapStateToProps = ({ languageState }) => ({
   languageState,
 });
@@ -66,19 +64,13 @@ export default class HeaderCatalog extends Component {
                 title: 'Popular topics',
               },
               {
-                title: 'JS',
+                title: 'Kotlin',
               },
               {
-                title: 'React',
+                title: 'Xamarin',
               },
               {
-                title: 'Angular',
-              },
-              {
-                title: 'CSS',
-              },
-              {
-                title: 'PHP',
+                title: 'XCode',
               },
             ],
           },
@@ -87,6 +79,39 @@ export default class HeaderCatalog extends Component {
       {
         title: 'Business',
         icon: 'https://img.icons8.com/ios/50/000000/statistics.png',
+        subitems: [
+          {
+            title: 'All Business',
+          },
+          {
+            title: 'Finance',
+            subitems: [
+              {
+                title: 'Popular topics',
+              },
+              {
+                title: 'Finance analise',
+              },
+              {
+                title: 'Statistics',
+              },
+            ],
+          },
+          {
+            title: 'Networking',
+            subitems: [
+              {
+                title: 'Popular topics',
+              },
+              {
+                title: 'Prepare text',
+              },
+              {
+                title: 'Public speak',
+              },
+            ],
+          },
+        ],
       },
       {
         title: 'IT',

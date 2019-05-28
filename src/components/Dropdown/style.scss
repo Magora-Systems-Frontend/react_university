@@ -1,17 +1,12 @@
 .dropdown {
   position: relative;
   height: 100%;
-  &:hover {
-    .dropdown__bubble {
-      display: block;
-    }
-  }
   &__bubble {
     position: absolute;
     top: calc(100% - 2px);
     left: 0;
     z-index: 1000;
-    display: none;
+    display: block;
     float: left;
     min-width: 160px;
     max-width: calc(100vw - 30px);
