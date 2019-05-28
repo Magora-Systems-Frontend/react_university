@@ -139,13 +139,24 @@
   margin-left: 5px;
 }
 
-.ant-popover-inner {
-  box-shadow: 0 4px 16px rgba(20, 23, 28, 0.25);
+.course-item {
+  position: relative;
+}
+
+.popup-content {
+  width: 320px !important;
+  max-width: 320px !important;
+  border: none !important;
+  padding: 0 !important;
 }
 
 .item__popover {
+  box-shadow: 0 4px 16px rgba(20, 23, 28, 0.25);
+  background-color: white;
   width: 320px;
   padding: 15px;
+  left: 200px;
+  z-index: 100;
   @media (max-width: 500px) {
     width: 250px;
   }
