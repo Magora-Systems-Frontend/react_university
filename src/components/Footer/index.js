@@ -1,13 +1,13 @@
 import React, { Component, Fragment } from 'react';
 import { SimpleSelect } from 'components/Fields';
-import './style.scss';
-import '../Sections/sections.scss';
-import lang from './lang.json';
-import logo from './logo.svg';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { getLanguage } from '../../pages/HomePage/actions';
 import PropTypes from 'prop-types';
+import { GLYPH, Icon } from '../Icon';
+import lang from './lang.json';
+import { getLanguage } from '../../pages/HomePage/actions';
+import './style.scss';
+import '../Sections/sections.scss';
 
 const mapStateToProps = ({ languageState }) => ({
   languageState,
@@ -101,7 +101,7 @@ export class Footer extends Component {
           <div className="row footer__copyright">
             <div className="col-sm-6 footer__copyright-left">
               <div className="footer__copyright-logo">
-                <img src={logo} alt="" />
+                <Icon width={110} height={32} glyph={GLYPH.logo} />
               </div>
               <div className="footer__copyright-text">Copyright © 2019 Udemy, Inc.</div>
             </div>

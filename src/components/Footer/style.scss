@@ -63,6 +63,9 @@
   }
   &__copyright {
     margin: 30px auto;
+    &-text {
+      margin-left: 20px;
+    }
     &-left {
       display: flex;
       justify-content: flex-start;
