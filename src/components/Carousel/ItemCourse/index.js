@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import StarRatings from 'react-star-ratings';
-import { Popover, Icon } from 'antd';
 import { connect } from 'react-redux';
 import lang from './lang.json';
-
 import './item.scss';
+import TooltipTrigger from 'react-popper-tooltip';
+import 'react-popper-tooltip/dist/styles.css';
 
 const mapStateToProps = ({ languageState }) => ({
   languageState,
@@ -31,8 +31,8 @@ export class ItemCourse extends React.PureComponent {
     const { language } = languageState;
     const { updated, lectures, hours, cart } = lang[language];
 
-    const content = (
-      <div className="item__popover">
+    const tooltip = ({ arrowRef, tooltipRef, getArrowProps, getTooltipProps, placement }) => (
+      <div className="item__popover " {...getTooltipProps({ ref: tooltipRef })}>
         <div className="item__popover_update">
           {updated} {data.update}
         </div>
@@ -42,19 +42,19 @@ export class ItemCourse extends React.PureComponent {
         </div>
         <div className="item__popover_info">
           <div className="item-info">
-            <Icon type="play-circle" />
+            {/*<Icon type="play-circle" />*/}
             <span>
               {data.lectures} {lectures}
             </span>
           </div>
           <div className="item-info">
-            <Icon type="clock-circle" />
+            {/*<Icon type="clock-circle" />*/}
             <span>
               {data.hours} {hours}
             </span>
           </div>
           <div className="item-info">
-            <Icon type="project" />
+            {/*<Icon type="project" />*/}
             <span>{data.levels}</span>
           </div>
         </div>
@@ -66,48 +66,52 @@ export class ItemCourse extends React.PureComponent {
         </ul>
         <div className="item__popover_buttons">
           <div className="item__popover_add-card">{cart}</div>
-          <div className="item__popover_add-wishlist">
-            <Icon type="heart" />
+          <div className="item__popover_add-wishlist">{/*<Icon type="heart" />*/}</div>
+        </div>
+      </div>
+    );
+
+    const item = ({ getTriggerProps, triggerRef }) => (
+      <div className="item" {...getTriggerProps({ ref: triggerRef })}>
+        <div className="item__wrapper">
+          <div className="item__wrapper_header">
+            <img src={data.img} alt="" />
+          </div>
+          <div className="item__wrapper_body">
+            <div>
+              <div className="title">{data.title}</div>
+              <div className="author">{data.author}</div>
+              <div className="stars">
+                <StarRatings
+                  rating={data.stars}
+                  starRatedColor="#f4c150"
+                  starDimension="15px"
+                  starSpacing="0px"
+                  name="rating"
+                />
+                <span className="stars__rating">
+                  <span className="stars__rating_reviews">{data.stars}</span>
+                  <span className="stars__rating_count">({data.rating})</span>
+                </span>
+              </div>
+              <div className="price">
+                <div className="price__container">
+                  <div className="price__container_discount">{data.currentPrice}</div>
+                  <div className="price__container_regular">{data.price}</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     );
 
     return (
-      <Popover content={content} placement="rightTop">
-        <div className="item">
-          <div className="item__wrapper">
-            <div className="item__wrapper_header">
-              <img src={data.img} alt="" />
-            </div>
-            <div className="item__wrapper_body">
-              <div>
-                <div className="title">{data.title}</div>
-                <div className="author">{data.author}</div>
-                <div className="stars">
-                  <StarRatings
-                    rating={data.stars}
-                    starRatedColor="#f4c150"
-                    starDimension="15px"
-                    starSpacing="0px"
-                    name="rating"
-                  />
-                  <span className="stars__rating">
-                    <span className="stars__rating_reviews">{data.stars}</span>
-                    <span className="stars__rating_count">({data.rating})</span>
-                  </span>
-                </div>
-                <div className="price">
-                  <div className="price__container">
-                    <div className="price__container_discount">{data.currentPrice}</div>
-                    <div className="price__container_regular">{data.price}</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Popover>
+      <div className="course-item">
+        <TooltipTrigger placement="auto" trigger="hover" tooltip={tooltip}>
+          {item}
+        </TooltipTrigger>
+      </div>
     );
   }
 }
