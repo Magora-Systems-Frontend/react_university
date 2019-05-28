@@ -7,7 +7,6 @@ import * as axiosClient from 'utils/api/axiosClient';
 import store from './store';
 
 import './styles/app.scss';
-import 'antd/dist/antd.css';
 
 const MOUNT_NODE = document.getElementById('root');
 

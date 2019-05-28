@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 import { GLYPH, Icon } from '../Icon';
-import lang from './lang.json';
 import { getLanguage } from '../../pages/HomePage/actions';
+import lang from './lang.json';
 import './style.scss';
 import '../Sections/sections.scss';
 

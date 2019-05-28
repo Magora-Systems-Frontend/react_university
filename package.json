@@ -45,7 +45,6 @@
     "@babel/preset-react": "^7.0.0-beta.49",
     "@babel/runtime": "^7.4.3",
     "@hot-loader/react-dom": "^16.8.6",
-    "antd": "^3.18.1",
     "autoprefixer": "^8.6.1",
     "axios": "^0.18.0",
     "babel-loader": "^8.0.5",
