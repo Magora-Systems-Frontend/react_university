@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Icon } from 'antd';
+import { GLYPH, Icon } from 'components/Icon';
 import './style.scss';
 
 export default class HeaderCart extends Component {
@@ -7,7 +7,7 @@ export default class HeaderCart extends Component {
     return (
       <div className="shopping-list">
         <div className="shopping-list__icon">
-          <Icon style={{ fontSize: '20px' }} type="shopping-cart" />
+          <Icon width={20} height={20} glyph={GLYPH.shoppingCart} />
         </div>
       </div>
     );

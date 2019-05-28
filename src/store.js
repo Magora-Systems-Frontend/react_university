@@ -1,7 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { REDUX_LOGGER_IS_ENABLED } from 'config/constants';
-import { routerMiddleware } from 'connected-react-router';
 import { createBrowserHistory } from 'history';
 //
 import { loadStore } from 'utils/localStorage';
@@ -12,7 +11,7 @@ const initialState = loadStore();
 const injectedReducers = {};
 const enhancers = [];
 export const history = createBrowserHistory();
-const middleware = [thunk, routerMiddleware(history)];
+const middleware = [thunk];
 if (REDUX_LOGGER_IS_ENABLED) {
   middleware.push(reduxLoggerMiddleware);
 }

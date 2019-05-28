@@ -1,6 +1,6 @@
 import React, { Component, PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Icon } from 'antd';
+import { Icon, GLYPH } from 'components/Icon';
 import './style.scss';
 
 class FirstLevel extends PureComponent {
@@ -16,7 +16,7 @@ class FirstLevel extends PureComponent {
         <a href="javascript:void(0)" className="dropdown__link">
           <img src={item.icon} alt="" />
           <span className="text">{item.title}</span>
-          {item && item.subitems && <Icon type="right" />}
+          {item && item.subitems && <Icon glyph={GLYPH.arrowRight} width={10} />}
         </a>
         {sublevel && <ul className="dropdown__menu-second-level">{sublevel}</ul>}
       </li>
@@ -36,7 +36,7 @@ class SecondLevel extends PureComponent {
       <li className="dropdown__menu-second-level-item">
         <a href="javascript:void(0)" className="dropdown__link">
           <span className="text">{item.title}</span>
-          {item && item.subitems && <Icon type="right" />}
+          {item && item.subitems && <Icon glyph={GLYPH.arrowRight} width={10} />}
         </a>
         {sublevel && <ul className="dropdown__menu-third-level">{sublevel}</ul>}
       </li>

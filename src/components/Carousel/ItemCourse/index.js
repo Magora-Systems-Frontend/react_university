@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import StarRatings from 'react-star-ratings';
 import { connect } from 'react-redux';
+import { GLYPH, Icon } from 'components/Icon';
 import lang from './lang.json';
 import './item.scss';
 import TooltipTrigger from 'react-popper-tooltip';
@@ -42,19 +43,19 @@ export class ItemCourse extends React.PureComponent {
         </div>
         <div className="item__popover_info">
           <div className="item-info">
-            {/*<Icon type="play-circle" />*/}
+            <Icon glyph={GLYPH.playCircle} width={10} />
             <span>
               {data.lectures} {lectures}
             </span>
           </div>
           <div className="item-info">
-            {/*<Icon type="clock-circle" />*/}
+            <Icon glyph={GLYPH.clockCircle} width={10} />
             <span>
               {data.hours} {hours}
             </span>
           </div>
           <div className="item-info">
-            {/*<Icon type="project" />*/}
+            <Icon glyph={GLYPH.project} width={10} />
             <span>{data.levels}</span>
           </div>
         </div>
@@ -66,7 +67,9 @@ export class ItemCourse extends React.PureComponent {
         </ul>
         <div className="item__popover_buttons">
           <div className="item__popover_add-card">{cart}</div>
-          <div className="item__popover_add-wishlist">{/*<Icon type="heart" />*/}</div>
+          <div className="item__popover_add-wishlist">
+            <Icon glyph={GLYPH.heart} width={30} height={30} fill="#ec5252" />
+          </div>
         </div>
       </div>
     );

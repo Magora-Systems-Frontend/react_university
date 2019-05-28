@@ -1,6 +1,5 @@
 import React from 'react';
 import { fieldPropTypes } from 'redux-form';
-import { Input, Form } from 'antd';
 import './style.scss';
 
 export class TextField extends React.PureComponent {
@@ -9,7 +8,7 @@ export class TextField extends React.PureComponent {
   };
 
   render() {
-    const { label, meta, input, type, cssmodify } = this.props;
+    const { type, meta, ...tailProps } = this.props;
 
     let inputElement;
     switch (type) {
@@ -19,19 +18,15 @@ export class TextField extends React.PureComponent {
         );
         break;
       case 'text':
-        inputElement = Input;
+        inputElement = <input />;
         break;
       default:
-        inputElement = Input;
+        inputElement = <input />;
     }
 
     const validateStatus = meta.error && meta.touched ? 'error' : '';
     const help = meta.error && meta.touched ? meta.error : '';
 
-    return (
-      <Form.Item label={label} validateStatus={validateStatus} help={help} style={cssmodify}>
-        {React.createElement(inputElement, { ...this.props, ...input })}
-      </Form.Item>
-    );
+    return React.createElement(inputElement, { ...this.props, ...tailProps, validateStatus, help });
   }
 }

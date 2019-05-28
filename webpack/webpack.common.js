@@ -49,16 +49,16 @@ module.exports = {
           }
         ]
       },
-      // {
-      //   test: /\.(woff(2)?|ttf|eot|svg|png|jpg)(\?v=\d+\.\d+\.\d+)?$/,
-      //   use: [{
-      //     loader: 'file-loader',
-      //     options: {
-      //       name: '[name].[ext]',
-      //       outputPath: 'assets/',
-      //     }
-      //   }]
-      // }
+      {
+        test: /\.(woff(2)?|ttf|eot|png|jpg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'assets/',
+          }
+        }]
+      },
       {
         test: /\.svg$/,
         exclude: /node_modules/,

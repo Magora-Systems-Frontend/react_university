@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import './advantages.scss';
-import '../sections.scss';
-import { Icon } from 'antd';
 import lang from './lang.json';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { GLYPH, Icon } from 'components/Icon';
+
+import './advantages.scss';
+import '../sections.scss';
 
 const mapStateToProps = ({ languageState }) => ({
   languageState,
@@ -21,13 +22,14 @@ export class Advantages extends Component {
   };
   render() {
     const { languageState = {} } = this.props;
+    console.log();
     const { language } = languageState;
     const { advantages } = lang[language];
 
     const advantagesList = advantages.map((item) => (
       <div className="advantages-section__item" key={item.title}>
         <div className="advantages-section__item-icon">
-          <Icon type={item.iconType} />
+          <Icon glyph={GLYPH[item.iconType]} fill="#ffffff" width={42} height={42} />
         </div>
         <div className="advantages-section__item-text">
           <div className="advantages-section__item-title">{item.title}</div>
