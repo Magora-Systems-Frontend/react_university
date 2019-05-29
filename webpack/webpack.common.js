@@ -2,6 +2,7 @@ const path = require('path');
 const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
 const makePath = to => path.resolve(__dirname, to);
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack');
 
 const fs = require('fs');
 console.log(__dirname);
@@ -9,14 +10,15 @@ console.log(__dirname);
 
 module.exports = {
   entry: './src',
-  output: {
-    filename: 'bundle.js',
-    path: makePath('../public'),
-  },
   plugins: [
     new CopyWebpackPlugin([
       { from: makePath('../src/assets/'), to: makePath('../public/assets/') },
-    ])
+    ]),
+    new webpack.DefinePlugin({
+      'process.env': {
+        IS_BROWSER: true,
+      },
+    }),
   ],
   module: {
     rules: [
@@ -26,28 +28,6 @@ module.exports = {
         use: {
           loader: 'babel-loader',
         },
-      },
-      {
-        test: /\.css/,
-        use: [
-          'style-loader',
-          'css-loader',
-        ]
-      },
-      {
-        test: /\.(scss|sass)$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          {
-            loader: 'sass-loader',
-            options: {
-              includePaths: [
-                path.resolve('../node_modules/bootstrap/scss/mixins')
-              ]
-            }
-          }
-        ]
       },
       {
         test: /\.(woff(2)?|ttf|eot|png|jpg)(\?v=\d+\.\d+\.\d+)?$/,

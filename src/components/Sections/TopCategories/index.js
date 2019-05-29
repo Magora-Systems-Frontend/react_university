@@ -49,7 +49,7 @@ export class TopCategories extends React.PureComponent {
         <div className="content_container">
           <div className="categories__title">{title}</div>
           <div className="categories__items">
-            {payload.map((item, index) => (
+            {(payload || []).map((item, index) => (
               <ItemCategory data={item} key={index} />
             ))}
           </div>

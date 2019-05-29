@@ -6,7 +6,7 @@ import { GLYPH, Icon } from 'components/Icon';
 import lang from './lang.json';
 import './item.scss';
 import TooltipTrigger from 'react-popper-tooltip';
-import 'react-popper-tooltip/dist/styles.css';
+// import 'react-popper-tooltip/dist/styles.css';
 
 const mapStateToProps = ({ languageState }) => ({
   languageState,

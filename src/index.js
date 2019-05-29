@@ -1,10 +1,12 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 //
 import { NODE_ENV, API_URL, API_VERSION } from 'config/constants';
-import { Root } from 'pages';
+import { Root } from 'pages/Root';
 import * as axiosClient from 'utils/api/axiosClient';
-import store from './store';
+import { configureStore } from './store';
 
 import './styles/app.scss';
 
@@ -16,5 +18,19 @@ if (NODE_ENV !== 'production') {
   }
 }
 
+let initialState = {};
+if (window && window.REDUX_STATE) {
+  initialState = window.REDUX_STATE;
+  delete window.REDUX_STATE;
+}
+const store = configureStore(initialState);
+
 axiosClient.init({ store, API_URL, API_VERSION });
-ReactDOM.render(<Root store={store} />, MOUNT_NODE);
+ReactDOM.hydrate(
+  <BrowserRouter>
+    <Provider store={store}>
+      <Root />
+    </Provider>
+  </BrowserRouter>,
+  MOUNT_NODE
+);
