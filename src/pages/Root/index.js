@@ -1,10 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-// import PT from 'prop-types';
 //
 import { MainWrapper, ErrorBoundary } from 'components';
 import { routes } from 'routes';
-import 'bootstrap/scss/bootstrap-grid.scss';
 
 export function Root() {
   return (

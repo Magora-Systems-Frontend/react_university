@@ -15,7 +15,7 @@ after cloning the repo:
 $ npm i
 
 # to run server
-$ npm run server
+$ npm run json-server
 
 # to run dev 
 # head over to http://0.0.0.0:8020
@@ -32,8 +32,8 @@ after cloning the repo:
 install dependencies
 npm i --production
 
-run prod build and server
-head over to  http://localhost:8020
+to run prod client and server
+head over to  http://0.0.0.0:8022
 $ npm run build
 
 

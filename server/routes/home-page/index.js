@@ -6,7 +6,10 @@ export const reqHomePage = async (req, res, next) => {
 
   const prevInitialState = req.reduxInitialState || {};
 
-  const getCoursesUrl = `${API_URL}${API_METHODS.COURSES}/Popular`;
+  const getCoursesPopularUrl = `${API_URL}${API_METHODS.COURSES}/Popular`;
+  const responsePopularCourses = await nodeFetch({ url: getCoursesPopularUrl });
+
+  const getCoursesUrl = `${API_URL}${API_METHODS.COURSES}/Development`;
   const responseCourses = await nodeFetch({ url: getCoursesUrl });
 
   const getCategoriesUrl = `${API_URL}${API_METHODS.CATEGORIES}`;
@@ -18,8 +21,11 @@ export const reqHomePage = async (req, res, next) => {
   req.reduxInitialState = {
     ...prevInitialState,
     coursesState: {
-      payloadPopular: {
+      payload: {
         ...responseCourses,
+      },
+      payloadPopular: {
+        ...responsePopularCourses,
       }
     },
     categoriesState: {
