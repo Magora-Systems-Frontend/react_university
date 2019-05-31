@@ -6,7 +6,6 @@ import { GLYPH, Icon } from 'components/Icon';
 import lang from './lang.json';
 import './item.scss';
 import TooltipTrigger from 'react-popper-tooltip';
-// import 'react-popper-tooltip/dist/styles.css';
 
 const mapStateToProps = ({ languageState }) => ({
   languageState,
@@ -29,7 +28,7 @@ export class ItemCourse extends React.PureComponent {
   render() {
     const { data = {}, id = '', languageState = {} } = this.props;
     const { objective = [] } = data;
-    const { language } = languageState;
+    const { language } = languageState; //language variable
     const { updated, lectures, hours, cart } = lang[language];
 
     const tooltip = ({ arrowRef, tooltipRef, getArrowProps, getTooltipProps, placement }) => (

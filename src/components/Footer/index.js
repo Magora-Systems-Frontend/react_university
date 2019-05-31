@@ -38,20 +38,26 @@ export class Footer extends Component {
 
   render() {
     const { languageState = {} } = this.props;
-    const { language } = languageState;
-    const { links, languages, laws } = lang[language];
+    const { language } = languageState; // language variable
+    const { links, languages, laws, title } = lang[language];
 
-    const list = links.map((item) => (
+    const list = links.map((
+      item //list of links
+    ) => (
       <li key={item.id} className="links__item">
         <a href="javascript:void(0)">{item.title}</a>
       </li>
     ));
-    const languagesList = languages.map((item) => (
+    const languagesList = languages.map((
+      item //list of languages
+    ) => (
       <li key={item}>
         <a href="javascript:void(0)">{item}</a>
       </li>
     ));
-    const listLaws = laws.map((item) => (
+    const listLaws = laws.map((
+      item //list of laws links
+    ) => (
       <li key={item.id}>
         <a href="javascript:void(0)">{item.title}</a>
       </li>
@@ -89,7 +95,7 @@ export class Footer extends Component {
             <div className="col-12">
               <ul className="footer__language-list">
                 <li>
-                  <b>Local Home Pages</b>
+                  <b>{title}</b>
                 </li>
                 {languagesList}
               </ul>

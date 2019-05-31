@@ -16,7 +16,7 @@ export class CarouselCourses extends React.PureComponent {
   render() {
     const { dataCourses } = this.props;
     const { posts = [], id = '' } = dataCourses;
-    let options;
+    let options; // settings for slick slider
 
     if (id !== 'Popular') {
       options = {

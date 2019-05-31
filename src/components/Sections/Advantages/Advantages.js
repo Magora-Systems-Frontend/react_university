@@ -22,8 +22,7 @@ export class Advantages extends Component {
   };
   render() {
     const { languageState = {} } = this.props;
-    console.log();
-    const { language } = languageState;
+    const { language } = languageState; //language variable
     const { advantages } = lang[language];
 
     const advantagesList = advantages.map((item) => (

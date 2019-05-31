@@ -11,10 +11,10 @@ import languageReducer from './pages/HomePage/reducerLanguage';
 export default function createReducer(injectedReducers) {
   return combineReducers({
     form: formReducer,
-    coursesState: coursesReducer,
-    categoriesState: categoriesReducer,
-    commentsState: commentsReducer,
-    languageState: languageReducer,
+    coursesState: coursesReducer, //reducer for all courses
+    categoriesState: categoriesReducer, //reducer for categories courses
+    commentsState: commentsReducer, //reducer for comments
+    languageState: languageReducer, //reducer for language
     ...injectedReducers,
   });
 }

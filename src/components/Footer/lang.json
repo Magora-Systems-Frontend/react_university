@@ -63,7 +63,8 @@
         "id": 3,
         "title": "Topics"
       }
-    ]
+    ],
+    "title": "Local Home Pages"
   },
   "RU": {
     "links": [
@@ -124,6 +125,7 @@
         "id": 3,
         "title": "Темы"
       }
-    ]
+    ],
+    "title": "Домашние страницы стран"
   }
 }

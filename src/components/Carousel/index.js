@@ -49,6 +49,7 @@ export class Carousel extends React.Component {
     const { options = {}, data } = this.props;
 
     const settings = {
+      //settings for slick carousel
       dots: false,
       infinite: true,
       slidesToScroll: 1,

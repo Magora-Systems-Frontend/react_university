@@ -6,11 +6,11 @@ import Button from 'components/Button';
 
 export class ButtonCoursesType extends React.PureComponent {
   static propTypes = {
-    clickButton: PropTypes.func,
+    clickButton: PropTypes.func, //parameter for the pressed button
   };
 
   static defaultProps = {
-    clickButton: Function.prototype,
+    clickButton: Function.prototype, //parameter for the pressed button
   };
 
   state = {
@@ -23,8 +23,9 @@ export class ButtonCoursesType extends React.PureComponent {
 
   render() {
     const { clickButton } = this.props;
-    const current = this.state.active;
+    const current = this.state.active; //current tab
     const btnTitles = [
+      //titles for button in tabs
       'Development',
       'Design',
       'Business',
@@ -34,6 +35,7 @@ export class ButtonCoursesType extends React.PureComponent {
       'Photography',
     ];
     let getClass = function(name, index) {
+      //add class for current tab
       if (index === current) return name;
       return '';
     };

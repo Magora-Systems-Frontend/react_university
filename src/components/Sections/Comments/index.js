@@ -41,7 +41,7 @@ export class Comments extends React.PureComponent {
   render() {
     const { commentsState, languageState = {} } = this.props;
     const { payload = [] } = commentsState;
-    const { language } = languageState;
+    const { language } = languageState; //language variable
     const { title } = lang[language];
 
     const options = {

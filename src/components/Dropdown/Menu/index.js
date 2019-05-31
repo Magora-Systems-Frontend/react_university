@@ -8,6 +8,10 @@ export default class Menu extends Component {
     menu: PropTypes.array,
   };
 
+  static defaultProps = {
+    menu: [],
+  };
+
   render() {
     const { menu } = this.props;
     const list = menu.map((item) => <FirstLevel item={item} key={item.title} />);
@@ -16,6 +20,13 @@ export default class Menu extends Component {
 }
 
 class FirstLevel extends Component {
+  static propTypes = {
+    item: PropTypes.object,
+  };
+
+  static defaultProps = {
+    item: {},
+  };
   constructor() {
     super();
     this.state = {
@@ -51,6 +62,13 @@ class FirstLevel extends Component {
 }
 
 class SecondLevel extends Component {
+  static propTypes = {
+    item: PropTypes.object,
+  };
+
+  static defaultProps = {
+    item: {},
+  };
   constructor() {
     super();
     this.state = {
@@ -87,6 +105,14 @@ class SecondLevel extends Component {
 }
 
 class ThirdLevel extends Component {
+  static propTypes = {
+    item: PropTypes.object,
+  };
+
+  static defaultProps = {
+    item: {},
+  };
+
   render() {
     const { item } = this.props;
     return (

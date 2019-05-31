@@ -7,6 +7,12 @@ export default class EmptyCart extends Component {
     text: PropTypes.string,
     linkText: PropTypes.string,
   };
+
+  static defaultProps = {
+    text: '',
+    linkText: '',
+  };
+
   render() {
     const { text, linkText } = this.props;
     return (
