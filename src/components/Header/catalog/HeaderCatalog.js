@@ -23,8 +23,8 @@ export default class HeaderCatalog extends Component {
 
   render() {
     const { languageState = {} } = this.props;
-    const { language } = languageState;
-    const { catalogTitle } = lang[language];
+    const { language } = languageState; //variable pointing to current language
+    const { catalogTitle } = lang[language]; //variables responsible for textual data, changeable depending on the selected language
 
     const data = [
       {
@@ -131,7 +131,6 @@ export default class HeaderCatalog extends Component {
         <Wrapper margin="0 2px" padding="9px 0">
           <div className="header-catalog">
             <Icon width={15} height={13} glyph={GLYPH.catalog} />
-            {/*<Icon style={{ fontSize: '20px', marginRight: '4px' }} type="appstore" />*/}
             {catalogTitle}
           </div>
         </Wrapper>

@@ -1,10 +1,9 @@
 import React from 'react';
-
-import './recommendations.scss';
 import { GLYPH, Icon } from 'components/Icon';
-import lang from './lang.json';
 import { connect } from 'react-redux';
 import Propglyphs from 'prop-types';
+import lang from './lang.json';
+import './recommendations.scss';
 
 const mapStateToProps = ({ languageState }) => ({
   languageState,
@@ -22,8 +21,8 @@ export class Recommendations extends React.PureComponent {
 
   render() {
     const { languageState = {} } = this.props;
-    const { language } = languageState;
-    const { title, desc, btn } = lang[language];
+    const { language } = languageState; //variable pointing to current language
+    const { title, desc, btn } = lang[language]; //variables responsible for textual data, changeable depending on the selected language
 
     return (
       <div className="recomendations">

@@ -1,0 +1,143 @@
+.item {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  vertical-align: top;
+  width: 216px;
+  height: 290px;
+  margin: 2px 15px 2px 2px;
+  border: none;
+  box-sizing: border-box;
+  @media (max-width: 500px) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.item:before {
+  box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1), 0 3px 1px 0 rgba(20, 23, 28, 0.1);
+  opacity: 1;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.2s ease;
+  pointer-events: none;
+}
+
+.item__wrapper {
+  background: #fff;
+  height: 290px;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  @media (max-width: 500px) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.item__wrapper_header {
+  position: relative;
+}
+
+.item__wrapper_header img {
+  width: 100%;
+  display: block;
+  height: 122px;
+  object-fit: cover;
+  box-shadow: 0 1px 0 0 rgba(232, 233, 235, 0.5);
+  -webkit-filter: sepia(0.1) grayscale(0.1) saturate(0.8);
+  filter: sepia(0.1) grayscale(0.1) saturate(0.8);
+  @media (max-width: 500px) {
+    height: auto;
+  }
+}
+
+.item__wrapper_body {
+  position: relative;
+  display: block;
+  padding: 15px 10px 0 15px;
+  font-size: small;
+}
+
+.item__wrapper_body .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  font-weight: 600;
+  height: 42px;
+  font-size: 15px;
+  color: #29303b;
+  margin-bottom: 10px;
+}
+
+.item__wrapper_body .author {
+  margin-bottom: 14px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  color: #686f7a;
+}
+
+.item__wrapper_body .price {
+  display: flex;
+  justify-content: flex-end;
+  min-height: 36px;
+}
+
+.price__container {
+  flex-direction: row-reverse;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.price__container_discount {
+  margin-right: 0;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 18px;
+  color: #29303b;
+}
+
+.price__container_regular {
+  margin-right: 10px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #686f7a;
+  text-decoration: line-through;
+}
+
+.item__wrapper_body .stars {
+  display: flex;
+  padding-top: 2px;
+  margin-top: -2px;
+  background: 0 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.stars .star-ratings {
+  line-height: 1;
+}
+
+.stars__rating {
+  margin-left: 5px;
+}
+
+.stars__rating_reviews {
+  font-weight: 600;
+  color: #505763;
+}
+
+.stars__rating_count {
+  font-size: 12px;
+  font-weight: 400;
+  color: #686f7a;
+  margin-left: 5px;
+}

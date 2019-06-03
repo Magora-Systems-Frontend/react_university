@@ -23,14 +23,14 @@ export default class SearchForm extends Component {
   };
 
   static defaultProps = {
+    maxWidth: '',
     languageState: {},
   };
 
   render() {
-    const { languageState = {} } = this.props;
-    const { language } = languageState;
-    const { formPlaceholder } = lang[language];
-    const { maxWidth } = this.props;
+    const { languageState = {}, maxWidth } = this.props;
+    const { language } = languageState; //variable pointing to current language
+    const { formPlaceholder } = lang[language]; //variables responsible for textual data, changeable depending on the selected language
 
     return (
       <form

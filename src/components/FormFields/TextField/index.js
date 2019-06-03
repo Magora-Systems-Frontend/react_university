@@ -1,10 +1,18 @@
 import React from 'react';
 import { fieldPropTypes } from 'redux-form';
+import PropTypes from 'prop-types';
 import './style.scss';
 
 export class TextField extends React.PureComponent {
   static propTypes = {
     ...fieldPropTypes,
+    type: PropTypes.string,
+    meta: PropTypes.string,
+  };
+
+  static defaultProps = {
+    type: '',
+    meta: '',
   };
 
   render() {

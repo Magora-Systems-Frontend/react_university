@@ -8,6 +8,7 @@ import {
 } from '../../config/constants';
 
 export function getCourses(title) {
+  //function to get a list of courses
   const url = `${API_METHODS.COURSES}/${title}`;
 
   const axios = getAxios();
@@ -27,6 +28,7 @@ export function getCourses(title) {
 }
 
 export function getCoursesPopular(title) {
+  //function to get a list of popular courses
   const url = `${API_METHODS.COURSES}/${title}`;
 
   const axios = getAxios();
@@ -46,6 +48,7 @@ export function getCoursesPopular(title) {
 }
 
 export function getCategories() {
+  //function to get a list of popular categories
   const url = `${API_METHODS.CATEGORIES}`;
 
   const axios = getAxios();
@@ -65,6 +68,7 @@ export function getCategories() {
 }
 
 export function getComments() {
+  //function to get a list of comments
   const url = `${API_METHODS.COMMENTS}`;
 
   const axios = getAxios();
@@ -84,8 +88,7 @@ export function getComments() {
 }
 
 export function getLanguage(event) {
-  let response = event === 'EN' ? 'RU' : 'EN';
-
+  //function to get current language
   return (dispatch, getState) => {
     dispatch(getLanguageState(event));
   };

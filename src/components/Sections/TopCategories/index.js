@@ -41,8 +41,8 @@ export class TopCategories extends React.PureComponent {
   render() {
     const { categoriesState, languageState = {} } = this.props;
     const { payload = [] } = categoriesState;
-    const { language } = languageState;
-    const { title } = lang[language];
+    const { language } = languageState; //variable pointing to current language
+    const { title } = lang[language]; //variables responsible for textual data, changeable depending on the selected language
 
     return (
       <div className="categories">

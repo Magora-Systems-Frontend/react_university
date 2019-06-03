@@ -1,20 +1,19 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { ROUTES } from 'config/constants';
 import { Wrapper } from 'components/Wrapper';
 import Dropdown from 'components/Dropdown';
 import MobileLeftMenu from 'components/MobileLeftMenu';
+import { GLYPH, Icon } from 'components/Icon';
 import HeaderControls from './controls/HeaderControls';
 import HeaderSearch from './search/HeaderSearch';
 import HeaderInvite from './invite/HeaderInvite';
 import HeaderCart from './cart/HeaderCart';
 import HeaderCatalog from './catalog/HeaderCatalog';
-import { GLYPH, Icon } from 'components/Icon';
 import lang from './lang.json';
 import './header.scss';
-import logo from '/assets/images/logo.svg';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 
 const mapStateToProps = ({ languageState }) => ({
   languageState,
@@ -27,7 +26,7 @@ export class Header extends Component {
   };
 
   static defaultProps = {
-    showModal: Function.prototype,
+    languageState: '',
   };
 
   constructor(props) {

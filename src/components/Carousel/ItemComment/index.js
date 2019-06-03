@@ -15,6 +15,7 @@ export class ItemComment extends React.PureComponent {
   render() {
     const { data = {} } = this.props;
     let logo; // user avatar
+
     if (data.icon !== '') {
       logo = <img className="item-comment__info_icon" src={data.icon} alt="" />;
     } else {

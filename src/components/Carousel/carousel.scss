@@ -22,6 +22,20 @@
   justify-content: center;
 }
 
+.slick-track {
+  align-items: stretch;
+  display: flex !important;
+  padding-bottom: 2px;
+}
+
+.slick-slide {
+  height: auto !important;
+}
+
+.slick-slide > div {
+  height: 100%;
+}
+
 .carousel__arrow:hover {
   box-shadow: 0 2px 8px 2px rgba(20, 23, 28, 0.15);
   svg {

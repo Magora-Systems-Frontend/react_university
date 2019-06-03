@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import cn from 'classnames';
 import Button from 'components/Button';
 import lang from './lang.json';
 import './style.scss';
-import { connect } from 'react-redux';
 
 const mapStateToProps = ({ languageState }) => ({
   languageState,
@@ -13,19 +13,22 @@ const mapStateToProps = ({ languageState }) => ({
 @connect(mapStateToProps)
 export default class MobileLeftMenu extends Component {
   static propTypes = {
-    show: PropTypes.bool,
-    toggleMenu: PropTypes.func,
+    show: PropTypes.bool, //variable showing the status of the menu
+    toggleMenu: PropTypes.func, //variable to hide / show the menu on mobile screens
     languageState: PropTypes.object,
   };
 
   static defaultProps = {
+    show: false,
+    toggleMenu: Function.prototype,
     languageState: {},
   };
 
   render() {
     const { languageState = {}, show, toggleMenu } = this.props;
-    const { language } = languageState;
-    const { menuTitle, loginTitle, menu } = lang[language];
+    const { language } = languageState; //variable pointing to current language
+    const { menuTitle, loginTitle, menu } = lang[language]; //variables responsible for textual data, changeable depending on the selected language
+
     const list = menu.map((item) => (
       <li key={item.id}>
         <a className="mobile-nav__menu-item" href="javascript:void(0)">

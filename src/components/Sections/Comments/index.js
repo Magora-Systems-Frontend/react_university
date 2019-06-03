@@ -41,10 +41,11 @@ export class Comments extends React.PureComponent {
   render() {
     const { commentsState, languageState = {} } = this.props;
     const { payload = [] } = commentsState;
-    const { language } = languageState; //language variable
-    const { title } = lang[language];
+    const { language } = languageState; //variable pointing to current language
+    const { title } = lang[language]; //variables responsible for textual data, changeable depending on the selected language
 
     const options = {
+      //slider settings
       slidesToShow: 3,
       slidesToScroll: 3,
       responsive: [
