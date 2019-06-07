@@ -1,5 +1,7 @@
+@import '../../styles/_variables';
+
 .button-container {
-  border-bottom: 1px solid #dedfe0;
+  border-bottom: 1px solid $button-search-color;
   display: flex;
   margin-bottom: 16px;
 }

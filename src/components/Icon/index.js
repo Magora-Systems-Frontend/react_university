@@ -59,7 +59,7 @@ const Icon = ({ className, glyph, fill, height, stroke, strokeWidth, width }) =>
 };
 
 Icon.defaultProps = {
-  className: null,
+  className: '',
   glyph: null,
   fill: '#3b393a',
   height: 20,

@@ -1,6 +1,8 @@
+@import '../../../../styles/_variables';
+
 .item__popover {
-  box-shadow: 0 4px 16px rgba(20, 23, 28, 0.25);
-  background-color: white;
+  box-shadow: 0 4px 16px $button-transparent-hover-background;
+  background-color: $white;
   width: 320px;
   padding: 15px;
   left: 200px;
@@ -11,7 +13,7 @@
 }
 
 .item__popover_update {
-  color: #686f7a;
+  color: $button-bordered-color;
   font-size: 13px;
   line-height: 1.43;
   margin-bottom: 10px;
@@ -28,7 +30,7 @@
   font-weight: 600;
   line-height: 1.33;
   letter-spacing: -0.3px;
-  color: #505763;
+  color: $button-transparent-color;
 }
 
 .item__popover_description {
@@ -41,12 +43,12 @@
   font-size: 15px;
   line-height: 1.53;
   letter-spacing: -0.2px;
-  color: #686f7a;
+  color: $button-bordered-color;
   padding-top: 10px;
 }
 
 .item__popover_category {
-  color: #686f7a;
+  color: $button-bordered-color;
   display: block;
   font-size: 11px;
   overflow: auto;
@@ -54,7 +56,7 @@
 }
 
 .item__popover_category span {
-  color: #007791;
+  color: $button-mobile-login-color;
   letter-spacing: -0.2px;
 }
 
@@ -66,8 +68,8 @@
 }
 
 .item__popover_add-card {
-  color: #fff;
-  background-color: #ec5252;
+  color: $white;
+  background-color: $button-red;
   border: 1px solid transparent;
   padding: 16px 12px;
   font-size: 15px;
@@ -79,12 +81,12 @@
 }
 
 .item__popover_add-card:hover {
-  background-color: #992337;
+  background-color: $button-red-hover;
 }
 
 .item__popover_add-wishlist {
   margin-left: 15px;
-  color: #ec5252;
+  color: $button-red;
   font-size: 24px;
   cursor: pointer;
   line-height: 1;
@@ -96,7 +98,7 @@
   justify-content: space-between;
   line-height: 1.43;
   font-size: 13px;
-  color: #686f7a;
+  color: $button-bordered-color;
   font-weight: 400;
   padding: 5px 0;
 }
@@ -119,5 +121,5 @@
   max-height: 54px;
   font-size: 13px;
   letter-spacing: -0.2px;
-  color: #686f7a;
+  color: $button-bordered-color;
 }

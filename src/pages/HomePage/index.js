@@ -19,10 +19,6 @@ import reducer from './reducer';
 
 const withReducer = injectReducer({ key: 'home', reducer });
 
-@connect(
-  mapStateToProps,
-  mapDispatchToProps
-)
 @compose(withReducer)
 export class HomePage extends React.PureComponent {
   static propTypes = {
@@ -53,12 +49,4 @@ export class HomePage extends React.PureComponent {
       </article>
     );
   }
-}
-
-function mapStateToProps(state) {
-  return {};
-}
-
-function mapDispatchToProps(dispatch) {
-  return {};
 }

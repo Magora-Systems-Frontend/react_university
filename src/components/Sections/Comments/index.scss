@@ -1,5 +1,7 @@
+@import '../../../styles/_variables';
+
 .comments {
-  background-color: #f7f8fa;
+  background-color: $gray-light-2;
   position: relative;
   width: 100%;
 }
@@ -27,6 +29,6 @@
   font-size: 24px;
   font-weight: 600;
   line-height: 1.33em;
-  color: #29303b;
+  color: $banner-background-color;
   margin-bottom: 15px;
 }

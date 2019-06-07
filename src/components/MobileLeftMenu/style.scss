@@ -1,3 +1,5 @@
+@import '../../styles/_variables';
+
 .mobile-menu {
   &__overlay {
     cursor: pointer;
@@ -8,7 +10,7 @@
     height: 100%;
     z-index: 100;
     transition: opacity 200ms ease-out;
-    background-color: rgba(41, 48, 59, 0.55);
+    background-color: $gray-medium-2;
     visibility: hidden;
     opacity: 0;
     &_show {
@@ -19,7 +21,7 @@
 }
 
 .mobile-nav {
-  background: #fff;
+  background: $white;
   height: 100%;
   left: 0;
   max-width: 80%;
@@ -36,9 +38,9 @@
   &__divider {
     margin: 0 16px;
     height: 0;
-    background-color: #dedfe0;
+    background-color: $button-search-color;
     border: 0;
-    border-top: 1px solid #e8e9eb;
+    border-top: 1px solid $gray;
   }
   &__menu {
     &-list {
@@ -47,7 +49,7 @@
     }
     &-title {
       font-size: 13px;
-      color: #686f7a;
+      color: $button-bordered-color;
       text-transform: uppercase;
       padding: 8px 16px 0;
       letter-spacing: 1px;
@@ -56,7 +58,7 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      color: #29303b;
+      color: $banner-background-color;
       padding: 11px 16px;
       font-size: 15px;
       font-weight: 400;
@@ -64,7 +66,7 @@
       position: relative;
       &:hover {
         text-decoration: none;
-        background-color: #f2f3f5;
+        background-color: $gray-light;
         color: inherit;
       }
     }

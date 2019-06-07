@@ -1,6 +1,5 @@
 import React from 'react';
 //
-import { Wrapper } from './index.styled';
 
 export class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -19,14 +18,14 @@ export class ErrorBoundary extends React.Component {
     if (this.state.errorInfo) {
       // Error path
       return (
-        <Wrapper>
+        <div>
           <h1>Something went wrong.</h1>
           <details style={{ whiteSpace: 'pre-wrap' }}>
             {this.state.error && this.state.error.toString()}
             <br />
             {this.state.errorInfo.componentStack}
           </details>
-        </Wrapper>
+        </div>
       );
     }
     // Normally, just render children

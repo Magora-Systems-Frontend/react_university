@@ -1,16 +1,17 @@
+@import '../../../styles/_variables';
 .header-search-form {
   display: flex;
   margin: 0 15px;
   flex: 1;
-  border: 1px solid #f2f3f5;
-  background-color: #f2f3f5;
+  border: 1px solid $gray-light;
+  background-color: $gray-light;
   outline: none;
 }
 
 .header-search-form__submit {
   &:hover {
     svg {
-      fill: #fff;
+      fill: $white;
     }
   }
 }

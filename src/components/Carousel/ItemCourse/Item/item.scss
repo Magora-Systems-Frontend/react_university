@@ -1,3 +1,5 @@
+@import '../../../../styles/_variables';
+
 .item {
   display: inline-block;
   position: relative;
@@ -7,16 +9,30 @@
   height: 290px;
   margin: 2px 15px 2px 2px;
   border: none;
+  transition: 0.2s ease;
   box-sizing: border-box;
   @media (max-width: 500px) {
     width: 100%;
     height: auto;
   }
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+
+    .item__wrapper_header {
+      background: $banner-background-color;
+    }
+
+    img {
+      opacity: 0.5;
+    }
+  }
 }
 
 .item:before {
-  box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1), 0 3px 1px 0 rgba(20, 23, 28, 0.1);
-  opacity: 1;
+  box-shadow: 0 0 1px 1px $shadow-header, 0 3px 1px 0 $shadow-header;
+  opacity: 0.5;
   content: '';
   position: absolute;
   left: 0;
@@ -28,7 +44,7 @@
 }
 
 .item__wrapper {
-  background: #fff;
+  background: $white;
   height: 290px;
   display: block;
   overflow: hidden;
@@ -48,8 +64,7 @@
   display: block;
   height: 122px;
   object-fit: cover;
-  box-shadow: 0 1px 0 0 rgba(232, 233, 235, 0.5);
-  -webkit-filter: sepia(0.1) grayscale(0.1) saturate(0.8);
+  box-shadow: 0 1px 0 0 $shadow;
   filter: sepia(0.1) grayscale(0.1) saturate(0.8);
   @media (max-width: 500px) {
     height: auto;
@@ -70,7 +85,7 @@
   font-weight: 600;
   height: 42px;
   font-size: 15px;
-  color: #29303b;
+  color: $banner-background-color;
   margin-bottom: 10px;
 }
 
@@ -81,7 +96,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 12px;
-  color: #686f7a;
+  color: $button-bordered-color;
 }
 
 .item__wrapper_body .price {
@@ -102,14 +117,14 @@
   white-space: nowrap;
   font-weight: 600;
   font-size: 18px;
-  color: #29303b;
+  color: $banner-background-color;
 }
 
 .price__container_regular {
   margin-right: 10px;
   font-size: 13px;
   font-weight: 400;
-  color: #686f7a;
+  color: $button-bordered-color;
   text-decoration: line-through;
 }
 
@@ -132,12 +147,12 @@
 
 .stars__rating_reviews {
   font-weight: 600;
-  color: #505763;
+  color: $button-transparent-color;
 }
 
 .stars__rating_count {
   font-size: 12px;
   font-weight: 400;
-  color: #686f7a;
+  color: $button-bordered-color;
   margin-left: 5px;
 }

@@ -1,4 +1,4 @@
-//
+@import '../../styles/_variables';
 .btn-action {
   display: inline-block;
   margin-bottom: 0;
@@ -22,14 +22,14 @@
 }
 
 .btn_colored {
-  color: #fff;
-  background-color: #ec5252;
+  color: $white;
+  background-color: $button-red;
   &:focus,
   &:hover {
-    background-color: #992337;
+    background-color: $button-red-hover;
   }
   &:active {
-    background-color: #521822;
+    background-color: $button-red-active;
   }
   &:disabled {
     background-image: none;
@@ -38,19 +38,19 @@
 }
 
 .btn_bordered {
-  color: #686f7a;
-  background-color: #fff;
-  border: 1px solid #686f7a;
+  color: $button-bordered-color;
+  background-color: $white;
+  border: 1px solid $button-bordered-border;
   &:focus,
   &:hover {
-    color: #29303b;
-    background-color: #fff;
-    border-color: #29303b;
+    color: $banner-background-color;
+    background-color: $white;
+    border-color: $banner-background-color;
   }
   &:active {
-    color: #29303b;
-    background-color: #f7f8fa;
-    border-color: #29303b;
+    color: $banner-background-color;
+    background-color: $white;
+    border-color: $banner-background-color;
   }
 }
 
@@ -59,13 +59,13 @@
   border: 1px solid transparent;
   font-size: 13px;
   font-weight: 400;
-  color: #505763;
+  color: $button-transparent-color;
   height: 45px;
   &:focus,
   &:hover {
-    color: #29303b;
-    background: rgba(20, 23, 28, 0.05);
-    border-color: rgba(20, 23, 28, 0.05);
+    color: $banner-background-color;
+    background: $button-transparent-hover-background;
+    border-color: $button-transparent-hover-background;
   }
 }
 
@@ -77,13 +77,13 @@
   align-content: center;
   background-color: transparent;
   border-width: 0;
-  border-color: #dedfe0;
+  border-color: $button-search-color;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  color: #ec5252;
+  color: $button-red;
   &:hover {
-    background-color: #ec5252;
-    color: #fff;
+    background-color: $button-red;
+    color: $white;
   }
 }
 
@@ -93,18 +93,18 @@
   padding: 11px 16px;
   font-weight: 600;
   text-align: left;
-  color: #007791;
+  color: $button-mobile-login-color;
   border-color: transparent;
   background-color: transparent;
   &:hover {
-    background: #f2f3f5;
-    color: #003845;
+    background: $white;
+    color: $button-mobile-login-hover-color;
   }
 }
 
 .btn_category-toggle {
   font-weight: normal;
-  color: #29303b;
+  color: $banner-background-color;
   border: none;
   border-radius: 0;
   border-bottom: 6px solid transparent;
@@ -112,14 +112,14 @@
   margin-bottom: 0;
   white-space: normal;
   &:active {
-    border-color: #007791;
-    color: #14171c;
+    border-color: $button-category-border;
+    color: $button-category-color;
   }
   &:focus {
     outline: 0;
   }
   &_active {
-    border-color: #007791;
-    color: #14171c;
+    border-color: $button-category-border;
+    color: $button-category-color;
   }
 }

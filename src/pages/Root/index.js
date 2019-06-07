@@ -1,12 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 //
-import { MainWrapper, ErrorBoundary } from 'components';
+import { ErrorBoundary } from 'components';
 import { routes } from 'routes';
 
 export function Root() {
   return (
-    <MainWrapper>
+    <div>
       <Helmet itleTemplate="%s - Notes" defaultTitle="Notes">
         <meta name="description" content="Sample Application" />
         <link
@@ -15,15 +15,15 @@ export function Root() {
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossOrigin="anonymous"
         />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          charset="UTF-8"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-        />
+        {/*<link*/}
+        {/*rel="stylesheet"*/}
+        {/*type="text/css"*/}
+        {/*charset="UTF-8"*/}
+        {/*href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"*/}
+        {/*/>*/}
       </Helmet>
       <ErrorBoundary>{routes()}</ErrorBoundary>
-    </MainWrapper>
+    </div>
   );
 }
 

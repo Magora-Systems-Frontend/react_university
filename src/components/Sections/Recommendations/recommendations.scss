@@ -1,3 +1,4 @@
+@import '../../../styles/_variables';
 .recommendations {
   width: 100%;
   height: auto;
@@ -5,15 +6,15 @@
 }
 
 .recomendations__top-border {
-  background: linear-gradient(-45deg, #ec5252 0, #6e1a52 100%);
+  background: linear-gradient(-45deg, $button-red 0, $red-dark 100%);
   height: 8px;
 }
 
 .recomendations__banner {
   padding: 5px 0;
   align-items: center;
-  background-color: #29303b;
-  color: #f7f8fa;
+  background-color: $banner-background-color;
+  color: $white;
   display: block;
 }
 
@@ -69,8 +70,8 @@
 }
 
 .recomendations__banner_text-center .button {
-  color: #fff;
-  background-color: #ec5252;
+  color: $white;
+  background-color: $button-red;
   border: 1px solid transparent;
   display: inline-block;
   margin-bottom: 0;
@@ -90,7 +91,7 @@
   -ms-user-select: none;
   user-select: none;
   &:hover {
-    background-color: #992337;
+    background-color: $button-red-hover;
   }
   &:focus {
     outline: none;

@@ -1,6 +1,8 @@
+@import '../../styles/_variables';
+
 .header {
   display: block;
-  box-shadow: 0 4px 4px rgba(69, 79, 99, 0.16);
+  box-shadow: 0 4px 4px $shadow-header;
   height: 65px;
   position: relative;
   @media (max-width: 767px) {
@@ -51,7 +53,7 @@
 }
 
 .header-mobile {
-  box-shadow: 0 4px 4px rgba(69, 79, 99, 0.16);
+  box-shadow: 0 4px 4px $shadow-header;
   &__content {
     display: none;
     @media (max-width: 767px) {

@@ -1,9 +1,11 @@
+@import '../../../styles/_variables';
+
 .non-student {
-  background: #f7f8fa;
+  background: $gray-light-2;
   display: flex;
   flex-direction: row;
   padding: 0 20px 22px;
-  border-bottom: 1px solid #e8e9eb;
+  border-bottom: 1px solid $gray;
   @media (max-width: 768px) {
     flex-direction: column;
     padding-bottom: 22px;
@@ -14,11 +16,11 @@
     padding: 28px 30px;
     text-align: center;
     &:first-child {
-      border-right: 1px solid #dedfe0;
+      border-right: 1px solid $button-search-color;
       border-bottom: none;
       @media (max-width: 768px) {
         border-right: none;
-        border-bottom: 1px solid #dedfe0;
+        border-bottom: 1px solid $button-search-color;
       }
     }
     &-text {
@@ -30,10 +32,10 @@
       font-size: 19px;
       font-weight: 600;
       line-height: 1.47em;
-      color: #505763;
+      color: $button-transparent-color;
       &:hover {
         text-decoration: none;
-        color: #505763;
+        color: $button-transparent-color;
       }
     }
     &-description {

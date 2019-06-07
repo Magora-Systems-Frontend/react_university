@@ -1,4 +1,3 @@
-export { MainWrapper } from './MainWrapper';
 export { ErrorBoundary } from './ErrorBoundary';
 export { FindCourse } from './Sections/FindCourse/FindCourse';
 export { Advantages } from './Sections/Advantages/Advantages';

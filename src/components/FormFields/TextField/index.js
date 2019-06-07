@@ -7,12 +7,12 @@ export class TextField extends React.PureComponent {
   static propTypes = {
     ...fieldPropTypes,
     type: PropTypes.string,
-    meta: PropTypes.string,
+    meta: PropTypes.object,
   };
 
   static defaultProps = {
     type: '',
-    meta: '',
+    meta: {},
   };
 
   render() {

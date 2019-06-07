@@ -1,3 +1,5 @@
+@import '../../../styles/_variables';
+
 .categories {
   position: relative;
   margin: 30px auto;
@@ -22,7 +24,7 @@
   font-weight: 600;
   line-height: 1.33em;
   margin-bottom: 8px;
-  color: #29303b;
+  color: $banner-background-color;
 }
 
 .categories__items {

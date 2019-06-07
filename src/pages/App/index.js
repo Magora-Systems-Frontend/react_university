@@ -2,7 +2,6 @@ import React from 'react';
 import PT from 'prop-types';
 import { Header } from 'components/Header';
 import { Footer } from 'components/Footer';
-import { Wrapper } from './index.styled';
 
 export class App extends React.PureComponent {
   static propTypes = {
@@ -15,12 +14,12 @@ export class App extends React.PureComponent {
 
   render() {
     return (
-      <Wrapper>
+      <div>
         <Header />
         {this.props.children}
         {/* Here could be header / footer / static blocks and etc */}
         <Footer />
-      </Wrapper>
+      </div>
     );
   }
 }

@@ -1,10 +1,12 @@
+@import '../../../styles/_variables';
+
 .search-course-form {
   max-height: 44px;
   display: flex;
   flex: 1;
   border: 0;
   border-radius: 2px;
-  background-color: #fff;
+  background-color: $white;
   font-size: 20px;
   outline: none;
 }
@@ -12,7 +14,7 @@
 .search-course-form__submit {
   &:hover {
     svg {
-      fill: #fff;
+      fill: $white;
     }
   }
 }

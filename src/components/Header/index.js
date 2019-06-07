@@ -22,11 +22,7 @@ const mapStateToProps = ({ languageState }) => ({
 @connect(mapStateToProps)
 export class Header extends Component {
   static propTypes = {
-    languageState: PropTypes.object,
-  };
-
-  static defaultProps = {
-    languageState: '',
+    languageState: PropTypes.object.isRequired,
   };
 
   constructor(props) {

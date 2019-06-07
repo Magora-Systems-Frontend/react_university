@@ -1,7 +1,9 @@
+@import '../../../styles/_variables';
+
 .item-comment {
-  background-color: #fff;
+  background-color: $white;
   border-radius: 3px;
-  box-shadow: 0 1px 3px 0 rgba(20, 23, 28, 0.15);
+  box-shadow: 0 1px 3px 0 $button-transparent-hover-background;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -34,13 +36,13 @@
   height: 64px;
   margin-right: 18px;
   border-radius: 50%;
-  background-color: rgb(104, 111, 122);
+  background-color: $gray-dark;
   font-size: 18px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: $white;
 }
 
 .item-comment__info_name {

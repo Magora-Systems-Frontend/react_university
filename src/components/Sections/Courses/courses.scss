@@ -1,3 +1,5 @@
+@import '../../../styles/_variables';
+
 .courses {
   position: relative;
   margin: 0 auto 20px;
@@ -30,12 +32,12 @@
   font-size: 19px;
   font-weight: 400;
   line-height: 1.47em;
-  color: #505763;
+  color: $button-transparent-color;
   margin: 0 0 10px;
 }
 
 .courses__block-selection_description {
-  background: #f7f8fa;
+  background: $gray-light-2;
   display: flex;
   flex: 1 0 auto;
   flex-direction: column;

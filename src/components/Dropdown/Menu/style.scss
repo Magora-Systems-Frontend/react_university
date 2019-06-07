@@ -1,3 +1,5 @@
+@import '../../../styles/_variables';
+
 .dropdown {
   &__menu {
     width: 270px;
@@ -7,7 +9,7 @@
     &-item {
       a {
         padding: 5px 15px;
-        color: #29303b;
+        color: $banner-background-color;
         font-size: 15px;
         font-weight: 400;
         width: 100%;
@@ -18,12 +20,12 @@
           margin-right: 10px;
         }
         &:hover {
-          color: #007791;
+          color: $button-mobile-login-color;
           text-decoration: none;
         }
       }
       &:hover {
-        background: #f2f3f5;
+        background: $gray-light;
       }
     }
     &-second-level,
@@ -36,14 +38,14 @@
       display: block;
       list-style: none;
       height: 100%;
-      background: #f7f8fa;
-      box-shadow: 4px 4px 16px rgba(20, 23, 28, 0.25);
+      background: $gray-light-2;
+      box-shadow: 4px 4px 16px $button-transparent-hover-background;
       &-item {
         a {
           display: flex;
           flex-direction: row;
           align-items: center;
-          color: #29303b;
+          color: $banner-background-color;
           font-size: 15px;
           font-weight: 400;
           width: 100%;
@@ -51,8 +53,8 @@
           padding: 5px 15px;
           overflow-wrap: break-word;
           &:hover {
-            color: #007791;
-            background-color: #f2f3f5;
+            color: $button-mobile-login-color;
+            background-color: $gray-light;
             text-decoration: none;
           }
         }
