@@ -2,9 +2,9 @@
 
 .footer {
   &_main {
-    margin: 40px auto 0;
-    padding: 0 20px;
-    background-color: $white;
+    margin: 0 auto;
+    padding: 30px 20px 0;
+    background-color: $gray-light-2;
     color: $gray-medium;
     font-size: 13px;
     line-height: 18px;
@@ -76,7 +76,7 @@
     }
     &-logo {
       img {
-        width: 110px;
+        width: 50px;
         height: auto;
       }
     }
@@ -121,5 +121,5 @@
   margin: 0;
   height: 1px;
   width: 100%;
-  background-color: #ec5252;
+  background-color: $button-blue;
 }

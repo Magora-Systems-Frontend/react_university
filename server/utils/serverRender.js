@@ -50,7 +50,7 @@ export default (req, res) => {
     // inject the rendered app with additional data into our html and send it
 
     let resultHtml = htmlData.replace(
-      '<title>Udemy clone</title>',
+      '<title>Clone</title>',
       `${helmet.title.toString()}${helmet.meta.toString()}`,
     );
 

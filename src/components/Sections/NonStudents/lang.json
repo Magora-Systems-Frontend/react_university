@@ -3,15 +3,15 @@
     "invites": [
       {
         "id": "teacher",
-        "title": "Teach on Udemy",
-        "description": "Teach what you love. Udemy gives you the tools to create an online course.",
+        "title": "Teach",
+        "description": "Teach what you love.",
         "btnTitle": "Start teaching"
       },
       {
         "id": "business",
-        "title": "Udemy for Business",
-        "description": "Get unlimited access to 3,000+ of Udemy’s top courses for your team.",
-        "btnTitle": "Get Udemy for business"
+        "title": "Business",
+        "description": "Get unlimited access to 3,000+ top courses for your team.",
+        "btnTitle": "Business"
       }
     ]
   },
@@ -19,15 +19,15 @@
     "invites": [
       {
         "id": "teacher",
-        "title": "Преподавайте на Udemy",
-        "description": "Преподавайте то, что любите. Udemy предоставляет вам инструменты для создания онлайн-курса.",
+        "title": "Преподавайте",
+        "description": "Преподавайте то, что любите.",
         "btnTitle": "Станьте преподавателем"
       },
       {
         "id": "business",
-        "title": "Udemy for Business",
-        "description": "Получите неограниченный доступ к более чем 3 000 лучших курсов на Udemy для своей команды.",
-        "btnTitle": "Получить Udemy for Business"
+        "title": "Business",
+        "description": "Получите неограниченный доступ к более чем 3 000 лучших курсов для своей команды.",
+        "btnTitle": "Business"
       }
     ]
   }

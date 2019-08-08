@@ -57,7 +57,7 @@ export class Popover extends React.PureComponent {
         <div className="item__popover_buttons">
           <div className="item__popover_add-card">{titles.cart}</div>
           <div className="item__popover_add-wishlist">
-            <Icon glyph={GLYPH.heart} width={30} height={30} fill="#ec5252" />
+            <Icon glyph={GLYPH.heart} width={30} height={30} fill="$button-blue" />
           </div>
         </div>
       </div>

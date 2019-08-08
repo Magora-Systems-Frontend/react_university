@@ -7,18 +7,23 @@
     justify-content: center;
     align-items: center;
     &-wrapper {
-      background: $gray-light-2;
+      padding: 30px 0 100px;
+      background: white;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      border-bottom: 1px solid #e8e9eb;
     }
   }
   &__text {
-    color: $button-bordered-color;
-    font-size: 13px;
-    padding-top: 16px;
+    font-size: 36px;
+    font-weight: 600;
     text-align: center;
+    line-height: 1.33em;
+    color: #29303b;
+    margin-bottom: 15px;
+    padding-top: 16px;
   }
   &__logos {
     display: inline-flex;

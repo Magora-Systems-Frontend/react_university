@@ -57,15 +57,15 @@ export class Courses extends React.PureComponent {
       <div className="courses">
         <div className="content_container">
           <div className="courses__block-selection">
-            <div className="courses__block-selection_description">
-              <div className="courses__block-selection_lead-test">{title}</div>
-              <div className="courses__block-selection_sub-test">{description}</div>
-            </div>
             <div className="courses__block-selection_unit-container">
               <div className="courses__block-selection_unit-container-content">
                 <ButtonCoursesType clickButton={this.clickButton} />
                 <CarouselCourses dataCourses={payload} />
               </div>
+            </div>
+            <div className="courses__block-selection_description">
+              <div className="courses__block-selection_lead-test">{title}</div>
+              <div className="courses__block-selection_sub-test">{description}</div>
             </div>
           </div>
           <div className="courses__block-popular">

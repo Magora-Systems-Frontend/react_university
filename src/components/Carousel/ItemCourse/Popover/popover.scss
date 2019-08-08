@@ -1,7 +1,7 @@
 @import '../../../../styles/_variables';
 
 .item__popover {
-  box-shadow: 0 4px 16px $button-transparent-hover-background;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
   background-color: $white;
   width: 320px;
   padding: 15px;
@@ -69,7 +69,7 @@
 
 .item__popover_add-card {
   color: $white;
-  background-color: $button-red;
+  background-color: $button-blue;
   border: 1px solid transparent;
   padding: 16px 12px;
   font-size: 15px;
@@ -81,12 +81,12 @@
 }
 
 .item__popover_add-card:hover {
-  background-color: $button-red-hover;
+  background-color: $button-blue-hover;
 }
 
 .item__popover_add-wishlist {
   margin-left: 15px;
-  color: $button-red;
+  color: $button-blue;
   font-size: 24px;
   cursor: pointer;
   line-height: 1;

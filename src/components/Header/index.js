@@ -15,6 +15,8 @@ import HeaderCatalog from './catalog/HeaderCatalog';
 import lang from './lang.json';
 import './header.scss';
 
+import logo from '/assets/images/react-logo.png';
+
 const mapStateToProps = ({ languageState }) => ({
   languageState,
 });
@@ -65,14 +67,14 @@ export class Header extends Component {
             <div className="header__logo_container">
               <Link to={ROUTES.HOME_PAGE}>
                 <div className="header__logo">
-                  <Icon width={110} glyph={GLYPH.logo} />
+                  <img src={logo} alt="" />
                 </div>
               </Link>
             </div>
             <div className="header__left-side">
               <HeaderCatalog />
-              <HeaderSearch maxWidth="800px" />
-              <HeaderInvite />
+              <HeaderSearch maxWidth="300px" />
+              {/*<HeaderInvite />*/}
             </div>
             <div className="header__right-side">
               <Dropdown dropdownType="emptyCart" bubblePosition="left" text={text} linkText={linkText} width="270px">

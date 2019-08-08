@@ -24,4 +24,7 @@
 @import '~slick-carousel/slick/slick.css';
 
 // site styles
-//@import "site/globals"; // required for any pages
+
+body {
+  font-family: sans-serif !important;
+}

@@ -44,8 +44,8 @@ export class HomePage extends React.PureComponent {
         <Recommendations />
         <TopCategories />
         <Comments />
-        <Partners />
         <NonStudents />
+        <Partners />
       </article>
     );
   }

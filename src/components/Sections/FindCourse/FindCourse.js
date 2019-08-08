@@ -31,7 +31,7 @@ export class FindCourse extends Component {
           <div className="find-course__content">
             <h1 className="find-course__title">{title}</h1>
             <div className="find-course__description">{description}</div>
-            <SectionSearch />
+            {/*<SectionSearch />*/}
           </div>
         </div>
       </section>

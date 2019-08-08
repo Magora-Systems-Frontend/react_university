@@ -45,7 +45,7 @@ export default class HeaderSearch extends Component {
           component={TextField}
         />
         <Button colorStyle="search" type="submit" modificationClass="header-search-form__submit">
-          <Icon glyph={GLYPH.search} fill="#ec5252" />
+          <Icon glyph={GLYPH.search} fill="#2727a4" />
         </Button>
       </form>
     );

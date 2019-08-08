@@ -29,9 +29,6 @@ export class ButtonCoursesType extends React.PureComponent {
       'Development',
       'Design',
       'Business',
-      'IT & Software',
-      'Personal Development',
-      'Marketing',
       'Photography',
     ];
     let getClass = function(name, index) {

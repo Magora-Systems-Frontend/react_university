@@ -1,11 +1,10 @@
 @import '../../../styles/_variables';
 
 .non-student {
-  background: $gray-light-2;
+  background: white;
   display: flex;
   flex-direction: row;
-  padding: 0 20px 22px;
-  border-bottom: 1px solid $gray;
+  padding: 30px 0;
   @media (max-width: 768px) {
     flex-direction: column;
     padding-bottom: 22px;
@@ -16,15 +15,13 @@
     padding: 28px 30px;
     text-align: center;
     &:first-child {
-      border-right: 1px solid $button-search-color;
       border-bottom: none;
       @media (max-width: 768px) {
         border-right: none;
-        border-bottom: 1px solid $button-search-color;
       }
     }
     &-text {
-      max-width: 320px;
+      max-width: 80%;
       margin: 0 auto;
     }
     &-title {

@@ -9,6 +9,8 @@ import lang from './lang.json';
 import './style.scss';
 import '../Sections/sections.scss';
 
+import logo from '/assets/images/react-logo.png';
+
 const mapStateToProps = ({ languageState }) => ({
   languageState,
 });
@@ -95,25 +97,25 @@ export class Footer extends Component {
               />
             </div>
           </div>
-          <div className="row footer__languages">
-            <div className="col-12">
-              <ul className="footer__language-list">
-                <li>
-                  <b>{title}</b>
-                </li>
-                {languagesList}
-              </ul>
-            </div>
-          </div>
+          {/*<div className="row footer__languages">*/}
+          {/*<div className="col-12">*/}
+          {/*<ul className="footer__language-list">*/}
+          {/*<li>*/}
+          {/*<b>{title}</b>*/}
+          {/*</li>*/}
+          {/*{languagesList}*/}
+          {/*</ul>*/}
+          {/*</div>*/}
+          {/*</div>*/}
         </footer>
         <hr className="language-divider" />
         <footer className="footer_bottom content_container">
           <div className="row footer__copyright">
             <div className="col-sm-6 footer__copyright-left">
               <div className="footer__copyright-logo">
-                <Icon width={110} height={32} glyph={GLYPH.logo} />
+                <img src={logo} alt="" />
               </div>
-              <div className="footer__copyright-text">Copyright © 2019 Udemy, Inc.</div>
+              <div className="footer__copyright-text">Copyright © 2019</div>
             </div>
             <div className="col-sm-6 footer__copyright-right">
               <ul className="footer__copyright-laws">{listLaws}</ul>

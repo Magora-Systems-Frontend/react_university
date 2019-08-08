@@ -18,73 +18,41 @@ export class CarouselCourses extends React.PureComponent {
     const { posts = [], id = '' } = dataCourses;
     let options; // settings for slick slider
 
-    if (id !== 'Popular') {
-      options = {
-        slidesToShow: 4,
-        responsive: [
-          {
-            breakpoint: 1440,
-            settings: {
-              slidesToShow: 3,
-            },
+    options = {
+      slidesToShow: 6,
+      responsive: [
+        {
+          breakpoint: 1440,
+          settings: {
+            slidesToShow: 5,
           },
-          {
-            breakpoint: 1240,
-            settings: {
-              slidesToShow: 3,
-            },
+        },
+        {
+          breakpoint: 1240,
+          settings: {
+            slidesToShow: 4,
           },
-          {
-            breakpoint: 992,
-            settings: {
-              slidesToShow: 3,
-            },
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
           },
-          {
-            breakpoint: 500,
-            settings: {
-              slidesToShow: 1,
-            },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
           },
-        ],
-      };
-    } else {
-      options = {
-        slidesToShow: 6,
-        responsive: [
-          {
-            breakpoint: 1440,
-            settings: {
-              slidesToShow: 5,
-            },
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1,
           },
-          {
-            breakpoint: 1240,
-            settings: {
-              slidesToShow: 4,
-            },
-          },
-          {
-            breakpoint: 992,
-            settings: {
-              slidesToShow: 3,
-            },
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 2,
-            },
-          },
-          {
-            breakpoint: 500,
-            settings: {
-              slidesToShow: 1,
-            },
-          },
-        ],
-      };
-    }
+        },
+      ],
+    };
 
     return (
       <div className="carousel-curses">

@@ -1,14 +1,14 @@
 {
   "EN": {
-    "menuTitle": "MORE FROM UDEMY",
+    "menuTitle": "MORE PRODUCTS",
     "loginTitle": "Sign up / Log in",
     "menu": [
       {
-        "title": "Teach on Udemy",
+        "title": "Teach",
         "id": "1"
       },
       {
-        "title": "Udemy for Business",
+        "title": "Business",
         "id": "2"
       },
       {
@@ -22,11 +22,11 @@
     ]
   },
   "RU": {
-    "menuTitle": "Другие продукты Udemy",
+    "menuTitle": "Другие продукты",
     "loginTitle": "Зарегистрироваться / войти",
     "menu": [
       {
-        "title": "Преподавайте на Udemy",
+        "title": "Преподавайте",
         "id": "1"
       },
       {

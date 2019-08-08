@@ -47,7 +47,7 @@ export default class SearchForm extends Component {
           component={TextField}
         />
         <Button colorStyle="search" type="submit" modificationClass="search-course-form__submit">
-          <Icon glyph={GLYPH.search} fill="$button-red" />
+          <Icon glyph={GLYPH.search} fill="$button-blue" />
         </Button>
       </form>
     );

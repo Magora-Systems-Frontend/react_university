@@ -1,9 +1,11 @@
 @import '../../../styles/_variables';
 
 .comments {
-  background-color: $gray-light-2;
+  background-color: white;
   position: relative;
   width: 100%;
+  margin: 30px 0;
+  box-shadow: 0 4px 20px 0 rgba(32, 34, 36, 0.2);
 }
 
 .comments__wrapper {
@@ -26,8 +28,9 @@
 }
 
 .comments__wrapper_title {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 600;
+  text-align: center;
   line-height: 1.33em;
   color: $banner-background-color;
   margin-bottom: 15px;

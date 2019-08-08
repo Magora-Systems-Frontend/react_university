@@ -1,11 +1,11 @@
 {
   "EN" : {
-    "buttonText": "Teach on Udemy",
+    "buttonText": "Teach",
     "text": "Turn what you know into an opportunity and reach millions around the world.",
     "linkText": "Learn more"
   },
   "RU" : {
-    "buttonText": "Преподавайте на Udemy",
+    "buttonText": "Преподавайте",
     "text": "Ваши знания станут проводником в мире возможностей и достигнут миллионов.",
     "linkText": "Подробнее"
   }
