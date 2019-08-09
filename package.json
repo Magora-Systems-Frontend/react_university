@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config webpack/webpack.development.js",
-    "build": "npm-run-all build-client build-server --parallel json-server ./json-server/db.json",
+    "build": "npm-run-all build-client build-server --parallel json-server",
     "build-client": "NODE_ENV=production webpack --config webpack/webpack.production.js",
     "build-server": "NODE_ENV=production webpack --config webpack/webpack.server.js",
     "server": "node ./public/server.js",
