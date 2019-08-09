@@ -6,12 +6,12 @@
   "scripts": {
     "preinstall": "rm -rf ./public",
     "dev": "webpack-dev-server --config webpack/webpack.development.js",
-    "build": "npm-run-all build-client --parallel",
+    "build": "npm-run-all build-client --parallel json-server",
     "build-client": "NODE_ENV=production webpack --config webpack/webpack.production.js",
     "build-server": "NODE_ENV=production webpack --config webpack/webpack.server.js",
     "start": "node ./server.js",
     "server": "node ./public/server.js",
-    "json-server": "nodemon ./json-server/server.js",
+    "json-server": "node ./json-server/server.js",
     "lint:js": "eslint --ext .js src",
     "lint:style": "stylelint \"src/**/*.scss\" --syntax scss",
     "prettier": "prettier --write src/**/*.{js,scss}"
