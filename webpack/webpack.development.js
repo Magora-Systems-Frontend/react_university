@@ -6,7 +6,7 @@ const common = require('./webpack.common.js');
 const config = require('../bin');
 const makePath = to => path.resolve(__dirname, to);
 
-const API_URL = process.env.API_URL || 'http://localhost:2000';
+const API_URL = process.env.API_URL || 'http://localhost:8021';
 
 module.exports = merge(common, {
   mode: 'development',
