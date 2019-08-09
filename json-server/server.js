@@ -25,6 +25,5 @@ server.use(function(err, req, res, next) {
 server.use(middlewares);
 server.use(router);
 server.listen(PORT, () => {
-  console.log(process.env);
   console.log(`JSON Server is running on port: ${PORT}`)
 });
