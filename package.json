@@ -6,7 +6,7 @@
   "scripts": {
     "preinstall": "rm -rf ./public",
     "dev": "webpack-dev-server --config webpack/webpack.development.js",
-    "build": "npm-run-all build-client json-server",
+    "build": "concurrently \"npm run build-client\" \"npm run json-server\"",
     "build-client": "NODE_ENV=production webpack --config webpack/webpack.production.js",
     "build-server": "NODE_ENV=production webpack --config webpack/webpack.server.js",
     "start": "node ./server.js",
@@ -57,6 +57,7 @@
     "bootstrap": "^4.3.1",
     "classnames": "^2.2.6",
     "compression": "^1.7.4",
+    "concurrently": "^4.1.1",
     "connected-react-router": "^5.0.1",
     "copy-webpack-plugin": "^5.0.3",
     "css-loader": "^1.0.0",
