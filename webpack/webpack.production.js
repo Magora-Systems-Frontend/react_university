@@ -1,3 +1,5 @@
+import {API_URL_PROD} from "../src/config/constants";
+
 const path = require('path');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -25,6 +27,7 @@ module.exports = merge(common, {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production'),
+        API_URL: API_URL_PROD
       },
     }),
     new MiniCssExtractPlugin({
