@@ -21,10 +21,12 @@ $ npm run json-server
 # head over to http://0.0.0.0:8020
 $ npm run dev
 
-
 ```
 
 ### Running prod
+
+####Fake backend deployed for this project at https://magora-react-university-api.herokuapp.com
+
 
 ```bash
 after cloning the repo:
@@ -33,8 +35,9 @@ install dependencies
 npm i --production
 
 to run prod client and server
-head over to  http://0.0.0.0:8022
+head over to  http://0.0.0.0:8021
 $ npm run build
+$ npm start
 
 
 ```
