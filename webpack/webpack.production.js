@@ -27,7 +27,7 @@ module.exports = merge(common, {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production'),
-        API_URL: API_URL_PROD
+        API_URL: JSON.stringify(API_URL_PROD)
       },
     }),
     new MiniCssExtractPlugin({
