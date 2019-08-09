@@ -1,5 +1,6 @@
 import axios from 'axios';
 import lodash from 'lodash';
+import { API_URL } from '../../config/constants';
 let axiosClient = null;
 
 class AxiosClient {
@@ -10,7 +11,7 @@ class AxiosClient {
 
     const localAxios = axios.create({
       // baseURL: process.env.NODE_ENV === 'development' ? '/api/' : `${this._API_URL}/api/v${this._API_VERSION}`,
-      baseURL: process.env.NODE_ENV === 'development' ? '/api/' : `${this._API_URL}/api/`,
+      baseURL: process.env.NODE_ENV === 'development' ? '/api/' : `${API_URL}/api/`,
       timeout: 5000,
     });
 
