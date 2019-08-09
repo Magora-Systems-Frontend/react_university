@@ -26,7 +26,7 @@ $ npm run dev
 ### Running prod
 
 ####Fake backend deployed for this project at https://magora-react-university-api.herokuapp.com
-
+####This code deployed on https://magora-react-university.herokuapp.com/
 
 ```bash
 after cloning the repo:
