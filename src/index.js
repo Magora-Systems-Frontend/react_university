@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 //
-import { NODE_ENV, API_URL, API_VERSION } from 'config/constants';
+import { NODE_ENV, API_URL_PROD, API_VERSION } from 'config/constants';
 import { Root } from 'pages/Root';
 import * as axiosClient from 'utils/api/axiosClient';
 import { configureStore } from './store';
@@ -25,7 +25,7 @@ if (window && window.REDUX_STATE) {
 }
 const store = configureStore(initialState);
 
-axiosClient.init({ store, API_URL, API_VERSION });
+axiosClient.init({ store, API_URL_PROD, API_VERSION });
 ReactDOM.hydrate(
   <BrowserRouter>
     <Provider store={store}>

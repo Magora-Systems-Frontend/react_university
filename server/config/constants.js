@@ -1,3 +1,3 @@
 export const {
-  API_URL = 'http://localhost:8021',
+  API_URL = 'http://localhost:2000',
 } = process.env || {};
