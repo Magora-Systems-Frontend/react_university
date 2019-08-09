@@ -46,12 +46,6 @@
   margin: 100px 0;
   max-width: 100%;
   //padding: 0 30px;
-  @media (min-width: 992px) and (max-width: 1200px) {
-    max-width: calc(216px + 15px);
-  }
-  @media (max-width: 992px) {
-    display: none;
-  }
 }
 
 .courses__block-selection_lead-test {
