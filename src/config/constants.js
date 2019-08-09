@@ -1,5 +1,5 @@
 export const {
-  API_URL = 'http://localhost:8021',
+  API_URL = 'https://magora-react-university.herokuapp.com/',
   API_VERSION = '1',
   LOCAL_STORAGE_PREFIX = '@REACT_TEMPLATE_APP',
   NODE_ENV,
