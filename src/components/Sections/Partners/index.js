@@ -57,7 +57,7 @@ export class Partners extends Component {
       <section className="partners_main-page-wrapper">
         <div className="partners_main-page">
           <div className="partners__text">Trusted by companies of all sizes</div>
-          <a href="javascript:void(0)">
+          <a href={null}>
             <div className="partners__logos">{list}</div>
           </a>
         </div>

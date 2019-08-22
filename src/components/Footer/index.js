@@ -47,7 +47,7 @@ export class Footer extends Component {
       item //list of links
     ) => (
       <li key={item.id} className="links__item">
-        <a href="javascript:void(0)">{item.title}</a>
+        <a href={null}>{item.title}</a>
       </li>
     ));
 
@@ -55,7 +55,7 @@ export class Footer extends Component {
       item //list of languages
     ) => (
       <li key={item}>
-        <a href="javascript:void(0)">{item}</a>
+        <a href={null}>{item}</a>
       </li>
     ));
 
@@ -63,7 +63,7 @@ export class Footer extends Component {
       item //list of laws links
     ) => (
       <li key={item.id}>
-        <a href="javascript:void(0)">{item.title}</a>
+        <a href={null}>{item.title}</a>
       </li>
     ));
 

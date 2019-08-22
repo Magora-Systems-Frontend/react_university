@@ -28,7 +28,7 @@ export class NonStudents extends Component {
     const blocks = invites.map((item) => (
       <div className="non-student__block" key={item.id}>
         <div className="non-student__block-text">
-          <a href="javascript:void(0)" className="non-student__block-title">
+          <a href={null} className="non-student__block-title">
             {item.title}
           </a>
           <div className="non-student__block-description">{item.description}</div>

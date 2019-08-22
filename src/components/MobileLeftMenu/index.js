@@ -31,7 +31,7 @@ export default class MobileLeftMenu extends Component {
 
     const list = menu.map((item) => (
       <li key={item.id}>
-        <a className="mobile-nav__menu-item" href="javascript:void(0)">
+        <a className="mobile-nav__menu-item" href={null}>
           {item.title}
         </a>
       </li>

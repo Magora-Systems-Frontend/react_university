@@ -50,7 +50,7 @@ class FirstLevel extends Component {
       item.subitems.map((item) => <SecondLevel item={item} key={item.title} />);
     return (
       <li className="dropdown__menu-item" onMouseEnter={this.toggleSecondLevel} onMouseLeave={this.toggleSecondLevel}>
-        <a href="javascript:void(0)" className="dropdown__link">
+        <a href={null} className="dropdown__link">
           <img src={item.icon} alt="" />
           <span className="text">{item.title}</span>
           {item && item.subitems && <Icon glyph={GLYPH.arrowRight} width={10} />}
@@ -94,7 +94,7 @@ class SecondLevel extends Component {
         className="dropdown__menu-second-level-item"
         onMouseEnter={this.toggleThirdLevel}
         onMouseLeave={this.toggleThirdLevel}>
-        <a href="javascript:void(0)" className="dropdown__link">
+        <a href={null} className="dropdown__link">
           <span className="text">{item.title}</span>
           {item && item.subitems && <Icon glyph={GLYPH.arrowRight} width={10} />}
         </a>
@@ -117,7 +117,7 @@ class ThirdLevel extends Component {
     const { item } = this.props;
     return (
       <li className="dropdown__menu-third-level-item">
-        <a href="javascript:void(0)" className="dropdown__link">
+        <a href={null} className="dropdown__link">
           <span className="text">{item.title}</span>
         </a>
       </li>
