@@ -3,6 +3,7 @@ const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
 const makePath = to => path.resolve(__dirname, to);
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
+const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 
 const fs = require('fs');
 console.log(__dirname);
@@ -19,9 +20,15 @@ module.exports = {
         IS_BROWSER: true,
       },
     }),
+    new ServiceWorkerWebpackPlugin({
+      entry: makePath('../src/sw.js'),
+    }),
   ],
   module: {
     rules: [
+      {
+        test: /\.json$/,
+      },
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,

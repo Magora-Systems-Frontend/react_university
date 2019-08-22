@@ -3,3 +3,4 @@ json-server
 public
 webpack
 utils
+src/sw.js
