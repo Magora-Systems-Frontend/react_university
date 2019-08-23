@@ -3,7 +3,7 @@ const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
 const makePath = to => path.resolve(__dirname, to);
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
-const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 const fs = require('fs');
 console.log(__dirname);
@@ -13,16 +13,19 @@ module.exports = {
   entry: './src',
   plugins: [
     new CopyWebpackPlugin([
-      { from: makePath('../src/assets/'), to: makePath('../public/assets/') },
+      {from: makePath('../src/assets/'), to: makePath('../public/assets/')},
     ]),
     new webpack.DefinePlugin({
       'process.env': {
         IS_BROWSER: true,
       },
     }),
-    new ServiceWorkerWebpackPlugin({
-      entry: makePath('../src/sw.js'),
-    }),
+    new WorkboxPlugin.GenerateSW({
+      // these options encourage the ServiceWorkers to get in there fast
+      // and not allow any straggling "old" SWs to hang around
+      clientsClaim: true,
+      skipWaiting: true
+    })
   ],
   module: {
     rules: [
@@ -55,9 +58,9 @@ module.exports = {
             loader: 'svgo-loader',
             options: {
               plugins: [
-                { removeTitle: true },
-                { convertColors: { shorthex: false } },
-                { convertPathData: false },
+                {removeTitle: true},
+                {convertColors: {shorthex: false}},
+                {convertPathData: false},
               ],
             },
           },

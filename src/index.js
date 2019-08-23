@@ -8,13 +8,7 @@ import { Root } from 'pages/Root';
 import * as axiosClient from 'utils/api/axiosClient';
 import { configureStore } from './store';
 
-import runtime from 'serviceworker-webpack-plugin/lib/runtime';
-
 import './styles/app.scss';
-
-if ('serviceWorker' in navigator) {
-  const registration = runtime.register();
-}
 
 const MOUNT_NODE = document.getElementById('root');
 
