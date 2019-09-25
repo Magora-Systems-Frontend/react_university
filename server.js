@@ -8,6 +8,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/ping', function (req, res) {
   return res.send('pong');
 });
+app.get('/service-worker.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'public', 'assets', 'service-worker.js'));
+});
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'public', 'assets', 'index.html'));
 });
