@@ -104,7 +104,7 @@ export class Header extends Component {
             <div className="header-mobile__content-logo">
               <Link to={ROUTES.HOME_PAGE}>
                 <div className="header__logo">
-                  <Icon width={110} glyph={GLYPH.logo} />
+                  <img src={logo} alt="" />
                 </div>
               </Link>
             </div>

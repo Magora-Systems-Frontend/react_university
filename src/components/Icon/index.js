@@ -5,7 +5,6 @@ require('./icon.sass');
 
 const GLYPH = {};
 
-GLYPH.logo = require('/assets/images/logo.svg').default;
 GLYPH.catalog = require('/assets/icons/catalog.svg').default;
 GLYPH.shoppingCart = require('/assets/icons/shoppingCart.svg').default;
 GLYPH.menu = require('/assets/icons/menu.svg').default;
