@@ -1,7 +1,10 @@
 workbox.core.skipWaiting();
 workbox.core.clientsClaim();
 
-workbox.routing.registerRoute(new RegExp('http://127.0.0.1:3001'), new workbox.strategies.StaleWhileRevalidate());
+workbox.routing.registerRoute(
+  new RegExp('https://magora-react-university.herokuapp.com'),
+  new workbox.strategies.StaleWhileRevalidate()
+);
 
 self.addEventListener('push', (event) => {
   const title = 'Get Started With Workbox';
