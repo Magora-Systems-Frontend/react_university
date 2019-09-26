@@ -4,6 +4,7 @@ const makePath = to => path.resolve(__dirname, to);
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 const WorkboxPlugin = require('workbox-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const fs = require('fs');
 console.log(__dirname);
@@ -12,6 +13,10 @@ console.log(__dirname);
 module.exports = {
   entry: './src',
   plugins: [
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: makePath('../src/template.html'),
+    }),
     new CopyWebpackPlugin([
       {from: makePath('../src/assets/'), to: makePath('../public/assets/')},
     ]),
@@ -21,11 +26,11 @@ module.exports = {
       },
     }),
 
-    new WorkboxPlugin.GenerateSW({
+    new WorkboxPlugin.InjectManifest({
       // these options encourage the ServiceWorkers to get in there fast
       // and not allow any straggling "old" SWs to hang around
-      clientsClaim: true,
-      skipWaiting: true
+      swSrc: './src/sw.js',
+      swDest: 'custom-sw.js'
     })
   ],
   module: {
