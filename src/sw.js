@@ -2,8 +2,14 @@ workbox.core.skipWaiting();
 workbox.core.clientsClaim();
 
 workbox.routing.registerRoute(
-  new RegExp('https://magora-react-university.herokuapp.com'),
-  new workbox.strategies.StaleWhileRevalidate()
+  'https://magora-react-university.herokuapp.com',
+  new workbox.strategies.StaleWhileRevalidate({
+    plugins: [
+      new workbox.cacheableResponse.Plugin({
+        statuses: [0, 200],
+      }),
+    ],
+  })
 );
 
 self.addEventListener('push', (event) => {
