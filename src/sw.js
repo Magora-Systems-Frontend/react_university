@@ -6,7 +6,7 @@ let arrayRoutes = ['categories', 'comments', 'courses/Popular'];
 for (var i = 0; i < arrayRoutes.length; i++) {
   workbox.routing.registerRoute(
     `https://magora-react-university-api.herokuapp.com/${arrayRoutes[i]}`,
-    new workbox.strategies.CacheFirst({
+    new workbox.strategies.NetworkFirst({
       cacheName: arrayRoutes[i],
     })
   );

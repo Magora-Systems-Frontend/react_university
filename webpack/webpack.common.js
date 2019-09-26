@@ -25,7 +25,6 @@ module.exports = {
         IS_BROWSER: true,
       },
     }),
-
     new WorkboxPlugin.InjectManifest({
       swSrc: './src/sw.js',
       swDest: 'custom-sw.js'
