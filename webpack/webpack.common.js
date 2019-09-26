@@ -27,8 +27,6 @@ module.exports = {
     }),
 
     new WorkboxPlugin.InjectManifest({
-      // these options encourage the ServiceWorkers to get in there fast
-      // and not allow any straggling "old" SWs to hang around
       swSrc: './src/sw.js',
       swDest: 'custom-sw.js'
     })

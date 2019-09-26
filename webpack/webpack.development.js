@@ -12,7 +12,7 @@ module.exports = merge(common, {
   mode: 'development',
   output: {
     filename: '[hash]-bundle.js',
-    path: makePath('../public/assets'),
+    path: makePath('../public'),
   },
   devtool: 'cheap-module-eval-source-map',
   devServer: {

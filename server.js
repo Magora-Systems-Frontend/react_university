@@ -12,7 +12,7 @@ app.get('/custom-sw.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'public', 'assets', 'custom-sw.js'));
 });
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'public', 'assets', 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`)

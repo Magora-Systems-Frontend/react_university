@@ -15,14 +15,10 @@ module.exports = merge(common, {
   mode: 'production',
   output: {
     filename: '[hash]-bundle.js',
-    path: makePath('../public/assets'),
-    publicPath: './assets/',
+    path: makePath('../public'),
+    publicPath: './',
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      inject: true,
-      template: makePath('../src/template.html'),
-    }),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production')
