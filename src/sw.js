@@ -1,15 +1,14 @@
 workbox.core.skipWaiting();
 workbox.core.clientsClaim();
 
-let arrayRoutes = ['categories', 'comments', 'courses/Popular'];
-
-for (var i = 0; i < arrayRoutes.length; i++) {
-  workbox.routing.registerRoute(
-    `https://magora-react-university-api.herokuapp.com/${arrayRoutes[i]}`,
-    new workbox.strategies.NetworkFirst({
-      cacheName: arrayRoutes[i],
-    })
-  );
-}
+workbox.routing.registerRoute(
+  new RegExp('https://magora-react-university-api.herokuapp.com/'),
+  new workbox.strategies.StaleWhileRevalidate({
+    cacheName: 'cacheApi',
+    cacheExpiration: {
+      maxAgeSeconds: 60 * 30, //cache the news content for 30mn
+    },
+  })
+);
 
 workbox.precaching.precacheAndRoute(self.__precacheManifest);
