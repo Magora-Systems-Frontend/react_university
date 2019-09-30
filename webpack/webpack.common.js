@@ -25,20 +25,6 @@ module.exports = {
         IS_BROWSER: true,
       },
     }),
-    // new WorkboxPlugin.GenerateSW({
-    //   swDest: 'custom-sw.js',
-    //   skipWaiting: true,
-    //   clientsClaim: true,
-    //   runtimeCaching: [{
-    //     urlPattern: new RegExp('https://magora-react-university-api.herokuapp.com/'),
-    //     handler: 'StaleWhileRevalidate',
-    //     options: {
-    //       cacheableResponse: {
-    //         statuses: [0, 200]
-    //       }
-    //     }
-    //   }]
-    // })
     new WorkboxPlugin.InjectManifest({
       swSrc: './src/sw.js',
       swDest: 'custom-sw.js'
