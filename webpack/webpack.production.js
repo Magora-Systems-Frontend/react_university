@@ -18,7 +18,6 @@ module.exports = merge(common, {
     path: makePath('../public'),
     publicPath: './',
   },
-  devtool: 'eval-source-map',
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
@@ -33,7 +32,9 @@ module.exports = merge(common, {
 
   optimization: {
     minimizer: [
-      new TerserPlugin({ test: /\.js(\?.*)?$/i }),
+      new TerserPlugin({
+        test: /\.js(\?.*)?$/i
+      }),
       new OptimizeCSSAssetsPlugin({}),
     ],
   },
