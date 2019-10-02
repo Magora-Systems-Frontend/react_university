@@ -6,6 +6,7 @@ const webpack = require('webpack');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ImageminPlugin = require("imagemin-webpack-plugin").default;
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
 const fs = require('fs');
 console.log(__dirname);
@@ -31,7 +32,8 @@ module.exports = {
       swSrc: './src/sw.js',
       swDest: 'custom-sw.js'
     }),
-    new ImageminPlugin()
+    new ImageminPlugin(),
+    new LodashModuleReplacementPlugin()
   ],
   module: {
     rules: [
