@@ -1,6 +1,6 @@
 {
-  "short_name": "MAGORA React/Redux",
-  "name": "Site MAGORA React/Redux",
+  "short_name": "MAGORA React",
+  "name": "Site MAGORA React",
   "icons": [
     {
       "src": "/assets/images/react-logo.png",
