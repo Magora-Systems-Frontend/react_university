@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.magora.reactredux",
+    "sha256_cert_fingerprints":
+    ["BB:88:44:B4:8A:03:A6:91:8F:E0:73:4B:49:C3:EF:F9:0C:A3:22:EF:91:19:0B:DC:6B:B8:28:7B:79:5E:CD:93"]
+  }
+}]

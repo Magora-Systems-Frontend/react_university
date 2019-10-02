@@ -19,6 +19,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       {from: makePath('../src/assets/'), to: makePath('../public/assets/')},
+      {from: makePath('../src/.well-known/'), to: makePath('../public/.well-known/')}
     ]),
     new webpack.DefinePlugin({
       'process.env': {
