@@ -18,6 +18,7 @@ module.exports = merge(common, {
     path: makePath('../public'),
     publicPath: './',
   },
+  devtool: 'eval-source-map',
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
