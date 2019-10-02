@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ImageminPlugin = require("imagemin-webpack-plugin").default;
 
 const fs = require('fs');
 console.log(__dirname);
@@ -29,7 +30,8 @@ module.exports = {
     new WorkboxPlugin.InjectManifest({
       swSrc: './src/sw.js',
       swDest: 'custom-sw.js'
-    })
+    }),
+    new ImageminPlugin()
   ],
   module: {
     rules: [

@@ -16,11 +16,11 @@ if ('serviceWorker' in navigator) {
       .register('/custom-sw.js')
       .then((registration) => {
         console.log('SW registered: ', registration);
-        registration.pushManager.subscribe({
-          userVisibleOnly: true,
-          applicationServerKey:
-            'BEyzpasKaje2mtvHnQ587dk0B150SG4jNjXLqV53t01qOPjqZ5KuaVRI_B4UWILDc9eYFY2Ynwt-iTTfrJ9QP00',
-        });
+        // registration.pushManager.subscribe({
+        //   userVisibleOnly: true,
+        //   applicationServerKey:
+        //     'BEyzpasKaje2mtvHnQ587dk0B150SG4jNjXLqV53t01qOPjqZ5KuaVRI_B4UWILDc9eYFY2Ynwt-iTTfrJ9QP00',
+        // });
       })
       .catch((registrationError) => {
         console.log('SW registration failed: ', registrationError);
