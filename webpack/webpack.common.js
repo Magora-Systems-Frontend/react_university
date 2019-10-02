@@ -33,7 +33,7 @@ module.exports = {
       swDest: 'custom-sw.js'
     }),
     new ImageminPlugin(),
-    new LodashModuleReplacementPlugin()
+    new LodashModuleReplacementPlugin
   ],
   module: {
     rules: [
@@ -45,6 +45,10 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
+          options: {
+            plugins: ['lodash'],
+            presets: [['@babel/env', { 'targets': { 'node': 6 } }]]
+          }
         },
       },
       {
