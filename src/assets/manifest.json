@@ -1,6 +1,6 @@
 {
-  "short_name": "React/Redux",
-  "name": "Site React/Redux",
+  "short_name": "MAGORA React/Redux",
+  "name": "Site MAGORA React/Redux",
   "icons": [
     {
       "src": "/assets/images/react-logo.png",
@@ -8,7 +8,7 @@
       "sizes": "192x192 512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "background_color": "#3367D6",
   "display": "standalone",
   "theme_color": "#3367D6"
