@@ -6,7 +6,7 @@ workbox.routing.registerRoute(
   new workbox.strategies.StaleWhileRevalidate({
     cacheName: 'cacheApi',
     cacheExpiration: {
-      maxAgeSeconds: 60 * 30, //cache the news content for 30mn
+      maxAgeSeconds: 60 * 60 * 24,
     },
   })
 );
