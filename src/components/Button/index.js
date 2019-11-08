@@ -5,7 +5,6 @@ import './style.scss';
 
 export default class Button extends Component {
   static propTypes = {
-    title: PropTypes.string,
     children: PropTypes.any,
     onClick: PropTypes.func,
     type: PropTypes.string,

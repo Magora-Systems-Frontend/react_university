@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component snapshot capturing snapshot of buttons 1`] = `
+<div
+  className="button-container"
+>
+  <button
+    className="btn-action btn_category-toggle btn_category-toggle_active"
+    onClick={[Function]}
+  >
+    Development
+  </button>
+  <button
+    className="btn-action btn_category-toggle"
+    onClick={[Function]}
+  >
+    Design
+  </button>
+  <button
+    className="btn-action btn_category-toggle"
+    onClick={[Function]}
+  >
+    Business
+  </button>
+  <button
+    className="btn-action btn_category-toggle"
+    onClick={[Function]}
+  >
+    Photography
+  </button>
+</div>
+`;
