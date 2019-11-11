@@ -12,12 +12,13 @@ export default class Dropdown extends Component {
     linkText: PropTypes.string,
     bubblePosition: PropTypes.string,
     isMobile: PropTypes.bool,
+    displayBubble: PropTypes.bool,
   };
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      displayBubble: false,
+      displayBubble: props.displayBubble || false,
     };
   }
 

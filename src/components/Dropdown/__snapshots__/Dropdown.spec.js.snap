@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component snapshot capturing snapshot of dropdown 1`] = `
+<div
+  className="dropdown"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <div
+    className="dropdown__bubble false undefined"
+    style={
+      Object {
+        "width": undefined,
+      }
+    }
+  />
+</div>
+`;
