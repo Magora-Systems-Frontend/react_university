@@ -16,7 +16,7 @@ export class ButtonCoursesType extends React.PureComponent {
     active: 0,
   };
 
-  stateBtn = (event, index) => {
+  stateBtn = (index) => {
     this.setState({ active: index });
   };
 
@@ -43,8 +43,8 @@ export class ButtonCoursesType extends React.PureComponent {
             key={index}
             colorStyle="category"
             modificationClass={getClass('btn_category-toggle_active', index)}
-            onClick={(event) => {
-              this.stateBtn(option, index);
+            onClick={() => {
+              this.stateBtn(index);
               clickButton(option);
             }}>
             {option}
