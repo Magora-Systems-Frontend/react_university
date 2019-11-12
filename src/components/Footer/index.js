@@ -3,7 +3,6 @@ import { SimpleSelect } from 'components/Fields';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
-import { GLYPH, Icon } from '../Icon';
 import { getLanguage } from '../../pages/HomePage/actions';
 import lang from './lang.json';
 import './style.scss';
@@ -19,10 +18,6 @@ const mapDispatchToProps = (dispatch) => ({
   getLanguage: bindActionCreators(getLanguage, dispatch),
 });
 
-@connect(
-  mapStateToProps,
-  mapDispatchToProps
-)
 export class Footer extends Component {
   static propTypes = {
     languageState: PropTypes.object,
@@ -127,3 +122,8 @@ export class Footer extends Component {
     );
   }
 }
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Footer);

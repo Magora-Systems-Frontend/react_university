@@ -1,0 +1,270 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component snapshot capturing snapshot of Footer 1`] = `
+Array [
+  <footer
+    className="footer_main content_container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="hidden-xs col-sm-9"
+      >
+        <ul
+          className="links"
+        >
+          <li
+            className="links__item"
+          >
+            <a
+              href={null}
+            >
+              Business
+            </a>
+          </li>
+          <li
+            className="links__item"
+          >
+            <a
+              href={null}
+            >
+              Teach
+            </a>
+          </li>
+          <li
+            className="links__item"
+          >
+            <a
+              href={null}
+            >
+              App
+            </a>
+          </li>
+          <li
+            className="links__item"
+          >
+            <a
+              href={null}
+            >
+              About us
+            </a>
+          </li>
+          <li
+            className="links__item"
+          >
+            <a
+              href={null}
+            >
+              Careers
+            </a>
+          </li>
+          <li
+            className="links__item"
+          >
+            <a
+              href={null}
+            >
+              Blog
+            </a>
+          </li>
+          <li
+            className="links__item"
+          >
+            <a
+              href={null}
+            >
+              Topics
+            </a>
+          </li>
+          <li
+            className="links__item"
+          >
+            <a
+              href={null}
+            >
+              Support
+            </a>
+          </li>
+          <li
+            className="links__item"
+          >
+            <a
+              href={null}
+            >
+              Affiliate
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        className="col-sm-3 language-select_wrapper"
+      >
+        <div
+          className="css-1nym7p-container"
+          onKeyDown={[Function]}
+        >
+          <div
+            className="css-1ad3pbc-control"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+          >
+            <div
+              className="css-1hwfws3"
+            >
+              <div
+                className="css-dvua67-singleValue"
+              >
+                English
+              </div>
+              <div
+                className="css-1g6gooi"
+              >
+                <div
+                  className=""
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
+                  <input
+                    aria-autocomplete="list"
+                    autoCapitalize="none"
+                    autoComplete="off"
+                    autoCorrect="off"
+                    disabled={false}
+                    id="react-select-2-input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    spellCheck="false"
+                    style={
+                      Object {
+                        "background": 0,
+                        "border": 0,
+                        "boxSizing": "content-box",
+                        "color": "inherit",
+                        "fontSize": "inherit",
+                        "label": "input",
+                        "opacity": 1,
+                        "outline": 0,
+                        "padding": 0,
+                        "width": "1px",
+                      }
+                    }
+                    tabIndex="0"
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    style={
+                      Object {
+                        "height": 0,
+                        "left": 0,
+                        "overflow": "scroll",
+                        "position": "absolute",
+                        "top": 0,
+                        "visibility": "hidden",
+                        "whiteSpace": "pre",
+                      }
+                    }
+                  >
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="css-w4sow2"
+            >
+              <span
+                className="css-ebkhu6-indicatorSeparator"
+              />
+              <div
+                aria-hidden="true"
+                className="css-16pqwjk-indicatorContainer"
+                onMouseDown={[Function]}
+                onTouchEnd={[Function]}
+              >
+                <svg
+                  aria-hidden="true"
+                  className="css-19bqh2r"
+                  focusable="false"
+                  height={20}
+                  viewBox="0 0 20 20"
+                  width={20}
+                >
+                  <path
+                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>,
+  <hr
+    className="language-divider"
+  />,
+  <footer
+    className="footer_bottom content_container"
+  >
+    <div
+      className="row footer__copyright"
+    >
+      <div
+        className="col-sm-6 footer__copyright-left"
+      >
+        <div
+          className="footer__copyright-logo"
+        >
+          <img
+            alt=""
+            src="test-file-stub"
+          />
+        </div>
+        <div
+          className="footer__copyright-text"
+        >
+          Copyright © 2019
+        </div>
+      </div>
+      <div
+        className="col-sm-6 footer__copyright-right"
+      >
+        <ul
+          className="footer__copyright-laws"
+        >
+          <li>
+            <a
+              href={null}
+            >
+              Terms
+            </a>
+          </li>
+          <li>
+            <a
+              href={null}
+            >
+              Privacy Policy and Cookie Policy
+            </a>
+          </li>
+          <li>
+            <a
+              href={null}
+            >
+              Topics
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>,
+  <hr
+    className="footer-divider"
+  />,
+]
+`;

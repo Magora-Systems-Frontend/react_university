@@ -1,7 +1,7 @@
 import React from 'react';
 import PT from 'prop-types';
 import { Header } from 'components/Header';
-import { Footer } from 'components/Footer';
+import Footer from 'components/Footer';
 
 export class App extends React.PureComponent {
   static propTypes = {
