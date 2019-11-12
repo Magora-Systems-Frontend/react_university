@@ -19,7 +19,7 @@ export default class Menu extends Component {
   }
 }
 
-class FirstLevel extends Component {
+export class FirstLevel extends Component {
   static propTypes = {
     item: PropTypes.object,
   };
@@ -61,7 +61,7 @@ class FirstLevel extends Component {
   }
 }
 
-class SecondLevel extends Component {
+export class SecondLevel extends Component {
   static propTypes = {
     item: PropTypes.object,
   };

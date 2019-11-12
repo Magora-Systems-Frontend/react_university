@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component snapshot capturing snapshot of first level 1`] = `
+<li
+  className="dropdown__menu-item"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <a
+    className="dropdown__link"
+    href={null}
+  >
+    <img
+      alt=""
+    />
+    <span
+      className="text"
+    />
+  </a>
+</li>
+`;
+
+exports[`component snapshot capturing snapshot of menu 1`] = `
+<ul
+  className="dropdown__menu"
+/>
+`;
+
+exports[`component snapshot capturing snapshot of second level 1`] = `
+<li
+  className="dropdown__menu-second-level-item"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <a
+    className="dropdown__link"
+    href={null}
+  >
+    <span
+      className="text"
+    />
+  </a>
+</li>
+`;
