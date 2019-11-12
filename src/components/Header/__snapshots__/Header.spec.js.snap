@@ -1,0 +1,232 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component snapshot capturing snapshot of Header  1`] = `
+Array [
+  <header
+    className="header"
+  >
+    <div
+      className="full-width header__container"
+    >
+      <div
+        className="header__logo_container"
+      >
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          <div
+            className="header__logo"
+          >
+            <img
+              alt=""
+              src="test-file-stub"
+            />
+          </div>
+        </a>
+      </div>
+      <div
+        className="header__left-side"
+      >
+        <div
+          className="dropdown"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <div
+            className="sc-bdVaJa inQFWo"
+          >
+            <div
+              className="header-catalog"
+            >
+              Categories
+            </div>
+          </div>
+        </div>
+        <form
+          className="header-search-form"
+          onSubmit={[Function]}
+        >
+          <input
+            className="header-search-form__control header-search-form__input"
+            placeholder="Search for anything"
+            type="text"
+          />
+          <button
+            className="btn-action btn_search header-search-form__submit"
+            onClick={[Function]}
+            type="submit"
+          />
+        </form>
+      </div>
+      <div
+        className="header__right-side"
+      >
+        <div
+          className="dropdown"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <div
+            className="sc-bdVaJa jCVwnM"
+          >
+            <div
+              className="shopping-list"
+            >
+              <div
+                className="shopping-list__icon"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="header__right-side-divider"
+        />
+        <div
+          className="header-controls"
+        >
+          <div
+            className="sc-bdVaJa jCVwnM"
+          >
+            <button
+              className="btn-action btn_bordered"
+              onClick={[Function]}
+            >
+              Log In
+            </button>
+          </div>
+          <div
+            className="sc-bdVaJa jCVwnM"
+          >
+            <button
+              className="btn-action btn_colored"
+              onClick={[Function]}
+            >
+              Sign up
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>,
+  <header
+    className="header-mobile"
+  >
+    <div
+      className="header-mobile__content"
+    >
+      <div
+        className="header-mobile__content-left"
+      >
+        <div
+          className="header-mobile__content-search"
+          onClick={[Function]}
+        >
+          <div
+            className="sc-bdVaJa eRtEKD"
+          />
+        </div>
+        <div
+          className="header-mobile__content-search"
+          onClick={[Function]}
+        >
+          <div
+            className="sc-bdVaJa eRtEKD"
+          />
+        </div>
+      </div>
+      <div
+        className="header-mobile__content-logo"
+      >
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          <div
+            className="header__logo"
+          />
+        </a>
+      </div>
+      <div
+        className="dropdown"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <div
+          className="shopping-list"
+        >
+          <div
+            className="shopping-list__icon"
+          />
+        </div>
+      </div>
+    </div>
+  </header>,
+  <div
+    className="mobile-menu_wrapper"
+  >
+    <div
+      className="mobile-menu__overlay"
+      onClick={[Function]}
+    />
+    <nav
+      className="mobile-nav"
+    >
+      <button
+        className="btn-action btn_mobile-login"
+        onClick={[Function]}
+      >
+        Sign up / Log in
+      </button>
+      <hr
+        className="mobile-nav__divider"
+      />
+      <div
+        className="mobile-nav__menu"
+      >
+        <div
+          className="mobile-nav__menu-title"
+        >
+          MORE PRODUCTS
+        </div>
+        <ul
+          className="mobile-nav__menu-list"
+        >
+          <li>
+            <a
+              className="mobile-nav__menu-item"
+              href={null}
+            >
+              Teach
+            </a>
+          </li>
+          <li>
+            <a
+              className="mobile-nav__menu-item"
+              href={null}
+            >
+              Business
+            </a>
+          </li>
+          <li>
+            <a
+              className="mobile-nav__menu-item"
+              href={null}
+            >
+              Get the app
+            </a>
+          </li>
+          <li>
+            <a
+              className="mobile-nav__menu-item"
+              href={null}
+            >
+              Help
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>,
+]
+`;

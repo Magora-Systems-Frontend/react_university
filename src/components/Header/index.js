@@ -9,7 +9,6 @@ import MobileLeftMenu from 'components/MobileLeftMenu';
 import { GLYPH, Icon } from 'components/Icon';
 import HeaderControls from './controls/HeaderControls';
 import HeaderSearch from './search/HeaderSearch';
-import HeaderInvite from './invite/HeaderInvite';
 import HeaderCart from './cart/HeaderCart';
 import HeaderCatalog from './catalog/HeaderCatalog';
 import lang from './lang.json';
@@ -21,7 +20,6 @@ const mapStateToProps = ({ languageState }) => ({
   languageState,
 });
 
-@connect(mapStateToProps)
 export class Header extends Component {
   static propTypes = {
     languageState: PropTypes.object.isRequired,
@@ -129,3 +127,5 @@ export class Header extends Component {
     );
   }
 }
+
+export default connect(mapStateToProps)(Header);

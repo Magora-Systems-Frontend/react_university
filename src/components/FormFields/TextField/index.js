@@ -22,14 +22,18 @@ export class TextField extends React.PureComponent {
     switch (type) {
       case 'search':
         inputElement = (props) => (
-          <input placeholder={props.placeholder} className="header-search-form__control header-search-form__input" />
+          <input
+            type="text"
+            placeholder={props.placeholder}
+            className="header-search-form__control header-search-form__input"
+          />
         );
         break;
       case 'text':
-        inputElement = <input />;
+        inputElement = <input type="text" />;
         break;
       default:
-        inputElement = <input />;
+        inputElement = <input type="text" />;
     }
 
     const validateStatus = meta.error && meta.touched ? 'error' : '';
