@@ -2,13 +2,13 @@ import 'mocks/matchMedia.mock';
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { mount, configure, shallow } from 'enzyme';
+import { configure, shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import configureStore from 'redux-mock-store';
 import Adapter from 'enzyme-adapter-react-16';
 
 import thunk from 'redux-thunk';
-import SmartComponent, { Header } from './index';
+import { Header } from './index';
 
 configure({ adapter: new Adapter() });
 

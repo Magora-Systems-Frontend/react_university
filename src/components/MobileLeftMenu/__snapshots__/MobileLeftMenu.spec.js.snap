@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component snapshot capturing snapshot of Footer 1`] = `
+<div
+  className="mobile-menu_wrapper"
+>
+  <div
+    className="mobile-menu__overlay"
+    onClick={[Function]}
+  />
+  <nav
+    className="mobile-nav"
+  >
+    <button
+      className="btn-action btn_mobile-login"
+      onClick={[Function]}
+    >
+      Sign up / Log in
+    </button>
+    <hr
+      className="mobile-nav__divider"
+    />
+    <div
+      className="mobile-nav__menu"
+    >
+      <div
+        className="mobile-nav__menu-title"
+      >
+        MORE PRODUCTS
+      </div>
+      <ul
+        className="mobile-nav__menu-list"
+      >
+        <li>
+          <a
+            className="mobile-nav__menu-item"
+            href={null}
+          >
+            Teach
+          </a>
+        </li>
+        <li>
+          <a
+            className="mobile-nav__menu-item"
+            href={null}
+          >
+            Business
+          </a>
+        </li>
+        <li>
+          <a
+            className="mobile-nav__menu-item"
+            href={null}
+          >
+            Get the app
+          </a>
+        </li>
+        <li>
+          <a
+            className="mobile-nav__menu-item"
+            href={null}
+          >
+            Help
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;

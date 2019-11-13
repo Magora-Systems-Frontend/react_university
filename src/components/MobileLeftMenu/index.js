@@ -10,8 +10,7 @@ const mapStateToProps = ({ languageState }) => ({
   languageState,
 });
 
-@connect(mapStateToProps)
-export default class MobileLeftMenu extends Component {
+export class MobileLeftMenu extends Component {
   static propTypes = {
     show: PropTypes.bool, //variable showing the status of the menu
     toggleMenu: PropTypes.func, //variable to hide / show the menu on mobile screens
@@ -52,3 +51,5 @@ export default class MobileLeftMenu extends Component {
     );
   }
 }
+
+export default connect(mapStateToProps)(MobileLeftMenu);
