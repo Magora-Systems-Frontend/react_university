@@ -1,4 +1,4 @@
-import 'mocks/matchMedia.mock';
+import '__mocks__/matchMedia.mock';
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
